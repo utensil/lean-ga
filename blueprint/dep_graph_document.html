@@ -59,14 +59,37 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.2.1</span><span class="definition_thmtitle">Clifford algebra</span></div>
+      <span class="definition_thmlabel">1.2.2</span><span class="definition_thmtitle">Clifford algebra</span></div>
     <div class="thm_thmcontent">
-<p>Let \(M\) be a module over a commutative ring \(R\), equipped with a quadratic form \(Q: V \to R\). </p>
-<p>A <b class="bfseries"><span style="color:#1F5C65"> Clifford algebra</span></b> over \(M\), denoted \(\mathcal{G}(M)\), is the quotient of the tensor algebra \(T(M)\) by the equivalence relation \(v \otimes v \sim Q(v)\). </p>
+<p>A <b class="bfseries"><span style="color:#181870"> Clifford algebra</span></b> over \(M\), denoted \(\mathop{\mathcal{C}\ell }(M)\), is the quotient of the tensor algebra \(T(M)\) by the equivalence relation <a href="sec-def.html#def:clifford_rel">1.2.1</a>. </p>
 </div>
 
     <a class="latex_link" href="sec-def.html#def:clifford_algebra">LaTeX</a>
   <a class="lean_link" href="https://github.com/leanprover-community/mathlib/blob/e1f01165ce7a8b650014e98bab47cdff5317e52e/src/linear_algebra/clifford_algebra/basic.lean#L69">Lean</a></div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="def:clifford_rel_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="def:clifford_rel" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">1.2.1</span><span class="definition_thmtitle">Clifford relation</span></div>
+    <div class="thm_thmcontent">
+<p>\(\forall m \in M, \iota (m)^2 \sim \iota _a(Q(m))\) </p>
+</div>
+
+    <a class="latex_link" href="sec-def.html#def:clifford_rel">LaTeX</a>
+  <a class="lean_link" href="https://github.com/leanprover-community/mathlib/blob/e1f01165ce7a8b650014e98bab47cdff5317e52e/src/linear_algebra/clifford_algebra/basic.lean#L60">Lean</a></div>
     
       </div>
     </div>
@@ -86,7 +109,7 @@
       </span>
       <span class="definition_thmlabel">1.1.1</span><span class="definition_thmtitle">Placeholder</span></div>
     <div class="thm_thmcontent">
-<p><b class="bfseries"><span style="color:#1F5C65"> Placeholder</span></b> is a placeholder. </p>
+<p><b class="bfseries"><span style="color:#181870"> Placeholder</span></b> is a placeholder. </p>
 </div>
 
     <a class="latex_link" href="sect0002.html#placeholder">LaTeX</a>
@@ -113,7 +136,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	placeholder	[color=blue,		label=placeholder,		shape=box];	"def:clifford_algebra"	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];}')
+    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	placeholder	[color=blue,		label=placeholder,		shape=box];	"def:clifford_algebra"	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];	"def:clifford_rel"	[color=green,		fillcolor="#b0eca3",		label=clifford_rel,		shape=box,		style=filled];	"def:clifford_rel" -> "def:clifford_algebra"	[style=dashed];}')
     .on("end", interactive);
 
 clickNode = function() {
