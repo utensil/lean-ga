@@ -38,6 +38,23 @@ def bp(ctx):
     os.chdir(cwd)
 
 @task
+def bp_tex(ctx):
+    """
+    Build the blueprint PDF file and prepare src/web.bbl for task `web` using old-fashioned TeXLive
+    This task is handy if one can't install Tectonic like there's no
+    https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.14.1/tectonic-0.14.1-aarch64-unknown-linux-gnu.tar.gz 
+    """
+
+    cwd = os.getcwd()
+    os.chdir(BP_DIR)
+    run('mkdir -p print && cd src && xelatex -output-directory=../print print.tex')
+    run('cd print && bibtex print.aux', env={'BIBINPUTS': '../src'})
+    run('cd src && xelatex -output-directory=../print print.tex')
+    run('cd src && xelatex -output-directory=../print print.tex')
+    run('cp print/print.bbl src/web.bbl')
+    os.chdir(cwd)
+
+@task
 def web(ctx):
     """
     Build the blueprint website

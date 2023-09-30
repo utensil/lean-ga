@@ -9,7 +9,7 @@
   - [Noncommutative algebras, computer algebra systems, and theorem provers](https://eric-wieser.github.io/divf-2022)
   - [The Universal Property of the Clifford Algebra](https://eric-wieser.github.io/brno-2021/)
 
-Much of the project infrastructure has been adapted from the [liquid tensor experiment](https://leanprover-community.github.io/liquid/) and [Unit Fractions](https://github.com/b-mehta/unit-fractions).
+Much of the project infrastructure has been adapted from the [liquid tensor experiment](https://github.com/leanprover-community/liquid) and [Unit Fractions](https://github.com/b-mehta/unit-fractions).
 
 ## Dependencies
 
