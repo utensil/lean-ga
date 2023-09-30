@@ -9,7 +9,6 @@ import shutil
 from pathlib import Path
 from invoke import run, task
 
-from mathlibtools.lib import LeanProject
 import http.server
 import socketserver
 
@@ -22,8 +21,15 @@ def decls(ctx):
     Collect Lean declarations from Lean sources for referencing in the blueprint
     """
 
-    proj = LeanProject.from_path(ROOT)
-    proj.pickle_decls(ROOT/'decls.pickle')
+    try:
+        from mathlibtools.lib import LeanProject
+
+        proj = LeanProject.from_path(ROOT)
+        proj.pickle_decls(ROOT/'decls.pickle')
+    except ImportError:
+        warnings.warn("Failed to make URLs for Lean 3 (run `pip install mathlibtools` to fix for now)")
+        warnings.warn("Lean 3 is no longer supported, please upgrade to Lean 4")
+        raise
 
 @task
 def bp(ctx):
