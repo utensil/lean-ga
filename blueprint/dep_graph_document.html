@@ -136,7 +136,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	placeholder	[color=blue,		label=placeholder,		shape=box];	"def:clifford_algebra"	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];	"def:clifford_rel"	[color=green,		fillcolor="#b0eca3",		label=clifford_rel,		shape=box,		style=filled];	"def:clifford_rel" -> "def:clifford_algebra"	[style=dashed];}')
+    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	placeholder	[color=blue,		label=placeholder,		shape=box];	"def:clifford_rel"	[color=green,		fillcolor="#b0eca3",		label=clifford_rel,		shape=box,		style=filled];	"def:clifford_algebra"	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];	"def:clifford_rel" -> "def:clifford_algebra"	[style=dashed];}')
     .on("end", interactive);
 
 clickNode = function() {
