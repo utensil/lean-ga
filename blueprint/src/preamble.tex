@@ -14,6 +14,12 @@
 % end web specific preambles
 \else
 % begin print specific preambles
+
+% Somehow this renders to plain text without brackets, makes it indistinguishable from the surrounding text.
+% And it doesn't work with plastex, the citation is not rendered at all for the web version.
+% \usepackage{natbib}
+% \citestyle{acmauthoryear}
+
 \usepackage{unicode-math}
 \usepackage{fontspec}
 \setmathfont{latinmodern-math.otf}
