@@ -59,9 +59,9 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.2.2</span><span class="definition_thmtitle">Clifford algebra</span></div>
+      <span class="definition_thmlabel">2.1.2</span><span class="definition_thmtitle">Clifford algebra</span></div>
     <div class="thm_thmcontent">
-<p>A <b class="bfseries"><span style="color:#181870"> Clifford algebra</span></b> over \(M\), denoted \(\mathop{\mathcal{C}\ell }(M)\), is the quotient of the tensor algebra \(T(M)\) by the equivalence relation <a href="sec-def.html#def:clifford_rel">1.2.1</a>. </p>
+<p>A <b class="bfseries"><span style="color:#181870"> Clifford algebra</span></b> over \(M\), denoted \(\mathop{\mathcal{C}\ell }(M)\), is the quotient of the tensor algebra \(T(M)\) by the equivalence relation <a href="sec-def.html#def:clifford_rel">2.1.1</a>. </p>
 </div>
 
     <a class="latex_link" href="sec-def.html#def:clifford_algebra">LaTeX</a>
@@ -83,7 +83,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.2.1</span><span class="definition_thmtitle">Clifford relation</span></div>
+      <span class="definition_thmlabel">2.1.1</span><span class="definition_thmtitle">Clifford relation</span></div>
     <div class="thm_thmcontent">
 <p>\(\forall m \in M, \iota (m)^2 \sim \iota _a(Q(m))\) </p>
 </div>
@@ -96,24 +96,105 @@
 
 
     
-    <div class="dep-modal-container" id="placeholder_modal">
+    <div class="dep-modal-container" id="group_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="placeholder" style="display: none">
+  <div class="thm" id="group" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.1</span><span class="definition_thmtitle">Placeholder</span></div>
+      <span class="definition_thmlabel">1.1.1</span><span class="definition_thmtitle">Group</span></div>
     <div class="thm_thmcontent">
-<p><b class="bfseries"><span style="color:#181870"> Placeholder</span></b> is a placeholder. </p>
+<p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a non-empty set \(G\) together with a law of composition, a mapping \((g, h) \to gh\) from \(G \times G\) to \(G\), which satisfies: </p>
+<ol class="enumerate">
+  <li><p>\((g h) j = g (h j)\) for all \(g, h, j \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>) </p>
+</li>
+  <li><p>there exists \(e\) in \(G\) such that \(e g = g e = g\) for all \(g \in G\) </p>
+</li>
+  <li><p>for each \(g \in G\) there exists \(g^{-1} \in G\) such that \(g g^{-1} = g^{-1} g = e\) </p>
+</li>
+</ol>
 </div>
 
-    <a class="latex_link" href="sect0002.html#placeholder">LaTeX</a>
-  </div>
+    <a class="latex_link" href="sec-basics.html#group">LaTeX</a>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Group#doc">Lean</a></div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="monoid_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="monoid" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">1.1.3</span><span class="definition_thmtitle">Monoid</span></div>
+    <div class="thm_thmcontent">
+<p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a set \(R\) with a law of composition, usually denoted multiplicatively, satisfying the following conditions: </p>
+<ol class="enumerate">
+  <li><p>\((a b) c = a (b c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>), </p>
+</li>
+  <li><p>There is an element \(1 \in R\) such that \(1 a = a 1 = a\) for all \(a\) in \(R\) (that is 1 is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
+</li>
+</ol>
+</div>
+
+    <a class="latex_link" href="sec-basics.html#monoid">LaTeX</a>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Monoid#doc">Lean</a></div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="ring_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="ring" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">1.1.4</span><span class="definition_thmtitle">Ring</span></div>
+    <div class="thm_thmcontent">
+<p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a set \(R\) with two laws of composition, </p>
+<ul class="itemize">
+  <li><p>addition, denoted \(+\); </p>
+</li>
+  <li><p>multiplication, denoted by juxtaposition, or <span class="ttfamily">*</span> in Lean, </p>
+</li>
+</ul>
+<p>which satisfy the following conditions: </p>
+<ol class="enumerate">
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under addition; </p>
+</li>
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under multiplication; </p>
+</li>
+  <li><p>If \(a, b, c\) are elements of \(R\), we have </p>
+<div class="displaymath" id="a0000000018">
+  \[  a (b + c) = a b + a c, (a + b) c = a c + b c.  \]
+</div>
+<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over addition) </p>
+</li>
+</ol>
+</div>
+
+    <a class="latex_link" href="sec-basics.html#ring">LaTeX</a>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Ring#doc">Lean</a></div>
     
       </div>
     </div>
@@ -136,7 +217,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	placeholder	[color=blue,		label=placeholder,		shape=box];	"def:clifford_rel"	[color=green,		fillcolor="#b0eca3",		label=clifford_rel,		shape=box,		style=filled];	"def:clifford_algebra"	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];	"def:clifford_rel" -> "def:clifford_algebra"	[style=dashed];}')
+    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	group	[color=blue,		label=group,		shape=box];	monoid	[color=blue,		label=monoid,		shape=box];	"def:clifford_rel"	[color=green,		fillcolor="#b0eca3",		label=clifford_rel,		shape=box,		style=filled];	"def:clifford_algebra"	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];	"def:clifford_rel" -> "def:clifford_algebra"	[style=dashed];	ring	[color=blue,		label=ring,		shape=box];}')
     .on("end", interactive);
 
 clickNode = function() {

@@ -13,8 +13,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Blueprint For Formalizing Geometric Algebra in Lean: Clifford algebras - definition</title>
-<link rel="next" href="sect0003.html" title="Involutions" />
-<link rel="prev" href="sect0002.html" title="Preliminaries" />
+<link rel="next" href="sect0002.html" title="Involutions" />
+<link rel="prev" href="cha-foundations.html" title="Foundations" />
 <link rel="up" href="cha-foundations.html" title="Foundations" />
 <link rel="stylesheet" href="styles/theme-white.css" />
 <link rel="stylesheet" href="styles/amsthm.css" />
@@ -33,72 +33,79 @@
 <li class="">
   <a href="sect0001.html"><span class="toc_ref"></span> <span class="toc_entry">Introduction</span></a>
  </li>
+<li class="">
+  <a href="cha-preliminaries.html"><span class="toc_ref">1</span> <span class="toc_entry">Preliminaries</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sec-basics.html"><span class="toc_ref">1.1</span> <span class="toc_entry">Basics</span></a>
+ </li>
+
+  </ul>
+ </li>
 <li class=" active">
-  <a href="cha-foundations.html"><span class="toc_ref">1</span> <span class="toc_entry">Foundations</span></a>
+  <a href="cha-foundations.html"><span class="toc_ref">2</span> <span class="toc_entry">Foundations</span></a>
   <span class="expand-toc">▼</span>
   <ul class="sub-toc-1 active">
-     <li class="">
-  <a href="sect0002.html"><span class="toc_ref">1.1</span> <span class="toc_entry">Preliminaries</span></a>
- </li>
-<li class=" active current">
-  <a href="sec-def.html"><span class="toc_ref">1.2</span> <span class="toc_entry">Clifford algebras - definition</span></a>
+     <li class=" active current">
+  <a href="sec-def.html"><span class="toc_ref">2.1</span> <span class="toc_entry">Clifford algebras - definition</span></a>
  </li>
 <li class="">
-  <a href="sect0004.html"><span class="toc_ref">1.3</span> <span class="toc_entry">Structure of Clifford algebras</span></a>
+  <a href="sect0003.html"><span class="toc_ref">2.2</span> <span class="toc_entry">Structure of Clifford algebras</span></a>
  </li>
 <li class="">
-  <a href="sect0005.html"><span class="toc_ref">1.4</span> <span class="toc_entry">Classifying Clifford algebras</span></a>
+  <a href="sect0004.html"><span class="toc_ref">2.3</span> <span class="toc_entry">Classifying Clifford algebras</span></a>
  </li>
 <li class="">
-  <a href="sect0006.html"><span class="toc_ref">1.5</span> <span class="toc_entry">Representing Clifford algebras</span></a>
+  <a href="sect0005.html"><span class="toc_ref">2.4</span> <span class="toc_entry">Representing Clifford algebras</span></a>
  </li>
 <li class="">
-  <a href="sect0007.html"><span class="toc_ref">1.6</span> <span class="toc_entry">Spin</span></a>
+  <a href="sect0006.html"><span class="toc_ref">2.5</span> <span class="toc_entry">Spin</span></a>
  </li>
 
   </ul>
  </li>
 <li class="">
-  <a href="sect0008.html"><span class="toc_ref">2</span> <span class="toc_entry">Geometric Algebra</span></a>
+  <a href="sect0007.html"><span class="toc_ref">3</span> <span class="toc_entry">Geometric Algebra</span></a>
   <span class="expand-toc">▶</span>
   <ul class="sub-toc-1">
      <li class="">
-  <a href="sect0009.html"><span class="toc_ref">2.1</span> <span class="toc_entry">Axioms</span></a>
+  <a href="sect0008.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Axioms</span></a>
  </li>
 <li class="">
-  <a href="sect0010.html"><span class="toc_ref">2.2</span> <span class="toc_entry">Operations and properties</span></a>
+  <a href="sect0009.html"><span class="toc_ref">3.2</span> <span class="toc_entry">Operations and properties</span></a>
  </li>
 
   </ul>
  </li>
 <li class="">
-  <a href="sect0011.html"><span class="toc_ref">3</span> <span class="toc_entry">Concrete algebras - definition</span></a>
+  <a href="sect0010.html"><span class="toc_ref">4</span> <span class="toc_entry">Concrete algebras - definition</span></a>
   <span class="expand-toc">▶</span>
   <ul class="sub-toc-1">
      <li class="">
-  <a href="sect0012.html"><span class="toc_ref">3.1</span> <span class="toc_entry">CGA</span></a>
+  <a href="sect0011.html"><span class="toc_ref">4.1</span> <span class="toc_entry">CGA</span></a>
  </li>
 <li class="">
-  <a href="sect0013.html"><span class="toc_ref">3.2</span> <span class="toc_entry">PGA</span></a>
+  <a href="sect0012.html"><span class="toc_ref">4.2</span> <span class="toc_entry">PGA</span></a>
  </li>
 <li class="">
-  <a href="sect0014.html"><span class="toc_ref">3.3</span> <span class="toc_entry">STA</span></a>
+  <a href="sect0013.html"><span class="toc_ref">4.3</span> <span class="toc_entry">STA</span></a>
  </li>
 
   </ul>
  </li>
 <li class="">
-  <a href="sect0015.html"><span class="toc_ref">4</span> <span class="toc_entry">Applications</span></a>
+  <a href="sect0014.html"><span class="toc_ref">5</span> <span class="toc_entry">Applications</span></a>
   <span class="expand-toc">▶</span>
   <ul class="sub-toc-1">
      <li class="">
-  <a href="sect0016.html"><span class="toc_ref">4.1</span> <span class="toc_entry">Geometry</span></a>
+  <a href="sect0015.html"><span class="toc_ref">5.1</span> <span class="toc_entry">Geometry</span></a>
  </li>
 
   </ul>
  </li>
 <li class="">
-  <a href="sect0017.html"><span class="toc_ref">5</span> <span class="toc_entry">Bibliography</span></a>
+  <a href="sect0016.html"><span class="toc_ref">6</span> <span class="toc_entry">Bibliography</span></a>
  </li>
 <li ><a href="dep_graph_document.html">Dependency graph</a></li>
 </ul>
@@ -109,7 +116,7 @@
 
 
 <div class="main-text">
-<h2 id="sec:def">1.2 Clifford algebras - definition</h2>
+<h2 id="sec:def">2.1 Clifford algebras - definition</h2>
 
 <p>Throughout this section: </p>
 <p>Let \(M\) be a module over a commutative ring \(R\), equipped with a quadratic form \(Q: M \to R\). </p>
@@ -120,7 +127,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.1</span>
+    <span class="definition_thmlabel">2.1.1</span>
     <span class="definition_thmtitle">Clifford relation</span>
     ✓
     <div class="thm_icons">
@@ -154,7 +161,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.2</span>
+    <span class="definition_thmlabel">2.1.2</span>
     <span class="definition_thmtitle">Clifford algebra</span>
     ✓
     <div class="thm_icons">
@@ -169,7 +176,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-def.html#def:clifford_rel">Definition 1.2.1</a></li>
+          <li><a href="sec-def.html#def:clifford_rel">Definition 2.1.1</a></li>
         </ul>
 
       </div>
@@ -193,7 +200,7 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>A <b class="bfseries"><span style="color:#181870"> Clifford algebra</span></b> over \(M\), denoted \(\mathop{\mathcal{C}\ell }(M)\), is the quotient of the tensor algebra \(T(M)\) by the equivalence relation <a href="sec-def.html#def:clifford_rel">1.2.1</a>. </p>
+<p>A <b class="bfseries"><span style="color:#181870"> Clifford algebra</span></b> over \(M\), denoted \(\mathop{\mathcal{C}\ell }(M)\), is the quotient of the tensor algebra \(T(M)\) by the equivalence relation <a href="sec-def.html#def:clifford_rel">2.1.1</a>. </p>
 
   </div>
 </div> </p>
@@ -202,7 +209,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.3</span>
+    <span class="remark_thmlabel">2.1.3</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-def.html#mk:two_sided_ideals">#</a>
 
@@ -221,7 +228,7 @@
     <span class="example_thmcaption">
     Example
     </span>
-    <span class="example_thmlabel">1.2.4</span>
+    <span class="example_thmlabel">2.1.4</span>
     <span class="example_thmtitle">Clifford algebra over a vector space</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-def.html#ex:clifford_algebra_v">#</a>
@@ -231,7 +238,7 @@
   <div class="example_thmcontent">
   
 <p>Let \(V\) be a vector space \(\mathbb R^n\) over \(\mathbb R\), equipped with a quadratic form \(Q\). </p>
-<p>Since \(\mathbb R\) is a commutative ring and \(V\) is a module, definition <a href="sec-def.html#def:clifford_algebra">1.2.2</a> of Clifford algebra applies. </p>
+<p>Since \(\mathbb R\) is a commutative ring and \(V\) is a module, definition <a href="sec-def.html#def:clifford_algebra">2.1.2</a> of Clifford algebra applies. </p>
 
   </div>
 </div>  </p>
@@ -242,11 +249,11 @@
 </div> <!-- wrapper -->
 
 <nav class="prev_up_next">
-  <a href="sect0002.html" title="Preliminaries"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+  <a href="cha-foundations.html" title="Foundations"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
 </a>
   <a href="cha-foundations.html" title="Foundations"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
 </a>
-  <a href="sect0003.html" title="Involutions"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+  <a href="sect0002.html" title="Involutions"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
 </a>
 </nav>
 

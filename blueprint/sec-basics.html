@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Blueprint For Formalizing Geometric Algebra in Lean: Basics</title>
+<link rel="next" href="cha-foundations.html" title="Foundations" />
+<link rel="prev" href="cha-preliminaries.html" title="Preliminaries" />
+<link rel="up" href="cha-preliminaries.html" title="Preliminaries" />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+<link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">The Blueprint For Formalizing Geometric Algebra in Lean</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref"></span> <span class="toc_entry">Introduction</span></a>
+ </li>
+<li class=" active">
+  <a href="cha-preliminaries.html"><span class="toc_ref">1</span> <span class="toc_entry">Preliminaries</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class=" active current">
+  <a href="sec-basics.html"><span class="toc_ref">1.1</span> <span class="toc_entry">Basics</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="cha-foundations.html"><span class="toc_ref">2</span> <span class="toc_entry">Foundations</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sec-def.html"><span class="toc_ref">2.1</span> <span class="toc_entry">Clifford algebras - definition</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html"><span class="toc_ref">2.2</span> <span class="toc_entry">Structure of Clifford algebras</span></a>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">2.3</span> <span class="toc_entry">Classifying Clifford algebras</span></a>
+ </li>
+<li class="">
+  <a href="sect0005.html"><span class="toc_ref">2.4</span> <span class="toc_entry">Representing Clifford algebras</span></a>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">2.5</span> <span class="toc_entry">Spin</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0007.html"><span class="toc_ref">3</span> <span class="toc_entry">Geometric Algebra</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0008.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Axioms</span></a>
+ </li>
+<li class="">
+  <a href="sect0009.html"><span class="toc_ref">3.2</span> <span class="toc_entry">Operations and properties</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0010.html"><span class="toc_ref">4</span> <span class="toc_entry">Concrete algebras - definition</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0011.html"><span class="toc_ref">4.1</span> <span class="toc_entry">CGA</span></a>
+ </li>
+<li class="">
+  <a href="sect0012.html"><span class="toc_ref">4.2</span> <span class="toc_entry">PGA</span></a>
+ </li>
+<li class="">
+  <a href="sect0013.html"><span class="toc_ref">4.3</span> <span class="toc_entry">STA</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0014.html"><span class="toc_ref">5</span> <span class="toc_entry">Applications</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0015.html"><span class="toc_ref">5.1</span> <span class="toc_entry">Geometry</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0016.html"><span class="toc_ref">6</span> <span class="toc_entry">Bibliography</span></a>
+ </li>
+<li ><a href="dep_graph_document.html">Dependency graph</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h2 id="sec:basics">1.1 Basics</h2>
+
+<p>In this section, we follow <span class="cite">
+	[
+	<a href="sect0016.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	, 
+	<a href="sect0016.html#garling2011clifford" >Garling(2011)</a>
+	]
+</span>, with modifications to match the counterparts in Lean. </p>
+<p><div class="definition_thmwrapper" id="group">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.1</span>
+    <span class="definition_thmtitle">Group</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#group">#</a>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Group#doc" target="_blank" rel="noopener noreferrer">Group</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a non-empty set \(G\) together with a law of composition, a mapping \((g, h) \to gh\) from \(G \times G\) to \(G\), which satisfies: </p>
+<ol class="enumerate">
+  <li><p>\((g h) j = g (h j)\) for all \(g, h, j \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>) </p>
+</li>
+  <li><p>there exists \(e\) in \(G\) such that \(e g = g e = g\) for all \(g \in G\) </p>
+</li>
+  <li><p>for each \(g \in G\) there exists \(g^{-1} \in G\) such that \(g g^{-1} = g^{-1} g = e\) </p>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:group">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.2</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:group">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>It then follows that \(e\), the <b class="bfseries"><span style="color:#181870"> identity element</span></b>, is unique, and that for each \(g \in G\) the <b class="bfseries"><span style="color:#181870"> inverse</span></b> \(g^{-1}\) is unique. </p>
+<p>A group G is abelian, or <b class="bfseries"><span style="color:#181870"> commutative</span></b>, if \(g h = h g\) for all \(g, h \in G\). </p>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="monoid">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.3</span>
+    <span class="definition_thmtitle">Monoid</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#monoid">#</a>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Monoid#doc" target="_blank" rel="noopener noreferrer">Monoid</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a set \(R\) with a law of composition, usually denoted multiplicatively, satisfying the following conditions: </p>
+<ol class="enumerate">
+  <li><p>\((a b) c = a (b c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>), </p>
+</li>
+  <li><p>There is an element \(1 \in R\) such that \(1 a = a 1 = a\) for all \(a\) in \(R\) (that is 1 is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="ring">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.4</span>
+    <span class="definition_thmtitle">Ring</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#ring">#</a>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Ring#doc" target="_blank" rel="noopener noreferrer">Ring</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a set \(R\) with two laws of composition, </p>
+<ul class="itemize">
+  <li><p>addition, denoted \(+\); </p>
+</li>
+  <li><p>multiplication, denoted by juxtaposition, or <span class="ttfamily">*</span> in Lean, </p>
+</li>
+</ul>
+<p>which satisfy the following conditions: </p>
+<ol class="enumerate">
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under addition; </p>
+</li>
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under multiplication; </p>
+</li>
+  <li><p>If \(a, b, c\) are elements of \(R\), we have </p>
+<div class="displaymath" id="a0000000018">
+  \[  a (b + c) = a b + a c, (a + b) c = a c + b c.  \]
+</div>
+<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over addition) </p>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:ring">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.5</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:ring">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>A ring containing at least two elements, in which every nonzero element a has a multiplicative inverse \(a^{-1}\) is called a <b class="bfseries"><span style="color:#181870"> division ring</span></b> (sometimes also called a "skew field"). A commutative division ring is called a <b class="bfseries"><span style="color:#181870"> field</span></b>. </p>
+
+  </div>
+</div>  </p>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <a href="cha-preliminaries.html" title="Preliminaries"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="cha-preliminaries.html" title="Preliminaries"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="cha-foundations.html" title="Foundations"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+</body>
+</html>
