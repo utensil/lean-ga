@@ -48,6 +48,49 @@
 <div id="statements">
 
     
+    <div class="dep-modal-container" id="characteristic_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="characteristic" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">1.1.6</span><span class="definition_thmtitle">Characteristic</span></div>
+    <div class="thm_thmcontent">
+<p>Let \(R\) be a ring with unit element 1 . The <b class="bfseries"><span style="color:#181870"> characteristic</span></b> of \(R\) is the smallest positive number \(n\) such that </p>
+<div class="displaymath" id="a0000000019">
+  \[  \underbrace{1+\ldots +1}_{n \text{ summands }}=0 \text{. }  \]
+</div>
+<p>If such a number does not exist, the characteristic is defined to be 0 . </p>
+</div>
+
+    <a class="latex_link" href="sec-basics.html#characteristic">LaTeX</a>
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=AddMonoidWithOne#doc">AddMonoidWithOne</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CharP#doc">CharP</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CharZero#doc">CharZero</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CharOne#doc">CharOne</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CharTwo#doc">CharTwo</a></li>
+        
+      </ul>
+  </div></div>
+    
+      </div>
+    </div>
+
+
+    
     <div class="dep-modal-container" id="def:clifford_algebra_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
@@ -217,7 +260,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	group	[color=blue,		label=group,		shape=box];	ring	[color=blue,		label=ring,		shape=box];	monoid	[color=blue,		label=monoid,		shape=box];	"def:clifford_algebra"	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];	"def:clifford_rel"	[color=green,		fillcolor="#b0eca3",		label=clifford_rel,		shape=box,		style=filled];	"def:clifford_rel" -> "def:clifford_algebra"	[style=dashed];}')
+    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	group	[color=blue,		label=group,		shape=box];	ring	[color=blue,		label=ring,		shape=box];	monoid	[color=blue,		label=monoid,		shape=box];	"def:clifford_algebra"	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];	"def:clifford_rel"	[color=green,		fillcolor="#b0eca3",		label=clifford_rel,		shape=box,		style=filled];	"def:clifford_rel" -> "def:clifford_algebra"	[style=dashed];	characteristic	[color=blue,		label=characteristic,		shape=box];}')
     .on("end", interactive);
 
 clickNode = function() {
