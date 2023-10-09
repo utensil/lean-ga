@@ -79,6 +79,23 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     \label{mk:ring}
     
     A ring containing at least two elements, in which every nonzero element a has a multiplicative inverse $a^{-1}$ is called a \vocab{division ring} (sometimes also called a "skew field").
-    A commutative division ring is called a \vocab{field}. 
+    
+    A commutative division ring is called a \vocab{field}.
 
+    In applications to Clifford algebras $R$ will be always assumed to be commutative.
+    
 \end{remark}
+
+\begin{definition}[Characteristic]
+    \label{characteristic}
+    \lean{AddMonoidWithOne, CharP, CharZero, CharOne, CharTwo}
+
+    Let $R$ be a ring with unit element 1 . The \vocab{characteristic} of $R$ is the smallest positive number $n$ such that
+
+    $$
+    \underbrace{1+\ldots+1}_{n \text { summands }}=0 \text {. }
+    $$
+    
+    If such a number does not exist, the characteristic is defined to be 0 .
+
+\end{definition}
