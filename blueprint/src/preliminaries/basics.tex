@@ -3,6 +3,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 
 \begin{definition}[Group]
     \label{group}
+    \leanok
     \lean{Group}
 
     A \vocab{group} is a non-empty set $G$ together with a law of composition, a mapping $(g, h) \to gh$ from $G \times G$ to $G$, which satisfies:
@@ -27,6 +28,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 
 \begin{definition}[Monoid]
     \label{monoid}
+    \leanok
     \lean{Monoid}
 
     A \vocab{monoid} is a set $R$ with a law of composition, usually denoted multiplicatively, 
@@ -43,6 +45,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 
 \begin{definition}[Ring]
     \label{ring}
+    \leanok
     \lean{Ring}
 
     A \vocab{ring} is a set $R$ with two laws of composition, 
@@ -88,7 +91,8 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 
 \begin{definition}[Characteristic]
     \label{characteristic}
-    \lean{AddMonoidWithOne, CharP, CharZero, CharOne, CharTwo}
+    \leanok
+    \lean{ringChar}
 
     Let $R$ be a ring with unit element 1 . The \vocab{characteristic} of $R$ is the smallest positive number $n$ such that
 
@@ -99,3 +103,26 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     If such a number does not exist, the characteristic is defined to be 0 .
 
 \end{definition}
+
+\begin{remark}
+    \label{mk:characteristic}
+
+    Equivalently, it can be defined to be $p$ in the following:
+
+    $$
+    \exists! p \in \mathbb{N}, \forall x \in \mathbb{N}, x = 0 \iff p \mid x
+    $$
+
+    where
+    
+    \begin{itemize}
+
+        \item $p \mid x$ is defined as $\exists y \in \mathbb{N}, x = p y$
+    
+        \item $x = 0$ asks that there exists a map $f : \mathbb{N} \to R$ such that $0 \in \mathbb{N} ↦ 0 \in R$.
+        
+    \end{itemize}
+
+    This is how the characteristic of $R$ is defined in Lean.
+
+\end{remark}
