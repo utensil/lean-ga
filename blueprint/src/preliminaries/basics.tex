@@ -1,0 +1,128 @@
+
+In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with modifications to match the counterparts in Lean.
+
+\begin{definition}[Group]
+    \label{group}
+    \leanok
+    \lean{Group}
+
+    A \vocab{group} is a non-empty set $G$ together with a law of composition, a mapping $(g, h) \to gh$ from $G \times G$ to $G$, which satisfies:
+
+    \begin{enumerate}
+    \item $(g h) j = g (h j)$ for all $g, h, j \in G$ (\vocab{associativity})
+    \item there exists $e$ in $G$ such that $e g = g e = g$ for all $g \in G$
+    \item for each $g \in G$ there exists $g^{-1} \in G$ such that $g g^{-1} = g^{-1} g = e$
+
+    \end{enumerate}
+
+\end{definition}
+
+\begin{remark}
+    \label{mk:group}
+    
+    It then follows that $e$, the \vocab{identity element}, is unique, and that for each $g \in G$ the \vocab{inverse} $g^{-1}$ is unique.
+
+    A group G is abelian, or \vocab{commutative}, if $g h = h g$ for all $g, h \in G$.
+
+\end{remark}
+
+\begin{definition}[Monoid]
+    \label{monoid}
+    \leanok
+    \lean{Monoid}
+
+    A \vocab{monoid} is a set $R$ with a law of composition, usually denoted multiplicatively, 
+    satisfying the following conditions:
+
+    \begin{enumerate}
+    \item $(a b) c = a (b c)$ for all $a, b, c \in R$ (\vocab{associativity}),
+
+    \item There is an element $1 \in R$ such that $1 a = a 1 = a$ for all $a$ in $R$ (that is 1 is the multiplicative identity (\vocab{neutral element}).
+
+    \end{enumerate}
+
+\end{definition}
+
+\begin{definition}[Ring]
+    \label{ring}
+    \leanok
+    \lean{Ring}
+
+    A \vocab{ring} is a set $R$ with two laws of composition, 
+    
+    \begin{itemize}
+        
+    \item addition, denoted $+$;
+    \item multiplication, denoted by juxtaposition, or \texttt{*} in Lean,
+    
+    \end{itemize}
+    
+    which satisfy the following conditions:
+
+    \begin{enumerate}
+    \item The elements of $R$ form a \vocab{commutative group} under addition;
+
+    \item The elements of $R$ form a \vocab{monoid} under multiplication;
+
+    \item If $a, b, c$ are elements of $R$, we have
+
+    $$
+    a (b + c) = a b + a c, (a + b) c = a c + b c.
+    $$
+
+    (left and right \vocab{distributivity} over addition)
+
+    \end{enumerate}
+
+
+
+\end{definition}
+
+\begin{remark}
+    \label{mk:ring}
+    
+    A ring containing at least two elements, in which every nonzero element a has a multiplicative inverse $a^{-1}$ is called a \vocab{division ring} (sometimes also called a "skew field").
+    
+    A commutative division ring is called a \vocab{field}.
+
+    In applications to Clifford algebras $R$ will be always assumed to be commutative.
+    
+\end{remark}
+
+\begin{definition}[Characteristic]
+    \label{characteristic}
+    \leanok
+    \lean{ringChar}
+
+    Let $R$ be a ring with unit element 1 . The \vocab{characteristic} of $R$ is the smallest positive number $n$ such that
+
+    $$
+    \underbrace{1+\ldots+1}_{n \text { summands }}=0 \text {. }
+    $$
+    
+    If such a number does not exist, the characteristic is defined to be 0 .
+
+\end{definition}
+
+\begin{remark}
+    \label{mk:characteristic}
+
+    Equivalently, it can be defined to be $p$ in the following:
+
+    $$
+    \exists! p \in \mathbb{N}, \forall x \in \mathbb{N}, x = 0 \iff p \mid x
+    $$
+
+    where
+    
+    \begin{itemize}
+
+        \item $p \mid x$ is defined as $\exists y \in \mathbb{N}, x = p y$
+    
+        \item $x = 0$ asks that there exists a map $f : \mathbb{N} \to R$ such that $0 \in \mathbb{N} ↦ 0 \in R$.
+        
+    \end{itemize}
+
+    This is how the characteristic of $R$ is defined in Lean.
+
+\end{remark}

@@ -1,0 +1,24 @@
+% This file is the entry point for generating the website by Plastex.
+\documentclass{article}
+
+\input{preamble}
+
+\usepackage[dep_graph, coverage, project=../../]{blueprint}
+% For testing \dochome work
+% \dochome{https://math.iisc.ac.in/~gadgil/proofs-and-programs-2023/doc/}
+
+% The rest of this file is identical to print.tex
+
+\input{macros}
+\input{meta}
+
+\begin{document}
+
+\input{content}
+
+\bibliographystyle{amsalpha}
+\bibliography{references}
+
+\end{document}
+
+% vim: ts=2 et sw=2 sts=2
