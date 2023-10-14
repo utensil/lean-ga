@@ -132,6 +132,7 @@
     </span>
     <span class="definition_thmlabel">1.1.1</span>
     <span class="definition_thmtitle">Group</span>
+    ✓
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#group">#</a>
     <button class="modal lean">L∃∀N</button>
@@ -190,6 +191,7 @@
     </span>
     <span class="definition_thmlabel">1.1.3</span>
     <span class="definition_thmtitle">Monoid</span>
+    ✓
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#monoid">#</a>
     <button class="modal lean">L∃∀N</button>
@@ -228,6 +230,7 @@
     </span>
     <span class="definition_thmlabel">1.1.4</span>
     <span class="definition_thmtitle">Ring</span>
+    ✓
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#ring">#</a>
     <button class="modal lean">L∃∀N</button>
@@ -298,6 +301,7 @@
     </span>
     <span class="definition_thmlabel">1.1.6</span>
     <span class="definition_thmtitle">Characteristic</span>
+    ✓
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#characteristic">#</a>
     <button class="modal lean">L∃∀N</button>
@@ -309,11 +313,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=AddMonoidWithOne#doc" target="_blank" rel="noopener noreferrer">AddMonoidWithOne</a></li>
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CharP#doc" target="_blank" rel="noopener noreferrer">CharP</a></li>
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CharZero#doc" target="_blank" rel="noopener noreferrer">CharZero</a></li>
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CharOne#doc" target="_blank" rel="noopener noreferrer">CharOne</a></li>
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CharTwo#doc" target="_blank" rel="noopener noreferrer">CharTwo</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=ringChar#doc" target="_blank" rel="noopener noreferrer">ringChar</a></li>
         </ul>
 
       </div>
@@ -328,6 +328,34 @@
   \[  \underbrace{1+\ldots +1}_{n \text{ summands }}=0 \text{. }  \]
 </div>
 <p>If such a number does not exist, the characteristic is defined to be 0 . </p>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:characteristic">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.7</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:characteristic">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>Equivalently, it can be defined to be \(p\) in the following: </p>
+<div class="displaymath" id="a0000000020">
+  \[  \exists ! p \in \mathbb {N}, \forall x \in \mathbb {N}, x = 0 \iff p \mid x  \]
+</div>
+<p>where </p>
+<ul class="itemize">
+  <li><p>\(p \mid x\) is defined as \(\exists y \in \mathbb {N}, x = p y\) </p>
+</li>
+  <li><p>\(x = 0\) asks that there exists a map \(f : \mathbb {N} \to R\) such that \(0 \in \mathbb {N} ↦ 0 \in R\). </p>
+</li>
+</ul>
+<p>This is how the characteristic of \(R\) is defined in Lean. </p>
 
   </div>
 </div>  </p>
