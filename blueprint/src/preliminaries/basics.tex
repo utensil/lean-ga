@@ -2,7 +2,7 @@
 In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with modifications to match the counterparts in Lean.
 
 \begin{definition}[Group]
-    \label{group}
+    \label{Group}
     \leanok
     \lean{Group}
 
@@ -18,7 +18,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 \end{definition}
 
 \begin{remark}
-    \label{mk:group}
+    \label{mk:Group}
     
     It then follows that $e$, the \vocab{identity element}, is unique, and that for each $g \in G$ the \vocab{inverse} $g^{-1}$ is unique.
 
@@ -27,7 +27,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 \end{remark}
 
 \begin{definition}[Monoid]
-    \label{monoid}
+    \label{Monoid}
     \leanok
     \lean{Monoid}
 
@@ -44,10 +44,10 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 \end{definition}
 
 \begin{definition}[Ring]
-    \label{ring}
+    \label{Ring}
     \leanok
     \lean{Ring}
-    \uses{group, monoid}
+    \uses{Group, Monoid}
 
     A \vocab{ring} is a set $R$ with two laws of composition, 
     
@@ -78,10 +78,10 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 \end{definition}
 
 \begin{definition}[Division ring]
-    \label{division_ring}
+    \label{DivisionRing}
     \leanok
     \lean{DivisionRing}
-    \uses{ring}
+    \uses{Ring}
 
     A ring containing at least two elements, in which
     every nonzero element $a$ has a multiplicative inverse $a^{-1}$ is called a \vocab{division ring} 
@@ -90,27 +90,27 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 \end{definition}
 
 \begin{definition}[Field]
-    \label{field}
+    \label{Field}
     \leanok
     \lean{Field}
-    \uses{ring}
+    \uses{Ring}
 
     A commutative division ring is called a \vocab{field}.
 
 \end{definition}
 
 \begin{remark}
-    \label{mk:commutative_ring}
+    \label{mk:CommRing}
 
     In applications to Clifford algebras $R$ will be always assumed to be \vocab{commutative}.
     
 \end{remark}
 
 \begin{definition}[Characteristic]
-    \label{characteristic}
+    \label{ringChar}
     \leanok
     \lean{ringChar}
-    \uses{ring}
+    \uses{Ring}
 
     Let $R$ be a ring with unit element 1 . The \vocab{characteristic} of $R$ is the smallest positive number $n$ such that
 
@@ -147,10 +147,10 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 \end{remark}
 
 \begin{definition}[Module]
-    \label{module}
+    \label{Module}
     \leanok
     \lean{Module}
-    \uses{group, ring}
+    \uses{Group, Ring}
 
     Let $R$ be a commutative ring. A \vocab{module} over $R$ (in short $R$-module) is a set $M$ such that
 
@@ -170,17 +170,17 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 \end{definition}
 
 \begin{definition}[Vector space]
-    \label{vector_space}
+    \label{VectorSpace}
     \leanok
     \lean{Module}
-    \uses{module}
+    \uses{Module, DivisionRing}
 
     If $R$ is a \vocab{division ring}, then a module $M$ over $R$ is called a \vocab{vector space}.
 
 \end{definition}
 
 \begin{remark}
-    \label{mk:vector_space}
+    \label{mk:VectorSpace}
 
     In Lean 4, for generality, Mathlib uses \vocab{Module} throughout for vector spaces,
     particularly, for a vector space $V$, it's usually declared as
@@ -192,3 +192,61 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     for definitions and theorems about it, and most of them can be found under \texttt{Mathlib.LinearAlgebra} .
     
 \end{remark}
+
+\begin{definition}[Submodule]
+    \label{Submodule}
+    \leanok
+    \lean{Submodule}
+    \uses{Module}
+
+    A \vocab{submodule} $N$ of $M$ is a module $N$ such that every element of $N$ is also an element of $M$.
+
+\end{definition}
+
+\begin{remark}
+    \label{mk:Submodule}
+
+    If $M$ is a vector space then $N$ is called a \vocab{subspace}.
+    
+\end{remark}
+
+\begin{definition}[Algebra]
+    \label{Algebra}
+    \leanok
+    \lean{Algebra}
+    \uses{Module, Ring}
+
+    An \vocab{algebra} $A$ over $R$ is a module over $R$ with a multiplication which makes $A$ a ring and satisfying
+
+    $$
+    \alpha(x y)=(\alpha x) y=x(\alpha y),(x, y \in A, \alpha \in R) .
+    $$
+
+\end{definition}
+
+\begin{remark}
+    \label{mk:Algebra}
+
+    What's simply called algebra is actually associative algebra with identity, a.k.a. \vocab{associative unital algebra}. See
+    \href{https://ncatlab.org/nlab/show/red%20herring%20principle}{the red herring principle}
+    for more about such phenomenon for naming, particularly the example of (possibly) \vocab{nonassociative algebra}.
+    
+\end{remark}
+
+\begin{definition}[Tensor algebra]
+    \label{TensorAlgebra}
+    \leanok
+    \lean{TensorAlgebra}
+    \uses{Algebra, Submodule}
+
+    Let $M$ be a module over $R$. An algebra $T$ is called a tensor algebra over $M$ (or "of $M$ ")
+    if it satisfies the following universal property
+
+    \begin{enumerate}
+    \setcounter{enumi}{1}
+    \item $T$ is an algebra containing $M$ as a \vocab{submodule}, and it is \vocab{generated by} $M$,
+    \item Every linear mapping $\lambda$ of $M$ into an algebra $A$ over $R$, can be extended to 
+    a \vocab{homomorphism} $\theta$ of $T$ into $A$.
+    \end{enumerate}
+
+\end{definition}
