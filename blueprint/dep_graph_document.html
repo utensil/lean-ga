@@ -48,51 +48,50 @@
 <div id="statements">
 
     
-    <div class="dep-modal-container" id="characteristic_modal">
+    <div class="dep-modal-container" id="Algebra_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="characteristic" style="display: none">
+  <div class="thm" id="Algebra" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.8</span><span class="definition_thmtitle">Characteristic</span></div>
+      <span class="definition_thmlabel">1.1.15</span><span class="definition_thmtitle">Algebra</span></div>
     <div class="thm_thmcontent">
-<p>Let \(R\) be a ring with unit element 1 . The <b class="bfseries"><span style="color:#181870"> characteristic</span></b> of \(R\) is the smallest positive number \(n\) such that </p>
-<div class="displaymath" id="a0000000019">
-  \[  \underbrace{1+\ldots +1}_{n \text{ summands }}=0 \text{. }  \]
+<p>An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a module over \(R\) with a multiplication which makes \(A\) a ring and satisfying </p>
+<div class="displaymath" id="a0000000021">
+  \[  \alpha (x y)=(\alpha x) y=x(\alpha y),(x, y \in A, \alpha \in R) .  \]
 </div>
-<p>If such a number does not exist, the characteristic is defined to be 0 . </p>
 </div>
 
-    <a class="latex_link" href="sec-basics.html#characteristic">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=ringChar#doc">Lean</a></div>
+    <a class="latex_link" href="sec-basics.html#Algebra">LaTeX</a>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Algebra#doc">Lean</a></div>
     
       </div>
     </div>
 
 
     
-    <div class="dep-modal-container" id="clifford_algebra_modal">
+    <div class="dep-modal-container" id="CliffordAlgebra_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="clifford_algebra" style="display: none">
+  <div class="thm" id="CliffordAlgebra" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
       </span>
       <span class="definition_thmlabel">2.1.2</span><span class="definition_thmtitle">Clifford algebra</span></div>
     <div class="thm_thmcontent">
-<p>A <b class="bfseries"><span style="color:#181870"> Clifford algebra</span></b> over \(M\), denoted \(\mathop{\mathcal{C}\ell }(M)\), is the quotient of the tensor algebra \(T(M)\) by the equivalence relation <a href="sec-def.html#clifford_rel">2.1.1</a>. </p>
+<p>A <b class="bfseries"><span style="color:#181870"> Clifford algebra</span></b> over \(M\), denoted \(\mathop{\mathcal{C}\ell }(M)\), is the quotient of the <b class="bfseries"><span style="color:#181870"> tensor algebra</span></b> \(T(M)\) by <b class="bfseries"><span style="color:#181870"> Clifford relation</span></b> ??. </p>
 </div>
 
-    <a class="latex_link" href="sec-def.html#clifford_algebra">LaTeX</a>
+    <a class="latex_link" href="sec-def.html#CliffordAlgebra">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CliffordAlgebra#doc">Lean</a></div>
     
       </div>
@@ -100,13 +99,13 @@
 
 
     
-    <div class="dep-modal-container" id="clifford_rel_modal">
+    <div class="dep-modal-container" id="CliffordAlgebra_Rel_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="clifford_rel" style="display: none">
+  <div class="thm" id="CliffordAlgebra_Rel" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -116,7 +115,7 @@
 <p>\(\forall m \in M, \iota (m)^2 \sim \iota _a(Q(m))\) </p>
 </div>
 
-    <a class="latex_link" href="sec-def.html#clifford_rel">LaTeX</a>
+    <a class="latex_link" href="sec-def.html#CliffordAlgebra_Rel">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CliffordAlgebra.Rel#doc">Lean</a></div>
     
       </div>
@@ -124,13 +123,13 @@
 
 
     
-    <div class="dep-modal-container" id="division_ring_modal">
+    <div class="dep-modal-container" id="DivisionRing_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="division_ring" style="display: none">
+  <div class="thm" id="DivisionRing" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -140,7 +139,7 @@
 <p>A ring containing at least two elements, in which every nonzero element \(a\) has a multiplicative inverse \(a^{-1}\) is called a <b class="bfseries"><span style="color:#181870"> division ring</span></b> (sometimes also called a "skew field"). </p>
 </div>
 
-    <a class="latex_link" href="sec-basics.html#division_ring">LaTeX</a>
+    <a class="latex_link" href="sec-basics.html#DivisionRing">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=DivisionRing#doc">Lean</a></div>
     
       </div>
@@ -148,13 +147,13 @@
 
 
     
-    <div class="dep-modal-container" id="field_modal">
+    <div class="dep-modal-container" id="Field_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="field" style="display: none">
+  <div class="thm" id="Field" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -164,7 +163,7 @@
 <p>A commutative division ring is called a <b class="bfseries"><span style="color:#181870"> field</span></b>. </p>
 </div>
 
-    <a class="latex_link" href="sec-basics.html#field">LaTeX</a>
+    <a class="latex_link" href="sec-basics.html#Field">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Field#doc">Lean</a></div>
     
       </div>
@@ -172,13 +171,13 @@
 
 
     
-    <div class="dep-modal-container" id="group_modal">
+    <div class="dep-modal-container" id="Group_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="group" style="display: none">
+  <div class="thm" id="Group" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -196,7 +195,7 @@
 </ol>
 </div>
 
-    <a class="latex_link" href="sec-basics.html#group">LaTeX</a>
+    <a class="latex_link" href="sec-basics.html#Group">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Group#doc">Lean</a></div>
     
       </div>
@@ -204,13 +203,13 @@
 
 
     
-    <div class="dep-modal-container" id="module_modal">
+    <div class="dep-modal-container" id="Module_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="module" style="display: none">
+  <div class="thm" id="Module" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -236,7 +235,7 @@
 </ol>
 </div>
 
-    <a class="latex_link" href="sec-basics.html#module">LaTeX</a>
+    <a class="latex_link" href="sec-basics.html#Module">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Module#doc">Lean</a></div>
     
       </div>
@@ -244,13 +243,13 @@
 
 
     
-    <div class="dep-modal-container" id="monoid_modal">
+    <div class="dep-modal-container" id="Monoid_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="monoid" style="display: none">
+  <div class="thm" id="Monoid" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -266,7 +265,7 @@
 </ol>
 </div>
 
-    <a class="latex_link" href="sec-basics.html#monoid">LaTeX</a>
+    <a class="latex_link" href="sec-basics.html#Monoid">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Monoid#doc">Lean</a></div>
     
       </div>
@@ -274,13 +273,13 @@
 
 
     
-    <div class="dep-modal-container" id="ring_modal">
+    <div class="dep-modal-container" id="Ring_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="ring" style="display: none">
+  <div class="thm" id="Ring" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -309,7 +308,7 @@
 </ol>
 </div>
 
-    <a class="latex_link" href="sec-basics.html#ring">LaTeX</a>
+    <a class="latex_link" href="sec-basics.html#Ring">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Ring#doc">Lean</a></div>
     
       </div>
@@ -317,13 +316,95 @@
 
 
     
-    <div class="dep-modal-container" id="vector_space_modal">
+    <div class="dep-modal-container" id="ringChar_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
 <svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         
-  <div class="thm" id="vector_space" style="display: none">
+  <div class="thm" id="ringChar" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">1.1.8</span><span class="definition_thmtitle">Characteristic</span></div>
+    <div class="thm_thmcontent">
+<p>Let \(R\) be a ring with unit element 1 . The <b class="bfseries"><span style="color:#181870"> characteristic</span></b> of \(R\) is the smallest positive number \(n\) such that </p>
+<div class="displaymath" id="a0000000019">
+  \[  \underbrace{1+\ldots +1}_{n \text{ summands }}=0 \text{. }  \]
+</div>
+<p>If such a number does not exist, the characteristic is defined to be 0 . </p>
+</div>
+
+    <a class="latex_link" href="sec-basics.html#ringChar">LaTeX</a>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=ringChar#doc">Lean</a></div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="Submodule_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="Submodule" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">1.1.13</span><span class="definition_thmtitle">Submodule</span></div>
+    <div class="thm_thmcontent">
+<p>A <b class="bfseries"><span style="color:#181870"> submodule</span></b> \(N\) of \(M\) is a module \(N\) such that every element of \(N\) is also an element of \(M\). </p>
+</div>
+
+    <a class="latex_link" href="sec-basics.html#Submodule">LaTeX</a>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Submodule#doc">Lean</a></div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="TensorAlgebra_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="TensorAlgebra" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">1.1.17</span><span class="definition_thmtitle">Tensor algebra</span></div>
+    <div class="thm_thmcontent">
+<p>Let \(M\) be a module over \(R\). An algebra \(T\) is called a tensor algebra over \(M\) (or "of \(M\) ") if it satisfies the following universal property </p>
+<ol class="enumerate">
+  <li><p>\(T\) is an algebra containing \(M\) as a <b class="bfseries"><span style="color:#181870"> submodule</span></b>, and it is <b class="bfseries"><span style="color:#181870"> generated by</span></b> \(M\), </p>
+</li>
+  <li><p>Every linear mapping \(\lambda \) of \(M\) into an algebra \(A\) over \(R\), can be extended to a <b class="bfseries"><span style="color:#181870"> homomorphism</span></b> \(\theta \) of \(T\) into \(A\). </p>
+</li>
+</ol>
+</div>
+
+    <a class="latex_link" href="sec-basics.html#TensorAlgebra">LaTeX</a>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=TensorAlgebra#doc">Lean</a></div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="VectorSpace_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="VectorSpace" style="display: none">
     <div class="thm_thmheading">
       <span class="definition_thmcaption">
       Definition
@@ -333,7 +414,7 @@
 <p>If \(R\) is a <b class="bfseries"><span style="color:#181870"> division ring</span></b>, then a module \(M\) over \(R\) is called a <b class="bfseries"><span style="color:#181870"> vector space</span></b>. </p>
 </div>
 
-    <a class="latex_link" href="sec-basics.html#vector_space">LaTeX</a>
+    <a class="latex_link" href="sec-basics.html#VectorSpace">LaTeX</a>
   <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Module#doc">Lean</a></div>
     
       </div>
@@ -357,7 +438,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	group	[color=green,		fillcolor="#b0eca3",		label=group,		shape=box,		style=filled];	ring	[color=green,		fillcolor="#b0eca3",		label=ring,		shape=box,		style=filled];	group -> ring	[style=dashed];	module	[color=green,		fillcolor="#b0eca3",		label=module,		shape=box,		style=filled];	group -> module	[style=dashed];	monoid	[color=green,		fillcolor="#b0eca3",		label=monoid,		shape=box,		style=filled];	monoid -> ring	[style=dashed];	field	[color=green,		fillcolor="#b0eca3",		label=field,		shape=box,		style=filled];	division_ring	[color=green,		fillcolor="#b0eca3",		label=division_ring,		shape=box,		style=filled];	ring -> field	[style=dashed];	ring -> division_ring	[style=dashed];	characteristic	[color=green,		fillcolor="#b0eca3",		label=characteristic,		shape=box,		style=filled];	ring -> characteristic	[style=dashed];	ring -> module	[style=dashed];	clifford_algebra	[color=green,		fillcolor="#b0eca3",		label=clifford_algebra,		shape=box,		style=filled];	vector_space	[color=green,		fillcolor="#b0eca3",		label=vector_space,		shape=box,		style=filled];	module -> vector_space	[style=dashed];	clifford_rel	[color=green,		fillcolor="#b0eca3",		label=clifford_rel,		shape=box,		style=filled];	module -> clifford_rel	[style=dashed];	clifford_rel -> clifford_algebra	[style=dashed];}')
+    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Group	[color=green,		fillcolor="#b0eca3",		label=Group,		shape=box,		style=filled];	Ring	[color=green,		fillcolor="#b0eca3",		label=Ring,		shape=box,		style=filled];	Group -> Ring	[style=dashed];	Module	[color=green,		fillcolor="#b0eca3",		label=Module,		shape=box,		style=filled];	Group -> Module	[style=dashed];	Ring -> Module	[style=dashed];	Field	[color=green,		fillcolor="#b0eca3",		label=Field,		shape=box,		style=filled];	Ring -> Field	[style=dashed];	DivisionRing	[color=green,		fillcolor="#b0eca3",		label=DivisionRing,		shape=box,		style=filled];	Ring -> DivisionRing	[style=dashed];	ringChar	[color=green,		fillcolor="#b0eca3",		label=ringChar,		shape=box,		style=filled];	Ring -> ringChar	[style=dashed];	Algebra	[color=green,		fillcolor="#b0eca3",		label=Algebra,		shape=box,		style=filled];	Ring -> Algebra	[style=dashed];	VectorSpace	[color=green,		fillcolor="#b0eca3",		label=VectorSpace,		shape=box,		style=filled];	Module -> VectorSpace	[style=dashed];	Submodule	[color=green,		fillcolor="#b0eca3",		label=Submodule,		shape=box,		style=filled];	Module -> Submodule	[style=dashed];	Module -> Algebra	[style=dashed];	CliffordAlgebra_Rel	[color=green,		fillcolor="#b0eca3",		label=CliffordAlgebra_Rel,		shape=box,		style=filled];	CliffordAlgebra	[color=green,		fillcolor="#b0eca3",		label=CliffordAlgebra,		shape=box,		style=filled];	CliffordAlgebra_Rel -> CliffordAlgebra	[style=dashed];	Monoid	[color=green,		fillcolor="#b0eca3",		label=Monoid,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];	DivisionRing -> VectorSpace	[style=dashed];	TensorAlgebra	[color=green,		fillcolor="#b0eca3",		label=TensorAlgebra,		shape=box,		style=filled];	Submodule -> TensorAlgebra	[style=dashed];	Algebra -> TensorAlgebra	[style=dashed];	TensorAlgebra -> CliffordAlgebra	[style=dashed];}')
     .on("end", interactive);
 
 clickNode = function() {
