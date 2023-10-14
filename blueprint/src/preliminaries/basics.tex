@@ -74,18 +74,32 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 
     \end{enumerate}
 
+\end{definition}
 
+\begin{definition}[Division ring]
+    \label{division_ring}
+    \leanok
+    \lean{DivisionRing}
+
+    A ring containing at least two elements, in which
+    every nonzero element $a$ has a multiplicative inverse $a^{-1}$ is called a \vocab{division ring} 
+    (sometimes also called a "skew field").
+
+\end{definition}
+
+\begin{definition}[Field]
+    \label{field}
+    \leanok
+    \lean{Field}
+
+    A commutative division ring is called a \vocab{field}.
 
 \end{definition}
 
 \begin{remark}
-    \label{mk:ring}
-    
-    A ring containing at least two elements, in which every nonzero element a has a multiplicative inverse $a^{-1}$ is called a \vocab{division ring} (sometimes also called a "skew field").
-    
-    A commutative division ring is called a \vocab{field}.
+    \label{mk:commutative_ring}
 
-    In applications to Clifford algebras $R$ will be always assumed to be commutative.
+    In applications to Clifford algebras $R$ will be always assumed to be \vocab{commutative}.
     
 \end{remark}
 
@@ -107,10 +121,10 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 \begin{remark}
     \label{mk:characteristic}
 
-    Equivalently, it can be defined to be $p$ in the following:
+    Equivalently, it can be defined to be the unique $p \in \mathbb{N}$ satisfying:
 
     $$
-    \exists! p \in \mathbb{N}, \forall x \in \mathbb{N}, x = 0 \iff p \mid x
+    \forall x \in \mathbb{N}, x = 0 \iff p \mid x
     $$
 
     where
@@ -119,10 +133,56 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
 
         \item $p \mid x$ is defined as $\exists y \in \mathbb{N}, x = p y$
     
+        % TODO: confirm to what extent it demands the map
         \item $x = 0$ asks that there exists a map $f : \mathbb{N} \to R$ such that $0 \in \mathbb{N} ↦ 0 \in R$.
         
     \end{itemize}
 
     This is how the characteristic of $R$ is defined in Lean.
 
+\end{remark}
+
+\begin{definition}[Module]
+    \label{module}
+    \leanok
+    \lean{Module}
+
+    Let $R$ be a commutative ring. A \vocab{module} over $R$ (in short $R$-module) is a set $M$ such that
+
+    \begin{enumerate}
+      \item M has a structure of an additive group,
+    
+      \item For every $\alpha \in R$, $a \in M$ an element $\alpha a \in M$ called scalar multiple is defined, and we have
+      
+        \begin{enumerate}[i]
+            \item $\alpha(x+y)=\alpha x+\alpha y$,
+            \item $(\alpha+\beta) x=\alpha x+\beta x$,
+            \item $\alpha(\beta x)=(\alpha \beta) x$,
+            \item $1 \cdot x=x$.
+        \end{enumerate}
+    \end{enumerate}
+
+\end{definition}
+
+\begin{definition}[Vector space]
+    \label{vector_space}
+    \leanok
+    \lean{Module}
+
+    If $R$ is a \vocab{division ring}, then a module $M$ over $R$ is called a \vocab{vector space}.
+
+\end{definition}
+
+\begin{remark}
+    \label{mk:vector_space}
+
+    In Lean 4, for generality, Mathlib uses \vocab{Module} throughout for vector spaces,
+    particularly, for a vector space $V$, it's usually declared as
+
+    \begin{lstlisting}
+        variable [DivisionRing K] [AddCommGroup V] [Module K V]
+    \end{lstlisting}
+
+    for definitions and theorems about it, and most of them can be found under \texttt{Mathlib.LinearAlgebra} .
+    
 \end{remark}
