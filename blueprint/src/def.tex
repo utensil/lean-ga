@@ -32,9 +32,10 @@ Let $\iota : M \lmap{R} T(M)$ be the canonical $R$-linear map for the tensor alg
 Let $\iota_a : R \amap{R} T(M)$ be the canonical map from $R$ to $T(M)$, as a ring homomorphism.
 
 \begin{definition}[Clifford relation]
-  \label{def:clifford_rel}
+  \label{clifford_rel}
   \lean{CliffordAlgebra.Rel}
   \leanok
+  \uses{module}
 
   $\forall m \in M, \iota(m)^2 \sim \iota_a(Q(m))$
 \end{definition}
@@ -42,14 +43,14 @@ Let $\iota_a : R \amap{R} T(M)$ be the canonical map from $R$ to $T(M)$, as a ri
 We say that $\iota$ \vocab{is Clifford} if this relation holds.
 
 \begin{definition}[Clifford algebra]
-    \label{def:clifford_algebra}
+    \label{clifford_algebra}
     \lean{CliffordAlgebra}
     \leanok
-    \uses{def:clifford_rel}
+    \uses{clifford_rel}
 
     A \vocab{Clifford algebra} over $M$, denoted $\Cl (M)$, is
     the quotient of the tensor algebra $T(M)$
-    by the equivalence relation \ref{def:clifford_rel}.
+    by the equivalence relation \ref{clifford_rel}.
 \end{definition}
 
 \begin{remark}

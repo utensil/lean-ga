@@ -47,6 +47,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     \label{ring}
     \leanok
     \lean{Ring}
+    \uses{group, monoid}
 
     A \vocab{ring} is a set $R$ with two laws of composition, 
     
@@ -80,6 +81,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     \label{division_ring}
     \leanok
     \lean{DivisionRing}
+    \uses{ring}
 
     A ring containing at least two elements, in which
     every nonzero element $a$ has a multiplicative inverse $a^{-1}$ is called a \vocab{division ring} 
@@ -91,6 +93,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     \label{field}
     \leanok
     \lean{Field}
+    \uses{ring}
 
     A commutative division ring is called a \vocab{field}.
 
@@ -107,6 +110,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     \label{characteristic}
     \leanok
     \lean{ringChar}
+    \uses{ring}
 
     Let $R$ be a ring with unit element 1 . The \vocab{characteristic} of $R$ is the smallest positive number $n$ such that
 
@@ -146,6 +150,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     \label{module}
     \leanok
     \lean{Module}
+    \uses{group, ring}
 
     Let $R$ be a commutative ring. A \vocab{module} over $R$ (in short $R$-module) is a set $M$ such that
 
@@ -168,6 +173,7 @@ In this section, we follow \cite{jadczyk2019notes, garling2011clifford}, with mo
     \label{vector_space}
     \leanok
     \lean{Module}
+    \uses{module}
 
     If $R$ is a \vocab{division ring}, then a module $M$ over $R$ is called a \vocab{vector space}.
 
