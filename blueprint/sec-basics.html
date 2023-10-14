@@ -275,22 +275,86 @@
 
   </div>
 </div> </p>
-<p><div class="remark_thmwrapper" id="mk:ring">
+<p><div class="definition_thmwrapper" id="division_ring">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.5</span>
+    <span class="definition_thmtitle">Division ring</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#division_ring">#</a>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=DivisionRing#doc" target="_blank" rel="noopener noreferrer">DivisionRing</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>A ring containing at least two elements, in which every nonzero element \(a\) has a multiplicative inverse \(a^{-1}\) is called a <b class="bfseries"><span style="color:#181870"> division ring</span></b> (sometimes also called a "skew field"). </p>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="field">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.6</span>
+    <span class="definition_thmtitle">Field</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#field">#</a>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Field#doc" target="_blank" rel="noopener noreferrer">Field</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>A commutative division ring is called a <b class="bfseries"><span style="color:#181870"> field</span></b>. </p>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:commutative_ring">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.5</span>
+    <span class="remark_thmlabel">1.1.7</span>
     <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:ring">#</a>
+    <a class="icon proof" href="sec-basics.html#mk:commutative_ring">#</a>
 
   </div>
   </div>
   <div class="remark_thmcontent">
   
-<p>A ring containing at least two elements, in which every nonzero element a has a multiplicative inverse \(a^{-1}\) is called a <b class="bfseries"><span style="color:#181870"> division ring</span></b> (sometimes also called a "skew field"). </p>
-<p>A commutative division ring is called a <b class="bfseries"><span style="color:#181870"> field</span></b>. </p>
-<p>In applications to Clifford algebras \(R\) will be always assumed to be commutative. </p>
+<p>In applications to Clifford algebras \(R\) will be always assumed to be <b class="bfseries"><span style="color:#181870"> commutative</span></b>. </p>
 
   </div>
 </div> </p>
@@ -299,7 +363,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.6</span>
+    <span class="definition_thmlabel">1.1.8</span>
     <span class="definition_thmtitle">Characteristic</span>
     ✓
     <div class="thm_icons">
@@ -336,7 +400,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.7</span>
+    <span class="remark_thmlabel">1.1.9</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:characteristic">#</a>
 
@@ -344,9 +408,9 @@
   </div>
   <div class="remark_thmcontent">
   
-<p>Equivalently, it can be defined to be \(p\) in the following: </p>
+<p>Equivalently, it can be defined to be the unique \(p \in \mathbb {N}\) satisfying: </p>
 <div class="displaymath" id="a0000000020">
-  \[  \exists ! p \in \mathbb {N}, \forall x \in \mathbb {N}, x = 0 \iff p \mid x  \]
+  \[  \forall x \in \mathbb {N}, x = 0 \iff p \mid x  \]
 </div>
 <p>where </p>
 <ul class="itemize">
@@ -356,6 +420,108 @@
 </li>
 </ul>
 <p>This is how the characteristic of \(R\) is defined in Lean. </p>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="module">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.10</span>
+    <span class="definition_thmtitle">Module</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#module">#</a>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Module#doc" target="_blank" rel="noopener noreferrer">Module</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>Let \(R\) be a commutative ring. A <b class="bfseries"><span style="color:#181870"> module</span></b> over \(R\) (in short \(R\)-module) is a set \(M\) such that </p>
+<ol class="enumerate">
+  <li><p>M has a structure of an additive group, </p>
+</li>
+  <li><p>For every \(\alpha \in R\), \(a \in M\) an element \(\alpha a \in M\) called scalar multiple is defined, and we have </p>
+<ol class="enumerate">
+  <li><p>\(\alpha (x+y)=\alpha x+\alpha y\), </p>
+</li>
+  <li><p>\((\alpha +\beta ) x=\alpha x+\beta x\), </p>
+</li>
+  <li><p>\(\alpha (\beta x)=(\alpha \beta ) x\), </p>
+</li>
+  <li><p>\(1 \cdot x=x\). </p>
+</li>
+</ol>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="vector_space">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.11</span>
+    <span class="definition_thmtitle">Vector space</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#vector_space">#</a>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Module#doc" target="_blank" rel="noopener noreferrer">Module</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>If \(R\) is a <b class="bfseries"><span style="color:#181870"> division ring</span></b>, then a module \(M\) over \(R\) is called a <b class="bfseries"><span style="color:#181870"> vector space</span></b>. </p>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:vector_space">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.12</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:vector_space">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>In Lean 4, for generality, Mathlib uses <b class="bfseries"><span style="color:#181870"> Module</span></b> throughout for vector spaces, particularly, for a vector space \(V\), it’s usually declared as </p>
+<code class="plain_listing">variable [DivisionRing K] [AddCommGroup V] [Module K V]</code>
+
+<p>for definitions and theorems about it, and most of them can be found under <span class="ttfamily">Mathlib.LinearAlgebra</span> . </p>
 
   </div>
 </div>  </p>
