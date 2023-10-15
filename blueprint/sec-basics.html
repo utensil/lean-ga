@@ -345,60 +345,12 @@
 
   </div>
 </div> </p>
-<p><div class="definition_thmwrapper" id="Field">
-  <div class="definition_thmheading">
-    <span class="definition_thmcaption">
-    Definition
-    </span>
-    <span class="definition_thmlabel">1.1.6</span>
-    <span class="definition_thmtitle">Field</span>
-    ✓
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#Field">#</a>
-    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
-</button>
-    <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Uses</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-                <ul class="uses">
-          <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
-        </ul>
-
-      </div>
-    </div>
-    <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-                <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Field#doc" target="_blank" rel="noopener noreferrer">Field</a></li>
-        </ul>
-
-      </div>
-    </div>
-
-  </div>
-  </div>
-  <div class="definition_thmcontent">
-  
-<p>A commutative division ring is called a <b class="bfseries"><span style="color:#181870"> field</span></b>. </p>
-
-  </div>
-</div> </p>
 <p><div class="remark_thmwrapper" id="mk:CommRing">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.7</span>
+    <span class="remark_thmlabel">1.1.6</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:CommRing">#</a>
 
@@ -410,92 +362,12 @@
 
   </div>
 </div> </p>
-<p><div class="definition_thmwrapper" id="ringChar">
-  <div class="definition_thmheading">
-    <span class="definition_thmcaption">
-    Definition
-    </span>
-    <span class="definition_thmlabel">1.1.8</span>
-    <span class="definition_thmtitle">Characteristic</span>
-    ✓
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#ringChar">#</a>
-    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
-</button>
-    <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Uses</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-                <ul class="uses">
-          <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
-        </ul>
-
-      </div>
-    </div>
-    <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-                <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=ringChar#doc" target="_blank" rel="noopener noreferrer">ringChar</a></li>
-        </ul>
-
-      </div>
-    </div>
-
-  </div>
-  </div>
-  <div class="definition_thmcontent">
-  
-<p>Let \(R\) be a ring with unit element 1 . The <b class="bfseries"><span style="color:#181870"> characteristic</span></b> of \(R\) is the smallest positive number \(n\) such that </p>
-<div class="displaymath" id="a0000000019">
-  \[  \underbrace{1+\ldots +1}_{n \text{ summands }}=0 \text{. }  \]
-</div>
-<p>If such a number does not exist, the characteristic is defined to be 0 . </p>
-
-  </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:characteristic">
-  <div class="remark_thmheading">
-    <span class="remark_thmcaption">
-    Remark
-    </span>
-    <span class="remark_thmlabel">1.1.9</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:characteristic">#</a>
-
-  </div>
-  </div>
-  <div class="remark_thmcontent">
-  
-<p>Equivalently, it can be defined to be the unique \(p \in \mathbb {N}\) satisfying: </p>
-<div class="displaymath" id="a0000000020">
-  \[  \forall x \in \mathbb {N}, x = 0 \iff p \mid x  \]
-</div>
-<p>where </p>
-<ul class="itemize">
-  <li><p>\(p \mid x\) is defined as \(\exists y \in \mathbb {N}, x = p y\) </p>
-</li>
-  <li><p>\(x = 0\) asks that there exists a map \(f : \mathbb {N} \to R\) such that \(0 \in \mathbb {N} ↦ 0 \in R\). </p>
-</li>
-</ul>
-<p>This is how the characteristic of \(R\) is defined in Lean. </p>
-
-  </div>
-</div> </p>
 <p><div class="definition_thmwrapper" id="Module">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.10</span>
+    <span class="definition_thmlabel">1.1.7</span>
     <span class="definition_thmtitle">Module</span>
     ✓
     <div class="thm_icons">
@@ -560,7 +432,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.11</span>
+    <span class="definition_thmlabel">1.1.8</span>
     <span class="definition_thmtitle">Vector space</span>
     ✓
     <div class="thm_icons">
@@ -575,7 +447,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.10</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
           <li><a href="sec-basics.html#DivisionRing">Definition 1.1.5</a></li>
         </ul>
 
@@ -609,7 +481,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.12</span>
+    <span class="remark_thmlabel">1.1.9</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:VectorSpace">#</a>
 
@@ -624,60 +496,12 @@
 
   </div>
 </div> </p>
-<p><div class="definition_thmwrapper" id="Submodule">
-  <div class="definition_thmheading">
-    <span class="definition_thmcaption">
-    Definition
-    </span>
-    <span class="definition_thmlabel">1.1.13</span>
-    <span class="definition_thmtitle">Submodule</span>
-    ✓
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#Submodule">#</a>
-    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
-</button>
-    <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Uses</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-                <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.10</a></li>
-        </ul>
-
-      </div>
-    </div>
-    <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-                <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Submodule#doc" target="_blank" rel="noopener noreferrer">Submodule</a></li>
-        </ul>
-
-      </div>
-    </div>
-
-  </div>
-  </div>
-  <div class="definition_thmcontent">
-  
-<p>A <b class="bfseries"><span style="color:#181870"> submodule</span></b> \(N\) of \(M\) is a module \(N\) such that every element of \(N\) is also an element of \(M\). </p>
-
-  </div>
-</div> </p>
 <p><div class="remark_thmwrapper" id="mk:Submodule">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.14</span>
+    <span class="remark_thmlabel">1.1.10</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:Submodule">#</a>
 
@@ -685,6 +509,7 @@
   </div>
   <div class="remark_thmcontent">
   
+<p>A <b class="bfseries"><span style="color:#181870"> submodule</span></b> \(N\) of \(M\) is a module \(N\) such that every element of \(N\) is also an element of \(M\). </p>
 <p>If \(M\) is a vector space then \(N\) is called a <b class="bfseries"><span style="color:#181870"> subspace</span></b>. </p>
 
   </div>
@@ -694,7 +519,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.15</span>
+    <span class="definition_thmlabel">1.1.11</span>
     <span class="definition_thmtitle">Algebra</span>
     ✓
     <div class="thm_icons">
@@ -709,7 +534,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.10</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
           <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
         </ul>
 
@@ -735,7 +560,7 @@
   <div class="definition_thmcontent">
   
 <p>An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a module over \(R\) with a multiplication which makes \(A\) a ring and satisfying </p>
-<div class="displaymath" id="a0000000021">
+<div class="displaymath" id="a0000000019">
   \[  \alpha (x y)=(\alpha x) y=x(\alpha y),(x, y \in A, \alpha \in R) .  \]
 </div>
 
@@ -746,7 +571,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.16</span>
+    <span class="remark_thmlabel">1.1.12</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:Algebra">#</a>
 
@@ -763,7 +588,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.17</span>
+    <span class="definition_thmlabel">1.1.13</span>
     <span class="definition_thmtitle">RingHom</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#RingHom">#</a>
@@ -810,7 +635,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.18</span>
+    <span class="definition_thmlabel">1.1.14</span>
     <span class="definition_thmtitle">FreeAlgebra</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#FreeAlgebra">#</a>
@@ -825,7 +650,7 @@
         </header>
                 <ul class="uses">
           <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
-          <li><a href="sec-basics.html#Module">Definition 1.1.10</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
         </ul>
 
       </div>
@@ -858,7 +683,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.19</span>
+    <span class="definition_thmlabel">1.1.15</span>
     <span class="definition_thmtitle">LinearMap</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#LinearMap">#</a>
@@ -872,8 +697,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.10</a></li>
-          <li><a href="sec-basics.html#RingHom">Definition 1.1.17</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
+          <li><a href="sec-basics.html#RingHom">Definition 1.1.13</a></li>
         </ul>
 
       </div>
@@ -906,7 +731,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.20</span>
+    <span class="definition_thmlabel">1.1.16</span>
     <span class="definition_thmtitle">RingQuot</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#RingQuot">#</a>
@@ -920,8 +745,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.10</a></li>
-          <li><a href="sec-basics.html#RingHom">Definition 1.1.17</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
+          <li><a href="sec-basics.html#RingHom">Definition 1.1.13</a></li>
         </ul>
 
       </div>
@@ -954,7 +779,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.21</span>
+    <span class="definition_thmlabel">1.1.17</span>
     <span class="definition_thmtitle">TensorAlgebra relation</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#TensorAlgebra_Rel">#</a>
@@ -968,8 +793,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.18</a></li>
-          <li><a href="sec-basics.html#LinearMap">Definition 1.1.19</a></li>
+          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.14</a></li>
+          <li><a href="sec-basics.html#LinearMap">Definition 1.1.15</a></li>
         </ul>
 
       </div>
@@ -1002,7 +827,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.22</span>
+    <span class="definition_thmlabel">1.1.18</span>
     <span class="definition_thmtitle">Tensor algebra</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#TensorAlgebra">#</a>
@@ -1016,10 +841,10 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Algebra">Definition 1.1.15</a></li>
-          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.18</a></li>
-          <li><a href="sec-basics.html#TensorAlgebra_Rel">Definition 1.1.21</a></li>
-          <li><a href="sec-basics.html#RingQuot">Definition 1.1.20</a></li>
+          <li><a href="sec-basics.html#Algebra">Definition 1.1.11</a></li>
+          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.14</a></li>
+          <li><a href="sec-basics.html#TensorAlgebra_Rel">Definition 1.1.17</a></li>
+          <li><a href="sec-basics.html#RingQuot">Definition 1.1.16</a></li>
         </ul>
 
       </div>
@@ -1058,7 +883,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.23</span>
+    <span class="remark_thmlabel">1.1.19</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:TensorAlgebra">#</a>
 
