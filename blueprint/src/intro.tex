@@ -14,28 +14,27 @@ The PDF version of this blueprint is available \href{./blueprint.pdf}{here}.
 The web version of this blueprint is available \href{https://utensil.github.io/lean-ga/blueprint/}{here}.
 \fi
 
-\begin{leancode}
-class has_mul (G : Type*) :=
-(mul : G → G → G)
+% \begin{leancode}
+% class has_mul (G : Type*) :=
+% (mul : G → G → G)
 
-infix * := has_mul.mul
-\end{leancode}
-\begin{minipage}{\textwidth}  % I don't know what's up with the spacing on the page break here
-\vspace{-4pt}
-\begin{leancode}
-class semigroup (G : Type*) extends has_mul G :=
-(mul_assoc : ∀ a b c : G, a * b * c = a * (b * c))
-\end{leancode}
-\vspace{4pt}
-\end{minipage}
+% infix * := has_mul.mul
+% \end{leancode}
+% \begin{minipage}{\textwidth}  % I don't know what's up with the spacing on the page break here
+% \vspace{-4pt}
+% \begin{leancode}
+% class semigroup (G : Type*) extends has_mul G :=
+% (mul_assoc : ∀ a b c : G, a * b * c = a * (b * c))
+% \end{leancode}
+% \vspace{4pt}
+% \end{minipage}
 
+% \begin{lstlisting}
+% class has_mul (G : Type*) :=
+% (mul : G → G → G)
 
-\begin{lstlisting}
-class has_mul (G : Type*) :=
-(mul : G → G → G)
+% infix * := has_mul.mul
 
-infix * := has_mul.mul
-
-class semigroup (G : Type*) extends has_mul G :=
-(mul_assoc : ∀ a b c : G, a * b * c = a * (b * c))
-\end{lstlisting}
+% class semigroup (G : Type*) extends has_mul G :=
+% (mul_assoc : ∀ a b c : G, a * b * c = a * (b * c))
+% \end{lstlisting}
