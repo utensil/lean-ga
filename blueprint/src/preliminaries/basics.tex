@@ -90,15 +90,16 @@ and modifications to match the counterparts in Lean's \texttt{Mathlib}.
 
 \end{definition}
 
-\begin{definition}[Field]
-    \label{Field}
-    \leanok
-    \lean{Field}
-    \uses{Ring}
+% TODO resume later when needed
+% \begin{definition}[Field]
+%     \label{Field}
+%     \leanok
+%     \lean{Field}
+%     \uses{Ring}
 
-    A commutative division ring is called a \vocab{field}.
+%     A commutative division ring is called a \vocab{field}.
 
-\end{definition}
+% \end{definition}
 
 \begin{remark}
     \label{mk:CommRing}
@@ -107,45 +108,46 @@ and modifications to match the counterparts in Lean's \texttt{Mathlib}.
     
 \end{remark}
 
-\begin{definition}[Characteristic]
-    \label{ringChar}
-    \leanok
-    \lean{ringChar}
-    \uses{Ring}
+% TODO resume later when needed
+% \begin{definition}[Characteristic]
+%     \label{ringChar}
+%     \leanok
+%     \lean{ringChar}
+%     \uses{Ring}
 
-    Let $R$ be a ring with unit element 1 . The \vocab{characteristic} of $R$ is the smallest positive number $n$ such that
+%     Let $R$ be a ring with unit element 1 . The \vocab{characteristic} of $R$ is the smallest positive number $n$ such that
 
-    $$
-    \underbrace{1+\ldots+1}_{n \text { summands }}=0 \text {. }
-    $$
+%     $$
+%     \underbrace{1+\ldots+1}_{n \text { summands }}=0 \text {. }
+%     $$
     
-    If such a number does not exist, the characteristic is defined to be 0 .
+%     If such a number does not exist, the characteristic is defined to be 0 .
 
-\end{definition}
+% \end{definition}
 
-\begin{remark}
-    \label{mk:characteristic}
+% \begin{remark}
+%     \label{mk:characteristic}
 
-    Equivalently, it can be defined to be the unique $p \in \mathbb{N}$ satisfying:
+%     Equivalently, it can be defined to be the unique $p \in \mathbb{N}$ satisfying:
 
-    $$
-    \forall x \in \mathbb{N}, x = 0 \iff p \mid x
-    $$
+%     $$
+%     \forall x \in \mathbb{N}, x = 0 \iff p \mid x
+%     $$
 
-    where
+%     where
     
-    \begin{itemize}
+%     \begin{itemize}
 
-        \item $p \mid x$ is defined as $\exists y \in \mathbb{N}, x = p y$
+%         \item $p \mid x$ is defined as $\exists y \in \mathbb{N}, x = p y$
     
-        % TODO: confirm to what extent it demands the map
-        \item $x = 0$ asks that there exists a map $f : \mathbb{N} \to R$ such that $0 \in \mathbb{N} ↦ 0 \in R$.
+%         % TODO: confirm to what extent it demands the map
+%         \item $x = 0$ asks that there exists a map $f : \mathbb{N} \to R$ such that $0 \in \mathbb{N} ↦ 0 \in R$.
         
-    \end{itemize}
+%     \end{itemize}
 
-    This is how the characteristic of $R$ is defined in Lean.
+%     This is how the characteristic of $R$ is defined in Lean.
 
-\end{remark}
+% \end{remark}
 
 \begin{definition}[Module]
     \label{Module}
@@ -194,22 +196,32 @@ and modifications to match the counterparts in Lean's \texttt{Mathlib}.
     
 \end{remark}
 
-\begin{definition}[Submodule]
-    \label{Submodule}
-    \leanok
-    \lean{Submodule}
-    \uses{Module}
-
-    A \vocab{submodule} $N$ of $M$ is a module $N$ such that every element of $N$ is also an element of $M$.
-
-\end{definition}
-
 \begin{remark}
     \label{mk:Submodule}
 
+    A \vocab{submodule} $N$ of $M$ is a module $N$ such that every element of $N$ is also an element of $M$.
+
     If $M$ is a vector space then $N$ is called a \vocab{subspace}.
-    
+
 \end{remark}
+
+% TODO resume later when needed
+% \begin{definition}[Submodule]
+%     \label{Submodule}
+%     \leanok
+%     \lean{Submodule}
+%     \uses{Module}
+
+%     A \vocab{submodule} $N$ of $M$ is a module $N$ such that every element of $N$ is also an element of $M$.
+
+% \end{definition}
+
+% \begin{remark}
+%     \label{mk:Submodule}
+
+%     If $M$ is a vector space then $N$ is called a \vocab{subspace}.
+    
+% \end{remark}
 
 \begin{definition}[Algebra]
     \label{Algebra}
