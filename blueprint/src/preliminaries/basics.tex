@@ -5,14 +5,14 @@ and modifications to match the counterparts in Lean's \Mathlib.
 \begin{definition}[Group]
     \label{Group}
     \leanok
-    \lean{Group}
+    \lean{Group, AddGroup}
 
-    A \vocab{group} is a non-empty set $G$ together with a law of composition, a mapping $(g, h) \to gh$ from $G \times G$ to $G$, which satisfies:
+    A \vocab{group} is a pair $(G, *)$, where $G$ is a set, $*$ is a binary operation, satisfying:
 
     \begin{enumerate}
-    \item $(g h) j = g (h j)$ for all $g, h, j \in G$ (\vocab{associativity})
-    \item there exists $e$ in $G$ such that $e g = g e = g$ for all $g \in G$
-    \item for each $g \in G$ there exists $g^{-1} \in G$ such that $g g^{-1} = g^{-1} g = e$
+    \item $(g * h) * j = g * (h * j)$ for all $g, h, j \in G$ (\vocab{associativity})
+    \item there exists $e$ in $G$ such that $e * g = g * e = g$ for all $g \in G$
+    \item for each $g \in G$ there exists $g^{-1} \in G$ such that $g * g^{-1} = g^{-1} * g = e$
 
     \end{enumerate}
 
@@ -23,22 +23,41 @@ and modifications to match the counterparts in Lean's \Mathlib.
     
     It then follows that $e$, the \vocab{identity element}, is unique, and that for each $g \in G$ the \vocab{inverse} $g^{-1}$ is unique.
 
-    A group G is abelian, or \vocab{commutative}, if $g h = h g$ for all $g, h \in G$.
+    A group G is abelian, or \vocab{commutative}, if $g * h = h * g$ for all $g, h \in G$.
+
+\end{remark}
+
+\begin{remark}
+    \label{mk:Notation}
+
+    In literatures, the binary operation are usually denoted by juxtaposition, and is understood to be a mapping
+    $(g, h) \mapsto g * h$ from $G \times G$ to $G$.
+    
+    \Mathlib uses a slightly different way to encode this, $G \to G \to G$ is understood to be $G \to (G \to G)$,
+    that sends $g \in G$ to a mapping that sends $h \in G$ to $g * h \in G$.
+    
+    Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation. %TODO cite
+    
+    It can be denoted multiplicatively as $*$ in \MathlibDoc{Group}
+    or additively as $+$ in \MathlibDoc{AddGroup}, where $e$ will be denoted by $1$ or $0$, respectively,
+    sometimes with subscript (e.g. $1_G$) to indicate where it is.
+
+    We will use the corresponding notation in \Mathlib for future operations without further explanation.
 
 \end{remark}
 
 \begin{definition}[Monoid]
     \label{Monoid}
     \leanok
-    \lean{Monoid}
+    \lean{Monoid, AddMonoid}
 
-    A \vocab{monoid} is a set $R$ with a law of composition, usually denoted multiplicatively, 
-    satisfying the following conditions:
+    A \vocab{monoid} is a pair $(R, *)$, satisfying:
 
     \begin{enumerate}
-    \item $(a b) c = a (b c)$ for all $a, b, c \in R$ (\vocab{associativity}),
+    \item $(a * b) * c = a * (b * c)$ for all $a, b, c \in R$ (\vocab{associativity}),
 
-    \item There is an element $1 \in R$ such that $1 a = a 1 = a$ for all $a$ in $R$ (that is 1 is the multiplicative identity (\vocab{neutral element}).
+    \item There is an element $1 \in R$ such that $1 * a = a * 1 = a$ for all $a$ in $R$
+    (that is $1$ is the multiplicative identity (\vocab{neutral element}).
 
     \end{enumerate}
 
@@ -50,29 +69,24 @@ and modifications to match the counterparts in Lean's \Mathlib.
     \lean{Ring, CommRing, CommSemiring}
     \uses{Group, Monoid}
 
-    A \vocab{ring} is a set $R$ with two laws of composition, 
-    
-    \begin{itemize}
-        
-    \item addition, denoted $+$;
-    \item multiplication, denoted by juxtaposition, or \texttt{*} in Lean,
-    
-    \end{itemize}
-    
-    which satisfy the following conditions:
+    A \vocab{ring} is a triple $(R, +, *)$, satisfying:
 
     \begin{enumerate}
-    \item The elements of $R$ form a \vocab{commutative group} under addition;
+    \item The elements of $R$ form a \vocab{commutative group} under $+$;
 
-    \item The elements of $R$ form a \vocab{monoid} under multiplication;
+    \item The elements of $R$ form a \vocab{monoid} under $*$;
 
     \item If $a, b, c$ are elements of $R$, we have
 
     $$
-    a (b + c) = a b + a c, (a + b) c = a c + b c.
+    a * (b + c) = a * b + a * c,
     $$
 
-    (left and right \vocab{distributivity} over addition)
+    $$
+    (a + b) * c = a * c + b * c
+    $$
+
+    (left and right \vocab{distributivity} over $+$).
 
     \end{enumerate}
 
@@ -160,17 +174,30 @@ and modifications to match the counterparts in Lean's \Mathlib.
     \begin{enumerate}
       \item M has a structure of an additive group,
     
-      \item For every $\alpha \in R$, $a \in M$ an element $\alpha a \in M$ called scalar multiple is defined, and we have
+      \item For every $a, b \in R$, $x, y \in M$, an operation $\alpha \bu a$ called scalar multiplication is defined, and we have
       
         \begin{enumerate}[i]
-            \item $\alpha(x+y)=\alpha x+\alpha y$,
-            \item $(\alpha+\beta) x=\alpha x+\beta x$,
-            \item $\alpha(\beta x)=(\alpha \beta) x$,
-            \item $1 \cdot x=x$.
+            \item $a \bu (x + y) = a \bu x + b \bu y$,
+            \item $(a + b) \bu x = a \bu x + b \bu x$,
+            \item $a * (b \bu x)=(a * b) \bu x$,
+            \item $1_R \bu x = x$.
         \end{enumerate}
     \end{enumerate}
 
 \end{definition}
+
+\begin{remark}
+    \label{mk:Module}
+
+    The notation of scalar multiplication is generalized as heterogeneous scalar multiplication in \Mathlib:
+
+    $$
+    \alpha \to \beta \to \gamma
+    $$
+
+    where $\alpha$, $\beta$, $gamma$ are different types.
+    
+\end{remark}
 
 \begin{definition}[Vector space]
     \label{VectorSpace}
@@ -185,7 +212,7 @@ and modifications to match the counterparts in Lean's \Mathlib.
 \begin{remark}
     \label{mk:VectorSpace}
 
-    In Lean 4, for generality, \Mathlib uses \MathlibDoc{Module} throughout for vector spaces,
+    For generality, \Mathlib uses \MathlibDoc{Module} throughout for vector spaces,
     particularly, for a vector space $V$, it's usually declared as
 
     \begin{lstlisting}
