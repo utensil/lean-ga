@@ -6,4 +6,4 @@ mkdir -p $WORKSPACES/
 ROOT=$(cd $ROOT && pwd)
 echo "ROOT=$ROOT"
 
-sudo docker run -d --name lean-ga -v$ROOT:/workspaces/lean-ga/ mcr.microsoft.com/devcontainers/base:ubuntu bash -c 'sleep infinity'
+sudo docker run -d --name lean-ga -v$ROOT:/workspaces/lean-ga/ -p 8080:8080 mcr.microsoft.com/devcontainers/base:ubuntu bash -c 'sleep infinity'

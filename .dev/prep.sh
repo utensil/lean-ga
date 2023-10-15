@@ -12,10 +12,7 @@ cd $ROOT
 sudo apt update
 sudo apt install -y curl wget git git-lfs python3 python3-pip graphviz libgraphviz-dev pdf2svg dvisvgm texlive-binaries # texlive-full
 
-# Install Tectonic
-mkdir -p ~/.local/bin
-(cd ~/.local/bin && curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net |sh)
-which tectonic
+bash .dev/install-tectonic.sh
 
 curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | bash -s -- -y
 source ~/.profile
