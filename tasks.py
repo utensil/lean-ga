@@ -40,7 +40,7 @@ def bp(ctx):
 
     cwd = os.getcwd()
     os.chdir(BP_DIR)
-    run('mkdir -p print && cd src && tectonic --keep-intermediates --outdir ../print print.tex')
+    run('mkdir -p print && cd src && tectonic -Z shell-escape-cwd=. --keep-intermediates --outdir ../print print.tex')
     run('cp print/print.bbl src/web.bbl')
     os.chdir(cwd)
 
