@@ -59,16 +59,16 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.11</span><span class="definition_thmtitle">Algebra</span></div>
+      <span class="definition_thmlabel">1.1.13</span><span class="definition_thmtitle">Algebra</span></div>
     <div class="thm_thmcontent">
 <p>An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a module over \(R\) with a multiplication which makes \(A\) a ring and satisfying </p>
-<div class="displaymath" id="a0000000019">
+<div class="displaymath" id="a0000000021">
   \[  \alpha (x y)=(\alpha x) y=x(\alpha y),(x, y \in A, \alpha \in R) .  \]
 </div>
 </div>
 
     <a class="latex_link" href="sec-basics.html#Algebra">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Algebra#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Algebra" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -92,7 +92,7 @@
 </div>
 
     <a class="latex_link" href="sec-def.html#CliffordAlgebra">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CliffordAlgebra#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -116,7 +116,7 @@
 </div>
 
     <a class="latex_link" href="sec-def.html#CliffordAlgebra_Rel">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CliffordAlgebra.Rel#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.Rel" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -134,13 +134,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.5</span><span class="definition_thmtitle">Division ring</span></div>
+      <span class="definition_thmlabel">1.1.6</span><span class="definition_thmtitle">Division ring</span></div>
     <div class="thm_thmcontent">
 <p>A ring containing at least two elements, in which every nonzero element \(a\) has a multiplicative inverse \(a^{-1}\) is called a <b class="bfseries"><span style="color:#181870"> division ring</span></b> (sometimes also called a "skew field"). </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#DivisionRing">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=DivisionRing#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/DivisionRing" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -158,13 +158,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.14</span><span class="definition_thmtitle">FreeAlgebra</span></div>
+      <span class="definition_thmlabel">1.1.16</span><span class="definition_thmtitle">FreeAlgebra</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#FreeAlgebra">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=FreeAlgebra#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -184,19 +184,28 @@
       </span>
       <span class="definition_thmlabel">1.1.1</span><span class="definition_thmtitle">Group</span></div>
     <div class="thm_thmcontent">
-<p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a non-empty set \(G\) together with a law of composition, a mapping \((g, h) \to gh\) from \(G \times G\) to \(G\), which satisfies: </p>
+<p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a pair \((G, *)\), where \(G\) is a set, \(*\) is a binary operation, satisfying: </p>
 <ol class="enumerate">
-  <li><p>\((g h) j = g (h j)\) for all \(g, h, j \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>) </p>
+  <li><p>\((g * h) * j = g * (h * j)\) for all \(g, h, j \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>) </p>
 </li>
-  <li><p>there exists \(e\) in \(G\) such that \(e g = g e = g\) for all \(g \in G\) </p>
+  <li><p>there exists \(e\) in \(G\) such that \(e * g = g * e = g\) for all \(g \in G\) </p>
 </li>
-  <li><p>for each \(g \in G\) there exists \(g^{-1} \in G\) such that \(g g^{-1} = g^{-1} g = e\) </p>
+  <li><p>for each \(g \in G\) there exists \(g^{-1} \in G\) such that \(g * g^{-1} = g^{-1} * g = e\) </p>
 </li>
 </ol>
 </div>
 
     <a class="latex_link" href="sec-basics.html#Group">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Group#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Group" target="_blank" rel="noopener noreferrer">Group</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/AddGroup" target="_blank" rel="noopener noreferrer">AddGroup</a></li>
+        
+      </ul>
+  </div></div>
     
       </div>
     </div>
@@ -214,13 +223,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.15</span><span class="definition_thmtitle">LinearMap</span></div>
+      <span class="definition_thmlabel">1.1.17</span><span class="definition_thmtitle">LinearMap</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#LinearMap">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=LinearMap#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/LinearMap" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -238,21 +247,21 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.7</span><span class="definition_thmtitle">Module</span></div>
+      <span class="definition_thmlabel">1.1.8</span><span class="definition_thmtitle">Module</span></div>
     <div class="thm_thmcontent">
 <p>Let \(R\) be a commutative ring. A <b class="bfseries"><span style="color:#181870"> module</span></b> over \(R\) (in short \(R\)-module) is a set \(M\) such that </p>
 <ol class="enumerate">
   <li><p>M has a structure of an additive group, </p>
 </li>
-  <li><p>For every \(\alpha \in R\), \(a \in M\) an element \(\alpha a \in M\) called scalar multiple is defined, and we have </p>
+  <li><p>For every \(a, b \in R\), \(x, y \in M\), an operation \(\alpha \bullet a\) called scalar multiplication is defined, and we have </p>
 <ol class="enumerate">
-  <li><p>\(\alpha (x+y)=\alpha x+\alpha y\), </p>
+  <li><p>\(a \bullet (x + y) = a \bullet x + b \bullet y\), </p>
 </li>
-  <li><p>\((\alpha +\beta ) x=\alpha x+\beta x\), </p>
+  <li><p>\((a + b) \bullet x = a \bullet x + b \bullet x\), </p>
 </li>
-  <li><p>\(\alpha (\beta x)=(\alpha \beta ) x\), </p>
+  <li><p>\(a * (b \bullet x)=(a * b) \bullet x\), </p>
 </li>
-  <li><p>\(1 \cdot x=x\). </p>
+  <li><p>\(1_R \bullet x = x\). </p>
 </li>
 </ol>
 </li>
@@ -260,7 +269,7 @@
 </div>
 
     <a class="latex_link" href="sec-basics.html#Module">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Module#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Module" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -278,19 +287,28 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.3</span><span class="definition_thmtitle">Monoid</span></div>
+      <span class="definition_thmlabel">1.1.4</span><span class="definition_thmtitle">Monoid</span></div>
     <div class="thm_thmcontent">
-<p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a set \(R\) with a law of composition, usually denoted multiplicatively, satisfying the following conditions: </p>
+<p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a pair \((R, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>\((a b) c = a (b c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>), </p>
+  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>), </p>
 </li>
-  <li><p>There is an element \(1 \in R\) such that \(1 a = a 1 = a\) for all \(a\) in \(R\) (that is 1 is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
+  <li><p>There is an element \(1 \in R\) such that \(1 * a = a * 1 = a\) for all \(a\) in \(R\) (that is \(1\) is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
 </li>
 </ol>
 </div>
 
     <a class="latex_link" href="sec-basics.html#Monoid">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Monoid#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Monoid" target="_blank" rel="noopener noreferrer">Monoid</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/AddMonoid" target="_blank" rel="noopener noreferrer">AddMonoid</a></li>
+        
+      </ul>
+  </div></div>
     
       </div>
     </div>
@@ -308,26 +326,22 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.4</span><span class="definition_thmtitle">Ring</span></div>
+      <span class="definition_thmlabel">1.1.5</span><span class="definition_thmtitle">Ring</span></div>
     <div class="thm_thmcontent">
-<p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a set \(R\) with two laws of composition, </p>
-<ul class="itemize">
-  <li><p>addition, denoted \(+\); </p>
-</li>
-  <li><p>multiplication, denoted by juxtaposition, or <span class="ttfamily">*</span> in Lean, </p>
-</li>
-</ul>
-<p>which satisfy the following conditions: </p>
+<p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a triple \((R, +, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under addition; </p>
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under \(+\); </p>
 </li>
-  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under multiplication; </p>
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\); </p>
 </li>
   <li><p>If \(a, b, c\) are elements of \(R\), we have </p>
 <div class="displaymath" id="a0000000018">
-  \[  a (b + c) = a b + a c, (a + b) c = a c + b c.  \]
+  \[  a * (b + c) = a * b + a * c,  \]
 </div>
-<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over addition) </p>
+<div class="displaymath" id="a0000000019">
+  \[  (a + b) * c = a * c + b * c  \]
+</div>
+<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over \(+\)). </p>
 </li>
 </ol>
 </div>
@@ -337,11 +351,11 @@
       <span class="lean_link">Lean</span>
       <ul class="tooltip_list">
         
-           <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Ring#doc" target="_blank" rel="noopener noreferrer">Ring</a></li>
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Ring" target="_blank" rel="noopener noreferrer">Ring</a></li>
         
-           <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CommRing#doc" target="_blank" rel="noopener noreferrer">CommRing</a></li>
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CommRing" target="_blank" rel="noopener noreferrer">CommRing</a></li>
         
-           <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CommSemiring#doc" target="_blank" rel="noopener noreferrer">CommSemiring</a></li>
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CommSemiring" target="_blank" rel="noopener noreferrer">CommSemiring</a></li>
         
       </ul>
   </div></div>
@@ -362,13 +376,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.13</span><span class="definition_thmtitle">RingHom</span></div>
+      <span class="definition_thmlabel">1.1.15</span><span class="definition_thmtitle">RingHom</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#RingHom">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=RingHom#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingHom" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -386,13 +400,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.16</span><span class="definition_thmtitle">RingQuot</span></div>
+      <span class="definition_thmlabel">1.1.18</span><span class="definition_thmtitle">RingQuot</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#RingQuot">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=RingQuot#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingQuot" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -410,7 +424,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.18</span><span class="definition_thmtitle">Tensor algebra</span></div>
+      <span class="definition_thmlabel">1.1.20</span><span class="definition_thmtitle">Tensor algebra</span></div>
     <div class="thm_thmcontent">
 <p>Let \(M\) be a module over \(R\). An algebra \(T\) is called a <b class="bfseries"><span style="color:#181870"> tensor algebra</span></b> over \(M\) (or "of \(M\) ") if it satisfies the following universal property </p>
 <ol class="enumerate">
@@ -422,7 +436,7 @@
 </div>
 
     <a class="latex_link" href="sec-basics.html#TensorAlgebra">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=TensorAlgebra#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/TensorAlgebra" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -440,13 +454,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.17</span><span class="definition_thmtitle">TensorAlgebra relation</span></div>
+      <span class="definition_thmlabel">1.1.19</span><span class="definition_thmtitle">TensorAlgebra relation</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#TensorAlgebra_Rel">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=TensorAlgebra.Rel#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/TensorAlgebra.Rel" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -464,13 +478,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.8</span><span class="definition_thmtitle">Vector space</span></div>
+      <span class="definition_thmlabel">1.1.10</span><span class="definition_thmtitle">Vector space</span></div>
     <div class="thm_thmcontent">
 <p>If \(R\) is a <b class="bfseries"><span style="color:#181870"> division ring</span></b>, then a module \(M\) over \(R\) is called a <b class="bfseries"><span style="color:#181870"> vector space</span></b>. </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#VectorSpace">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Module#doc" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Module" target="_blank" rel="noopener noreferrer">Lean</a></div>
     
       </div>
     </div>
@@ -493,7 +507,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Group	[color=green,		fillcolor="#b0eca3",		label=Group,		shape=box,		style=filled];	Module	[color=green,		fillcolor="#b0eca3",		label=Module,		shape=box,		style=filled];	Group -> Module	[style=dashed];	Ring	[color=green,		fillcolor="#b0eca3",		label=Ring,		shape=box,		style=filled];	Group -> Ring	[style=dashed];	Monoid	[color=green,		fillcolor="#b0eca3",		label=Monoid,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];	LinearMap	[label=LinearMap,		shape=box];	Module -> LinearMap	[style=dashed];	VectorSpace	[color=green,		fillcolor="#b0eca3",		label=VectorSpace,		shape=box,		style=filled];	Module -> VectorSpace	[style=dashed];	Algebra	[color=green,		fillcolor="#b0eca3",		label=Algebra,		shape=box,		style=filled];	Module -> Algebra	[style=dashed];	FreeAlgebra	[color=blue,		label=FreeAlgebra,		shape=box];	Module -> FreeAlgebra	[style=dashed];	RingQuot	[label=RingQuot,		shape=box];	Module -> RingQuot	[style=dashed];	DivisionRing	[color=green,		fillcolor="#b0eca3",		label=DivisionRing,		shape=box,		style=filled];	DivisionRing -> VectorSpace	[style=dashed];	TensorAlgebra_Rel	[label=TensorAlgebra_Rel,		shape=box];	LinearMap -> TensorAlgebra_Rel	[style=dashed];	TensorAlgebra	[label=TensorAlgebra,		shape=box];	TensorAlgebra_Rel -> TensorAlgebra	[style=dashed];	CliffordAlgebra_Rel	[color=blue,		label=CliffordAlgebra_Rel,		shape=box];	CliffordAlgebra	[label=CliffordAlgebra,		shape=box];	CliffordAlgebra_Rel -> CliffordAlgebra	[style=dashed];	Ring -> Module	[style=dashed];	Ring -> DivisionRing	[style=dashed];	Ring -> Algebra	[style=dashed];	RingHom	[color=blue,		label=RingHom,		shape=box];	Ring -> RingHom	[style=dashed];	Ring -> FreeAlgebra	[style=dashed];	Algebra -> TensorAlgebra	[style=dashed];	RingHom -> LinearMap	[style=dashed];	RingHom -> RingQuot	[style=dashed];	FreeAlgebra -> TensorAlgebra_Rel	[style=dashed];	FreeAlgebra -> TensorAlgebra	[style=dashed];	RingQuot -> TensorAlgebra	[style=dashed];	TensorAlgebra -> CliffordAlgebra	[style=dashed];}')
+    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Group	[color=green,		fillcolor="#b0eca3",		label=Group,		shape=box,		style=filled];	Module	[color=green,		fillcolor="#b0eca3",		label=Module,		shape=box,		style=filled];	Group -> Module	[style=dashed];	Ring	[color=green,		fillcolor="#b0eca3",		label=Ring,		shape=box,		style=filled];	Group -> Ring	[style=dashed];	Algebra	[color=green,		fillcolor="#b0eca3",		label=Algebra,		shape=box,		style=filled];	Module -> Algebra	[style=dashed];	RingQuot	[label=RingQuot,		shape=box];	Module -> RingQuot	[style=dashed];	VectorSpace	[color=green,		fillcolor="#b0eca3",		label=VectorSpace,		shape=box,		style=filled];	Module -> VectorSpace	[style=dashed];	FreeAlgebra	[color=blue,		label=FreeAlgebra,		shape=box];	Module -> FreeAlgebra	[style=dashed];	LinearMap	[label=LinearMap,		shape=box];	Module -> LinearMap	[style=dashed];	TensorAlgebra	[label=TensorAlgebra,		shape=box];	Algebra -> TensorAlgebra	[style=dashed];	RingQuot -> TensorAlgebra	[style=dashed];	CliffordAlgebra	[label=CliffordAlgebra,		shape=box];	TensorAlgebra -> CliffordAlgebra	[style=dashed];	DivisionRing	[color=green,		fillcolor="#b0eca3",		label=DivisionRing,		shape=box,		style=filled];	DivisionRing -> VectorSpace	[style=dashed];	Monoid	[color=green,		fillcolor="#b0eca3",		label=Monoid,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];	Ring -> Module	[style=dashed];	Ring -> Algebra	[style=dashed];	Ring -> DivisionRing	[style=dashed];	RingHom	[color=blue,		label=RingHom,		shape=box];	Ring -> RingHom	[style=dashed];	Ring -> FreeAlgebra	[style=dashed];	RingHom -> RingQuot	[style=dashed];	RingHom -> LinearMap	[style=dashed];	FreeAlgebra -> TensorAlgebra	[style=dashed];	TensorAlgebra_Rel	[label=TensorAlgebra_Rel,		shape=box];	FreeAlgebra -> TensorAlgebra_Rel	[style=dashed];	LinearMap -> TensorAlgebra_Rel	[style=dashed];	TensorAlgebra_Rel -> TensorAlgebra	[style=dashed];	CliffordAlgebra_Rel	[color=blue,		label=CliffordAlgebra_Rel,		shape=box];	CliffordAlgebra_Rel -> CliffordAlgebra	[style=dashed];}')
     .on("end", interactive);
 
 clickNode = function() {

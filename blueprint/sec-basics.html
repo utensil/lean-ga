@@ -128,7 +128,7 @@
 	, 
 	<a href="sect0016.html#chen2016infinitely" >Chen(2016)</a>
 	]
-</span>, and modifications to match the counterparts in Lean’s <span class="sffamily">Mathlib</span>. </p>
+</span>, and modifications to match the counterparts in Lean’s <span class="sffamily">Mathlib</span>&#160;. </p>
 <p><div class="definition_thmwrapper" id="Group">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
@@ -148,7 +148,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Group#doc" target="_blank" rel="noopener noreferrer">Group</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Group" target="_blank" rel="noopener noreferrer">Group</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/AddGroup" target="_blank" rel="noopener noreferrer">AddGroup</a></li>
         </ul>
 
       </div>
@@ -158,13 +159,13 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a non-empty set \(G\) together with a law of composition, a mapping \((g, h) \to gh\) from \(G \times G\) to \(G\), which satisfies: </p>
+<p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a pair \((G, *)\), where \(G\) is a set, \(*\) is a binary operation, satisfying: </p>
 <ol class="enumerate">
-  <li><p>\((g h) j = g (h j)\) for all \(g, h, j \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>) </p>
+  <li><p>\((g * h) * j = g * (h * j)\) for all \(g, h, j \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>) </p>
 </li>
-  <li><p>there exists \(e\) in \(G\) such that \(e g = g e = g\) for all \(g \in G\) </p>
+  <li><p>there exists \(e\) in \(G\) such that \(e * g = g * e = g\) for all \(g \in G\) </p>
 </li>
-  <li><p>for each \(g \in G\) there exists \(g^{-1} \in G\) such that \(g g^{-1} = g^{-1} g = e\) </p>
+  <li><p>for each \(g \in G\) there exists \(g^{-1} \in G\) such that \(g * g^{-1} = g^{-1} * g = e\) </p>
 </li>
 </ol>
 
@@ -184,7 +185,28 @@
   <div class="remark_thmcontent">
   
 <p>It then follows that \(e\), the <b class="bfseries"><span style="color:#181870"> identity element</span></b>, is unique, and that for each \(g \in G\) the <b class="bfseries"><span style="color:#181870"> inverse</span></b> \(g^{-1}\) is unique. </p>
-<p>A group G is abelian, or <b class="bfseries"><span style="color:#181870"> commutative</span></b>, if \(g h = h g\) for all \(g, h \in G\). </p>
+<p>A group G is abelian, or <b class="bfseries"><span style="color:#181870"> commutative</span></b>, if \(g * h = h * g\) for all \(g, h \in G\). </p>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:Notation">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.3</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:Notation">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>In literatures, the binary operation are usually denoted by juxtaposition, and is understood to be a mapping \((g, h) \mapsto g * h\) from \(G \times G\) to \(G\). </p>
+<p><span class="sffamily">Mathlib</span>&#160;uses a slightly different way to encode this, \(G \to G \to G\) is understood to be \(G \to (G \to G)\), that sends \(g \in G\) to a mapping that sends \(h \in G\) to \(g * h \in G\). </p>
+<p>Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation. </p>
+<p>It can be denoted multiplicatively as \(*\) in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=Group">Group</a> or additively as \(+\) in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=AddGroup">AddGroup</a>, where \(e\) will be denoted by \(1\) or \(0\), respectively, sometimes with subscript (e.g. \(1_G\)) to indicate where it is. </p>
+<p>We will use the corresponding notation in <span class="sffamily">Mathlib</span>&#160;for future operations without further explanation. </p>
 
   </div>
 </div> </p>
@@ -193,7 +215,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.3</span>
+    <span class="definition_thmlabel">1.1.4</span>
     <span class="definition_thmtitle">Monoid</span>
     ✓
     <div class="thm_icons">
@@ -207,7 +229,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Monoid#doc" target="_blank" rel="noopener noreferrer">Monoid</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Monoid" target="_blank" rel="noopener noreferrer">Monoid</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/AddMonoid" target="_blank" rel="noopener noreferrer">AddMonoid</a></li>
         </ul>
 
       </div>
@@ -217,11 +240,11 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a set \(R\) with a law of composition, usually denoted multiplicatively, satisfying the following conditions: </p>
+<p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a pair \((R, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>\((a b) c = a (b c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>), </p>
+  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>), </p>
 </li>
-  <li><p>There is an element \(1 \in R\) such that \(1 a = a 1 = a\) for all \(a\) in \(R\) (that is 1 is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
+  <li><p>There is an element \(1 \in R\) such that \(1 * a = a * 1 = a\) for all \(a\) in \(R\) (that is \(1\) is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
 </li>
 </ol>
 
@@ -232,7 +255,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.4</span>
+    <span class="definition_thmlabel">1.1.5</span>
     <span class="definition_thmtitle">Ring</span>
     ✓
     <div class="thm_icons">
@@ -248,7 +271,7 @@
         </header>
                 <ul class="uses">
           <li><a href="sec-basics.html#Group">Definition 1.1.1</a></li>
-          <li><a href="sec-basics.html#Monoid">Definition 1.1.3</a></li>
+          <li><a href="sec-basics.html#Monoid">Definition 1.1.4</a></li>
         </ul>
 
       </div>
@@ -262,9 +285,9 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Ring#doc" target="_blank" rel="noopener noreferrer">Ring</a></li>
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CommRing#doc" target="_blank" rel="noopener noreferrer">CommRing</a></li>
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=CommSemiring#doc" target="_blank" rel="noopener noreferrer">CommSemiring</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Ring" target="_blank" rel="noopener noreferrer">Ring</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CommRing" target="_blank" rel="noopener noreferrer">CommRing</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CommSemiring" target="_blank" rel="noopener noreferrer">CommSemiring</a></li>
         </ul>
 
       </div>
@@ -274,24 +297,20 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a set \(R\) with two laws of composition, </p>
-<ul class="itemize">
-  <li><p>addition, denoted \(+\); </p>
-</li>
-  <li><p>multiplication, denoted by juxtaposition, or <span class="ttfamily">*</span> in Lean, </p>
-</li>
-</ul>
-<p>which satisfy the following conditions: </p>
+<p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a triple \((R, +, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under addition; </p>
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under \(+\); </p>
 </li>
-  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under multiplication; </p>
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\); </p>
 </li>
   <li><p>If \(a, b, c\) are elements of \(R\), we have </p>
 <div class="displaymath" id="a0000000018">
-  \[  a (b + c) = a b + a c, (a + b) c = a c + b c.  \]
+  \[  a * (b + c) = a * b + a * c,  \]
 </div>
-<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over addition) </p>
+<div class="displaymath" id="a0000000019">
+  \[  (a + b) * c = a * c + b * c  \]
+</div>
+<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over \(+\)). </p>
 </li>
 </ol>
 
@@ -302,7 +321,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.5</span>
+    <span class="definition_thmlabel">1.1.6</span>
     <span class="definition_thmtitle">Division ring</span>
     ✓
     <div class="thm_icons">
@@ -317,7 +336,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
+          <li><a href="sec-basics.html#Ring">Definition 1.1.5</a></li>
         </ul>
 
       </div>
@@ -331,7 +350,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=DivisionRing#doc" target="_blank" rel="noopener noreferrer">DivisionRing</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/DivisionRing" target="_blank" rel="noopener noreferrer">DivisionRing</a></li>
         </ul>
 
       </div>
@@ -350,7 +369,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.6</span>
+    <span class="remark_thmlabel">1.1.7</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:CommRing">#</a>
 
@@ -367,7 +386,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.7</span>
+    <span class="definition_thmlabel">1.1.8</span>
     <span class="definition_thmtitle">Module</span>
     ✓
     <div class="thm_icons">
@@ -383,7 +402,7 @@
         </header>
                 <ul class="uses">
           <li><a href="sec-basics.html#Group">Definition 1.1.1</a></li>
-          <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
+          <li><a href="sec-basics.html#Ring">Definition 1.1.5</a></li>
         </ul>
 
       </div>
@@ -397,7 +416,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Module#doc" target="_blank" rel="noopener noreferrer">Module</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Module" target="_blank" rel="noopener noreferrer">Module</a></li>
         </ul>
 
       </div>
@@ -411,19 +430,40 @@
 <ol class="enumerate">
   <li><p>M has a structure of an additive group, </p>
 </li>
-  <li><p>For every \(\alpha \in R\), \(a \in M\) an element \(\alpha a \in M\) called scalar multiple is defined, and we have </p>
+  <li><p>For every \(a, b \in R\), \(x, y \in M\), an operation \(\alpha \bullet a\) called scalar multiplication is defined, and we have </p>
 <ol class="enumerate">
-  <li><p>\(\alpha (x+y)=\alpha x+\alpha y\), </p>
+  <li><p>\(a \bullet (x + y) = a \bullet x + b \bullet y\), </p>
 </li>
-  <li><p>\((\alpha +\beta ) x=\alpha x+\beta x\), </p>
+  <li><p>\((a + b) \bullet x = a \bullet x + b \bullet x\), </p>
 </li>
-  <li><p>\(\alpha (\beta x)=(\alpha \beta ) x\), </p>
+  <li><p>\(a * (b \bullet x)=(a * b) \bullet x\), </p>
 </li>
-  <li><p>\(1 \cdot x=x\). </p>
-</li>
-</ol>
+  <li><p>\(1_R \bullet x = x\). </p>
 </li>
 </ol>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:Module">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.9</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:Module">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>The notation of scalar multiplication is generalized as heterogeneous scalar multiplication in <span class="sffamily">Mathlib</span>&#160;: </p>
+<div class="displaymath" id="a0000000020">
+  \[  \alpha \to \beta \to \gamma  \]
+</div>
+<p>where \(\alpha \), \(\beta \), \(gamma\) are different types. </p>
 
   </div>
 </div> </p>
@@ -432,7 +472,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.8</span>
+    <span class="definition_thmlabel">1.1.10</span>
     <span class="definition_thmtitle">Vector space</span>
     ✓
     <div class="thm_icons">
@@ -447,8 +487,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
-          <li><a href="sec-basics.html#DivisionRing">Definition 1.1.5</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          <li><a href="sec-basics.html#DivisionRing">Definition 1.1.6</a></li>
         </ul>
 
       </div>
@@ -462,7 +502,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Module#doc" target="_blank" rel="noopener noreferrer">Module</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Module" target="_blank" rel="noopener noreferrer">Module</a></li>
         </ul>
 
       </div>
@@ -481,7 +521,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.9</span>
+    <span class="remark_thmlabel">1.1.11</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:VectorSpace">#</a>
 
@@ -489,7 +529,7 @@
   </div>
   <div class="remark_thmcontent">
   
-<p>In Lean 4, for generality, <span class="sffamily">Mathlib</span>uses <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=Module">Module</a> throughout for vector spaces, particularly, for a vector space \(V\), it’s usually declared as </p>
+<p>For generality, <span class="sffamily">Mathlib</span>&#160;uses <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=Module">Module</a> throughout for vector spaces, particularly, for a vector space \(V\), it’s usually declared as </p>
 <code class="plain_listing">variable [DivisionRing K] [AddCommGroup V] [Module K V]</code>
 
 <p>for definitions/theorems about it, and most of them can be found under <span class="sffamily">Mathlib.LinearAlgebra</span>. </p>
@@ -501,7 +541,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.10</span>
+    <span class="remark_thmlabel">1.1.12</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:Submodule">#</a>
 
@@ -519,7 +559,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.11</span>
+    <span class="definition_thmlabel">1.1.13</span>
     <span class="definition_thmtitle">Algebra</span>
     ✓
     <div class="thm_icons">
@@ -534,8 +574,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
-          <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          <li><a href="sec-basics.html#Ring">Definition 1.1.5</a></li>
         </ul>
 
       </div>
@@ -549,7 +589,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=Algebra#doc" target="_blank" rel="noopener noreferrer">Algebra</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Algebra" target="_blank" rel="noopener noreferrer">Algebra</a></li>
         </ul>
 
       </div>
@@ -560,7 +600,7 @@
   <div class="definition_thmcontent">
   
 <p>An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a module over \(R\) with a multiplication which makes \(A\) a ring and satisfying </p>
-<div class="displaymath" id="a0000000019">
+<div class="displaymath" id="a0000000021">
   \[  \alpha (x y)=(\alpha x) y=x(\alpha y),(x, y \in A, \alpha \in R) .  \]
 </div>
 
@@ -571,7 +611,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.12</span>
+    <span class="remark_thmlabel">1.1.14</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:Algebra">#</a>
 
@@ -588,7 +628,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.13</span>
+    <span class="definition_thmlabel">1.1.15</span>
     <span class="definition_thmtitle">RingHom</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#RingHom">#</a>
@@ -602,7 +642,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
+          <li><a href="sec-basics.html#Ring">Definition 1.1.5</a></li>
         </ul>
 
       </div>
@@ -616,7 +656,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=RingHom#doc" target="_blank" rel="noopener noreferrer">RingHom</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingHom" target="_blank" rel="noopener noreferrer">RingHom</a></li>
         </ul>
 
       </div>
@@ -635,7 +675,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.14</span>
+    <span class="definition_thmlabel">1.1.16</span>
     <span class="definition_thmtitle">FreeAlgebra</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#FreeAlgebra">#</a>
@@ -649,8 +689,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Ring">Definition 1.1.4</a></li>
-          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
+          <li><a href="sec-basics.html#Ring">Definition 1.1.5</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
         </ul>
 
       </div>
@@ -664,7 +704,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=FreeAlgebra#doc" target="_blank" rel="noopener noreferrer">FreeAlgebra</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra" target="_blank" rel="noopener noreferrer">FreeAlgebra</a></li>
         </ul>
 
       </div>
@@ -683,7 +723,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.15</span>
+    <span class="definition_thmlabel">1.1.17</span>
     <span class="definition_thmtitle">LinearMap</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#LinearMap">#</a>
@@ -697,8 +737,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
-          <li><a href="sec-basics.html#RingHom">Definition 1.1.13</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          <li><a href="sec-basics.html#RingHom">Definition 1.1.15</a></li>
         </ul>
 
       </div>
@@ -712,7 +752,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=LinearMap#doc" target="_blank" rel="noopener noreferrer">LinearMap</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/LinearMap" target="_blank" rel="noopener noreferrer">LinearMap</a></li>
         </ul>
 
       </div>
@@ -731,7 +771,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.16</span>
+    <span class="definition_thmlabel">1.1.18</span>
     <span class="definition_thmtitle">RingQuot</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#RingQuot">#</a>
@@ -745,8 +785,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.7</a></li>
-          <li><a href="sec-basics.html#RingHom">Definition 1.1.13</a></li>
+          <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          <li><a href="sec-basics.html#RingHom">Definition 1.1.15</a></li>
         </ul>
 
       </div>
@@ -760,7 +800,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=RingQuot#doc" target="_blank" rel="noopener noreferrer">RingQuot</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingQuot" target="_blank" rel="noopener noreferrer">RingQuot</a></li>
         </ul>
 
       </div>
@@ -779,7 +819,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.17</span>
+    <span class="definition_thmlabel">1.1.19</span>
     <span class="definition_thmtitle">TensorAlgebra relation</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#TensorAlgebra_Rel">#</a>
@@ -793,8 +833,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.14</a></li>
-          <li><a href="sec-basics.html#LinearMap">Definition 1.1.15</a></li>
+          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.16</a></li>
+          <li><a href="sec-basics.html#LinearMap">Definition 1.1.17</a></li>
         </ul>
 
       </div>
@@ -808,7 +848,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=TensorAlgebra.Rel#doc" target="_blank" rel="noopener noreferrer">TensorAlgebra.Rel</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/TensorAlgebra.Rel" target="_blank" rel="noopener noreferrer">TensorAlgebra.Rel</a></li>
         </ul>
 
       </div>
@@ -827,7 +867,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.18</span>
+    <span class="definition_thmlabel">1.1.20</span>
     <span class="definition_thmtitle">Tensor algebra</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#TensorAlgebra">#</a>
@@ -841,10 +881,10 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Algebra">Definition 1.1.11</a></li>
-          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.14</a></li>
-          <li><a href="sec-basics.html#TensorAlgebra_Rel">Definition 1.1.17</a></li>
-          <li><a href="sec-basics.html#RingQuot">Definition 1.1.16</a></li>
+          <li><a href="sec-basics.html#Algebra">Definition 1.1.13</a></li>
+          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.16</a></li>
+          <li><a href="sec-basics.html#TensorAlgebra_Rel">Definition 1.1.19</a></li>
+          <li><a href="sec-basics.html#RingQuot">Definition 1.1.18</a></li>
         </ul>
 
       </div>
@@ -858,7 +898,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs//find/?pattern=TensorAlgebra#doc" target="_blank" rel="noopener noreferrer">TensorAlgebra</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/TensorAlgebra" target="_blank" rel="noopener noreferrer">TensorAlgebra</a></li>
         </ul>
 
       </div>
@@ -883,7 +923,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.19</span>
+    <span class="remark_thmlabel">1.1.21</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:TensorAlgebra">#</a>
 
@@ -898,7 +938,7 @@
   <li><p>additional relations making the inclusion of \(M\) into an \(R\)-linear map </p>
 </li>
 </ol>
-<p>As ideals haven’t been formalized for the non-commutative case, <span class="sffamily">Mathlib</span>uses <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=RingQuot">RingQuot</a> which is the quotient of a non-commutative ring by an arbitrary relation. </p>
+<p>As ideals haven’t been formalized for the non-commutative case, <span class="sffamily">Mathlib</span>&#160;uses <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=RingQuot">RingQuot</a> which is the quotient of a non-commutative ring by an arbitrary relation. </p>
 
   </div>
 </div>  </p>
