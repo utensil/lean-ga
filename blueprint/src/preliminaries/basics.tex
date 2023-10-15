@@ -1,6 +1,6 @@
 
 In this section, we follow \cite{jadczyk2019notes}, with supplements from \cite{garling2011clifford, chen2016infinitely}, 
-and modifications to match the counterparts in Lean's \texttt{Mathlib}.
+and modifications to match the counterparts in Lean's \Mathlib.
 
 \begin{definition}[Group]
     \label{Group}
@@ -185,14 +185,14 @@ and modifications to match the counterparts in Lean's \texttt{Mathlib}.
 \begin{remark}
     \label{mk:VectorSpace}
 
-    In Lean 4, for generality, Mathlib uses \vocab{Module} throughout for vector spaces,
+    In Lean 4, for generality, \Mathlib uses \MathlibDoc{Module} throughout for vector spaces,
     particularly, for a vector space $V$, it's usually declared as
 
     \begin{lstlisting}
         variable [DivisionRing K] [AddCommGroup V] [Module K V]
     \end{lstlisting}
 
-    for definitions/theorems about it, and most of them can be found under \texttt{Mathlib.LinearAlgebra}.
+    for definitions/theorems about it, and most of them can be found under \textsf{Mathlib.LinearAlgebra}. % e.g. \MathlibDoc{LinearIndependent}.
     
 \end{remark}
 
@@ -325,7 +325,7 @@ and modifications to match the counterparts in Lean's \texttt{Mathlib}.
         \item additional relations making the inclusion of $M$ into an $R$-linear map
     \end{enumerate}
 
-    As ideals haven't been formalized for the non-commutative case, \texttt{Mathlib} uses \texttt{RingQuote} which is
+    As ideals haven't been formalized for the non-commutative case, \Mathlib uses \MathlibDoc{RingQuot} which is
     the quotient of a non-commutative ring by an arbitrary relation.
     
 \end{remark}
