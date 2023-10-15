@@ -6,3 +6,7 @@ src/all.lean
 src/list_decls.lean
 decls.pickle
 decls.yaml
+blueprint/src/_minted-print/
+blueprint/print/print.pyg
+blueprint/src/print.xdv
+blueprint/src/print.pyg
