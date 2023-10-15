@@ -1,0 +1,56 @@
+\ProvidesPackage{lean_unicode}
+\RequirePackage{newunicodechar}
+\RequirePackage{accsupp}
+\RequirePackage{MnSymbol}
+\RequirePackage{hyperref}
+
+% unicode characters
+\newunicodechar{∗}{\BeginAccSupp{method=hex,unicode,ActualText=2217}\ensuremath{\ast}\EndAccSupp{}}
+\newunicodechar{≠}{\BeginAccSupp{method=hex,unicode,ActualText=2260}\ensuremath{\ne}\EndAccSupp{}}
+\newunicodechar{−}{\BeginAccSupp{method=hex,unicode,ActualText=2212}\ensuremath{-}\EndAccSupp{}}
+\newunicodechar{Π}{\BeginAccSupp{method=hex,unicode,ActualText=03A0}\ensuremath{\mathrm{\Pi}}\EndAccSupp{}}
+\newunicodechar{⨁}{\BeginAccSupp{method=hex,unicode,ActualText=2A01}\ensuremath{\bigoplus}\EndAccSupp{}}
+\newunicodechar{∑}{\BeginAccSupp{method=hex,unicode,ActualText=2211}\ensuremath{\mathrm{\Sigma}}\EndAccSupp{}}
+\newunicodechar{⦃}{\BeginAccSupp{method=hex,unicode,ActualText=2983}\ensuremath{\{\!|}\EndAccSupp{}}
+\newunicodechar{⦄}{\BeginAccSupp{method=hex,unicode,ActualText=2984}\ensuremath{|\!\}}\EndAccSupp{}}
+\newunicodechar{≃}{\BeginAccSupp{method=hex,unicode,ActualText=2243}\ensuremath{\simeq}\EndAccSupp{}}
+\newunicodechar{∃}{\makebox[.5em]{\BeginAccSupp{method=hex,unicode,ActualText=2203}\ensuremath{\exists}\EndAccSupp{}}}
+\newunicodechar{∀}{\makebox[.5em]{\BeginAccSupp{method=hex,unicode,ActualText=2200}\ensuremath{\forall}\EndAccSupp{}}}
+\newunicodechar{⅟}{\BeginAccSupp{method=hex,unicode,ActualText=215F}\ensuremath{{}^1\!/}\EndAccSupp{}}
+\newunicodechar{∞}{\BeginAccSupp{method=hex,unicode,ActualText=221E}\ensuremath{\infty}\EndAccSupp{}}
+% letters
+\newunicodechar{α}{\makebox[.5em]{\BeginAccSupp{method=hex,unicode,ActualText=03B1}\ensuremath{\alpha}\EndAccSupp{}}}
+\newunicodechar{β}{\makebox[.5em]{\BeginAccSupp{method=hex,unicode,ActualText=03B2}\ensuremath{\beta}\EndAccSupp{}}}
+\newunicodechar{ℝ}{\BeginAccSupp{method=hex,unicode,ActualText=211D}\ensuremath{\mathbb{R}}\EndAccSupp{}}
+\newunicodechar{ℕ}{\BeginAccSupp{method=hex,unicode,ActualText=2115}\ensuremath{\mathbb{N}}\EndAccSupp{}}
+\newunicodechar{ℚ}{\BeginAccSupp{method=hex,unicode,ActualText=211A}\ensuremath{\mathbb{Q}}\EndAccSupp{}}
+\newunicodechar{ℤ}{\BeginAccSupp{method=hex,unicode,ActualText=2124}\ensuremath{\mathbb{Z}}\EndAccSupp{}}
+\newunicodechar{ℂ}{\BeginAccSupp{method=hex,unicode,ActualText=2102}\ensuremath{\mathbb{C}}\EndAccSupp{}}
+\newunicodechar{λ}{\makebox[.5em]{\BeginAccSupp{method=hex,unicode,ActualText=03BB}\ensuremath{\lambda}\EndAccSupp{}}}
+\newunicodechar{ι}{\makebox[.5em]{\BeginAccSupp{method=hex,unicode,ActualText=03B9}\ensuremath{\iota}\EndAccSupp{}}}
+% sets
+\newunicodechar{∅}{\BeginAccSupp{method=hex,unicode,ActualText=2205}\ensuremath{\varnothing}\EndAccSupp{}}
+\newunicodechar{∪}{\BeginAccSupp{method=hex,unicode,ActualText=222A}\ensuremath{\cup}\EndAccSupp{}}
+\newunicodechar{∩}{\BeginAccSupp{method=hex,unicode,ActualText=2229}\ensuremath{\cap}\EndAccSupp{}}
+\newunicodechar{∈}{\BeginAccSupp{method=hex,unicode,ActualText=2208}\ensuremath{\in}\EndAccSupp{}}
+\newunicodechar{Δ}{\BeginAccSupp{method=hex,unicode,ActualText=0394}\ensuremath{\Delta}\EndAccSupp{}}
+% subscripts and superscripts
+\newunicodechar{ᵒ}{\BeginAccSupp{method=hex,unicode,ActualText=1D52}\ensuremath{{}^o}\EndAccSupp{}}
+\newunicodechar{₀}{\BeginAccSupp{method=hex,unicode,ActualText=2080}\ensuremath{{}_o}\EndAccSupp{}}
+\newunicodechar{ᵖ}{\BeginAccSupp{method=hex,unicode,ActualText=1D56}\ensuremath{{}^p}\EndAccSupp{}}
+\newunicodechar{ᵈ}{\BeginAccSupp{method=hex,unicode,ActualText=1D48}\ensuremath{{}^d}\EndAccSupp{}}
+\newunicodechar{ₙ}{\BeginAccSupp{method=hex,unicode,ActualText=2099}\ensuremath{{}_n}\EndAccSupp{}}
+\newunicodechar{₁}{\BeginAccSupp{method=hex,unicode,ActualText=2081}\ensuremath{{}_1}\EndAccSupp{}}
+\newunicodechar{₂}{\BeginAccSupp{method=hex,unicode,ActualText=2082}\texorpdfstring{\ensuremath{{}_2}}{₂}\EndAccSupp{}}
+\newunicodechar{₃}{\BeginAccSupp{method=hex,unicode,ActualText=2083}\ensuremath{{}_3}\EndAccSupp{}}
+\newunicodechar{ₗ}{\makebox[.5em]{\BeginAccSupp{method=hex,unicode,ActualText=2097}\ensuremath{{}_l}\EndAccSupp{}}}
+\newunicodechar{ₐ}{\BeginAccSupp{method=hex,unicode,ActualText=2090}\ensuremath{{}_a}\EndAccSupp{}}
+% other operators
+\newunicodechar{⋏}{\BeginAccSupp{method=hex,unicode,ActualText=22CF}\ensuremath{\curlywedge}\EndAccSupp{}}
+\newunicodechar{↥}{\BeginAccSupp{method=hex,unicode,ActualText=21A5}\ensuremath{\upmapsto}\EndAccSupp{}}
+\newunicodechar{̅}{\BeginAccSupp{method=hex,unicode,ActualText=0305}\ensuremath{\overline{\phantom{x}}\negphantom{x}}\EndAccSupp{}}
+\newunicodechar{▸}{\BeginAccSupp{method=hex,unicode,ActualText=25B8}\ensuremath{\blacktriangleright}\EndAccSupp{}}
+\newunicodechar{∥}{\BeginAccSupp{method=hex,unicode,ActualText=2225}\ensuremath{\|}\EndAccSupp{}}
+\newunicodechar{⊗}{\BeginAccSupp{method=hex,unicode,ActualText=2297}\ensuremath{\otimes}\EndAccSupp{}}
+
+\endinput
