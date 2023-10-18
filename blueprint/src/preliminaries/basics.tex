@@ -195,7 +195,7 @@ and modifications to match the counterparts in Lean's \Mathlib.
     \alpha \to \beta \to \gamma
     $$
 
-    where $\alpha$, $\beta$, $gamma$ are different types.
+    where $\alpha$, $\beta$, $\gamma$ are different types.
     
 \end{remark}
 
@@ -273,7 +273,7 @@ and modifications to match the counterparts in Lean's \Mathlib.
     
 \end{remark}
 
-\begin{definition}[RingHom]
+\begin{definition}[Ring homomorphism]
     \label{RingHom}
     % \leanok
     \lean{RingHom, RingHomClass}
@@ -281,15 +281,13 @@ and modifications to match the counterparts in Lean's \Mathlib.
 
     Let $(\alpha, +_\alpha, *_\alpha)$, and $(\beta, +_\beta, *_\beta)$ be rings.
     
-    A \vocab{ring homomorphism}, from $\alpha$ to $\beta$ is a function $f : \alpha \to \beta$ such that
+    A \vocab{ring homomorphism}, from $\alpha$ to $\beta$ is a function $f : \alpha \to_{+*} \beta$ such that
 
 	\begin{enumerate}[(i)]
 		\item $f(x +_{\alpha} y) = f(x) +_{\beta} f(y)$ for each $x,y \in \alpha$.
 		\item $f(x \times_{\alpha} y) = f(x) \times_{\beta} f(y)$ for each $x,y \in \alpha$.
 		\item $f(1_{\alpha}) = 1_{\beta}$.
 	\end{enumerate}
-
-    and is denoted as $f : \alpha \to_{+*} \beta$.
 
 \end{definition}
 
