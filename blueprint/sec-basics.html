@@ -657,6 +657,7 @@
         </header>
                 <ul class="uses">
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingHom" target="_blank" rel="noopener noreferrer">RingHom</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingHomClass" target="_blank" rel="noopener noreferrer">RingHomClass</a></li>
         </ul>
 
       </div>
@@ -666,7 +667,17 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>TODO </p>
+<p>Let \((\alpha , +_\alpha , *_\alpha )\), and \((\beta , +_\beta , *_\beta )\) be rings. </p>
+<p>A <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b>, from \(\alpha \) to \(\beta \) is a function \(f : \alpha \to \beta \) such that </p>
+<ol class="enumerate">
+  <li><p>\(f(x +_{\alpha } y) = f(x) +_{\beta } f(y)\) for each \(x,y \in \alpha \). </p>
+</li>
+  <li><p>\(f(x \times _{\alpha } y) = f(x) \times _{\beta } f(y)\) for each \(x,y \in \alpha \). </p>
+</li>
+  <li><p>\(f(1_{\alpha }) = 1_{\beta }\). </p>
+</li>
+</ol>
+<p>and is denoted as \(f : \alpha \to _{+*} \beta \). </p>
 
   </div>
 </div> </p>
