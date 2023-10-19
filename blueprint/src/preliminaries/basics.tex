@@ -39,8 +39,9 @@ and modifications to match the counterparts in Lean's \Mathlib.
     Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation. %TODO cite
     
     It can be denoted multiplicatively as $*$ in \MathlibDoc{Group}
-    or additively as $+$ in \MathlibDoc{AddGroup}, where $e$ will be denoted by $1$ or $0$, respectively,
-    sometimes with subscript (e.g. $1_G$) to indicate where it is.
+    or additively as $+$ in \MathlibDoc{AddGroup}, where $e$ will be denoted by $1$ or $0$, respectively.
+
+    Sometimes we use notations with subscripts (e.g. $*_G$, $1_G$) to indicate where they are.
 
     We will use the corresponding notation in \Mathlib for future operations without further explanation.
 
@@ -92,6 +93,13 @@ and modifications to match the counterparts in Lean's \Mathlib.
 
 \end{definition}
 
+\begin{remark}
+    \label{mk:CommRing}
+
+    In applications to Clifford algebras $R$ will be always assumed to be \vocab{commutative}.
+    
+\end{remark}
+
 \begin{definition}[Division ring]
     \label{DivisionRing}
     \leanok
@@ -114,13 +122,6 @@ and modifications to match the counterparts in Lean's \Mathlib.
 %     A commutative division ring is called a \vocab{field}.
 
 % \end{definition}
-
-\begin{remark}
-    \label{mk:CommRing}
-
-    In applications to Clifford algebras $R$ will be always assumed to be \vocab{commutative}.
-    
-\end{remark}
 
 % TODO resume later when needed
 % \begin{definition}[Characteristic]
@@ -174,7 +175,7 @@ and modifications to match the counterparts in Lean's \Mathlib.
     \begin{enumerate}
       \item M has a structure of an additive group,
     
-      \item For every $a, b \in R$, $x, y \in M$, an operation $\alpha \bu a$ called scalar multiplication is defined, and we have
+      \item For every $a, b \in R$, $x, y \in M$, an operation $\bu : R \to M \to M$ called scalar multiplication is defined, and we have
       
         \begin{enumerate}[i]
             \item $a \bu (x + y) = a \bu x + b \bu y$,
@@ -192,7 +193,7 @@ and modifications to match the counterparts in Lean's \Mathlib.
     The notation of scalar multiplication is generalized as heterogeneous scalar multiplication in \Mathlib:
 
     $$
-    \alpha \to \beta \to \gamma
+    bu : \alpha \to \beta \to \gamma
     $$
 
     where $\alpha$, $\beta$, $\gamma$ are different types.
