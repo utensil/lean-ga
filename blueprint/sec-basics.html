@@ -243,7 +243,7 @@
   
 <p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a pair \((R, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>), </p>
+  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>). </p>
 </li>
   <li><p>There is an element \(1 \in R\) such that \(1 * a = a * 1 = a\) for all \(a\) in \(R\) (that is \(1\) is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
 </li>
@@ -300,9 +300,9 @@
   
 <p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a triple \((R, +, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under \(+\); </p>
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under \(+\). </p>
 </li>
-  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\); </p>
+  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\). </p>
 </li>
   <li><p>If \(a, b, c\) are elements of \(R\), we have </p>
 <div class="displaymath" id="a0000000018">
@@ -462,7 +462,7 @@
   
 <p>The notation of scalar multiplication is generalized as heterogeneous scalar multiplication in <span class="sffamily">Mathlib</span>&#160;: </p>
 <div class="displaymath" id="a0000000020">
-  \[  bu : \alpha \to \beta \to \gamma  \]
+  \[  \bullet : \alpha \to \beta \to \gamma  \]
 </div>
 <p>where \(\alpha \), \(\beta \), \(\gamma \) are different types. </p>
 
@@ -600,10 +600,18 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a module over \(R\) with a multiplication which makes \(A\) a ring and satisfying </p>
+<p>An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a pair \((M, *)\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>The elements of \(A\) form a <b class="bfseries"><span style="color:#181870"> module</span></b> \(M\) over \(R\) under \(+\) and \(\bullet \). </p>
+</li>
+  <li><p>The elements of \(A\) form a <b class="bfseries"><span style="color:#181870"> ring</span></b> under \(*\). </p>
+</li>
+  <li><p>For \(x, y \in A, a \in R\), we have </p>
 <div class="displaymath" id="a0000000021">
-  \[  \alpha (x y)=(\alpha x) y=x(\alpha y),(x, y \in A, \alpha \in R) .  \]
+  \[  a \bullet (x * y) = (a \bullet x) y = x * (a \bullet y).  \]
 </div>
+</li>
+</ol>
 
   </div>
 </div> </p>
