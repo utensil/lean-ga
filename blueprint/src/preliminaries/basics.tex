@@ -55,7 +55,7 @@ and modifications to match the counterparts in Lean's \Mathlib.
     A \vocab{monoid} is a pair $(R, *)$, satisfying:
 
     \begin{enumerate}
-    \item $(a * b) * c = a * (b * c)$ for all $a, b, c \in R$ (\vocab{associativity}),
+    \item $(a * b) * c = a * (b * c)$ for all $a, b, c \in R$ (\vocab{associativity}).
 
     \item There is an element $1 \in R$ such that $1 * a = a * 1 = a$ for all $a$ in $R$
     (that is $1$ is the multiplicative identity (\vocab{neutral element}).
@@ -73,9 +73,9 @@ and modifications to match the counterparts in Lean's \Mathlib.
     A \vocab{ring} is a triple $(R, +, *)$, satisfying:
 
     \begin{enumerate}
-    \item The elements of $R$ form a \vocab{commutative group} under $+$;
+    \item The elements of $R$ form a \vocab{commutative group} under $+$.
 
-    \item The elements of $R$ form a \vocab{monoid} under $*$;
+    \item The elements of $R$ form a \vocab{monoid} under $*$.
 
     \item If $a, b, c$ are elements of $R$, we have
 
@@ -193,7 +193,7 @@ and modifications to match the counterparts in Lean's \Mathlib.
     The notation of scalar multiplication is generalized as heterogeneous scalar multiplication in \Mathlib:
 
     $$
-    bu : \alpha \to \beta \to \gamma
+    \bu : \alpha \to \beta \to \gamma
     $$
 
     where $\alpha$, $\beta$, $\gamma$ are different types.
@@ -257,11 +257,20 @@ and modifications to match the counterparts in Lean's \Mathlib.
     \lean{Algebra}
     \uses{Module, Ring}
 
-    An \vocab{algebra} $A$ over $R$ is a module over $R$ with a multiplication which makes $A$ a ring and satisfying
+    An \vocab{algebra} $A$ over $R$ is a pair $(M, *)$, satisfying:
 
+    \begin{enumerate}
+    \item The elements of $A$ form a \vocab{module} $M$ over $R$ under $+$ and $\bu$.
+
+    \item The elements of $A$ form a \vocab{ring} under $*$.
+
+    \item For $x, y \in A, a \in R$, we have
+    
     $$
-    \alpha(x y)=(\alpha x) y=x(\alpha y),(x, y \in A, \alpha \in R) .
+    a \bu (x * y) = (a \bu x) y = x * (a \bu y).
     $$
+
+    \end{enumerate}
 
 \end{definition}
 
