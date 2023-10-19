@@ -205,7 +205,8 @@
 <p>In literatures, the binary operation are usually denoted by juxtaposition, and is understood to be a mapping \((g, h) \mapsto g * h\) from \(G \times G\) to \(G\). </p>
 <p><span class="sffamily">Mathlib</span>&#160;uses a slightly different way to encode this, \(G \to G \to G\) is understood to be \(G \to (G \to G)\), that sends \(g \in G\) to a mapping that sends \(h \in G\) to \(g * h \in G\). </p>
 <p>Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation. </p>
-<p>It can be denoted multiplicatively as \(*\) in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=Group">Group</a> or additively as \(+\) in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=AddGroup">AddGroup</a>, where \(e\) will be denoted by \(1\) or \(0\), respectively, sometimes with subscript (e.g. \(1_G\)) to indicate where it is. </p>
+<p>It can be denoted multiplicatively as \(*\) in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=Group">Group</a> or additively as \(+\) in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/?pattern=AddGroup">AddGroup</a>, where \(e\) will be denoted by \(1\) or \(0\), respectively. </p>
+<p>Sometimes we use notations with subscripts (e.g. \(*_G\), \(1_G\)) to indicate where they are. </p>
 <p>We will use the corresponding notation in <span class="sffamily">Mathlib</span>&#160;for future operations without further explanation. </p>
 
   </div>
@@ -316,12 +317,29 @@
 
   </div>
 </div> </p>
+<p><div class="remark_thmwrapper" id="mk:CommRing">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.6</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:CommRing">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>In applications to Clifford algebras \(R\) will be always assumed to be <b class="bfseries"><span style="color:#181870"> commutative</span></b>. </p>
+
+  </div>
+</div> </p>
 <p><div class="definition_thmwrapper" id="DivisionRing">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.6</span>
+    <span class="definition_thmlabel">1.1.7</span>
     <span class="definition_thmtitle">Division ring</span>
     ✓
     <div class="thm_icons">
@@ -361,23 +379,6 @@
   <div class="definition_thmcontent">
   
 <p>A ring containing at least two elements, in which every nonzero element \(a\) has a multiplicative inverse \(a^{-1}\) is called a <b class="bfseries"><span style="color:#181870"> division ring</span></b> (sometimes also called a "skew field"). </p>
-
-  </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:CommRing">
-  <div class="remark_thmheading">
-    <span class="remark_thmcaption">
-    Remark
-    </span>
-    <span class="remark_thmlabel">1.1.7</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:CommRing">#</a>
-
-  </div>
-  </div>
-  <div class="remark_thmcontent">
-  
-<p>In applications to Clifford algebras \(R\) will be always assumed to be <b class="bfseries"><span style="color:#181870"> commutative</span></b>. </p>
 
   </div>
 </div> </p>
@@ -430,7 +431,7 @@
 <ol class="enumerate">
   <li><p>M has a structure of an additive group, </p>
 </li>
-  <li><p>For every \(a, b \in R\), \(x, y \in M\), an operation \(\alpha \bullet a\) called scalar multiplication is defined, and we have </p>
+  <li><p>For every \(a, b \in R\), \(x, y \in M\), an operation \(\bullet : R \to M \to M\) called scalar multiplication is defined, and we have </p>
 <ol class="enumerate">
   <li><p>\(a \bullet (x + y) = a \bullet x + b \bullet y\), </p>
 </li>
@@ -461,7 +462,7 @@
   
 <p>The notation of scalar multiplication is generalized as heterogeneous scalar multiplication in <span class="sffamily">Mathlib</span>&#160;: </p>
 <div class="displaymath" id="a0000000020">
-  \[  \alpha \to \beta \to \gamma  \]
+  \[  bu : \alpha \to \beta \to \gamma  \]
 </div>
 <p>where \(\alpha \), \(\beta \), \(\gamma \) are different types. </p>
 
@@ -488,7 +489,7 @@
         </header>
                 <ul class="uses">
           <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
-          <li><a href="sec-basics.html#DivisionRing">Definition 1.1.6</a></li>
+          <li><a href="sec-basics.html#DivisionRing">Definition 1.1.7</a></li>
         </ul>
 
       </div>
