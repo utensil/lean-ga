@@ -265,7 +265,7 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
         variable [DivisionRing K] [AddCommGroup V] [Module K V]
     \end{lstlisting}
 
-    for definitions/theorems about it, and most of them can be found under \textsf{Mathlib.LinearAlgebra}. % e.g. \MathlibDoc{LinearIndependent}.
+    for definitions/theorems about it, and most of them can be found under \textsf{Mathlib.LinearAlgebra} e.g. \MathlibDoc{LinearIndependent}.
     
 \end{remark}
 
@@ -298,7 +298,7 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
 
 \begin{definition}[Ring homomorphism]
     \label{RingHom}
-    % \leanok
+    \leanok
     \lean{RingHom, RingHomClass}
     \uses{Ring}
 
@@ -318,14 +318,14 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
     \label{Algebra}
     \leanok
     \lean{Algebra}
-    \uses{Module, Ring}
+    \uses{RingHom, Module}
 
     Let $R$ be a commutative ring. An \vocab{algebra} $A$ over $R$ is a pair $(A, \bu)$, satisfying:
 
     \begin{enumerate}
     \item $A$ is a \vocab{ring} under $*$.
     
-    \item there exists a \vocab{ring homomorphism} from $R$ to $A$, denoted $f : R \to_{+*} A$.
+    \item there exists a \vocab{ring homomorphism} from $R$ to $A$, denoted $\iota : R \to_{+*} A$.
     
     \item $\bu : R \to M \to M$ is a \vocab{scalar multiplication}
     
@@ -338,7 +338,7 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
 
     \end{enumerate}
 
-    where we omitted that the ring homomorphism $f$ is applied to $r$ before multiplication,
+    where we omitted that the ring homomorphism $\iota$ is applied to $r$ before each multiplication,
     while they are explicitly written as \lstinline|toRingHom(r)| in \Mathlib.
 
 \end{definition}
@@ -380,10 +380,42 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
 \begin{definition}[FreeAlgebra]
     \label{FreeAlgebra}
     % \leanok
-    \lean{FreeAlgebra}
+    \lean{FreeAlgebra, FreeAlgebra.Pre, FreeAlgebra.Rel}
     \uses{Ring, Module}
 
-    TODO
+    An \vocab{free algebra} $A$ over $R$ is a triple $(A, +, *)$ constructed inductively by:
+
+    \begin{enumerate}
+
+    \item for all $a in R$, there exists a map $R \to A$
+    \item for all $a, b$ in $A$, $a + b$ is in $A$
+    \item for all $a, b$ in $A$, $a * b$ is in $A$
+    
+    \end{enumerate}
+
+    , satisfying:
+
+    \begin{enumerate}
+    
+    \item $A$ is a \vocab{commutative ring} under $+$.
+    \item $A$ is a \vocab{monoid} under $*$.
+    \item \vocab{associativity} and \vocab{commutativity} under $*$.
+    \item \vocab{associativity} under $*$.
+    \item $1 * a = a * 1 = a$.
+    \item $0 * a = a * 0 = 0$.
+    \item left and right \vocab{distributivity} under $*$ over $+$
+    \item for all $a, b, c$ in $A$,
+    
+    \begin{enumerate}[(i)]
+    
+    \item a + c = b + c
+    \item c + a = c + b
+    \item a * c = b * c
+    \item c * a = c * b
+
+    \end{enumerate}
+
+    \end{enumerate}
 
 \end{definition}
 
