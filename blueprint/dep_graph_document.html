@@ -59,7 +59,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.13</span><span class="definition_thmtitle">Algebra</span></div>
+      <span class="definition_thmlabel">1.1.14</span><span class="definition_thmtitle">Algebra</span></div>
     <div class="thm_thmcontent">
 <p>An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a pair \((M, *)\), satisfying: </p>
 <ol class="enumerate">
@@ -68,7 +68,7 @@
   <li><p>The elements of \(A\) form a <b class="bfseries"><span style="color:#181870"> ring</span></b> under \(*\). </p>
 </li>
   <li><p>For \(x, y \in A, a \in R\), we have </p>
-<div class="displaymath" id="a0000000021">
+<div class="displaymath" id="a0000000020">
   \[  a \bullet (x * y) = (a \bullet x) * y = x * (a \bullet y).  \]
 </div>
 </li>
@@ -142,9 +142,19 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.7</span><span class="definition_thmtitle">Division ring</span></div>
+      <span class="definition_thmlabel">1.1.8</span><span class="definition_thmtitle">Division ring</span></div>
     <div class="thm_thmcontent">
-<p>A ring containing at least two elements, in which every nonzero element \(a\) has a multiplicative inverse \(a^{-1}\) is called a <b class="bfseries"><span style="color:#181870"> division ring</span></b> (sometimes also called a "skew field"). </p>
+<p>A <b class="bfseries"><span style="color:#181870"> division ring</span></b> is a ring \((R, +, *)\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(R\) contains at least 2 elements </p>
+</li>
+  <li><p>for all \(a \neq 0\) in \(R\), there exists a multiplicative inverse \(a^{-1} \in R\) such that </p>
+<div class="displaymath" id="a0000000018">
+  \[  a * a^{-1} = a^{-1} * a = 1  \]
+</div>
+</li>
+</ol>
+<p>(sometimes also called a "skew field"). </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#DivisionRing">LaTeX</a>
@@ -166,7 +176,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.16</span><span class="definition_thmtitle">FreeAlgebra</span></div>
+      <span class="definition_thmlabel">1.1.17</span><span class="definition_thmtitle">FreeAlgebra</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
@@ -190,13 +200,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.1</span><span class="definition_thmtitle">Group</span></div>
+      <span class="definition_thmlabel">1.1.2</span><span class="definition_thmtitle">Group</span></div>
     <div class="thm_thmcontent">
-<p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a pair \((G, *)\), where \(G\) is a set, \(*\) is a binary operation, satisfying: </p>
+<p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a pair \((G, *)\), satisfying: </p>
 <ol class="enumerate">
   <li><p>\((g * h) * j = g * (h * j)\) for all \(g, h, j \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>) </p>
 </li>
-  <li><p>there exists \(e\) in \(G\) such that \(e * g = g * e = g\) for all \(g \in G\) </p>
+  <li><p>there exists \(e \in G\) such that \(e * g = g * e = g\) for all \(g \in G\) </p>
 </li>
   <li><p>for each \(g \in G\) there exists \(g^{-1} \in G\) such that \(g * g^{-1} = g^{-1} * g = e\) </p>
 </li>
@@ -231,7 +241,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.17</span><span class="definition_thmtitle">LinearMap</span></div>
+      <span class="definition_thmlabel">1.1.18</span><span class="definition_thmtitle">LinearMap</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
@@ -255,13 +265,13 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.8</span><span class="definition_thmtitle">Module</span></div>
+      <span class="definition_thmlabel">1.1.9</span><span class="definition_thmtitle">Module</span></div>
     <div class="thm_thmcontent">
-<p>Let \(R\) be a commutative ring. A <b class="bfseries"><span style="color:#181870"> module</span></b> over \(R\) (in short \(R\)-module) is a set \(M\) such that </p>
+<p>Let \(R\) be a commutative ring. A <b class="bfseries"><span style="color:#181870"> module</span></b> over \(R\) (in short <b class="bfseries"><span style="color:#181870"> \(R\)-module</span></b>) is a pair \((M, \bullet )\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>M has a structure of an additive group, </p>
+  <li><p>M is a group under \(+\), </p>
 </li>
-  <li><p>For every \(a, b \in R\), \(x, y \in M\), an operation \(\bullet : R \to M \to M\) called scalar multiplication is defined, and we have </p>
+  <li><p>\(\bullet : R \to M \to M\) is called <b class="bfseries"><span style="color:#181870"> scalar multiplication</span></b>, for every \(a, b \in R\), \(x, y \in M\), we have </p>
 <ol class="enumerate">
   <li><p>\(a \bullet (x + y) = a \bullet x + b \bullet y\), </p>
 </li>
@@ -295,13 +305,14 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.4</span><span class="definition_thmtitle">Monoid</span></div>
+      <span class="definition_thmlabel">1.1.5</span><span class="definition_thmtitle">Monoid</span></div>
     <div class="thm_thmcontent">
 <p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a pair \((R, *)\), satisfying: </p>
 <ol class="enumerate">
   <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>). </p>
 </li>
-  <li><p>There is an element \(1 \in R\) such that \(1 * a = a * 1 = a\) for all \(a\) in \(R\) (that is \(1\) is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
+  <li><p>there exists an element \(1 \in R\) such that \(1 * a = a * 1 = a\) for all \(a \in R\) </p>
+<p>i.e. \(1\) is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
 </li>
 </ol>
 </div>
@@ -334,22 +345,22 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.5</span><span class="definition_thmtitle">Ring</span></div>
+      <span class="definition_thmlabel">1.1.6</span><span class="definition_thmtitle">Ring</span></div>
     <div class="thm_thmcontent">
 <p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a triple \((R, +, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under \(+\). </p>
+  <li><p>\(R\) is a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under \(+\). </p>
 </li>
-  <li><p>The elements of \(R\) form a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\). </p>
+  <li><p>\(R\) is a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\). </p>
 </li>
-  <li><p>If \(a, b, c\) are elements of \(R\), we have </p>
-<div class="displaymath" id="a0000000018">
-  \[  a * (b + c) = a * b + a * c,  \]
-</div>
-<div class="displaymath" id="a0000000019">
-  \[  (a + b) * c = a * c + b * c  \]
-</div>
-<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over \(+\)). </p>
+  <li><p>for all \(a, b, c \in R\), we have </p>
+<ol class="enumerate">
+  <li><p>\(a * (b + c) = a * b + a * c\) </p>
+</li>
+  <li><p>\((a + b) * c = a * c + b * c\) </p>
+</li>
+</ol>
+<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over \(+\)) </p>
 </li>
 </ol>
 </div>
@@ -384,7 +395,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.15</span><span class="definition_thmtitle">Ring homomorphism</span></div>
+      <span class="definition_thmlabel">1.1.16</span><span class="definition_thmtitle">Ring homomorphism</span></div>
     <div class="thm_thmcontent">
 <p>Let \((\alpha , +_\alpha , *_\alpha )\), and \((\beta , +_\beta , *_\beta )\) be rings. </p>
 <p>A <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b>, from \(\alpha \) to \(\beta \) is a function \(f : \alpha \to _{+*} \beta \) such that </p>
@@ -426,7 +437,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.18</span><span class="definition_thmtitle">RingQuot</span></div>
+      <span class="definition_thmlabel">1.1.19</span><span class="definition_thmtitle">RingQuot</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
@@ -450,7 +461,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.20</span><span class="definition_thmtitle">Tensor algebra</span></div>
+      <span class="definition_thmlabel">1.1.21</span><span class="definition_thmtitle">Tensor algebra</span></div>
     <div class="thm_thmcontent">
 <p>Let \(M\) be a module over \(R\). An algebra \(T\) is called a <b class="bfseries"><span style="color:#181870"> tensor algebra</span></b> over \(M\) (or "of \(M\) ") if it satisfies the following universal property </p>
 <ol class="enumerate">
@@ -480,7 +491,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.19</span><span class="definition_thmtitle">TensorAlgebra relation</span></div>
+      <span class="definition_thmlabel">1.1.20</span><span class="definition_thmtitle">TensorAlgebra relation</span></div>
     <div class="thm_thmcontent">
 <p>TODO </p>
 </div>
@@ -504,7 +515,7 @@
       <span class="definition_thmcaption">
       Definition
       </span>
-      <span class="definition_thmlabel">1.1.10</span><span class="definition_thmtitle">Vector space</span></div>
+      <span class="definition_thmlabel">1.1.11</span><span class="definition_thmtitle">Vector space</span></div>
     <div class="thm_thmcontent">
 <p>If \(R\) is a <b class="bfseries"><span style="color:#181870"> division ring</span></b>, then a module \(M\) over \(R\) is called a <b class="bfseries"><span style="color:#181870"> vector space</span></b>. </p>
 </div>
@@ -533,7 +544,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Group	[color=green,		fillcolor="#b0eca3",		label=Group,		shape=box,		style=filled];	Module	[color=green,		fillcolor="#b0eca3",		label=Module,		shape=box,		style=filled];	Group -> Module	[style=dashed];	Ring	[color=green,		fillcolor="#b0eca3",		label=Ring,		shape=box,		style=filled];	Group -> Ring	[style=dashed];	Algebra	[color=green,		fillcolor="#b0eca3",		label=Algebra,		shape=box,		style=filled];	Module -> Algebra	[style=dashed];	LinearMap	[label=LinearMap,		shape=box];	Module -> LinearMap	[style=dashed];	VectorSpace	[color=green,		fillcolor="#b0eca3",		label=VectorSpace,		shape=box,		style=filled];	Module -> VectorSpace	[style=dashed];	FreeAlgebra	[color=blue,		label=FreeAlgebra,		shape=box];	Module -> FreeAlgebra	[style=dashed];	RingQuot	[label=RingQuot,		shape=box];	Module -> RingQuot	[style=dashed];	TensorAlgebra	[label=TensorAlgebra,		shape=box];	Algebra -> TensorAlgebra	[style=dashed];	RingHom	[color=blue,		label=RingHom,		shape=box];	RingHom -> LinearMap	[style=dashed];	RingHom -> RingQuot	[style=dashed];	TensorAlgebra_Rel	[label=TensorAlgebra_Rel,		shape=box];	LinearMap -> TensorAlgebra_Rel	[style=dashed];	TensorAlgebra_Rel -> TensorAlgebra	[style=dashed];	CliffordAlgebra	[label=CliffordAlgebra,		shape=box];	TensorAlgebra -> CliffordAlgebra	[style=dashed];	Ring -> Module	[style=dashed];	Ring -> Algebra	[style=dashed];	Ring -> RingHom	[style=dashed];	DivisionRing	[color=green,		fillcolor="#b0eca3",		label=DivisionRing,		shape=box,		style=filled];	Ring -> DivisionRing	[style=dashed];	Ring -> FreeAlgebra	[style=dashed];	Monoid	[color=green,		fillcolor="#b0eca3",		label=Monoid,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];	DivisionRing -> VectorSpace	[style=dashed];	FreeAlgebra -> TensorAlgebra_Rel	[style=dashed];	FreeAlgebra -> TensorAlgebra	[style=dashed];	RingQuot -> TensorAlgebra	[style=dashed];	CliffordAlgebra_Rel	[color=blue,		label=CliffordAlgebra_Rel,		shape=box];	CliffordAlgebra_Rel -> CliffordAlgebra	[style=dashed];}')
+    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Module	[color=green,		fillcolor="#b0eca3",		label=Module,		shape=box,		style=filled];	VectorSpace	[color=green,		fillcolor="#b0eca3",		label=VectorSpace,		shape=box,		style=filled];	Module -> VectorSpace	[style=dashed];	Algebra	[color=green,		fillcolor="#b0eca3",		label=Algebra,		shape=box,		style=filled];	Module -> Algebra	[style=dashed];	RingQuot	[label=RingQuot,		shape=box];	Module -> RingQuot	[style=dashed];	FreeAlgebra	[color=blue,		label=FreeAlgebra,		shape=box];	Module -> FreeAlgebra	[style=dashed];	LinearMap	[label=LinearMap,		shape=box];	Module -> LinearMap	[style=dashed];	Monoid	[color=green,		fillcolor="#b0eca3",		label=Monoid,		shape=box,		style=filled];	Ring	[color=green,		fillcolor="#b0eca3",		label=Ring,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];	TensorAlgebra	[label=TensorAlgebra,		shape=box];	Algebra -> TensorAlgebra	[style=dashed];	RingHom	[color=blue,		label=RingHom,		shape=box];	RingHom -> RingQuot	[style=dashed];	RingHom -> LinearMap	[style=dashed];	RingQuot -> TensorAlgebra	[style=dashed];	CliffordAlgebra_Rel	[color=blue,		label=CliffordAlgebra_Rel,		shape=box];	CliffordAlgebra	[label=CliffordAlgebra,		shape=box];	CliffordAlgebra_Rel -> CliffordAlgebra	[style=dashed];	Group	[color=green,		fillcolor="#b0eca3",		label=Group,		shape=box,		style=filled];	Group -> Module	[style=dashed];	Group -> Ring	[style=dashed];	DivisionRing	[color=green,		fillcolor="#b0eca3",		label=DivisionRing,		shape=box,		style=filled];	DivisionRing -> VectorSpace	[style=dashed];	Ring -> Module	[style=dashed];	Ring -> Algebra	[style=dashed];	Ring -> RingHom	[style=dashed];	Ring -> DivisionRing	[style=dashed];	Ring -> FreeAlgebra	[style=dashed];	TensorAlgebra_Rel	[label=TensorAlgebra_Rel,		shape=box];	FreeAlgebra -> TensorAlgebra_Rel	[style=dashed];	FreeAlgebra -> TensorAlgebra	[style=dashed];	LinearMap -> TensorAlgebra_Rel	[style=dashed];	TensorAlgebra_Rel -> TensorAlgebra	[style=dashed];	TensorAlgebra -> CliffordAlgebra	[style=dashed];}')
     .on("end", interactive);
 
 clickNode = function() {
