@@ -70,7 +70,8 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
     \Mathlib uses a slightly different way to encode this, $G \to G \to G$ is understood to be $G \to (G \to G)$,
     that sends $g \in G$ to a mapping that sends $h \in G$ to $g * h \in G$.
     
-    Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation. %TODO cite
+    Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation,
+    see \cite{carneiro2019type} and \cite[section 3.2]{ullrich2023extensible}.
     
     It can be denoted multiplicatively as $*$ in \MathlibDoc{Group}
     or additively as $+$ in \MathlibDoc{AddGroup}, where $e$ will be denoted by $1$ or $0$, respectively.
