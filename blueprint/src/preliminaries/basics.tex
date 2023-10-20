@@ -2,16 +2,50 @@
 In this section, we follow \cite{jadczyk2019notes}, with supplements from \cite{garling2011clifford, chen2016infinitely}, 
 and modifications to match the counterparts in Lean's \Mathlib.
 
+\begin{remark}
+\label{mk:Informal}
+
+We unify the informal mathematical language for a definition to:
+
+\optional{Let \placeholder{$A$} be a \placeholder{concept $A$}. }
+A \vocab{\placeholder{concept $B$}} is a set/pair/triple/tuple $(B, \mathtt{op}, ...)$, satisfying:
+
+\begin{enumerate}
+    \item \placeholder{$B$} is a \placeholder{concept $C$} \optional{ over \placeholder{$A$} under \placeholder{op} }
+
+    \item \placeholder{formula} for all \placeholder{elements in concept $B$} \optional{(\vocab{ \placeholder{property} })}
+    
+    \item \optional{for each \placeholder{element} in \placeholder{concept $A$} }
+    there exists \placeholder{element} such that
+    \placeholder{formula} for all \placeholder{elements in concept $B$}
+
+    \item \optional{\placeholder{op} is called \placeholder{\vocab{op name}}, }for all \placeholder{elements in concept $B$}, we have
+
+        \begin{enumerate}[(i)]
+
+        \item \placeholder{formula}
+        \item \placeholder{formula}
+        
+        \end{enumerate}
+
+        \optional{(\vocab{ \placeholder{property} })}
+
+\end{enumerate}
+
+By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation on \placeholder{$A$}.
+
+\end{remark}
+
 \begin{definition}[Group]
     \label{Group}
     \leanok
     \lean{Group, AddGroup}
 
-    A \vocab{group} is a pair $(G, *)$, where $G$ is a set, $*$ is a binary operation, satisfying:
+    A \vocab{group} is a pair $(G, *)$, satisfying:
 
     \begin{enumerate}
     \item $(g * h) * j = g * (h * j)$ for all $g, h, j \in G$ (\vocab{associativity})
-    \item there exists $e$ in $G$ such that $e * g = g * e = g$ for all $g \in G$
+    \item there exists $e \in G$ such that $e * g = g * e = g$ for all $g \in G$
     \item for each $g \in G$ there exists $g^{-1} \in G$ such that $g * g^{-1} = g^{-1} * g = e$
 
     \end{enumerate}
@@ -57,8 +91,9 @@ and modifications to match the counterparts in Lean's \Mathlib.
     \begin{enumerate}
     \item $(a * b) * c = a * (b * c)$ for all $a, b, c \in R$ (\vocab{associativity}).
 
-    \item There is an element $1 \in R$ such that $1 * a = a * 1 = a$ for all $a$ in $R$
-    (that is $1$ is the multiplicative identity (\vocab{neutral element}).
+    \item there exists an element $1 \in R$ such that $1 * a = a * 1 = a$ for all $a \in R$
+    
+    i.e. $1$ is the multiplicative identity (\vocab{neutral element}).
 
     \end{enumerate}
 
@@ -73,21 +108,21 @@ and modifications to match the counterparts in Lean's \Mathlib.
     A \vocab{ring} is a triple $(R, +, *)$, satisfying:
 
     \begin{enumerate}
-    \item The elements of $R$ form a \vocab{commutative group} under $+$.
 
-    \item The elements of $R$ form a \vocab{monoid} under $*$.
+    \item $R$ is a \vocab{commutative group} under $+$.
 
-    \item If $a, b, c$ are elements of $R$, we have
+    \item $R$ is a \vocab{monoid} under $*$.
 
-    $$
-    a * (b + c) = a * b + a * c,
-    $$
+    \item for all $a, b, c \in R$, we have
+    
+    \begin{enumerate}[(i)]
 
-    $$
-    (a + b) * c = a * c + b * c
-    $$
+    \item $a * (b + c) = a * b + a * c$
+    \item $(a + b) * c = a * c + b * c$
 
-    (left and right \vocab{distributivity} over $+$).
+    \end{enumerate}
+
+    (left and right \vocab{distributivity} over $+$)
 
     \end{enumerate}
 
@@ -106,8 +141,19 @@ and modifications to match the counterparts in Lean's \Mathlib.
     \lean{DivisionRing}
     \uses{Ring}
 
-    A ring containing at least two elements, in which
-    every nonzero element $a$ has a multiplicative inverse $a^{-1}$ is called a \vocab{division ring} 
+    A \vocab{division ring} is a ring $(R, +, *)$, satisfying:
+
+    \begin{enumerate}
+
+    \item $R$ contains at least 2 elements
+    \item for all $a \neq 0$ in $R$, there exists a multiplicative inverse $a^{-1} \in R$ such that
+    
+    $$
+    a * a^{-1} = a^{-1} * a = 1
+    $$
+
+    \end{enumerate}
+
     (sometimes also called a "skew field").
 
 \end{definition}
@@ -170,14 +216,14 @@ and modifications to match the counterparts in Lean's \Mathlib.
     \lean{Module}
     \uses{Group, Ring}
 
-    Let $R$ be a commutative ring. A \vocab{module} over $R$ (in short $R$-module) is a set $M$ such that
+    Let $R$ be a commutative ring. A \vocab{module} over $R$ (in short \vocab{$R$-module}) is a pair $(M, \bu)$, satisfying:
 
     \begin{enumerate}
-      \item M has a structure of an additive group,
+      \item M is a group under $+$,
     
-      \item For every $a, b \in R$, $x, y \in M$, an operation $\bu : R \to M \to M$ called scalar multiplication is defined, and we have
+      \item $\bu : R \to M \to M$ is called \vocab{scalar multiplication}, for every $a, b \in R$, $x, y \in M$, we have
       
-        \begin{enumerate}[i]
+        \begin{enumerate}[(i)]
             \item $a \bu (x + y) = a \bu x + b \bu y$,
             \item $(a + b) \bu x = a \bu x + b \bu x$,
             \item $a * (b \bu x)=(a * b) \bu x$,
@@ -190,7 +236,7 @@ and modifications to match the counterparts in Lean's \Mathlib.
 \begin{remark}
     \label{mk:Module}
 
-    The notation of scalar multiplication is generalized as heterogeneous scalar multiplication in \Mathlib:
+    The notation of scalar multiplication is generalized as heterogeneous scalar multiplication \MathlibDoc{HMul} in \Mathlib:
 
     $$
     \bu : \alpha \to \beta \to \gamma
@@ -351,7 +397,6 @@ and modifications to match the counterparts in Lean's \Mathlib.
     if it satisfies the following universal property
 
     \begin{enumerate}
-    \setcounter{enumi}{1}
     \item $T$ is an algebra containing $M$ as a \vocab{submodule}, and it is \vocab{generated by} $M$,
     \item Every linear mapping $\lambda$ of $M$ into an algebra $A$ over $R$, can be extended to 
     a \vocab{homomorphism} $\theta$ of $T$ into $A$.
@@ -365,7 +410,6 @@ and modifications to match the counterparts in Lean's \Mathlib.
     The properties above are equivalent to the following:
 
     \begin{enumerate}
-        \setcounter{enumi}{1}
         \item $T$ is the free (associative, unital) $R$-algebra generated by $M$.
         \item additional relations making the inclusion of $M$ into an $R$-linear map
     \end{enumerate}
