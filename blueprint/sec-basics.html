@@ -589,7 +589,7 @@
 <p>For generality, <span class="sffamily">Mathlib</span>&#160;uses <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/Module">Module</a> throughout for vector spaces, particularly, for a vector space \(V\), it’s usually declared as </p>
 <code class="plain_listing">variable [DivisionRing K] [AddCommGroup V] [Module K V]</code>
 
-<p>for definitions/theorems about it, and most of them can be found under <span class="sffamily">Mathlib.LinearAlgebra</span>. </p>
+<p>for definitions/theorems about it, and most of them can be found under <span class="sffamily">Mathlib.LinearAlgebra</span> e.g. <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/LinearIndependent">LinearIndependent</a>. </p>
 
   </div>
 </div> </p>
@@ -618,6 +618,7 @@
     </span>
     <span class="definition_thmlabel">1.1.14</span>
     <span class="definition_thmtitle">Ring homomorphism</span>
+    ✓
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#RingHom">#</a>
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
@@ -688,8 +689,8 @@
 </button>
         </header>
                 <ul class="uses">
+          <li><a href="sec-basics.html#RingHom">Definition 1.1.14</a></li>
           <li><a href="sec-basics.html#Module">Definition 1.1.9</a></li>
-          <li><a href="sec-basics.html#Ring">Definition 1.1.6</a></li>
         </ul>
 
       </div>
@@ -717,7 +718,7 @@
 <ol class="enumerate">
   <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> ring</span></b> under \(*\). </p>
 </li>
-  <li><p>there exists a <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b> from \(R\) to \(A\), denoted \(f : R \to _{+*} A\). </p>
+  <li><p>there exists a <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b> from \(R\) to \(A\), denoted \(\iota : R \to _{+*} A\). </p>
 </li>
   <li><p>\(\bullet : R \to M \to M\) is a <b class="bfseries"><span style="color:#181870"> scalar multiplication</span></b> </p>
 </li>
@@ -730,7 +731,7 @@
 </ol>
 </li>
 </ol>
-<p>where we omitted that the ring homomorphism \(f\) is applied to \(r\) before multiplication, while they are explicitly written as <code class="plain_lstlinline">toRingHom(r)</code> in <span class="sffamily">Mathlib</span>&#160;. </p>
+<p>where we omitted that the ring homomorphism \(\iota \) is applied to \(r\) before each multiplication, while they are explicitly written as <code class="plain_lstlinline">toRingHom(r)</code> in <span class="sffamily">Mathlib</span>&#160;. </p>
 
   </div>
 </div> </p>
@@ -816,6 +817,8 @@
         </header>
                 <ul class="uses">
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra" target="_blank" rel="noopener noreferrer">FreeAlgebra</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra.Pre" target="_blank" rel="noopener noreferrer">FreeAlgebra.Pre</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra.Rel" target="_blank" rel="noopener noreferrer">FreeAlgebra.Rel</a></li>
         </ul>
 
       </div>
@@ -825,7 +828,44 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>TODO </p>
+<p>An <b class="bfseries"><span style="color:#181870"> free algebra</span></b> \(A\) over \(R\) is a triple \((A, +, *)\) constructed inductively by: </p>
+<ol class="enumerate">
+  <li><p>for all \(a in R\), there exists a map \(R \to A\) </p>
+</li>
+  <li><p>for all \(a, b\) in \(A\), \(a + b\) is in \(A\) </p>
+</li>
+  <li><p>for all \(a, b\) in \(A\), \(a * b\) is in \(A\) </p>
+</li>
+</ol>
+<p>, satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> commutative ring</span></b> under \(+\). </p>
+</li>
+  <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\). </p>
+</li>
+  <li><p><b class="bfseries"><span style="color:#181870"> associativity</span></b> and <b class="bfseries"><span style="color:#181870"> commutativity</span></b> under \(*\). </p>
+</li>
+  <li><p><b class="bfseries"><span style="color:#181870"> associativity</span></b> under \(*\). </p>
+</li>
+  <li><p>\(1 * a = a * 1 = a\). </p>
+</li>
+  <li><p>\(0 * a = a * 0 = 0\). </p>
+</li>
+  <li><p>left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> under \(*\) over \(+\) </p>
+</li>
+  <li><p>for all \(a, b, c\) in \(A\), </p>
+<ol class="enumerate">
+  <li><p>a + c = b + c </p>
+</li>
+  <li><p>c + a = c + b </p>
+</li>
+  <li><p>a * c = b * c </p>
+</li>
+  <li><p>c * a = c * b </p>
+</li>
+</ol>
+</li>
+</ol>
 
   </div>
 </div> </p>

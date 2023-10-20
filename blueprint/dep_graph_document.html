@@ -65,7 +65,7 @@
 <ol class="enumerate">
   <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> ring</span></b> under \(*\). </p>
 </li>
-  <li><p>there exists a <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b> from \(R\) to \(A\), denoted \(f : R \to _{+*} A\). </p>
+  <li><p>there exists a <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b> from \(R\) to \(A\), denoted \(\iota : R \to _{+*} A\). </p>
 </li>
   <li><p>\(\bullet : R \to M \to M\) is a <b class="bfseries"><span style="color:#181870"> scalar multiplication</span></b> </p>
 </li>
@@ -78,7 +78,7 @@
 </ol>
 </li>
 </ol>
-<p>where we omitted that the ring homomorphism \(f\) is applied to \(r\) before multiplication, while they are explicitly written as <code class="plain_lstlinline">toRingHom(r)</code> in <span class="sffamily">Mathlib</span>&#160;. </p>
+<p>where we omitted that the ring homomorphism \(\iota \) is applied to \(r\) before each multiplication, while they are explicitly written as <code class="plain_lstlinline">toRingHom(r)</code> in <span class="sffamily">Mathlib</span>&#160;. </p>
 </div>
 
     <a class="latex_link" href="sec-basics.html#Algebra">LaTeX</a>
@@ -183,11 +183,59 @@
       </span>
       <span class="definition_thmlabel">1.1.18</span><span class="definition_thmtitle">FreeAlgebra</span></div>
     <div class="thm_thmcontent">
-<p>TODO </p>
+<p>An <b class="bfseries"><span style="color:#181870"> free algebra</span></b> \(A\) over \(R\) is a triple \((A, +, *)\) constructed inductively by: </p>
+<ol class="enumerate">
+  <li><p>for all \(a in R\), there exists a map \(R \to A\) </p>
+</li>
+  <li><p>for all \(a, b\) in \(A\), \(a + b\) is in \(A\) </p>
+</li>
+  <li><p>for all \(a, b\) in \(A\), \(a * b\) is in \(A\) </p>
+</li>
+</ol>
+<p>, satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> commutative ring</span></b> under \(+\). </p>
+</li>
+  <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\). </p>
+</li>
+  <li><p><b class="bfseries"><span style="color:#181870"> associativity</span></b> and <b class="bfseries"><span style="color:#181870"> commutativity</span></b> under \(*\). </p>
+</li>
+  <li><p><b class="bfseries"><span style="color:#181870"> associativity</span></b> under \(*\). </p>
+</li>
+  <li><p>\(1 * a = a * 1 = a\). </p>
+</li>
+  <li><p>\(0 * a = a * 0 = 0\). </p>
+</li>
+  <li><p>left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> under \(*\) over \(+\) </p>
+</li>
+  <li><p>for all \(a, b, c\) in \(A\), </p>
+<ol class="enumerate">
+  <li><p>a + c = b + c </p>
+</li>
+  <li><p>c + a = c + b </p>
+</li>
+  <li><p>a * c = b * c </p>
+</li>
+  <li><p>c * a = c * b </p>
+</li>
+</ol>
+</li>
+</ol>
 </div>
 
     <a class="latex_link" href="sec-basics.html#FreeAlgebra">LaTeX</a>
-  <a class="lean_link" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra" target="_blank" rel="noopener noreferrer">Lean</a></div>
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra" target="_blank" rel="noopener noreferrer">FreeAlgebra</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra.Pre" target="_blank" rel="noopener noreferrer">FreeAlgebra.Pre</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra.Rel" target="_blank" rel="noopener noreferrer">FreeAlgebra.Rel</a></li>
+        
+      </ul>
+  </div></div>
     
       </div>
     </div>
@@ -549,7 +597,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	DivisionRing	[color=green,		fillcolor="#b0eca3",		label=DivisionRing,		shape=box,		style=filled];	VectorSpace	[color=green,		fillcolor="#b0eca3",		label=VectorSpace,		shape=box,		style=filled];	DivisionRing -> VectorSpace	[style=dashed];	Algebra	[color=green,		fillcolor="#b0eca3",		label=Algebra,		shape=box,		style=filled];	TensorAlgebra	[label=TensorAlgebra,		shape=box];	Algebra -> TensorAlgebra	[style=dashed];	FreeAlgebra	[color=blue,		label=FreeAlgebra,		shape=box];	TensorAlgebra_Rel	[label=TensorAlgebra_Rel,		shape=box];	FreeAlgebra -> TensorAlgebra_Rel	[style=dashed];	FreeAlgebra -> TensorAlgebra	[style=dashed];	CliffordAlgebra	[label=CliffordAlgebra,		shape=box];	Group	[color=green,		fillcolor="#b0eca3",		label=Group,		shape=box,		style=filled];	Ring	[color=green,		fillcolor="#b0eca3",		label=Ring,		shape=box,		style=filled];	Group -> Ring	[style=dashed];	Module	[color=green,		fillcolor="#b0eca3",		label=Module,		shape=box,		style=filled];	Group -> Module	[style=dashed];	Ring -> DivisionRing	[style=dashed];	Ring -> Algebra	[style=dashed];	Ring -> FreeAlgebra	[style=dashed];	Ring -> Module	[style=dashed];	RingHom	[color=blue,		label=RingHom,		shape=box];	Ring -> RingHom	[style=dashed];	Monoid	[color=green,		fillcolor="#b0eca3",		label=Monoid,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];	Module -> VectorSpace	[style=dashed];	Module -> Algebra	[style=dashed];	Module -> FreeAlgebra	[style=dashed];	LinearMap	[label=LinearMap,		shape=box];	Module -> LinearMap	[style=dashed];	RingQuot	[label=RingQuot,		shape=box];	Module -> RingQuot	[style=dashed];	RingHom -> LinearMap	[style=dashed];	RingHom -> RingQuot	[style=dashed];	LinearMap -> TensorAlgebra_Rel	[style=dashed];	RingQuot -> TensorAlgebra	[style=dashed];	TensorAlgebra_Rel -> TensorAlgebra	[style=dashed];	TensorAlgebra -> CliffordAlgebra	[style=dashed];	CliffordAlgebra_Rel	[color=blue,		label=CliffordAlgebra_Rel,		shape=box];	CliffordAlgebra_Rel -> CliffordAlgebra	[style=dashed];}')
+    .renderDot('strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Group	[color=green,		fillcolor="#b0eca3",		label=Group,		shape=box,		style=filled];	Module	[color=green,		fillcolor="#b0eca3",		label=Module,		shape=box,		style=filled];	Group -> Module	[style=dashed];	Ring	[color=green,		fillcolor="#b0eca3",		label=Ring,		shape=box,		style=filled];	Group -> Ring	[style=dashed];	VectorSpace	[color=green,		fillcolor="#b0eca3",		label=VectorSpace,		shape=box,		style=filled];	RingHom	[color=green,		fillcolor="#b0eca3",		label=RingHom,		shape=box,		style=filled];	RingQuot	[color=blue,		label=RingQuot,		shape=box];	RingHom -> RingQuot	[style=dashed];	Algebra	[color=green,		fillcolor="#b0eca3",		label=Algebra,		shape=box,		style=filled];	RingHom -> Algebra	[style=dashed];	LinearMap	[color=blue,		label=LinearMap,		shape=box];	RingHom -> LinearMap	[style=dashed];	FreeAlgebra	[color=blue,		label=FreeAlgebra,		shape=box];	TensorAlgebra	[label=TensorAlgebra,		shape=box];	FreeAlgebra -> TensorAlgebra	[style=dashed];	TensorAlgebra_Rel	[label=TensorAlgebra_Rel,		shape=box];	FreeAlgebra -> TensorAlgebra_Rel	[style=dashed];	RingQuot -> TensorAlgebra	[style=dashed];	CliffordAlgebra	[label=CliffordAlgebra,		shape=box];	TensorAlgebra -> CliffordAlgebra	[style=dashed];	Module -> VectorSpace	[style=dashed];	Module -> FreeAlgebra	[style=dashed];	Module -> RingQuot	[style=dashed];	Module -> Algebra	[style=dashed];	Module -> LinearMap	[style=dashed];	Monoid	[color=green,		fillcolor="#b0eca3",		label=Monoid,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];	DivisionRing	[color=green,		fillcolor="#b0eca3",		label=DivisionRing,		shape=box,		style=filled];	DivisionRing -> VectorSpace	[style=dashed];	Ring -> RingHom	[style=dashed];	Ring -> FreeAlgebra	[style=dashed];	Ring -> Module	[style=dashed];	Ring -> DivisionRing	[style=dashed];	Algebra -> TensorAlgebra	[style=dashed];	LinearMap -> TensorAlgebra_Rel	[style=dashed];	TensorAlgebra_Rel -> TensorAlgebra	[style=dashed];	CliffordAlgebra_Rel	[color=blue,		label=CliffordAlgebra_Rel,		shape=box];	CliffordAlgebra_Rel -> CliffordAlgebra	[style=dashed];}')
     .on("end", interactive);
 
 clickNode = function() {
