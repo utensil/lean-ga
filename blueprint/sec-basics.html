@@ -145,11 +145,11 @@
 <p>We unify the informal mathematical language for a definition to: </p>
 <p><span style="color:#7F7F7F"> Let <i class="itshape">\(A\)</i> be a <i class="itshape">concept \(A\)</i>. </span> A <b class="bfseries"><span style="color:#181870"> <i class="itshape">concept \(B\)</i></span></b> is a set/pair/triple/tuple \((B, \mathtt{op}, ...)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p><i class="itshape">\(B\)</i> is a <i class="itshape">concept \(C\)</i> <span style="color:#7F7F7F">  over <i class="itshape">\(A\)</i> under <i class="itshape">op</i> </span> </p>
+  <li><p><i class="itshape">\(B\)</i> is a <i class="itshape">concept \(C\)</i> <span style="color:#7F7F7F">  over <i class="itshape">\(A\)</i> under <i class="itshape">op</i> </span>. </p>
 </li>
-  <li><p><i class="itshape">formula</i> for all <i class="itshape">elements in concept \(B\)</i> <span style="color:#7F7F7F"> (<b class="bfseries"><span style="color:#181870">  <i class="itshape">property</i> </span></b>)</span> </p>
+  <li><p><i class="itshape">formula</i> for all <i class="itshape">elements in concept \(B\)</i> <span style="color:#7F7F7F"> (<b class="bfseries"><span style="color:#181870">  <i class="itshape">property</i> </span></b>)</span>. </p>
 </li>
-  <li><p><span style="color:#7F7F7F"> for each <i class="itshape">element</i> in <i class="itshape">concept \(A\)</i> </span> there exists <i class="itshape">element</i> such that <i class="itshape">formula</i> for all <i class="itshape">elements in concept \(B\)</i> </p>
+  <li><p><span style="color:#7F7F7F"> for each <i class="itshape">element</i> in <i class="itshape">concept \(A\)</i> </span> there exists <i class="itshape">element</i> such that <i class="itshape">formula</i> for all <i class="itshape">elements in concept \(B\)</i>. </p>
 </li>
   <li><p><span style="color:#7F7F7F"> <i class="itshape">op</i> is called <i class="itshape"><b class="bfseries"><span style="color:#181870"> op name</span></b></i>, </span>for all <i class="itshape">elements in concept \(B\)</i>, we have </p>
 <ol class="enumerate">
@@ -158,7 +158,7 @@
   <li><p><i class="itshape">formula</i> </p>
 </li>
 </ol>
-<p><span style="color:#7F7F7F"> (<b class="bfseries"><span style="color:#181870">  <i class="itshape">property</i> </span></b>)</span> </p>
+<p><span style="color:#7F7F7F"> (<b class="bfseries"><span style="color:#181870">  <i class="itshape">property</i> </span></b>)</span>. </p>
 </li>
 </ol>
 <p>By default, <i class="itshape">\(A\)</i> is a set, <i class="itshape">op</i> is a binary operation on <i class="itshape">\(A\)</i>. </p>
@@ -197,11 +197,11 @@
   
 <p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a pair \((G, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>\((g * h) * j = g * (h * j)\) for all \(g, h, j \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>) </p>
+  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>). </p>
 </li>
-  <li><p>there exists \(e \in G\) such that \(e * g = g * e = g\) for all \(g \in G\) </p>
+  <li><p>there exists \(1 \in G\) such that \(1 * a = a * 1 = a\) for all \(a \in G\). </p>
 </li>
-  <li><p>for each \(g \in G\) there exists \(g^{-1} \in G\) such that \(g * g^{-1} = g^{-1} * g = e\) </p>
+  <li><p>for each \(a \in G\) there exists \(a^{-1} \in G\) such that \(a * a^{-1} = a^{-1} * a = 1\). </p>
 </li>
 </ol>
 
@@ -240,7 +240,17 @@
   
 <p>In literatures, the binary operation are usually denoted by juxtaposition, and is understood to be a mapping \((g, h) \mapsto g * h\) from \(G \times G\) to \(G\). </p>
 <p><span class="sffamily">Mathlib</span>&#160;uses a slightly different way to encode this, \(G \to G \to G\) is understood to be \(G \to (G \to G)\), that sends \(g \in G\) to a mapping that sends \(h \in G\) to \(g * h \in G\). </p>
-<p>Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation. </p>
+<p>Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation, see <span class="cite">
+	[
+	<a href="sect0016.html#carneiro2019type" >Carneiro(2019)</a>
+	]
+</span> and <span class="cite">
+	[
+	<a href="sect0016.html#ullrich2023extensible" >Ullrich(2023)</a>
+	, 
+	section 3.2
+	]
+</span>. </p>
 <p>It can be denoted multiplicatively as \(*\) in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/Group">Group</a> or additively as \(+\) in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/AddGroup">AddGroup</a>, where \(e\) will be denoted by \(1\) or \(0\), respectively. </p>
 <p>Sometimes we use notations with subscripts (e.g. \(*_G\), \(1_G\)) to indicate where they are. </p>
 <p>We will use the corresponding notation in <span class="sffamily">Mathlib</span>&#160;for future operations without further explanation. </p>
@@ -348,7 +358,7 @@
   <li><p>\((a + b) * c = a * c + b * c\) </p>
 </li>
 </ol>
-<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over \(+\)) </p>
+<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over \(+\)). </p>
 </li>
 </ol>
 
@@ -417,7 +427,7 @@
   
 <p>A <b class="bfseries"><span style="color:#181870"> division ring</span></b> is a ring \((R, +, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>\(R\) contains at least 2 elements </p>
+  <li><p>\(R\) contains at least 2 elements. </p>
 </li>
   <li><p>for all \(a \neq 0\) in \(R\), there exists a multiplicative inverse \(a^{-1} \in R\) such that </p>
 <div class="displaymath" id="a0000000018">
@@ -425,7 +435,6 @@
 </div>
 </li>
 </ol>
-<p>(sometimes also called a "skew field"). </p>
 
   </div>
 </div> </p>
@@ -476,17 +485,17 @@
   
 <p>Let \(R\) be a commutative ring. A <b class="bfseries"><span style="color:#181870"> module</span></b> over \(R\) (in short <b class="bfseries"><span style="color:#181870"> \(R\)-module</span></b>) is a pair \((M, \bullet )\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>M is a group under \(+\), </p>
+  <li><p>M is a group under \(+\). </p>
 </li>
   <li><p>\(\bullet : R \to M \to M\) is called <b class="bfseries"><span style="color:#181870"> scalar multiplication</span></b>, for every \(a, b \in R\), \(x, y \in M\), we have </p>
 <ol class="enumerate">
-  <li><p>\(a \bullet (x + y) = a \bullet x + b \bullet y\), </p>
+  <li><p>\(a \bullet (x + y) = a \bullet x + b \bullet y\) </p>
 </li>
-  <li><p>\((a + b) \bullet x = a \bullet x + b \bullet x\), </p>
+  <li><p>\((a + b) \bullet x = a \bullet x + b \bullet x\) </p>
 </li>
-  <li><p>\(a * (b \bullet x)=(a * b) \bullet x\), </p>
+  <li><p>\(a * (b \bullet x)=(a * b) \bullet x\) </p>
 </li>
-  <li><p>\(1_R \bullet x = x\). </p>
+  <li><p>\(1_R \bullet x = x\) </p>
 </li>
 </ol>
 </li>
@@ -602,89 +611,12 @@
 
   </div>
 </div> </p>
-<p><div class="definition_thmwrapper" id="Algebra">
-  <div class="definition_thmheading">
-    <span class="definition_thmcaption">
-    Definition
-    </span>
-    <span class="definition_thmlabel">1.1.14</span>
-    <span class="definition_thmtitle">Algebra</span>
-    ✓
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#Algebra">#</a>
-    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
-</button>
-    <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Uses</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-                <ul class="uses">
-          <li><a href="sec-basics.html#Module">Definition 1.1.9</a></li>
-          <li><a href="sec-basics.html#Ring">Definition 1.1.6</a></li>
-        </ul>
-
-      </div>
-    </div>
-    <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
-      <div class="modal-content">
-        <header>
-          <h1>Lean declarations</h1>
-          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
-</button>
-        </header>
-                <ul class="uses">
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Algebra" target="_blank" rel="noopener noreferrer">Algebra</a></li>
-        </ul>
-
-      </div>
-    </div>
-
-  </div>
-  </div>
-  <div class="definition_thmcontent">
-  
-<p>An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a pair \((M, *)\), satisfying: </p>
-<ol class="enumerate">
-  <li><p>The elements of \(A\) form a <b class="bfseries"><span style="color:#181870"> module</span></b> \(M\) over \(R\) under \(+\) and \(\bullet \). </p>
-</li>
-  <li><p>The elements of \(A\) form a <b class="bfseries"><span style="color:#181870"> ring</span></b> under \(*\). </p>
-</li>
-  <li><p>For \(x, y \in A, a \in R\), we have </p>
-<div class="displaymath" id="a0000000020">
-  \[  a \bullet (x * y) = (a \bullet x) * y = x * (a \bullet y).  \]
-</div>
-</li>
-</ol>
-
-  </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:Algebra">
-  <div class="remark_thmheading">
-    <span class="remark_thmcaption">
-    Remark
-    </span>
-    <span class="remark_thmlabel">1.1.15</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:Algebra">#</a>
-
-  </div>
-  </div>
-  <div class="remark_thmcontent">
-  
-<p>What’s simply called algebra is actually associative algebra with identity, a.k.a. <b class="bfseries"><span style="color:#181870"> associative unital algebra</span></b>. See <a href ="https://ncatlab.org/nlab/show/red%20herring%20principle">the red herring principle</a> for more about such phenomenon for naming, particularly the example of (possibly) <b class="bfseries"><span style="color:#181870"> nonassociative algebra</span></b>. </p>
-
-  </div>
-</div> </p>
 <p><div class="definition_thmwrapper" id="RingHom">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.16</span>
+    <span class="definition_thmlabel">1.1.14</span>
     <span class="definition_thmtitle">Ring homomorphism</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#RingHom">#</a>
@@ -736,12 +668,125 @@
 
   </div>
 </div> </p>
+<p><div class="definition_thmwrapper" id="Algebra">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.1.15</span>
+    <span class="definition_thmtitle">Algebra</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#Algebra">#</a>
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="sec-basics.html#Module">Definition 1.1.9</a></li>
+          <li><a href="sec-basics.html#Ring">Definition 1.1.6</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Algebra" target="_blank" rel="noopener noreferrer">Algebra</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>Let \(R\) be a commutative ring. An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a pair \((A, \bullet )\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> ring</span></b> under \(*\). </p>
+</li>
+  <li><p>there exists a <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b> from \(R\) to \(A\), denoted \(f : R \to _{+*} A\). </p>
+</li>
+  <li><p>\(\bullet : R \to M \to M\) is a <b class="bfseries"><span style="color:#181870"> scalar multiplication</span></b> </p>
+</li>
+  <li><p>for every \(r \in R\), \(x \in A\), we have </p>
+<ol class="enumerate">
+  <li><p>\(r * x = x * r\) (commutativity between \(R\) and \(A\)) </p>
+</li>
+  <li><p>\(r \bullet x = r * x\) (definition of scalar multiplication) </p>
+</li>
+</ol>
+</li>
+</ol>
+<p>where we omitted that the ring homomorphism \(f\) is applied to \(r\) before multiplication, while they are explicitly written as <code class="plain_lstlinline">toRingHom(r)</code> in <span class="sffamily">Mathlib</span>&#160;. </p>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:AlgebraLiterature">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.16</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:AlgebraLiterature">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>The following definition is more close to literature: </p>
+<p>The definition above (adopted in <span class="sffamily">Mathlib</span>&#160;) is more general than the definition in literature (shown below), see <em>Implementation notes</em> in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/Algebra">Algebra</a> for details. </p>
+<p>Let \(R\) be a commutative ring. An <b class="bfseries"><span style="color:#181870"> algebra</span></b> \(A\) over \(R\) is a pair \((M, *)\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> module</span></b> \(M\) over \(R\) under \(+\) and \(\bullet \). </p>
+</li>
+  <li><p>\(A\) is a <b class="bfseries"><span style="color:#181870"> ring</span></b> under \(*\). </p>
+</li>
+  <li><p>For \(x, y \in A, a \in R\), we have </p>
+<div class="displaymath" id="a0000000020">
+  \[  a \bullet (x * y) = (a \bullet x) * y = x * (a \bullet y)  \]
+</div>
+</li>
+</ol>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:AlgebraName">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.17</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:AlgebraName">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>What’s simply called algebra is actually associative algebra with identity, a.k.a. <b class="bfseries"><span style="color:#181870"> associative unital algebra</span></b>. See <a href ="https://ncatlab.org/nlab/show/red%20herring%20principle">the red herring principle</a> for more about such phenomenon for naming, particularly the example of (possibly) <b class="bfseries"><span style="color:#181870"> nonassociative algebra</span></b>. </p>
+
+  </div>
+</div> </p>
 <p><div class="definition_thmwrapper" id="FreeAlgebra">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.17</span>
+    <span class="definition_thmlabel">1.1.18</span>
     <span class="definition_thmtitle">FreeAlgebra</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#FreeAlgebra">#</a>
@@ -789,7 +834,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.18</span>
+    <span class="definition_thmlabel">1.1.19</span>
     <span class="definition_thmtitle">LinearMap</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#LinearMap">#</a>
@@ -804,7 +849,7 @@
         </header>
                 <ul class="uses">
           <li><a href="sec-basics.html#Module">Definition 1.1.9</a></li>
-          <li><a href="sec-basics.html#RingHom">Definition 1.1.16</a></li>
+          <li><a href="sec-basics.html#RingHom">Definition 1.1.14</a></li>
         </ul>
 
       </div>
@@ -837,7 +882,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.19</span>
+    <span class="definition_thmlabel">1.1.20</span>
     <span class="definition_thmtitle">RingQuot</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#RingQuot">#</a>
@@ -852,7 +897,7 @@
         </header>
                 <ul class="uses">
           <li><a href="sec-basics.html#Module">Definition 1.1.9</a></li>
-          <li><a href="sec-basics.html#RingHom">Definition 1.1.16</a></li>
+          <li><a href="sec-basics.html#RingHom">Definition 1.1.14</a></li>
         </ul>
 
       </div>
@@ -885,7 +930,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.20</span>
+    <span class="definition_thmlabel">1.1.21</span>
     <span class="definition_thmtitle">TensorAlgebra relation</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#TensorAlgebra_Rel">#</a>
@@ -899,8 +944,8 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.17</a></li>
-          <li><a href="sec-basics.html#LinearMap">Definition 1.1.18</a></li>
+          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.18</a></li>
+          <li><a href="sec-basics.html#LinearMap">Definition 1.1.19</a></li>
         </ul>
 
       </div>
@@ -933,7 +978,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.21</span>
+    <span class="definition_thmlabel">1.1.22</span>
     <span class="definition_thmtitle">Tensor algebra</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#TensorAlgebra">#</a>
@@ -947,10 +992,10 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Algebra">Definition 1.1.14</a></li>
-          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.17</a></li>
-          <li><a href="sec-basics.html#TensorAlgebra_Rel">Definition 1.1.20</a></li>
-          <li><a href="sec-basics.html#RingQuot">Definition 1.1.19</a></li>
+          <li><a href="sec-basics.html#Algebra">Definition 1.1.15</a></li>
+          <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.18</a></li>
+          <li><a href="sec-basics.html#TensorAlgebra_Rel">Definition 1.1.21</a></li>
+          <li><a href="sec-basics.html#RingQuot">Definition 1.1.20</a></li>
         </ul>
 
       </div>
@@ -989,7 +1034,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.22</span>
+    <span class="remark_thmlabel">1.1.23</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:TensorAlgebra">#</a>
 
