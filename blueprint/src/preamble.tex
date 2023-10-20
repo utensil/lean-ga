@@ -4,21 +4,12 @@
 \usetikzlibrary{decorations}
 % \usepackage{color}
 \usepackage[unicode]{hyperref}
-\hypersetup{%
-  colorlinks=true,
-  linkcolor={red!50!black},
-  citecolor={green!50!black},
-  urlcolor={blue!80!black}
-}
+
 % NOTE: Won't work in web version for roman numerals, but it works well for PDF version
 \usepackage{enumerate}% http://ctan.org/pkg/enumerate
 
 \usepackage{listings}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{newunicodechar}
-\usepackage{lean_unicode}
-\usepackage{xspace}
+
 
 % \usepackage[frozencache,cachedir=minted-cache]{minted}
 % \usepackage{minted}
@@ -57,11 +48,23 @@
 \else
 % begin print specific preambles
 
+\hypersetup{%
+  colorlinks=true,
+  linkcolor={red!50!black},
+  citecolor={green!50!black},
+  urlcolor={blue!80!black}
+}
+
 % Somehow this renders to plain text without brackets, makes it indistinguishable from the surrounding text.
 % And it doesn't work with plastex, the citation is not rendered at all for the web version.
 % \usepackage{natbib}
 % \citestyle{acmauthoryear}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newunicodechar}
+\usepackage{lean_unicode}
+\usepackage{xspace}
 \usepackage{unicode-math}
 \usepackage{fontspec}
 \setmathfont{latinmodern-math.otf}
