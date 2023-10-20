@@ -11,13 +11,13 @@ We unify the informal mathematical language for a definition to:
 A \vocab{\placeholder{concept $B$}} is a set/pair/triple/tuple $(B, \mathtt{op}, ...)$, satisfying:
 
 \begin{enumerate}
-    \item \placeholder{$B$} is a \placeholder{concept $C$} \optional{ over \placeholder{$A$} under \placeholder{op} }
+    \item \placeholder{$B$} is a \placeholder{concept $C$} \optional{ over \placeholder{$A$} under \placeholder{op} }.
 
-    \item \placeholder{formula} for all \placeholder{elements in concept $B$} \optional{(\vocab{ \placeholder{property} })}
+    \item \placeholder{formula} for all \placeholder{elements in concept $B$} \optional{(\vocab{ \placeholder{property} })}.
     
     \item \optional{for each \placeholder{element} in \placeholder{concept $A$} }
     there exists \placeholder{element} such that
-    \placeholder{formula} for all \placeholder{elements in concept $B$}
+    \placeholder{formula} for all \placeholder{elements in concept $B$}.
 
     \item \optional{\placeholder{op} is called \placeholder{\vocab{op name}}, }for all \placeholder{elements in concept $B$}, we have
 
@@ -28,7 +28,7 @@ A \vocab{\placeholder{concept $B$}} is a set/pair/triple/tuple $(B, \mathtt{op},
         
         \end{enumerate}
 
-        \optional{(\vocab{ \placeholder{property} })}
+        \optional{(\vocab{ \placeholder{property} })}.
 
 \end{enumerate}
 
@@ -44,9 +44,9 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
     A \vocab{group} is a pair $(G, *)$, satisfying:
 
     \begin{enumerate}
-    \item $(g * h) * j = g * (h * j)$ for all $g, h, j \in G$ (\vocab{associativity})
-    \item there exists $e \in G$ such that $e * g = g * e = g$ for all $g \in G$
-    \item for each $g \in G$ there exists $g^{-1} \in G$ such that $g * g^{-1} = g^{-1} * g = e$
+    \item $(a * b) * c = a * (b * c)$ for all $a, b, c \in G$ (\vocab{associativity}).
+    \item there exists $1 \in G$ such that $1 * a = a * 1 = a$ for all $a \in G$.
+    \item for each $a \in G$ there exists $a^{-1} \in G$ such that $a * a^{-1} = a^{-1} * a = 1$.
 
     \end{enumerate}
 
@@ -123,7 +123,7 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
 
     \end{enumerate}
 
-    (left and right \vocab{distributivity} over $+$)
+    (left and right \vocab{distributivity} over $+$).
 
     \end{enumerate}
 
@@ -146,7 +146,7 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
 
     \begin{enumerate}
 
-    \item $R$ contains at least 2 elements
+    \item $R$ contains at least 2 elements.
     \item for all $a \neq 0$ in $R$, there exists a multiplicative inverse $a^{-1} \in R$ such that
     
     $$
@@ -154,8 +154,6 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
     $$
 
     \end{enumerate}
-
-    (sometimes also called a "skew field").
 
 \end{definition}
 
@@ -220,15 +218,15 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
     Let $R$ be a commutative ring. A \vocab{module} over $R$ (in short \vocab{$R$-module}) is a pair $(M, \bu)$, satisfying:
 
     \begin{enumerate}
-      \item M is a group under $+$,
+      \item M is a group under $+$.
     
       \item $\bu : R \to M \to M$ is called \vocab{scalar multiplication}, for every $a, b \in R$, $x, y \in M$, we have
       
         \begin{enumerate}[(i)]
-            \item $a \bu (x + y) = a \bu x + b \bu y$,
-            \item $(a + b) \bu x = a \bu x + b \bu x$,
-            \item $a * (b \bu x)=(a * b) \bu x$,
-            \item $1_R \bu x = x$.
+            \item $a \bu (x + y) = a \bu x + b \bu y$
+            \item $(a + b) \bu x = a \bu x + b \bu x$
+            \item $a * (b \bu x)=(a * b) \bu x$
+            \item $1_R \bu x = x$
         \end{enumerate}
     \end{enumerate}
 
@@ -298,38 +296,6 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
     
 % \end{remark}
 
-\begin{definition}[Algebra]
-    \label{Algebra}
-    \leanok
-    \lean{Algebra}
-    \uses{Module, Ring}
-
-    An \vocab{algebra} $A$ over $R$ is a pair $(M, *)$, satisfying:
-
-    \begin{enumerate}
-    \item The elements of $A$ form a \vocab{module} $M$ over $R$ under $+$ and $\bu$.
-
-    \item The elements of $A$ form a \vocab{ring} under $*$.
-
-    \item For $x, y \in A, a \in R$, we have
-    
-    $$
-    a \bu (x * y) = (a \bu x) * y = x * (a \bu y).
-    $$
-
-    \end{enumerate}
-
-\end{definition}
-
-\begin{remark}
-    \label{mk:Algebra}
-
-    What's simply called algebra is actually associative algebra with identity, a.k.a. \vocab{associative unital algebra}. See
-    \href{https://ncatlab.org/nlab/show/red%20herring%20principle}{the red herring principle}
-    for more about such phenomenon for naming, particularly the example of (possibly) \vocab{nonassociative algebra}.
-    
-\end{remark}
-
 \begin{definition}[Ring homomorphism]
     \label{RingHom}
     % \leanok
@@ -340,13 +306,76 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
     
     A \vocab{ring homomorphism}, from $\alpha$ to $\beta$ is a function $f : \alpha \to_{+*} \beta$ such that
 
-	\begin{enumerate}[(i)]
-		\item $f(x +_{\alpha} y) = f(x) +_{\beta} f(y)$ for each $x,y \in \alpha$.
-		\item $f(x *_{\alpha} y) = f(x) *_{\beta} f(y)$ for each $x,y \in \alpha$.
-		\item $f(1_{\alpha}) = 1_{\beta}$.
-	\end{enumerate}
+    \begin{enumerate}[(i)]
+        \item $f(x +_{\alpha} y) = f(x) +_{\beta} f(y)$ for each $x,y \in \alpha$.
+        \item $f(x *_{\alpha} y) = f(x) *_{\beta} f(y)$ for each $x,y \in \alpha$.
+        \item $f(1_{\alpha}) = 1_{\beta}$.
+    \end{enumerate}
 
 \end{definition}
+
+\begin{definition}[Algebra]
+    \label{Algebra}
+    \leanok
+    \lean{Algebra}
+    \uses{Module, Ring}
+
+    Let $R$ be a commutative ring. An \vocab{algebra} $A$ over $R$ is a pair $(A, \bu)$, satisfying:
+
+    \begin{enumerate}
+    \item $A$ is a \vocab{ring} under $*$.
+    
+    \item there exists a \vocab{ring homomorphism} from $R$ to $A$, denoted $f : R \to_{+*} A$.
+    
+    \item $\bu : R \to M \to M$ is a \vocab{scalar multiplication}
+    
+    \item for every $r \in R$, $x \in A$, we have
+
+    \begin{enumerate}[(i)]
+        \item $r * x = x * r$ (commutativity between $R$ and $A$)
+        \item $r \bu x = r * x$ (definition of scalar multiplication)
+    \end{enumerate}
+
+    \end{enumerate}
+
+    where we omitted that the ring homomorphism $f$ is applied to $r$ before multiplication,
+    while they are explicitly written as \lstinline|toRingHom(r)| in \Mathlib.
+
+\end{definition}
+
+\begin{remark}
+    \label{mk:AlgebraLiterature}
+
+    The following definition is more close to literature:
+
+    The definition above (adopted in \Mathlib) is more general than the definition in literature (shown below),
+    see \emph{Implementation notes} in \MathlibDoc{Algebra} for details.
+    
+    Let $R$ be a commutative ring. An \vocab{algebra} $A$ over $R$ is a pair $(M, *)$, satisfying:
+
+    \begin{enumerate}
+    \item $A$ is a \vocab{module} $M$ over $R$ under $+$ and $\bu$.
+
+    \item $A$ is a \vocab{ring} under $*$.
+
+    \item For $x, y \in A, a \in R$, we have
+    
+    $$
+    a \bu (x * y) = (a \bu x) * y = x * (a \bu y)
+    $$
+
+    \end{enumerate}
+    
+\end{remark}
+
+\begin{remark}
+    \label{mk:AlgebraName}
+
+    What's simply called algebra is actually associative algebra with identity, a.k.a. \vocab{associative unital algebra}. See
+    \href{https://ncatlab.org/nlab/show/red%20herring%20principle}{the red herring principle}
+    for more about such phenomenon for naming, particularly the example of (possibly) \vocab{nonassociative algebra}.
+    
+\end{remark}
 
 \begin{definition}[FreeAlgebra]
     \label{FreeAlgebra}
