@@ -789,6 +789,7 @@
     </span>
     <span class="definition_thmlabel">1.1.18</span>
     <span class="definition_thmtitle">Free algebra</span>
+    ✓
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#FreeAlgebra">#</a>
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
@@ -801,8 +802,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-basics.html#Ring">Definition 1.1.6</a></li>
-          <li><a href="sec-basics.html#Module">Definition 1.1.9</a></li>
+          <li><a href="sec-basics.html#Algebra">Definition 1.1.15</a></li>
         </ul>
 
       </div>
@@ -839,7 +839,7 @@
   <li><p>for all \(a, b\) in \(A\), \(a * b\) is in \(A\). </p>
 </li>
 </ol>
-<p>by the equivalent relation that makes \(A\) an <b class="bfseries"><span style="color:#181870"> \(R\)-algebra</span></b>. </p>
+<p>by that equivalence relation that makes \(A\) an <b class="bfseries"><span style="color:#181870"> \(R\)-algebra</span></b>. </p>
 
   </div>
 </div> </p>
@@ -866,7 +866,8 @@
     Definition
     </span>
     <span class="definition_thmlabel">1.1.20</span>
-    <span class="definition_thmtitle">LinearMap</span>
+    <span class="definition_thmtitle">Linear map</span>
+    ✓
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#LinearMap">#</a>
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
@@ -904,7 +905,13 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>TODO </p>
+<p>Let \(R, S\) be rings, \(M\) an \(R\)-module, \(N\) an \(S\)-module. A <b class="bfseries"><span style="color:#181870"> linear map</span></b> from \(M\) to \(N\) is a function \(f : M \to _{l} N\) over a ring homomorphism \(\sigma : R \to _{+*} S\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(f(x + y) = f(x) + f(y)\) for all \(x, y \in M\). </p>
+</li>
+  <li><p>\(f(r \bullet x) = \sigma (r) \bullet f(x)\) for all \(r \in R\), \(x \in M\). </p>
+</li>
+</ol>
 
   </div>
 </div> </p>
@@ -914,7 +921,8 @@
     Definition
     </span>
     <span class="definition_thmlabel">1.1.21</span>
-    <span class="definition_thmtitle">RingQuot</span>
+    <span class="definition_thmtitle">Quotient of non-commutative ring</span>
+    ✓
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#RingQuot">#</a>
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
@@ -952,7 +960,34 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>TODO </p>
+<p>Let \(r\) be an arbitrary equivalence relation. The <b class="bfseries"><span style="color:#181870"> quotient of non-commutative rings</span></b> by \(r\) is by the strengthen equivalence relation that satisfies: </p>
+<ol class="enumerate">
+  <li><p>\(a + c \sim b + c\) if \(a \sim b\) </p>
+</li>
+  <li><p>\(a * c \sim b * c\) if \(a \sim b\) </p>
+</li>
+  <li><p>\(a * b \sim a * c\) if \(b \sim c\) </p>
+</li>
+</ol>
+<p>i.e. the equivalence relation is compatible with the ring operations \(+\) and \(*\). </p>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:RingQuot">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.1.22</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-basics.html#mk:RingQuot">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>As ideals haven’t been formalized for the non-commutative case, <span class="sffamily">Mathlib</span>&#160;uses <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/RingQuot">RingQuot</a> in places where the quotient of non-commutative rings by ideal is needed. </p>
+<p>The universal properties of the quotient are proven, and should be used instead of the definition that is subject to change. </p>
 
   </div>
 </div> </p>
@@ -961,7 +996,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.22</span>
+    <span class="definition_thmlabel">1.1.23</span>
     <span class="definition_thmtitle">TensorAlgebra relation</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#TensorAlgebra_Rel">#</a>
@@ -1009,7 +1044,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.1.23</span>
+    <span class="definition_thmlabel">1.1.24</span>
     <span class="definition_thmtitle">Tensor algebra</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#TensorAlgebra">#</a>
@@ -1025,7 +1060,7 @@
                 <ul class="uses">
           <li><a href="sec-basics.html#Algebra">Definition 1.1.15</a></li>
           <li><a href="sec-basics.html#FreeAlgebra">Definition 1.1.18</a></li>
-          <li><a href="sec-basics.html#TensorAlgebra_Rel">Definition 1.1.22</a></li>
+          <li><a href="sec-basics.html#TensorAlgebra_Rel">Definition 1.1.23</a></li>
           <li><a href="sec-basics.html#RingQuot">Definition 1.1.21</a></li>
         </ul>
 
@@ -1065,7 +1100,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.1.24</span>
+    <span class="remark_thmlabel">1.1.25</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-basics.html#mk:TensorAlgebra">#</a>
 
@@ -1080,7 +1115,6 @@
   <li><p>additional relations making the inclusion of \(M\) into an \(R\)-linear map </p>
 </li>
 </ol>
-<p>As ideals haven’t been formalized for the non-commutative case, <span class="sffamily">Mathlib</span>&#160;uses <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/RingQuot">RingQuot</a> which is the quotient of a non-commutative ring by an arbitrary relation. </p>
 
   </div>
 </div>  </p>
