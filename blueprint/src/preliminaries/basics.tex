@@ -480,13 +480,22 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
     
 \end{remark}
 
-\begin{definition}[TensorAlgebra relation]
+\begin{definition}[Tensor algebra relation]
     \label{TensorAlgebra_Rel}
-    % \leanok
+    \leanok
     \lean{TensorAlgebra.Rel}
     \uses{FreeAlgebra, LinearMap}
 
-    TODO
+    Let $A$ be a free $R$-algebra on module $M$, let $\iota : M \to A$ denote the map from $M$ to $A$.
+
+    The \vocab{tensor algebra relation} on $M$ is the equivalence relation satisfying:
+
+    \begin{enumerate}
+
+    \item for all $a, b$ in $M$, $\iota(a + b) \sim \iota(a) + \iota(b)$.
+    \item for all $r$ in $R$, $a$ in $M$, $\iota(r \bu a) \sim r * \iota(a)$.
+    
+    \end{enumerate}
 
 \end{definition}
 
