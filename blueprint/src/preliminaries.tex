@@ -13,7 +13,54 @@ The material in this section should be familiar to the reader, but it is worth r
 Details can be found in the references in corresponding section, or you may hover a definition/theorem,
 then click on "L∃∀N" for the Lean 4 code.
 
-\subsection{Basics}
+In this section, we follow \cite{jadczyk2019notes}, with supplements from \cite{garling2011clifford, chen2016infinitely}, 
+and modifications to match the counterparts in Lean's \Mathlib.
+
+\begin{remark}
+\label{mk:Informal}
+
+We unify the informal mathematical language for a definition to:
+
+\optional{Let \placeholder{$A$} be a \placeholder{concept $A$}. }
+A \vocab{\placeholder{concept $B$}} is a set/pair/triple/tuple $(B, \mathtt{op}, ...)$, satisfying:
+
+\begin{enumerate}
+    \item \placeholder{$B$} is a \placeholder{concept $C$} \optional{ over \placeholder{$A$} under \placeholder{op} }.
+
+    \item \placeholder{formula} for all \placeholder{elements in concept $B$} \optional{(\vocab{ \placeholder{property} })}.
+    
+    \item \optional{for each \placeholder{element} in \placeholder{concept $A$} }
+    there exists \placeholder{element} such that
+    \placeholder{formula} for all \placeholder{elements in concept $B$}.
+
+    \item \optional{\placeholder{op} is called \placeholder{\vocab{op name}}, }for all \placeholder{elements in concept $B$}, we have
+
+        \begin{enumerate}[(i)]
+
+        \item \placeholder{formula}
+        \item \placeholder{formula}
+        
+        \end{enumerate}
+
+        \optional{(\vocab{ \placeholder{property} })}.
+
+\end{enumerate}
+
+By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation on \placeholder{$A$}.
+
+\end{remark}
+
+\subsection{Basics: from \vocab{group} to \vocab{module}}
 \label{sec:basics}
 
 \input{preliminaries/basics}
+
+\subsection{Algebras}
+\label{sec:algebras}
+
+\input{preliminaries/algebras}
+
+\subsection{Forms}
+\label{sec:forms}
+
+\input{preliminaries/forms}
