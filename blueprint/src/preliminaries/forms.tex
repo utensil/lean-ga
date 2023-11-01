@@ -1,0 +1,40 @@
+\begin{definition}[Bilinear form]
+    \label{BilinForm}
+    \leanok
+    \lean{BilinForm}
+    \uses{Module}
+
+    Let $R$ be a ring, $M$ an $R$-module. An \vocab{bilinear form} $B$ over $M$ is a map $B : M \to M \to R$, satisfying:
+
+    \begin{enumerate}
+
+    \item $ B(x + y, z) = B(x, z) +B(y, z) $
+    
+    \item $ B(x, y + z) = B(x, y) +B(x, z) $
+    
+    \item $ B(a \bu x, y) = a * B(x, y)$
+    
+    \item $ B(x, a \bu y) = a * B(x, y)$
+        
+    \end{enumerate}
+
+    for all $a \in R, x, y, z \in M$.
+
+\end{definition}
+
+\begin{definition}[Quadratic form]
+    \label{QuadraticForm}
+    \leanok
+    \lean{QuadraticForm}
+    \uses{BilinForm}
+
+    Let $R$ be a commutative ring, $M$ a $R$-module. An \vocab{quadratic form} $Q$ over $M$ is a map $Q : M \to R$, satisfying:
+
+    \begin{enumerate}
+
+    \item $ Q(a \bu x) = a * a * Q(x)$ for all $a \in R, x \in M$.
+    
+    \item there exists a companion \vocab{bilinear form} $B : M \to M \to R$, such that $Q(x + y) = Q(x) + Q(y) + B(x, y)$
+    
+    \end{enumerate}
+\end{definition}
