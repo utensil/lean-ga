@@ -12,7 +12,7 @@
 <meta name="generator" content="plasTeX" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Blueprint For Formalizing Geometric Algebra in Lean: Basics: from <b class="bfseries"><span style="color:#181870"> group</span></b> to <b class="bfseries"><span style="color:#181870"> module</span></b></title>
+<title>The Blueprint For Formalizing Geometric Algebra in Lean: Basics: from groups to modules</title>
 <link rel="next" href="sec-algebras.html" title="Algebras" />
 <link rel="prev" href="cha-preliminaries.html" title="Preliminaries" />
 <link rel="up" href="cha-preliminaries.html" title="Preliminaries" />
@@ -38,7 +38,7 @@
   <span class="expand-toc">▼</span>
   <ul class="sub-toc-1 active">
      <li class=" active current">
-  <a href="sec-basics.html"><span class="toc_ref">1.1</span> <span class="toc_entry">Basics: from <b class="bfseries"><span style="color:#181870"> group</span></b> to <b class="bfseries"><span style="color:#181870"> module</span></b></span></a>
+  <a href="sec-basics.html"><span class="toc_ref">1.1</span> <span class="toc_entry">Basics: from groups to modules</span></a>
  </li>
 <li class="">
   <a href="sec-algebras.html"><span class="toc_ref">1.2</span> <span class="toc_entry">Algebras</span></a>
@@ -122,7 +122,7 @@
 
 
 <div class="main-text">
-<h2 id="sec:basics">1.1 Basics: from <b class="bfseries"><span style="color:#181870"> group</span></b> to <b class="bfseries"><span style="color:#181870"> module</span></b></h2>
+<h2 id="sec:basics">1.1 Basics: from groups to modules</h2>
 
 <p><div class="definition_thmwrapper" id="Group">
   <div class="definition_thmheading">
@@ -156,7 +156,7 @@
   
 <p>A <b class="bfseries"><span style="color:#181870"> group</span></b> is a pair \((G, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in G\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>). </p>
+  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in G\) (<b class="bfseries">associativity</b>). </p>
 </li>
   <li><p>there exists \(1 \in G\) such that \(1 * a = a * 1 = a\) for all \(a \in G\). </p>
 </li>
@@ -179,8 +179,8 @@
   </div>
   <div class="remark_thmcontent">
   
-<p>It then follows that \(e\), the <b class="bfseries"><span style="color:#181870"> identity element</span></b>, is unique, and that for each \(g \in G\) the <b class="bfseries"><span style="color:#181870"> inverse</span></b> \(g^{-1}\) is unique. </p>
-<p>A group G is abelian, or <b class="bfseries"><span style="color:#181870"> commutative</span></b>, if \(g * h = h * g\) for all \(g, h \in G\). </p>
+<p>It then follows that \(e\), the <b class="bfseries">identity element</b>, is unique, and that for each \(g \in G\) the <b class="bfseries">inverse</b> \(g^{-1}\) is unique. </p>
+<p>A group G is abelian, or <b class="bfseries">commutative</b>, if \(g * h = h * g\) for all \(g, h \in G\). </p>
 
   </div>
 </div> </p>
@@ -248,10 +248,10 @@
   
 <p>A <b class="bfseries"><span style="color:#181870"> monoid</span></b> is a pair \((R, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in R\) (<b class="bfseries"><span style="color:#181870"> associativity</span></b>). </p>
+  <li><p>\((a * b) * c = a * (b * c)\) for all \(a, b, c \in R\) (<b class="bfseries">associativity</b>). </p>
 </li>
   <li><p>there exists an element \(1 \in R\) such that \(1 * a = a * 1 = a\) for all \(a \in R\) </p>
-<p>i.e. \(1\) is the multiplicative identity (<b class="bfseries"><span style="color:#181870"> neutral element</span></b>). </p>
+<p>i.e. \(1\) is the multiplicative identity (<b class="bfseries">neutral element</b>). </p>
 </li>
 </ol>
 
@@ -306,9 +306,9 @@
   
 <p>A <b class="bfseries"><span style="color:#181870"> ring</span></b> is a triple \((R, +, *)\), satisfying: </p>
 <ol class="enumerate">
-  <li><p>\(R\) is a <b class="bfseries"><span style="color:#181870"> commutative group</span></b> under \(+\). </p>
+  <li><p>\(R\) is a <b class="bfseries">commutative group</b> under \(+\). </p>
 </li>
-  <li><p>\(R\) is a <b class="bfseries"><span style="color:#181870"> monoid</span></b> under \(*\). </p>
+  <li><p>\(R\) is a <b class="bfseries">monoid</b> under \(*\). </p>
 </li>
   <li><p>for all \(a, b, c \in R\), we have </p>
 <ol class="enumerate">
@@ -317,7 +317,7 @@
   <li><p>\((a + b) * c = a * c + b * c\) </p>
 </li>
 </ol>
-<p>(left and right <b class="bfseries"><span style="color:#181870"> distributivity</span></b> over \(+\)). </p>
+<p>(left and right <b class="bfseries">distributivity</b> over \(+\)). </p>
 </li>
 </ol>
 
@@ -336,7 +336,7 @@
   </div>
   <div class="remark_thmcontent">
   
-<p>In applications to Clifford algebras \(R\) will be always assumed to be <b class="bfseries"><span style="color:#181870"> commutative</span></b>. </p>
+<p>In applications to Clifford algebras \(R\) will be always assumed to be <b class="bfseries">commutative</b>. </p>
 
   </div>
 </div> </p>
@@ -442,11 +442,11 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>Let \(R\) be a commutative ring. A <b class="bfseries"><span style="color:#181870"> module</span></b> over \(R\) (in short <b class="bfseries"><span style="color:#181870"> \(R\)-module</span></b>) is a pair \((M, \bullet )\), satisfying: </p>
+<p>Let \(R\) be a commutative ring. A <b class="bfseries"><span style="color:#181870"> module</span></b> over \(R\) (in short <b class="bfseries">\(R\)-module</b>) is a pair \((M, \bullet )\), satisfying: </p>
 <ol class="enumerate">
   <li><p>M is a group under \(+\). </p>
 </li>
-  <li><p>\(\bullet : R \to M \to M\) is called <b class="bfseries"><span style="color:#181870"> scalar multiplication</span></b>, for every \(a, b \in R\), \(x, y \in M\), we have </p>
+  <li><p>\(\bullet : R \to M \to M\) is called <b class="bfseries">scalar multiplication</b>, for every \(a, b \in R\), \(x, y \in M\), we have </p>
 <ol class="enumerate">
   <li><p>\(a \bullet (x + y) = a \bullet x + b \bullet y\) </p>
 </li>
@@ -528,7 +528,7 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>If \(R\) is a <b class="bfseries"><span style="color:#181870"> division ring</span></b>, then a module \(M\) over \(R\) is called a <b class="bfseries"><span style="color:#181870"> vector space</span></b>. </p>
+<p>If \(R\) is a <b class="bfseries">division ring</b>, then a module \(M\) over \(R\) is called a <b class="bfseries"><span style="color:#181870"> vector space</span></b>. </p>
 
   </div>
 </div> </p>
@@ -566,7 +566,7 @@
   <div class="remark_thmcontent">
   
 <p>A <b class="bfseries"><span style="color:#181870"> submodule</span></b> \(N\) of \(M\) is a module \(N\) such that every element of \(N\) is also an element of \(M\). </p>
-<p>If \(M\) is a vector space then \(N\) is called a <b class="bfseries"><span style="color:#181870"> subspace</span></b>. </p>
+<p>If \(M\) is a vector space then \(N\) is called a <b class="bfseries">subspace</b>. </p>
 
   </div>
 </div> </p>
