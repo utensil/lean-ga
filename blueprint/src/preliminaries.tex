@@ -21,19 +21,19 @@ and modifications to match the counterparts in Lean's \Mathlib.
 
 We unify the informal mathematical language for a definition to:
 
-\optional{Let \placeholder{$A$} be a \placeholder{concept $A$}. }
-A \vocab{\placeholder{concept $B$}} is a set/pair/triple/tuple $(B, \mathtt{op}, ...)$, satisfying:
+\optional{Let \placeholder{$A$} be a \placeholder{\vocab{concept $A$}}. }
+A \newvocab{\placeholder{concept $B$}} is a set/pair/triple/tuple $(B, \mathtt{op}, ...)$, satisfying:
 
 \begin{enumerate}
-    \item \placeholder{$B$} is a \placeholder{concept $C$} \optional{ over \placeholder{$A$} under \placeholder{op} }.
+    \item \placeholder{$B$} is a \placeholder{\vocab{concept $C$}} \optional{ over \placeholder{$A$} under \placeholder{op} }.
 
-    \item \placeholder{formula} for all \placeholder{elements in concept $B$} \optional{(\vocab{ \placeholder{property} })}.
+    \item \placeholder{formula} for all \placeholder{elements in $B$} \optional{(\vocab{ \placeholder{property} })}.
     
-    \item \optional{for each \placeholder{element} in \placeholder{concept $A$} }
+    \item \optional{for each \placeholder{element} in \placeholder{\vocab{concept $A$}} }
     there exists \placeholder{element} such that
     \placeholder{formula} for all \placeholder{elements in concept $B$}.
 
-    \item \optional{\placeholder{op} is called \placeholder{\vocab{op name}}, }for all \placeholder{elements in concept $B$}, we have
+    \item \optional{\placeholder{op} is called \placeholder{\vocab{op name}}, }for all \placeholder{elements in $B$}, we have
 
         \begin{enumerate}[(i)]
 
@@ -50,7 +50,7 @@ By default, \placeholder{$A$} is a set, \placeholder{op} is a binary operation o
 
 \end{remark}
 
-\subsection{Basics: from \vocab{group} to \vocab{module}}
+\subsection{Basics: from groups to modules}
 \label{sec:basics}
 
 \input{preliminaries/basics}

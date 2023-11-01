@@ -3,7 +3,7 @@
     \leanok
     \lean{Group, AddGroup}
 
-    A \vocab{group} is a pair $(G, *)$, satisfying:
+    A \newvocab{group} is a pair $(G, *)$, satisfying:
 
     \begin{enumerate}
     \item $(a * b) * c = a * (b * c)$ for all $a, b, c \in G$ (\vocab{associativity}).
@@ -49,7 +49,7 @@
     \leanok
     \lean{Monoid, AddMonoid}
 
-    A \vocab{monoid} is a pair $(R, *)$, satisfying:
+    A \newvocab{monoid} is a pair $(R, *)$, satisfying:
 
     \begin{enumerate}
     \item $(a * b) * c = a * (b * c)$ for all $a, b, c \in R$ (\vocab{associativity}).
@@ -68,7 +68,7 @@
     \lean{Ring, CommRing, CommSemiring}
     \uses{Group, Monoid}
 
-    A \vocab{ring} is a triple $(R, +, *)$, satisfying:
+    A \newvocab{ring} is a triple $(R, +, *)$, satisfying:
 
     \begin{enumerate}
 
@@ -104,7 +104,7 @@
     \lean{DivisionRing}
     \uses{Ring}
 
-    A \vocab{division ring} is a ring $(R, +, *)$, satisfying:
+    A \newvocab{division ring} is a ring $(R, +, *)$, satisfying:
 
     \begin{enumerate}
 
@@ -177,7 +177,7 @@
     \lean{Module}
     \uses{Group, Ring}
 
-    Let $R$ be a commutative ring. A \vocab{module} over $R$ (in short \vocab{$R$-module}) is a pair $(M, \bu)$, satisfying:
+    Let $R$ be a commutative ring. A \newvocab{module} over $R$ (in short \vocab{$R$-module}) is a pair $(M, \bu)$, satisfying:
 
     \begin{enumerate}
       \item M is a group under $+$.
@@ -213,7 +213,7 @@
     \lean{Module}
     \uses{Module, DivisionRing}
 
-    If $R$ is a \vocab{division ring}, then a module $M$ over $R$ is called a \vocab{vector space}.
+    If $R$ is a \vocab{division ring}, then a module $M$ over $R$ is called a \newvocab{vector space}.
 
 \end{definition}
 
@@ -234,7 +234,7 @@
 \begin{remark}
     \label{mk:Submodule}
 
-    A \vocab{submodule} $N$ of $M$ is a module $N$ such that every element of $N$ is also an element of $M$.
+    A \newvocab{submodule} $N$ of $M$ is a module $N$ such that every element of $N$ is also an element of $M$.
 
     If $M$ is a vector space then $N$ is called a \vocab{subspace}.
 
