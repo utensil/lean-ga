@@ -1,3 +1,25 @@
+# To normalize:
+# bibtool --preserve.key.case=on --preserve.keys=on --pass.comments=on --print.use.tab=off -s -i blueprint/src/references.bib -o blueprint/src/references.bib -- 'new.entry.type {thesis}'
+
+# https://www.zbmath.org/ and https://mathscinet.ams.org/mathscinet
+# (or the free tool https://mathscinet.ams.org/mrlookup)
+# are good sources of complete bibtex entries for mathematics
+
+# To link to an entry in `references.bib` in Mathlib, use the following formats:
+#   [Author, *Title* (optional location)][bibkey]
+#
+# The above is adapted from https://github.com/leanprover-community/mathlib4/blob/master/docs/references.bib
+
+@Book{            bourbaki2007,
+  author        = {Bourbaki, Nicolas},
+  title         = {{\'E}l{\'e}ments de math{\'e}matique. {Alg{\`e}bre}.
+                  {Chapitre} 9},
+  edition       = {Reprint of the 1959 original},
+  isbn          = {3-540-35338-0},
+  year          = {2007},
+  publisher     = {Berlin: Springer},
+  language      = {French}
+}
 
 @Book{            bromborskyIntroductionGeometricAlgebra2014,
   title         = {An Introduction to Geometric Algebra and Calculus},
@@ -66,6 +88,14 @@
   publisher     = {Cambridge University Press}
 }
 
+@Misc{            grinberg2016clifford,
+  title         = {The Clifford algebra and the Chevalley map - a
+                  computational approach},
+  author        = {Grinberg, Darij},
+  year          = {2016},
+  url           = {https://www.cip.ifi.lmu.de/~grinberg/algebra/chevalley.pdf}
+}
+
 @Book{            hestenes2012clifford,
   title         = {Clifford Algebra to Geometric Calculus: A Unified Language
                   for Mathematics and Physics},
@@ -75,6 +105,16 @@
   volume        = {5},
   publisher     = {{Springer Science \& Business Media}},
   url           = {https://www.springer.com/gp/book/9789027716736}
+}
+
+@Article{         izhakian2016quadratic,
+  title         = {Quadratic and symmetric bilinear forms on modules with
+                  unique base over a semiring},
+  author        = {Izhakian, Zur and Knebusch, Manfred and Rowen, Louis},
+  journal       = {Documenta Mathematica},
+  volume        = {21},
+  pages         = {773--808},
+  year          = {2016}
 }
 
 @Article{         jadczyk2019notes,
@@ -91,17 +131,6 @@
   publisher     = {{Princeton university press}}
 }
 
-# To normalize:
-# bibtool --preserve.key.case=on --preserve.keys=on --pass.comments=on --print.use.tab=off -s -i blueprint/src/references.bib -o blueprint/src/references.bib -- 'new.entry.type {thesis}'
-
-# https://www.zbmath.org/ and https://mathscinet.ams.org/mathscinet
-# (or the free tool https://mathscinet.ams.org/mrlookup)
-# are good sources of complete bibtex entries for mathematics
-
-# To link to an entry in `references.bib` in Mathlib, use the following formats:
-#   [Author, *Title* (optional location)][bibkey]
-#
-# The above is adapted from https://github.com/leanprover-community/mathlib4/blob/master/docs/references.bib
 @InCollection{    lean_2015,
   address       = {Cham},
   title         = {The {Lean} {Theorem} {Prover} ({System} {Description})},
