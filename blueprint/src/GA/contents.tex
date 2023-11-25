@@ -1,0 +1,29 @@
+This sections would contain what's in Section "The contents of a geometric algebra" in \cite{chisolm2012geometric}, e.g. $r$-blades, $r$-vectors, before we can discuss anything for the operations.
+
+That means we need to first formalize the counter parts in Clifford Algebra, e.g. Lipschitz Group, Spin Group, and Z-filteration in Clifford Algebra.
+
+I'll take a stab at porting Jiale Miao's \href{https://github.com/leanprover-community/mathlib/pull/16040}{mathlib#16040} which seems to be a more principled attempt than \href{https://github.com/pygae/lean-ga/blob/master/src/geometric_algebra/from_mathlib/versors.lean}{versors in lean-ga} except for the part involving Z-filteration which is still worth porting, possibly with ideas from the prototype \href{https://github.com/eric-wieser/lftcm2023-clifford_algebra/}{here}.
+
+First step is to port it with mathport, then fill in the only sorry for \textsf{invertible_of_invertible_ι}.
+
+\begin{definition}[Lipschitz group]
+    \label{Lipschitz}
+    \tangled
+    % \leanok
+    % \lean{Lipschitz}
+    \uses{CliffordAlgebra}
+
+    TODO
+
+\end{definition}
+
+\begin{definition}[Spin group]
+    \label{SpinGroup}
+    \tangled
+    % \leanok
+    % \lean{SpinGroup}
+    \uses{CliffordAlgebra}
+
+    TODO
+
+\end{definition}
