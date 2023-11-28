@@ -111,7 +111,7 @@ jobs:
           git config --global --add safe.directory `pwd`
           python3 -m pip install --upgrade pip requests wheel
           python3 -m pip install invoke
-          inv bp_tex
+          inv bptex
 
     - name: Build blueprint
       run: |

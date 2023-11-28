@@ -45,7 +45,7 @@ def bp(ctx):
     os.chdir(cwd)
 
 @task
-def bp_tex(ctx):
+def bptex(ctx):
     """
     Build the blueprint PDF file and prepare src/web.bbl for task `web` using old-fashioned TeXLive
     This task is handy if one can't install Tectonic like there's no
