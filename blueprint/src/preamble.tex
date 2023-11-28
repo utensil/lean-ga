@@ -4,6 +4,7 @@
 \usetikzlibrary{decorations}
 % \usepackage{color}
 \usepackage[unicode]{hyperref}
+\usepackage{cleveref}
 
 % NOTE: Won't work in web version for roman numerals, but it works well for PDF version
 \usepackage{enumerate}% http://ctan.org/pkg/enumerate
@@ -63,17 +64,28 @@
 % \citestyle{acmauthoryear}
 
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc}
 \usepackage{newunicodechar}
 \usepackage{lean_unicode}
 \usepackage{xspace}
+\usepackage{xpatch}
 \usepackage{unicode-math}
 \usepackage{fontspec}
+% \usepackage[autosize]{dot2texi}
+% \usepackage{tikz}
+% \usepackage{todonotes}
+
+%\setmathfont{Latin Modern Math}
 \setmathfont{latinmodern-math.otf}
 \setmathfont[range=\varnothing]{Asana-Math.otf}
 \setlength{\textwidth}{6.5in}
 \setlength{\oddsidemargin}{-0.1in}
 \setlength{\evensidemargin}{-0.1in}
+\setmathfont[range=\varnothing]{Asana-Math.otf}
+\setmathfont[range=\pitchfork]{Asana-Math.otf}
+\setmathfont[range=\intprod]{Asana-Math.otf}
+\setmathfont[range=\int]{latinmodern-math.otf}
+
 % end print specific preambles
 \fi
 
