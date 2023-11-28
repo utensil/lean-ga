@@ -100,10 +100,22 @@ jobs:
       run: |
         pip install -r requirements.txt
         pip install mathlibtools
+    # Inspired by https://github.com/CBirkbeck/ModularForms/blob/485be39051a18198eb89764e5c43990386717e20/.github/workflows/build.yml#L183-L196
+    - uses: xu-cheng/texlive-action@v2
+      with:
+        scheme: full
+        run: |
+          apk update
+          apk add --update make py3-pip git
+          git config --global --add safe.directory $GITHUB_WORKSPACE
+          git config --global --add safe.directory `pwd`
+          python3 -m pip install --upgrade pip requests wheel
+          python3 -m pip install invoke
+          inv bp_tex
 
     - name: Build blueprint
       run: |
-        inv all      
+        inv web      
     - name: Deploy blueprint
       if: contains('|refs/heads/master|refs/heads/blueprint|', github.ref)
       uses: peaceiris/actions-gh-pages@v3
