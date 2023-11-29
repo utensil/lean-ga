@@ -17,7 +17,7 @@ ROOT = Path(__file__).parent
 BP_DIR = ROOT/'blueprint'
 
 @task
-def bp(ctx):
+def bptt(ctx):
     """
     Build the blueprint PDF file and prepare src/web.bbl for task `web`
     """
@@ -29,7 +29,7 @@ def bp(ctx):
     os.chdir(cwd)
 
 @task
-def bptex(ctx):
+def bp(ctx):
     """
     Build the blueprint PDF file and prepare src/web.bbl for task `web` using old-fashioned TeXLive
     This task is handy if one can't install Tectonic like there's no
