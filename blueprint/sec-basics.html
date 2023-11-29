@@ -18,6 +18,7 @@
 <link rel="up" href="cha-preliminaries.html" title="Preliminaries" />
 <link rel="stylesheet" href="styles/theme-white.css" />
 <link rel="stylesheet" href="styles/amsthm.css" />
+<link rel="stylesheet" href="styles/pygments.css" />
 <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -202,7 +203,7 @@
   
 <p>In literatures, the binary operation are usually denoted by juxtaposition, and is understood to be a mapping \((g, h) \mapsto g * h\) from \(G \times G\) to \(G\). </p>
 <p><span class="sffamily">Mathlib</span>&#160;uses a slightly different way to encode this, \(G \to G \to G\) is understood to be \(G \to (G \to G)\), that sends \(g \in G\) to a mapping that sends \(h \in G\) to \(g * h \in G\). </p>
-<p>Further more, a mathimatical construct is represented by a "type", as Lean has a dependent type theory foundation, see <span class="cite">
+<p>Furthermore, a mathimatical construct is represented by a “type", as Lean has a dependent type theory foundation, see <span class="cite">
 	[
 	<a href="sect0017.html#carneiro2019type" >Carneiro(2019)</a>
 	]
@@ -549,7 +550,8 @@
   <div class="remark_thmcontent">
   
 <p>For generality, <span class="sffamily">Mathlib</span>&#160;uses <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/Module">Module</a> throughout for vector spaces, particularly, for a vector space \(V\), it’s usually declared as </p>
-<code class="plain_listing">variable [DivisionRing K] [AddCommGroup V] [Module K V]</code>
+<div class="highlight"><pre><span></span><span class="kd">variable</span> <span class="o">[</span><span class="n">DivisionRing</span> <span class="n">K</span><span class="o">]</span> <span class="o">[</span><span class="n">AddCommGroup</span> <span class="n">V</span><span class="o">]</span> <span class="o">[</span><span class="n">Module</span> <span class="n">K</span> <span class="n">V</span><span class="o">]</span>
+</pre></div>
 
 <p>for definitions/theorems about it, and most of them can be found under <span class="sffamily">Mathlib.LinearAlgebra</span> e.g. <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/LinearIndependent">LinearIndependent</a>. </p>
 

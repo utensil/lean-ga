@@ -18,6 +18,7 @@
 <link rel="up" href="cha-foundations.html" title="Foundations" />
 <link rel="stylesheet" href="styles/theme-white.css" />
 <link rel="stylesheet" href="styles/amsthm.css" />
+<link rel="stylesheet" href="styles/pygments.css" />
 <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -196,6 +197,16 @@
 <p>In literatures, \(M\) is often written \(V\), and the quotient is taken by the two-sided ideal \(I_Q\) generated from the set \(\{  v \otimes v - Q(v) \: \vert \:  v \in V \} \). </p>
 <p>As of writing, <span class="sffamily">Mathlib</span>&#160;does not have direct support for two-sided ideals, but it does support the equivalent operation of taking the <b class="bfseries">ring quotient</b> by a suitable closure of a relation like \(v \otimes v \sim Q(v)\). </p>
 <p>Hence the definition above. </p>
+<p>The universal properties of the Clifford algebra are proven, and should be used instead of the definition that is subject to change. </p>
+<figure >
+  <div class="centered"><div class="tikzcd" id="a0000000022">
+    <img src="images/img-0001.svg" class="tikzcd-vector" alt="\begin{tikzcd} [column sep=huge, row sep=huge]
+    \mathcal{G}(Q) \arrow[r, &#34;\operatorname{lift} f = g&#34;] &amp; A \\
+    V \arrow[ru, &#34;f = \operatorname{lift}^{-1} g&#34;&#39;] \arrow[u, &#34;\iota&#34;]
+    \end{tikzcd}" />
+</div> </div>
+
+</figure>
 
   </div>
 </div> </p>
@@ -212,7 +223,11 @@
   </div>
   <div class="remark_thmcontent">
   
-<p>This definition and what follows in <span class="sffamily">Mathlib</span>&#160;are based on <span class="cite">
+<p>This definition and what follows in <span class="sffamily">Mathlib</span>&#160;is initially presented in <span class="cite">
+	[
+	<a href="sect0017.html#wieser2022formalizing" >Wieser and Song(2022)</a>
+	]
+</span>, some further developments are based on <span class="cite">
 	[
 	<a href="sect0017.html#grinberg2016clifford" >Grinberg(2016)</a>
 	]
@@ -221,7 +236,11 @@
 	<a href="sect0017.html#bourbaki2007" >Bourbaki(2007)</a>
 	]
 </span> which is in French and never translated to English. </p>
-<p>The most informative English reference on the latter is <span class="cite">
+<p>The most informative English reference on <span class="cite">
+	[
+	<a href="sect0017.html#bourbaki2007" >Bourbaki(2007)</a>
+	]
+</span> is <span class="cite">
 	[
 	<a href="sect0017.html#jadczyk2019notes" >Jadczyk(2019)</a>
 	]
