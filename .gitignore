@@ -10,3 +10,7 @@ blueprint/src/_minted-print/
 blueprint/print/print.pyg
 blueprint/src/print.xdv
 blueprint/src/print.pyg
+blueprint/print/*.dot
+blueprint/src/*.dot
+blueprint/src/dot2tex.cache
+blueprint/src/print-dot2tex-*.tex

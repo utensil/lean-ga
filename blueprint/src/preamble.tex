@@ -1,7 +1,8 @@
 \usepackage[usenames,svgnames,dvipsnames]{xcolor}
 \usepackage{amsfonts, amsthm, amssymb, amsmath}
+\usepackage{tikz}
 \usepackage{tikz-cd}
-\usetikzlibrary{decorations}
+\usetikzlibrary{shapes,arrows,decorations}
 % \usepackage{color}
 \usepackage[unicode]{hyperref}
 \usepackage{cleveref}
@@ -71,10 +72,13 @@
 \usepackage{xpatch}
 \usepackage{unicode-math}
 \usepackage{fontspec}
-% \usepackage[autosize]{dot2texi}
-% \usepackage{tikz}
+% https://tex.stackexchange.com/a/250368/75671
+\usepackage{float} %figure inside minipage
+\usepackage[autosize]{dot2texi}
 % \usepackage{todonotes}
 
+% ad hoc fix for iota in Lean code
+\setmainfont{latinmodern-math.otf}
 %\setmathfont{Latin Modern Math}
 \setmathfont{latinmodern-math.otf}
 \setmathfont[range=\varnothing]{Asana-Math.otf}
