@@ -126,14 +126,14 @@
 
 <div class="main-text">
 <h2 id="a0000000010">3.2 Contents</h2>
-<p>This sections would contain what’s in Section "The contents of a geometric algebra" in <span class="cite">
+<p>This section would contain what’s in Section “The contents of a geometric algebra" in <span class="cite">
 	[
-	<a href="sect0017.html#chisolm2012geometric" >Chisolm([n. d.])</a>
+	<a href="sect0017.html#chisolm2012geometric" >Chisolm(2012)</a>
 	]
-</span>, e.g. \(r\)-blades, \(r\)-vectors, before we can discuss anything for the operations. </p>
+</span>, e.g. \(r\)-blades, \(r\)-vectors, before we can discuss anything about the GA operations. </p>
 <p>That means we need to first formalize the counter parts in Clifford Algebra, e.g. Lipschitz Group, Spin Group, and Z-filteration in Clifford Algebra. </p>
 <p>I’ll take a stab at porting Jiale Miao’s <a href ="https://github.com/leanprover-community/mathlib/pull/16040">mathlib#16040</a> which seems to be a more principled attempt than <a href ="https://github.com/pygae/lean-ga/blob/master/src/geometric_algebra/from_mathlib/versors.lean">versors in lean-ga</a> except for the part involving Z-filteration which is still worth porting, possibly with ideas from the prototype <a href ="https://github.com/eric-wieser/lftcm2023-clifford_algebra/">here</a>. </p>
-<p>First step is to port it with mathport, then fill in the only sorry. </p>
+<p>First step is to port it with mathport, then fill in the only sorry <code class="plain_lstlinline">invertible_of_invertible_ι</code>. </p>
 <p><div class="definition_thmwrapper" id="Lipschitz">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
@@ -186,7 +186,7 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-def.html#CliffordAlgebra">Definition 2.1.1</a></li>
+          <li><a href="sect0009.html#Lipschitz">Definition 3.2.1</a></li>
         </ul>
 
       </div>
