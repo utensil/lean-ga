@@ -81,8 +81,8 @@ jobs:
       uses: awalsh128/cache-apt-pkgs-action@latest
       with:
         # texlive-binaries is for kpsewhich, which is a dependency of plastex
-        # texlive-core is for pdflatex, which is a dependency of rendering tikz-cd by plastex
-        packages: graphviz libgraphviz-dev pdf2svg dvisvgm texlive-core
+        # texlive-latex-base is for pdflatex, which is a dependency of rendering tikz-cd by plastex
+        packages: graphviz libgraphviz-dev pdf2svg dvisvgm texlive-latex-base
         version: 1.0
 
     # - uses: actions/cache@v3
