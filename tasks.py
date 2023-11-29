@@ -17,22 +17,6 @@ ROOT = Path(__file__).parent
 BP_DIR = ROOT/'blueprint'
 
 @task
-def decls(ctx):
-    """
-    Collect Lean declarations from Lean sources for referencing in the blueprint
-    """
-
-    try:
-        from mathlibtools.lib import LeanProject
-
-        proj = LeanProject.from_path(ROOT)
-        proj.pickle_decls(ROOT/'decls.pickle')
-    except ImportError:
-        warnings.warn("Failed to make URLs for Lean 3 (run `pip install mathlibtools` to fix for now)")
-        warnings.warn("Lean 3 is no longer supported, please upgrade to Lean 4")
-        raise
-
-@task
 def bp(ctx):
     """
     Build the blueprint PDF file and prepare src/web.bbl for task `web`
@@ -139,10 +123,10 @@ def dev(ctx):
             )
         ))
 
-@task(decls, bp, web)
+@task(bp, web)
 def all(ctx):
     """
-    Run all tasks: `decls`, `bp`, and `web`
+    Run all tasks: `bp`, and `web`
     """
     
     pass
