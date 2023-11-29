@@ -77,13 +77,13 @@ jobs:
         name: lean-decl-info
         path: lean-decl-info.tex
 
-    - name: Install blueprint apt deps with cache
-      uses: awalsh128/cache-apt-pkgs-action@latest
-      with:
-        # texlive-binaries is for kpsewhich, which is a dependency of plastex
-        # texlive-latex-base is for pdflatex, which is a dependency of rendering tikz-cd by plastex
-        packages: graphviz libgraphviz-dev pdf2svg dvisvgm texlive-latex-base
-        version: 1.0
+    # - name: Install blueprint apt deps with cache
+    #   uses: awalsh128/cache-apt-pkgs-action@latest
+    #   with:
+    #     # texlive-binaries is for kpsewhich, which is a dependency of plastex
+    #     # texlive-latex-base is for pdflatex, which is a dependency of rendering tikz-cd by plastex
+    #     packages: graphviz libgraphviz-dev pdf2svg dvisvgm texlive-latex-base
+    #     version: 1.0
 
     # - uses: actions/cache@v3
     #   name: Tectonic Cache
@@ -96,29 +96,23 @@ jobs:
     #   with:
     #     github-token: ${{ secrets.GITHUB_TOKEN }}
     #     biber-version: "latest"
-
-    - name: Install blueprint deps
-      run: |
-        pip install -r requirements.txt
-        pip install mathlibtools
     
     # Inspired by https://github.com/CBirkbeck/ModularForms/blob/485be39051a18198eb89764e5c43990386717e20/.github/workflows/build.yml#L183-L196
-    - name: Build blueprint PDF
+    - name: Build blueprint
       uses: xu-cheng/texlive-action@v2
       with:
         scheme: full
         run: |
           apk update
-          apk add --update make py3-pip git
+          apk add --update make py3-pip git pkgconfig graphviz graphviz-dev gcc musl-dev
           git config --global --add safe.directory $GITHUB_WORKSPACE
           git config --global --add safe.directory `pwd`
           python3 -m pip install --upgrade pip requests wheel
+          python3 -m pip install pygraphviz --global-option=build_ext --global-option="-L/usr/lib/graphviz/" --global-option="-R/usr/lib/graphviz/"
+          pip install -r requirements.txt
           python3 -m pip install invoke
-          inv bptex
-
-    - name: Build blueprint
-      run: |
-        inv web      
+          inv all
+     
     - name: Deploy blueprint
       if: contains('|refs/heads/master|refs/heads/blueprint|', github.ref)
       uses: peaceiris/actions-gh-pages@v3
