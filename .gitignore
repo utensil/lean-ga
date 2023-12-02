@@ -14,3 +14,5 @@ blueprint/print/*.dot
 blueprint/src/*.dot
 blueprint/src/dot2tex.cache
 blueprint/src/print-dot2tex-*.tex
+blueprint/print/print.brf
+blueprint/src/print.brf

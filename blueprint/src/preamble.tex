@@ -3,14 +3,19 @@
 \usepackage{tikz}
 \usepackage{tikz-cd}
 \usetikzlibrary{shapes,arrows,decorations}
-% \usepackage{color}
-\usepackage[unicode]{hyperref}
+% \usepackage{color} 
+% \PassOptionsToPackage{hyphens}{url}
+% \usepackage[unicode]{hyperref}
+\usepackage[unicode,pagebackref=true]{hyperref}
 \usepackage{cleveref}
 
 % NOTE: Won't work in web version for roman numerals, but it works well for PDF version
 \usepackage{enumerate}% http://ctan.org/pkg/enumerate
 
 \usepackage{listings}
+
+% FIXME: this fails to work: it breaks at where doi appears
+% \usepackage{natbib}
 
 % \usepackage{verbatim}
 
@@ -75,6 +80,13 @@
 % https://tex.stackexchange.com/a/250368/75671
 \usepackage{float} %figure inside minipage
 \usepackage[autosize]{dot2texi}
+
+% \usepackage[textwidth=14cm]{geometry}
+% \usepackage{polyglossia}
+% \setdefaultlanguage{english}
+% \usepackage{enumitem}
+% \usepackage{mathtools}
+% \usepackage{thmtools}
 % \usepackage{todonotes}
 
 % ad hoc fix for iota in Lean code
@@ -89,6 +101,14 @@
 \setmathfont[range=\pitchfork]{Asana-Math.otf}
 \setmathfont[range=\intprod]{Asana-Math.otf}
 \setmathfont[range=\int]{latinmodern-math.otf}
+
+\usepackage{backref}
+% Back refs
+\renewcommand*{\backrefalt}[4]{%
+    \ifcase #1 \footnotesize{(Not cited.)}%
+    \or        \footnotesize{(Cited on page~#2)}%
+    \else      \footnotesize{(Cited on pages~#2)}%
+    \fi}
 
 % end print specific preambles
 \fi
