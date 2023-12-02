@@ -90,7 +90,7 @@ def serve(ctx, port=8080):
 
     os.chdir(cwd)
 
-@task(bp, web)
+@task(bptt, web)
 def dev(ctx):
     """
     Serve the blueprint website, rebuild PDF and the website on file changes
