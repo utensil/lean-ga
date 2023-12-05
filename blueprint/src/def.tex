@@ -85,19 +85,21 @@ Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form 
   \leanok
   \uses{iota, lift}
 
-  Given $f : M \lmap{R} A$, which \vocab{is Clifford}, we have:
+  Given $f : M \lmap{R} A$, which \vocab{is Clifford}, $F = \operatorname{lift} f$, we have:
 
-  $\iota \circ \operatorname{lift} f = f$ and $\operatorname{lift}$ is unique.
-
-  i.e. the following diagram commutes:
+  1) $\iota \circ F = f$, i.e. the following diagram commutes:
 
   \begin{figure}[H]
     \centering
     \begin{tikzcd}[column sep=huge, row sep=huge]
-    \Cl(Q) \arrow[r, "\operatorname{lift} f = g"] & A \\
-    V \arrow[ru, "f = \operatorname{lift}^{-1} g"'] \arrow[u, "\iota"]
+    \Cl(Q) \arrow[r, "F = \operatorname{lift} f"] & A \\
+    V \arrow[ru, "f"'] \arrow[u, "\iota"]
     \end{tikzcd}
   \end{figure}
+
+  2) $\operatorname{lift}$ is unique, i.e. given $G : \Cl(Q) \amap A$, 
+
+  $\iota \circ G = f \iff G = \operatorname{lift} f$
 
 \end{theorem}
 
