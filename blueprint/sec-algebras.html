@@ -164,6 +164,7 @@
                 <ul class="uses">
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingHom" class="lean_decl">RingHom</a></li>
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingHomClass" class="lean_decl">RingHomClass</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/algebraMap" class="lean_decl">algebraMap</a></li>
         </ul>
 
       </div>
@@ -173,14 +174,14 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>Let \((\alpha , +_\alpha , *_\alpha )\), and \((\beta , +_\beta , *_\beta )\) be rings. </p>
-<p>A <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b> from \(\alpha \) to \(\beta \) is a function \(f : \alpha \to _{+*} \beta \) such that </p>
+<p>Let \((\alpha , +_\alpha , *_\alpha )\) and \((\beta , +_\beta , *_\beta )\) be rings. </p>
+<p>A <b class="bfseries"><span style="color:#181870"> ring homomorphism</span></b> from \(\alpha \) to \(\beta \) is a map \(\mathit{1}: \alpha \to _{+*}\beta \) such that </p>
 <ol class="enumerate">
-  <li><p>\(f(x +_{\alpha } y) = f(x) +_{\beta } f(y)\) for each \(x,y \in \alpha \). </p>
+  <li><p>\(\mathit{1}(x +_{\alpha } y) = \mathit{1}(x) +_{\beta } \mathit{1}(y)\) for each \(x,y \in \alpha \). </p>
 </li>
-  <li><p>\(f(x *_{\alpha } y) = f(x) *_{\beta } f(y)\) for each \(x,y \in \alpha \). </p>
+  <li><p>\(\mathit{1}(x *_{\alpha } y) = \mathit{1}(x) *_{\beta } \mathit{1}(y)\) for each \(x,y \in \alpha \). </p>
 </li>
-  <li><p>\(f(1_{\alpha }) = 1_{\beta }\). </p>
+  <li><p>\(\mathit{1}(1_{\alpha }) = 1_{\beta }\). </p>
 </li>
 </ol>
 
@@ -299,12 +300,62 @@
 
   </div>
 </div> </p>
-<p><div class="definition_thmwrapper" id="RingQuot">
+<p><div class="definition_thmwrapper" id="AlgHom">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.2.5</span>
+    <span class="definition_thmtitle">Algebra homomorphism</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-algebras.html#AlgHom">#</a>
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="sec-algebras.html#RingHom">Definition 1.2.1</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/AlgHom" class="lean_decl">AlgHom</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>Let \(A\) and \(B\) be \(R\)-algebras. \(\mathit{1}_A\) and \(\mathit{1}_B\) are <b class="bfseries">ring homomorphisms</b> from \(R\) to \(A\) and \(B\), respectively. </p>
+<p>A <b class="bfseries"><span style="color:#181870"> algebra homomorphism</span></b> from \(A\) to \(B\) is a map \(\iota _{a}: \alpha \to _{a}\beta \) such that </p>
+<p>\(\iota _{a}(\mathit{1}_{A}(r)) = \mathit{1}_{B}(r)\) for each \(r \in R\). </p>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="RingQuot">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.2.6</span>
     <span class="definition_thmtitle">Quotient of non-commutative ring</span>
     ✓
     <div class="thm_icons">
@@ -362,7 +413,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.6</span>
+    <span class="remark_thmlabel">1.2.7</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-algebras.html#mk:RingQuot">#</a>
 
@@ -380,7 +431,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.7</span>
+    <span class="definition_thmlabel">1.2.8</span>
     <span class="definition_thmtitle">Free algebra</span>
     ✓
     <div class="thm_icons">
@@ -396,7 +447,7 @@
         </header>
                 <ul class="uses">
           <li><a href="sec-algebras.html#Algebra">Definition 1.2.2</a></li>
-          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.5</a></li>
+          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.6</a></li>
         </ul>
 
       </div>
@@ -467,7 +518,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.8</span>
+    <span class="remark_thmlabel">1.2.9</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-algebras.html#mk:FreeAlgebra">#</a>
 
@@ -484,7 +535,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.9</span>
+    <span class="definition_thmlabel">1.2.10</span>
     <span class="definition_thmtitle">Linear map</span>
     ✓
     <div class="thm_icons">
@@ -539,7 +590,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.10</span>
+    <span class="definition_thmlabel">1.2.11</span>
     <span class="definition_thmtitle">Tensor algebra</span>
     ✓
     <div class="thm_icons">
@@ -554,9 +605,9 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-algebras.html#FreeAlgebra">Definition 1.2.7</a></li>
-          <li><a href="sec-algebras.html#LinearMap">Definition 1.2.9</a></li>
-          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.5</a></li>
+          <li><a href="sec-algebras.html#FreeAlgebra">Definition 1.2.8</a></li>
+          <li><a href="sec-algebras.html#LinearMap">Definition 1.2.10</a></li>
+          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.6</a></li>
         </ul>
 
       </div>
@@ -597,7 +648,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.11</span>
+    <span class="remark_thmlabel">1.2.12</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-algebras.html#mk:TensorAlgebra">#</a>
 
