@@ -1,23 +1,23 @@
 \subsection{Clifford algebras - definition}
 \label{sec:def}
 
+Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form $Q: M \to R$.
+
 \begin{definition}[Clifford algebra]
     \label{CliffordAlgebra}
     \lean{CliffordAlgebra}
     \leanok
     \uses{TensorAlgebra, QuadraticForm}
 
-    Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form $Q: M \to R$.
-
     Let $\iota : M \lmap{R} T(M)$ be the canonical $R$-linear map for the tensor algebra $T(M)$.
 
-    Let $\iota_a : R \amap{R} T(M)$ be the canonical map from $R$ to $T(M)$, as a ring homomorphism.
+    Let $\rfun : R \rmap T(M)$ be the canonical map from $R$ to $T(M)$, as a ring homomorphism.
 
-    A \vocab{Clifford algebra} over $M$, denoted $\Cl (M)$, is
+    A \vocab{Clifford algebra} over $Q$, denoted $\Cl (Q)$, is
     the \vocab{ring quotient} of the \vocab{tensor algebra} $T(M)$
     by the equivalence relation satisfying:
 
-    $\forall m \in M, \iota(m)^2 \sim \iota_a(Q(m))$.
+    $\forall m \in M, \iota(m)^2 \sim \rfun(Q(m))$.
 \end{definition}
 
 \begin{remark}
@@ -31,17 +31,6 @@
   a relation like $v \otimes v \sim Q(v)$.
 
   Hence the definition above.
-
-  The universal properties of the Clifford algebra are proven, and should be used instead of the definition
-  that is subject to change.
-
-  \begin{figure}[H]
-    \centering
-    \begin{tikzcd}[column sep=huge, row sep=huge]
-    \mathcal{G}(Q) \arrow[r, "\operatorname{lift} f = g"] & A \\
-    V \arrow[ru, "f = \operatorname{lift}^{-1} g"'] \arrow[u, "\iota"]
-    \end{tikzcd}
-  \end{figure}
 
 \end{remark}
 
@@ -65,3 +54,57 @@
   Since $\RR$ is a commutative ring and $V$ is a module,
   definition \ref{CliffordAlgebra} of Clifford algebra applies.
 \end{example}
+
+\begin{definition}[Clifford map]
+  \label{iota}
+  \lean{CliffordAlgebra.ι}
+  \leanok
+  \uses{CliffordAlgebra}
+
+  We denote the canonical $R$-linear map to the Clifford algebra $\Cl(M)$ by $\iota : M \lmap{R} \Cl(M)$.
+  % , called \newvocab{Clifford map} in some literatures.
+
+\end{definition}
+
+\begin{definition}[Clifford lift]
+  \label{lift}
+  \lean{CliffordAlgebra.lift}
+  \leanok
+  \uses{CliffordAlgebra, AlgHom}
+
+  Given a linear map $f : M \lmap{R} A$ into an $R$-algebra $A$, satisfying \forall $m$ in $M$, $f(m)^2 = Q(m)$,
+  called \newvocab{is Clifford},
+  the canonical \newvocab{lift} of $f$ is defined to be a \vocab{algebra homomorphism} from $\Cl(Q)$ to $A$,
+  denoted $\operatorname{lift} f : \Cl(Q) \amap A$.
+
+\end{definition}
+
+\begin{theorem}[The universal property of Clifford algebras]
+  \label{univ}
+  \lean{CliffordAlgebra.ι_comp_lift, lift_unique}
+  \leanok
+  \uses{iota, lift}
+
+  Given $f : M \lmap{R} A$, which \vocab{is Clifford}, we have:
+
+  $\iota \circ \operatorname{lift} f = f$ and $\operatorname{lift}$ is unique.
+
+  i.e. the following diagram commutes:
+
+  \begin{figure}[H]
+    \centering
+    \begin{tikzcd}[column sep=huge, row sep=huge]
+    \Cl(Q) \arrow[r, "\operatorname{lift} f = g"] & A \\
+    V \arrow[ru, "f = \operatorname{lift}^{-1} g"'] \arrow[u, "\iota"]
+    \end{tikzcd}
+  \end{figure}
+
+\end{theorem}
+
+\begin{remark}
+  \label{mk:univ}
+
+The universal property of the Clifford algebras is proven, and should be used instead of the definition
+that is subject to change.
+
+\end{remark}
