@@ -81,3 +81,7 @@ nav.toc li .expand-toc, nav.toc li.active .expand-toc.collapse {
     cursor: pointer;
 }
 
+.lstlinline, .highlight{
+    font-family: Fira Code, monospace;
+    font-size: small;
+}
