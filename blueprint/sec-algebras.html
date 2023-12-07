@@ -236,7 +236,7 @@
 <ol class="enumerate">
   <li><p>\(A\) is a <b class="bfseries">ring</b> under \(*\). </p>
 </li>
-  <li><p>there exists a <b class="bfseries">ring homomorphism</b> from \(R\) to \(A\), denoted \(\iota : R \to _{+*} A\). </p>
+  <li><p>there exists a <b class="bfseries">ring homomorphism</b> from \(R\) to \(A\), denoted \(\mathit{1}: R \to _{+*} A\). </p>
 </li>
   <li><p>\(\bullet : R \to M \to M\) is a <b class="bfseries">scalar multiplication</b> </p>
 </li>
@@ -249,7 +249,24 @@
 </ol>
 </li>
 </ol>
-<p>where we omitted that the ring homomorphism \(\iota \) is applied to \(r\) before each multiplication, while they are explicitly written as <code class="lstlinline"><span class="n">toRingHom</span><span class="o">(</span><span class="n">r</span><span class="o">)</span></code> in <span class="sffamily">Mathlib</span>&#160;. </p>
+<p>where we omitted that the ring homomorphism \(\mathit{1}\) is applied to \(r\) before each multiplication. </p>
+
+  </div>
+</div> </p>
+<p><div class="remark_thmwrapper" id="mk:AlgebraNotation">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.2.3</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-algebras.html#mk:AlgebraNotation">#</a>
+
+  </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>Following literatures, for \(r \in R\), usually we write \(\mathit{1}_A(r) : R \to _{+*} A\) as a product \(r \mathit{1}_A\) if not omitted, while they are written as a call to <code class="lstlinline"><span class="n">algebraMap</span> <span class="n">_</span> <span class="n">_</span> <span class="n">r</span></code> in <span class="sffamily">Mathlib</span>&#160;, which is defined to be <code class="lstlinline"><span class="n">Algebra.toRingHom</span> <span class="n">r</span></code>. </p>
 
   </div>
 </div> </p>
@@ -258,7 +275,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.3</span>
+    <span class="remark_thmlabel">1.2.4</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-algebras.html#mk:AlgebraLiterature">#</a>
 
@@ -288,7 +305,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.4</span>
+    <span class="remark_thmlabel">1.2.5</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-algebras.html#mk:AlgebraName">#</a>
 
@@ -305,7 +322,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.5</span>
+    <span class="definition_thmlabel">1.2.6</span>
     <span class="definition_thmtitle">Algebra homomorphism</span>
     ✓
     <div class="thm_icons">
@@ -345,8 +362,13 @@
   <div class="definition_thmcontent">
   
 <p>Let \(A\) and \(B\) be \(R\)-algebras. \(\mathit{1}_A\) and \(\mathit{1}_B\) are <b class="bfseries">ring homomorphisms</b> from \(R\) to \(A\) and \(B\), respectively. </p>
-<p>A <b class="bfseries"><span style="color:#181870"> algebra homomorphism</span></b> from \(A\) to \(B\) is a map \(\iota _{a}: \alpha \to _{a}\beta \) such that </p>
-<p>\(\iota _{a}(\mathit{1}_{A}(r)) = \mathit{1}_{B}(r)\) for each \(r \in R\). </p>
+<p>A <b class="bfseries"><span style="color:#181870"> algebra homomorphism</span></b> from \(A\) to \(B\) is a map \(f : \alpha \to _{a}\beta \) such that </p>
+<ol class="enumerate">
+  <li><p>\(f\) is a <b class="bfseries">ring homomorphism</b> </p>
+</li>
+  <li><p>\(f(\mathit{1}_{A}(r)) = \mathit{1}_{B}(r)\) for each \(r \in R\) </p>
+</li>
+</ol>
 
   </div>
 </div> </p>
@@ -355,7 +377,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.6</span>
+    <span class="definition_thmlabel">1.2.7</span>
     <span class="definition_thmtitle">Quotient of non-commutative ring</span>
     ✓
     <div class="thm_icons">
@@ -413,7 +435,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.7</span>
+    <span class="remark_thmlabel">1.2.8</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-algebras.html#mk:RingQuot">#</a>
 
@@ -431,7 +453,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.8</span>
+    <span class="definition_thmlabel">1.2.9</span>
     <span class="definition_thmtitle">Free algebra</span>
     ✓
     <div class="thm_icons">
@@ -447,7 +469,7 @@
         </header>
                 <ul class="uses">
           <li><a href="sec-algebras.html#Algebra">Definition 1.2.2</a></li>
-          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.6</a></li>
+          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.7</a></li>
         </ul>
 
       </div>
@@ -518,7 +540,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.9</span>
+    <span class="remark_thmlabel">1.2.10</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-algebras.html#mk:FreeAlgebra">#</a>
 
@@ -535,7 +557,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.10</span>
+    <span class="definition_thmlabel">1.2.11</span>
     <span class="definition_thmtitle">Linear map</span>
     ✓
     <div class="thm_icons">
@@ -590,7 +612,7 @@
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.11</span>
+    <span class="definition_thmlabel">1.2.12</span>
     <span class="definition_thmtitle">Tensor algebra</span>
     ✓
     <div class="thm_icons">
@@ -605,9 +627,9 @@
 </button>
         </header>
                 <ul class="uses">
-          <li><a href="sec-algebras.html#FreeAlgebra">Definition 1.2.8</a></li>
-          <li><a href="sec-algebras.html#LinearMap">Definition 1.2.10</a></li>
-          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.6</a></li>
+          <li><a href="sec-algebras.html#FreeAlgebra">Definition 1.2.9</a></li>
+          <li><a href="sec-algebras.html#LinearMap">Definition 1.2.11</a></li>
+          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.7</a></li>
         </ul>
 
       </div>
@@ -648,7 +670,7 @@
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.12</span>
+    <span class="remark_thmlabel">1.2.13</span>
     <div class="thm_icons">
     <a class="icon proof" href="sec-algebras.html#mk:TensorAlgebra">#</a>
 
