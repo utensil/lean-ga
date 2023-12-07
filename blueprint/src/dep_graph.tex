@@ -1,17 +1,16 @@
 \section{Dependency graph}
 
 \begin{figure}[H]
-    \begin{minipage}[b]{0.6\textwidth}
+    % \begin{minipage}[b]{0.6\textwidth}
     \centering
     {
-    \begin{dot2tex}[dot,options=--cache]
-    strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Group	[color=green,		fillcolor="#b0eca3",		label=Group,		shape=box,		style=filled];	Module	[color=green,		fillcolor="#b0eca3",		label=Module,		shape=box,		style=filled];	Group -> Module	[style=dashed];	Ring	[color=green,		fillcolor="#b0eca3",		label=Ring,		shape=box,		style=filled];	Group -> Ring	[style=dashed];	RingQuot	[color=green,		fillcolor="#b0eca3",		label=RingQuot,		shape=box,		style=filled];	Module -> RingQuot	[style=dashed];	LinearMap	[color=green,		fillcolor="#b0eca3",		label=LinearMap,		shape=box,		style=filled];	Module -> LinearMap	[style=dashed];	VectorSpace	[color=green,		fillcolor="#b0eca3",		label=VectorSpace,		shape=box,		style=filled];	Module -> VectorSpace	[style=dashed];	Algebra	[color=green,		fillcolor="#b0eca3",		label=Algebra,		shape=box,		style=filled];	Module -> Algebra	[style=dashed];	BilinForm	[color=green,		fillcolor="#b0eca3",		label=BilinForm,		shape=box,		style=filled];	Module -> BilinForm	[style=dashed];	FreeAlgebra	[color=green,		fillcolor="#b0eca3",		label=FreeAlgebra,		shape=box,		style=filled];	RingQuot -> FreeAlgebra	[style=dashed];	TensorAlgebra	[color=green,		fillcolor="#b0eca3",		label=TensorAlgebra,		shape=box,		style=filled];	RingQuot -> TensorAlgebra	[style=dashed];	LinearMap -> TensorAlgebra	[style=dashed];	QuadraticForm	[color=green,		fillcolor="#b0eca3",		label=QuadraticForm,		shape=box,		style=filled];	CliffordAlgebra	[color=green,		fillcolor="#b0eca3",		label=CliffordAlgebra,		shape=box,		style=filled];	QuadraticForm -> CliffordAlgebra	[style=dashed];	Lipschitz	[color=blue,		label=Lipschitz,		shape=box];	CliffordAlgebra -> Lipschitz	[style=dashed];	SpinGroup	[label=SpinGroup,		shape=box];	Lipschitz -> SpinGroup	[style=dashed];	DivisionRing	[color=green,		fillcolor="#b0eca3",		label=DivisionRing,		shape=box,		style=filled];	DivisionRing -> VectorSpace	[style=dashed];	Ring -> Module	[style=dashed];	Ring -> DivisionRing	[style=dashed];	RingHom	[color=green,		fillcolor="#b0eca3",		label=RingHom,		shape=box,		style=filled];	Ring -> RingHom	[style=dashed];	Monoid	[color=green,		fillcolor="#b0eca3",		label=Monoid,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];	RingHom -> RingQuot	[style=dashed];	RingHom -> LinearMap	[style=dashed];	RingHom -> Algebra	[style=dashed];	Algebra -> FreeAlgebra	[style=dashed];	FreeAlgebra -> TensorAlgebra	[style=dashed];	TensorAlgebra -> CliffordAlgebra	[style=dashed];	BilinForm -> QuadraticForm	[style=dashed];}
+    \begin{dot2tex}[dot,file=dep_graph_src]
     \end{dot2tex}
     }
     \caption{Dependency graph}
     \label{fig:dep_graph}
-    \medskip
-    \end{minipage}%
+    % \medskip
+    % \end{minipage}%
     % \begin{minipage}[b]{0.4\textwidth}
     % \centering
     % \end{minipage}
