@@ -28,7 +28,7 @@
     \begin{enumerate}
     \item $A$ is a \vocab{ring} under $*$.
     
-    \item there exists a \vocab{ring homomorphism} from $R$ to $A$, denoted $\iota : R \to_{+*} A$.
+    \item there exists a \vocab{ring homomorphism} from $R$ to $A$, denoted $\rfun : R \to_{+*} A$.
     
     \item $\bu : R \to M \to M$ is a \vocab{scalar multiplication}
     
@@ -41,10 +41,19 @@
 
     \end{enumerate}
 
-    where we omitted that the ring homomorphism $\iota$ is applied to $r$ before each multiplication,
-    while they are explicitly written as \lstinline|toRingHom(r)| in \Mathlib.
+    where we omitted that the ring homomorphism $\rfun$ is applied to $r$ before each multiplication.
 
 \end{definition}
+
+\begin{remark}
+    \label{mk:AlgebraNotation}
+
+    Following literatures, for $r \in R$, 
+    usually we write $\rfun_A(r) : R \to_{+*} A$ as a product $r \rfun_A$ if not omitted,
+    while they are written as a call to \lstinline|algebraMap _ _ r| in \Mathlib,
+    which is defined to be \lstinline|Algebra.toRingHom r|.
+
+\end{remark}
 
 \begin{remark}
     \label{mk:AlgebraLiterature}
@@ -86,10 +95,16 @@
     \uses{RingHom}
 
     Let $A$ and $B$ be $R$-algebras. $\rfun_A$ and $\rfun_B$ are \vocab{ring homomorphisms} from $R$ to $A$ and $B$, respectively.
-    
-    A \newvocab{algebra homomorphism} from $A$ to $B$ is a map $\afun : \alpha \amap \beta$ such that
 
-    $\afun(\rfun_{A}(r)) = \rfun_{B}(r)$ for each $r \in R$.
+    A \newvocab{algebra homomorphism} from $A$ to $B$ is a map $f : \alpha \amap \beta$ such that
+
+    \begin{enumerate}
+
+    \item $f$ is a \vocab{ring homomorphism}
+
+    \item $f(\rfun_{A}(r)) = \rfun_{B}(r)$ for each $r \in R$
+
+    \end{enumerate}
 
 \end{definition}
 
