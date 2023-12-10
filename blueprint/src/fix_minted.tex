@@ -1,0 +1,87 @@
+% Fixes https://github.com/gpoore/minted/issues/360
+% Adapted from https://github.com/opencompl/paper-template/pull/37/files
+
+\makeatletter
+\ifcsdef{minted@optlistcl@quote}
+{
+\ifwindows
+  \renewcommand{\minted@optlistcl@quote}[2]{%
+    \ifstrempty{#2}{\detokenize{#1}}{\detokenize{#1="#2"}}}
+\else
+  \renewcommand{\minted@optlistcl@quote}[2]{%
+    \ifstrempty{#2}{\detokenize{#1}}{\detokenize{#1='#2'}}}
+\fi
+
+% similar to \minted@def@optcl@switch
+\newcommand{\minted@def@optcl@novalue}[2]{%
+  \define@booleankey{minted@opt@g}{#1}%
+    {\minted@addto@optlistcl{\minted@optlistcl@g}{#2}{}%
+     \@namedef{minted@opt@g:#1}{true}}
+    {\@namedef{minted@opt@g:#1}{false}}
+  \define@booleankey{minted@opt@g@i}{#1}%
+    {\minted@addto@optlistcl{\minted@optlistcl@g@i}{#2}{}%
+     \@namedef{minted@opt@g@i:#1}{true}}
+    {\@namedef{minted@opt@g@i:#1}{false}}
+  \define@booleankey{minted@opt@lang}{#1}%
+    {\minted@addto@optlistcl@lang{minted@optlistcl@lang\minted@lang}{#2}{}%
+     \@namedef{minted@opt@lang\minted@lang:#1}{true}}
+    {\@namedef{minted@opt@lang\minted@lang:#1}{false}}
+  \define@booleankey{minted@opt@lang@i}{#1}%
+    {\minted@addto@optlistcl@lang{minted@optlistcl@lang\minted@lang @i}{#2}{}%
+     \@namedef{minted@opt@lang\minted@lang @i:#1}{true}}
+    {\@namedef{minted@opt@lang\minted@lang @i:#1}{false}}
+  \define@booleankey{minted@opt@cmd}{#1}%
+      {\minted@addto@optlistcl{\minted@optlistcl@cmd}{#2}{}%
+        \@namedef{minted@opt@cmd:#1}{true}}
+      {\@namedef{minted@opt@cmd:#1}{false}}
+}
+\minted@def@optcl@novalue{customlexer}{-x}
+}
+{
+}
+\makeatother
+
+% Newer versions of minted require the 'customlexer' argument for custom lexers
+% whereas older versions require the '-x' to be passed via the command line.
+\makeatletter
+\ifcsdef{minted@optlistcl@quote}
+{
+\newminted[leaninline]{lean4.py:Lean4Lexer}{customlexer,mathescape,bgcolor=bg}
+\newminted[leancode]{lean4.py:Lean4Lexer}{customlexer,mathescape,fontsize=\footnotesize}
+}
+{
+\newminted[leaninline]{lean4.py:Lean4Lexer -x}{mathescape,bgcolor=bg}
+\newminted[leancode]{lean4.py:Lean4Lexer -x}{mathescape,fontsize=\footnotesize}
+}
+\makeatother
+
+% \newmintinline[leaninline]{lean4.py:Lean4Lexer -x}{bgcolor=bg}
+% \newminted[leancode]{lean4.py:Lean4Lexer -x}{fontsize=\footnotesize}
+
+% fixes from https://github.com/gpoore/minted/issues/353
+
+% \NewDocumentCommand\srcsnippet{mmmm}{
+%   \begin{mdframed}[
+%     linecolor=#2!20,
+%     linewidth=2pt,
+%     topline=false,
+%     bottomline=false,
+%     rightline=false]
+%     % \ifstrequal is defined by etoolbox package, which minted already loads
+%     \expanded{%
+%       \ifstrequal{#4}{b}
+%         {\noexpand\inputminted[autogobble,breaklines]{#3}{#1}}
+%         {\noexpand\inputminted[autogobble]{#3}{#1}}%
+%     }
+%   \end{mdframed}
+% }
+
+% \usepackage{subfiles}
+% % first argument is section name, second is file name, third is code language
+% \NewDocumentCommand{\codesection}{ m m >{\wrapInSubfix} m }{%
+%     \addcontentsline{toc}{subsection}{Code: #1}%
+%     \inputminted{#3}{#2}%
+% }
+
+% % or \NewExpandableDocumentCommand{\wrapInSubfix}{m}{...} if you prefer it
+% \newcommand{\wrapInSubfix}[1]{\edef\ProcessedArgument{\subfix{#1}}}

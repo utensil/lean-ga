@@ -12,27 +12,35 @@
 % NOTE: Won't work in web version for roman numerals, but it works well for PDF version
 \usepackage{enumerate}% http://ctan.org/pkg/enumerate
 
-\usepackage{listings}
+% \usepackage{listings}
+% \def\lstlanguagefiles{lstlean.tex}
+% % set default language
+% \lstset{language=lean}
 
 % FIXME: this fails to work: it breaks at where doi appears
 % \usepackage{natbib}
 
-% \usepackage{verbatim}
-
 % \usepackage[frozencache,cachedir=minted-cache]{minted}
-% \usepackage{minted}
-% \setminted{
-%   fontsize=\footnotesize,
-%   frame=single,
-%   breaklines
-% }
-% \setmintedinline{fontsize=\currentfontsize}
-% \definecolor{bg}{rgb}{0.95,0.95,0.95}
-% \newmintinline[leanc]{theorem.py:LeanLexer -x}{bgcolor=bg}
-% \newminted[leancode]{theorem.py:LeanLexer -x}{}
-% % https://tex.stackexchange.com/a/276750/41112
-% \newlength{\mintedfboxsep}
-% \setlength{\mintedfboxsep}{1.5pt}
+
+% \input{lean4}
+
+\usepackage{moreverb}
+\usepackage[outputdir=../print]{minted}
+\setminted{
+  fontsize=\footnotesize,
+  frame=single,
+  breaklines
+}
+\setmintedinline{fontsize=\currentfontsize}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+\input{fix_minted}
+
+% \newmintinline[leaninline]{lean4.py:Lean4Lexer -x}{bgcolor=bg}
+% \newminted[leancode]{lean4.py:Lean4Lexer -x}{fontsize=\footnotesize}
+% https://tex.stackexchange.com/a/276750/41112
+\newlength{\mintedfboxsep}
+\setlength{\mintedfboxsep}{1.5pt}
 
 \date{\today}
 
@@ -45,10 +53,6 @@
 \definecolor{symbolcolor}{rgb}{0.0, 0.1, 0.6}    % blue
 \definecolor{sortcolor}{rgb}{0.1, 0.5, 0.1}      % green
 \definecolor{attributecolor}{rgb}{0.7, 0.1, 0.1} % red
-
-\def\lstlanguagefiles{lstlean.tex}
-% set default language
-\lstset{language=lean}
 
 \ifplastex
 % begin web specific preambles
