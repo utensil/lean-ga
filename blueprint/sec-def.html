@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="styles/theme-white.css" />
 <link rel="stylesheet" href="styles/amsthm.css" />
 <link rel="stylesheet" href="styles/pygments.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
 <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -115,9 +116,17 @@
   </ul>
  </li>
 <li class="">
-  <a href="sect0017.html"><span class="toc_ref">6</span> <span class="toc_entry">Bibliography</span></a>
+  <a href="sect0017.html"><span class="toc_ref">6</span> <span class="toc_entry">Experiments</span></a>
  </li>
-<li ><a href="dep_graph_document.html">Dependency graph</a></li>
+<li class="">
+  <a href="sect0018.html"><span class="toc_ref">7</span> <span class="toc_entry">Bibliography</span></a>
+ </li>
+<li ><a href="dep_graph_section_1.html">Section 1 graph</a></li>
+<li ><a href="dep_graph_section_2.html">Section 2 graph</a></li>
+<li ><a href="dep_graph_section_3.html">Section 3 graph</a></li>
+<li ><a href="dep_graph_section_4.html">Section 4 graph</a></li>
+<li ><a href="dep_graph_section_5.html">Section 5 graph</a></li>
+<li ><a href="dep_graph_section_6.html">Section 6 graph</a></li>
 </ul>
 </nav>
 
@@ -215,28 +224,28 @@
   
 <p>This definition and what follows in <span class="sffamily">Mathlib</span>&#160;is initially presented in <span class="cite">
 	[
-	<a href="sect0017.html#wieser2022formalizing" >Wieser and Song(2022)</a>
+	<a href="sect0018.html#wieser2022formalizing" >Wieser and Song(2022)</a>
 	]
 </span>, some further developments are based on <span class="cite">
 	[
-	<a href="sect0017.html#grinberg2016clifford" >Grinberg(2016)</a>
+	<a href="sect0018.html#grinberg2016clifford" >Grinberg(2016)</a>
 	]
 </span>, and in turn based on <span class="cite">
 	[
-	<a href="sect0017.html#bourbaki2007" >Bourbaki(2007)</a>
+	<a href="sect0018.html#bourbaki2007" >Bourbaki(2007)</a>
 	]
 </span> which is in French and never translated to English. </p>
 <p>The most informative English reference on <span class="cite">
 	[
-	<a href="sect0017.html#bourbaki2007" >Bourbaki(2007)</a>
+	<a href="sect0018.html#bourbaki2007" >Bourbaki(2007)</a>
 	]
 </span> is <span class="cite">
 	[
-	<a href="sect0017.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	<a href="sect0018.html#jadczyk2019notes" >Jadczyk(2019)</a>
 	]
 </span>, which has an updated exposition in <span class="cite">
 	[
-	<a href="sect0017.html#jadczyk2023bundle" >Jadczyk(2023)</a>
+	<a href="sect0018.html#jadczyk2023bundle" >Jadczyk(2023)</a>
 	]
 </span>. </p>
 
@@ -407,7 +416,7 @@
 <p>Given \(f : M \to _{l[R]} A\), which <b class="bfseries">is Clifford</b>, \(F = \operatorname {lift} f\), we have: </p>
 <p>1) \(\iota \circ F = f\), i.e. the following diagram commutes: </p>
 <figure >
-  <div class="centered"><div class="tikzcd" id="a0000000022">
+  <div class="centered"><div class="tikzcd" id="a0000000023">
     <img src="images/img-0001.svg" class="tikzcd-vector" alt="\begin{tikzcd} [column sep=huge, row sep=huge]
     \Cl(Q) \arrow[r, &#34;F = \operatorname{lift} f&#34;] &amp; A \\
     V \arrow[ru, &#34;f&#34;&#39;] \arrow[u, &#34;\iota&#34;]
@@ -492,6 +501,10 @@
 </div> <!-- wrapper -->
 
 <nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
   <a href="cha-foundations.html" title="Foundations"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
 </a>
   <a href="cha-foundations.html" title="Foundations"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
@@ -503,6 +516,8 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/plastex.js"></script>
 <script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

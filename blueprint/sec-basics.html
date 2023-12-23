@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="styles/theme-white.css" />
 <link rel="stylesheet" href="styles/amsthm.css" />
 <link rel="stylesheet" href="styles/pygments.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
 <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -115,9 +116,17 @@
   </ul>
  </li>
 <li class="">
-  <a href="sect0017.html"><span class="toc_ref">6</span> <span class="toc_entry">Bibliography</span></a>
+  <a href="sect0017.html"><span class="toc_ref">6</span> <span class="toc_entry">Experiments</span></a>
  </li>
-<li ><a href="dep_graph_document.html">Dependency graph</a></li>
+<li class="">
+  <a href="sect0018.html"><span class="toc_ref">7</span> <span class="toc_entry">Bibliography</span></a>
+ </li>
+<li ><a href="dep_graph_section_1.html">Section 1 graph</a></li>
+<li ><a href="dep_graph_section_2.html">Section 2 graph</a></li>
+<li ><a href="dep_graph_section_3.html">Section 3 graph</a></li>
+<li ><a href="dep_graph_section_4.html">Section 4 graph</a></li>
+<li ><a href="dep_graph_section_5.html">Section 5 graph</a></li>
+<li ><a href="dep_graph_section_6.html">Section 6 graph</a></li>
 </ul>
 </nav>
 
@@ -205,11 +214,11 @@
 <p><span class="sffamily">Mathlib</span>&#160;uses a slightly different way to encode this, \(G \to G \to G\) is understood to be \(G \to (G \to G)\), that sends \(g \in G\) to a mapping that sends \(h \in G\) to \(g * h \in G\). </p>
 <p>Furthermore, a mathimatical construct is represented by a “type", as Lean has a dependent type theory foundation, see <span class="cite">
 	[
-	<a href="sect0017.html#carneiro2019type" >Carneiro(2019)</a>
+	<a href="sect0018.html#carneiro2019type" >Carneiro(2019)</a>
 	]
 </span> and <span class="cite">
 	[
-	<a href="sect0017.html#ullrich2023extensible" >Ullrich(2023)</a>
+	<a href="sect0018.html#ullrich2023extensible" >Ullrich(2023)</a>
 	, 
 	section 3.2
 	]
@@ -393,7 +402,7 @@
   <li><p>\(R\) contains at least 2 elements. </p>
 </li>
   <li><p>for all \(a \neq 0\) in \(R\), there exists a multiplicative inverse \(a^{-1} \in R\) such that </p>
-<div class="displaymath" id="a0000000019">
+<div class="displaymath" id="a0000000020">
   \[  a * a^{-1} = a^{-1} * a = 1  \]
 </div>
 </li>
@@ -480,7 +489,7 @@
   <div class="remark_thmcontent">
   
 <p>The notation of scalar multiplication is generalized as heterogeneous scalar multiplication <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/HMul">HMul</a> in <span class="sffamily">Mathlib</span>&#160;: </p>
-<div class="displaymath" id="a0000000020">
+<div class="displaymath" id="a0000000021">
   \[  \bullet : \alpha \to \beta \to \gamma  \]
 </div>
 <p>where \(\alpha \), \(\beta \), \(\gamma \) are different types. </p>
@@ -582,6 +591,10 @@
 </div> <!-- wrapper -->
 
 <nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
   <a href="cha-preliminaries.html" title="Preliminaries"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
 </a>
   <a href="cha-preliminaries.html" title="Preliminaries"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
@@ -593,6 +606,8 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/plastex.js"></script>
 <script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
