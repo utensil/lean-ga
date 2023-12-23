@@ -212,7 +212,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	CliffordAlgebra	[color=green,		fillcolor="#b0eca3",		label=CliffordAlgebra,		shape=box,		style=filled];	iota	[color=green,		fillcolor="#b0eca3",		label=iota,		shape=box,		style=filled];	CliffordAlgebra -> iota	[style=dashed];	ExteriorAlgebra	[color=green,		fillcolor="#b0eca3",		label=ExteriorAlgebra,		shape=box,		style=filled];	CliffordAlgebra -> ExteriorAlgebra	[style=dashed];	lift	[color=green,		fillcolor="#b0eca3",		label=lift,		shape=box,		style=filled];	CliffordAlgebra -> lift	[style=dashed];	univ	[color=green,		label=univ,		shape=ellipse];	iota -> univ	[style=dashed];	lift -> univ	[style=dashed];}`)
+    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	CliffordAlgebra	[color=green,		fillcolor="#b0eca3",		label=CliffordAlgebra,		shape=box,		style=filled];	iota	[color=green,		fillcolor="#b0eca3",		label=iota,		shape=box,		style=filled];	CliffordAlgebra -> iota	[style=dashed];	lift	[color=green,		fillcolor="#b0eca3",		label=lift,		shape=box,		style=filled];	CliffordAlgebra -> lift	[style=dashed];	ExteriorAlgebra	[color=green,		fillcolor="#b0eca3",		label=ExteriorAlgebra,		shape=box,		style=filled];	CliffordAlgebra -> ExteriorAlgebra	[style=dashed];	univ	[color=green,		label=univ,		shape=ellipse];	iota -> univ	[style=dashed];	lift -> univ	[style=dashed];}`)
     .on("end", interactive);
 
 clickNode = function() {
