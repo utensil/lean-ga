@@ -391,7 +391,7 @@
 
   </div>
 </div> </p>
-<p><div class="definition_thmwrapper" id="a0000000025">
+<p><div class="definition_thmwrapper" id="antiDeriv">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
@@ -399,21 +399,46 @@
     <span class="definition_thmlabel">2.2.4</span>
     <span class="definition_thmtitle">\(Z_2\)-graded derivations \(i_f\), anti-derivation</span>
     <div class="thm_icons">
-    <a class="icon proof" href="sec-ops.html#a0000000025">#</a>
+    <a class="icon proof" href="sec-ops.html#antiDeriv">#</a>
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="sec-basics.html#Dual">Definition 1.1.13</a></li>
+          <li><a href="sec-def.html#CliffordAlgebra">Definition 2.1.1</a></li>
+        </ul>
+
+      </div>
+    </div>
 
   </div>
   </div>
   <div class="definition_thmcontent">
-  <p>Let \(f\) be an element of the <b class="bfseries">dual module</b> \(M^{*}\). </p>
+  
+<p>We denote by \(\operatorname {End}(M)\) the algebra of all <b class="bfseries">endomorphisms</b> (linear maps) of \(M\). </p>
+<p>For \(m \in M\), the linear operator \(e_{m} \in \) \(\operatorname {End}(\mathrm{T}(M)), \mathrm{T}^{p}(M) \rightarrow \mathrm{T}^{p+1}(M)\) is of left multiplication by \(m\) : </p>
+<div class="displaymath" id="a0000000025">
+  \[  e_{m}: x \mapsto e_{m}(x) = m \otimes x  \]
+</div>
+<p>for all \(x \in \mathrm{T}(M)\). </p>
+<p>Let \(f\) be an element of the <b class="bfseries">dual module</b> \(M^{*}\). </p>
 <p>The <b class="bfseries"><span style="color:#181870"> anti-derivation</span></b> \(i_{f} : T(M) \to _{l[T]}(M)\) is a linear map from \(T(M)\) to \(T(M)\), satisfying: </p>
 <ol class="enumerate">
   <li><p>\(i_{f}(1) = 0\) </p>
 </li>
-  <li><p>\(i_{f}(x \otimes u) = f(x) u-x \otimes i_{f}(u)\) for all \(x \in M \subset T(M)\), \(u \in T(M)\) </p>
+  <li><p>\(e_{m} \circ i_{f} + i_{f} \circ e_{m} = f(m) \cdot 1\) for all \(m \in M\) </p>
 </li>
 </ol>
 <p>The map \(f \mapsto i_{f}\) from \(M^{*}\) to <b class="bfseries">linear transformations</b> on \(T(M)\) is linear. We have </p>
 <ol class="enumerate">
+  <li><p>\(i_{f}(m \otimes x) = f(m) x - m \otimes i_{f}(x)\) for all \(m \in M \subset T(M)\), \(x \in T(M)\) </p>
+</li>
   <li><p>\(i_{f}\left( T^{p} M \right) \subset T^{p-1} M\) </p>
 </li>
   <li><p>\(i_{f}^{2} = 0\) </p>
@@ -421,17 +446,39 @@
   <li><p>\(i_{f} i_{g} + i_{g} i_{f} = 0\), for all \(f, g \in M^{*}\) </p>
 </li>
 </ol>
-<p>For a quadratic form \(Q\) on \(M\), \(\bar{i}_{f}\) can be defined on the quotient Clifford algebra: </p>
+<p>For \(m_{1}, \ldots , m_{p} \in M\) we have </p>
 <div class="displaymath" id="a0000000026">
+  \[  i_{f}\left(m_{1} \otimes \cdots \otimes m_{p}\right)=\sum _{i=1}^{p}(-1)^{i-1} f\left(m_{i}\right) m_{1} \otimes \cdots \otimes \check{m}_{i} \otimes \cdots \otimes m_{p}  \]
+</div>
+<p>where \(\check{m}_{i}\) denotes <b class="bfseries"><span style="color:#181870"> deletion</span></b> (of \(m_i\) from the multiplication). </p>
+<p>For a quadratic form \(Q\) on \(M\), \(\bar{i}_{f}\) can be defined on the quotient Clifford algebra: </p>
+<div class="displaymath" id="a0000000027">
   \[  \iota \circ i_{f} = \bar{i}_{f} \circ \iota ,  \]
 </div>
 <p>satisfying: </p>
 <ol class="enumerate">
   <li><p>\(\bar{i}_{f}(1) = 0\) for \(1 \in \mathop{\mathcal{C}\ell }(Q)\) </p>
 </li>
-  <li><p>\(\bar{i}_{f}\left( \iota (m) u \right) = f(m) u - \iota (m) \bar{i}_{f}(u)\) for all \(m \in M\), \(u \in \mathop{\mathcal{C}\ell }(Q)\) </p>
+  <li><p>\(\bar{i}_{f}\left( \iota (m) x \right) = f(m) x - \iota (m) \bar{i}_{f}(x)\) for all \(m \in M\), \(x \in \mathop{\mathcal{C}\ell }(Q)\) </p>
 </li>
 </ol>
+<p>Let \(F\) be a bilinear form on \(M\). Then every \(m \in M\) determines a linear form \(f_{m}\) on \(M\) defined as \(f_{m}(m') = F(m, m')\). </p>
+<p>We will denote by \(i_{m}^{F}\) the antiderivation \(i_{f_{m}}\). We have: </p>
+<ol class="enumerate">
+  <li><p>\(i_{m}^{F}(1) = 0\), </p>
+</li>
+  <li><p>\( i_{m}^{F}(m' \otimes x) = F(m, m') x - m' \otimes i_{m}^{F}(x) \) for all \(m' \in M, x \in T(M)\) </p>
+</li>
+</ol>
+<p>For \(x_{1}, \ldots , x_{n}\) in \(T(M)\), we have </p>
+<div class="displaymath" id="a0000000028">
+  \[  i_{m}^{F}\left(x_{1} \otimes \cdots \otimes x_{n}\right) = \sum _{j=1}^{n}(-1)^{j-1} F\left(m, x_{j}\right) x_{1} \otimes \cdots \otimes \check{x}_{j} \otimes \cdots \otimes x_{n}  \]
+</div>
+<p>As it was in the case with \(\bar{i}_{f}\), we will denote by \(\bar{i}_{x}^{F}\) the antiderivation \(\bar{i}_{f}\) for \(f_m(m') = F(m, m')\) : </p>
+<div class="displaymath" id="a0000000029">
+  \[  \bar{i}_{m}^{F}=\bar{i}_{f}  \]
+</div>
+<p>for \(f_m(m') = F(m, m'), (m, m' \in M)\) </p>
 <p>This is the approach used in <span class="cite">
 	[
 	<a href="sect0015.html#bourbaki2007" >Bourbaki(2007)</a>
@@ -448,6 +495,7 @@
 	<a href="sect0015.html#lundholm2009clifford" >Lundholm and Svensson(2009)</a>
 	]
 </span>. </p>
+<p>This is closely related to <b class="bfseries">contraction</b> (i.e. \(\iota (m)\rfloor x = m \rfloor _{F} x \doteq \bar{i}_{m}^{F}(x)\) for \(Q = 0\) ) and <a href ="https://en.wikipedia.org/wiki/Interior_product"><b class="bfseries">interior product</b></a>. </p>
 
   </div>
 </div> </p>
