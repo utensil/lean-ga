@@ -25,7 +25,7 @@
 \begin{definition}[Quadratic form]
     \label{QuadraticForm}
     \leanok
-    \lean{QuadraticForm}
+    \lean{QuadraticForm,QuadraticForm.polar}
     \uses{BilinForm}
 
     Let $R$ be a commutative ring, $M$ a $R$-module. An \newvocab{quadratic form} $Q$ over $M$ is a map $Q : M \to R$, satisfying:
@@ -37,6 +37,10 @@
     \item there exists a companion \vocab{bilinear form} $B : M \to M \to R$, such that $Q(x + y) = Q(x) + Q(y) + B(x, y)$
     
     \end{enumerate}
+
+    In some literatures, the bilinear form is denoted $\Phi$, and called the \newvocab{polar form} associated with the quadratic form $Q$,
+    or simply the polar form of $Q$.
+
 \end{definition}
 
 \begin{remark}

@@ -1,0 +1,177 @@
+Same as the previous section, let $M$ be a module over a commutative ring $R$, equipped with a quadratic form $Q: M \to R$.
+
+We also use $m$ or $m_1, m_2, \dots$ to denote elements of $M$, i.e. vectors, and $x, y, z$ to denote elements of $\Cl(Q)$.
+
+\begin{definition}[Grade involution]
+    \label{involute}
+    \lean{CliffordAlgebra.involute}
+    \leanok
+    \uses{iota}
+
+    \newvocab{Grade involution}, intuitively, is negating each basis vector.
+
+    Formally, it's an \vocab{algebra homomorphism} $\alpha : \Cl(Q) \amap \Cl(Q)$, satisfying:
+
+    \begin{enumerate}
+
+    \item $\alpha \circ \alpha = \operatorname{id}$
+    
+    \item $\alpha(\iota(m)) = - \iota(m)$
+    
+    \end{enumerate}
+
+    for all $m \in M$.
+
+    It's called \newvocab{main involution} $\alpha$ or \newvocab{main automorphism} in \cite{jadczyk2019notes}, 
+    the \newvocab{canonical automorphism} in \cite{gallier2008clifford}.
+
+    It's denoted $\hat{m}$ in \cite{lounestoCliffordAlgebrasSpinors2001}, $\alpha(m)$ in \cite{jadczyk2019notes}, $m^*$ in \cite{chisolm2012geometric}.
+
+    \begin{figure}[H]
+    \centering
+    \begin{tikzcd}[column sep=huge, row sep=huge]
+    \Cl(Q) \arrow[r, "\alpha"] & \Cl(Q) \\
+    V \arrow[ru, "-\iota"] \arrow[u, "\iota"]
+    \end{tikzcd}
+    \end{figure}
+
+\end{definition}
+
+\begin{definition}[Grade reversion]
+    \label{reverse}
+    \lean{CliffordAlgebra.reverse}
+    \leanok
+    \uses{iota}
+
+    \newvocab{Grade reversion}, intuitively, is reversing the multiplication order of basis vectors.
+    
+    Formally, it's an \vocab{algebra homomorphism} $\tau : \Cl(Q) \amap \Cl(Q)^{\mathtt{op}}$, satisfying:
+
+    \begin{enumerate}
+
+    \item $\tau(m_1 m_2) = \tau(m_2) \tau(m_1)$
+    \item $\tau \circ \tau = \operatorname{id}$
+    \item $\tau(\iota(m)) = \iota(m)$
+    
+    \end{enumerate}
+
+    It's called \newvocab{anti-involution} $\tau$ in \cite{jadczyk2019notes}, the \newvocab{canonical anti-automorphism} in \cite{gallier2008clifford},
+    also called \newvocab{transpose}/\newvocab{transposition} in some literature, following tensor algebra or matrix.
+
+    It's denoted $\tilde{m}$ in \cite{lounestoCliffordAlgebrasSpinors2001}, $m^\tau$ in \cite{jadczyk2019notes} (with variants like $m^t$ or $m^\top$ in other literatures), $m^\dagger$ in \cite{chisolm2012geometric}.
+
+    \begin{figure}[H]
+    \centering
+    \begin{tikzcd}[column sep=huge, row sep=huge]
+    \Cl(Q) \arrow[r, "\tau"] & \Cl(Q)^{\mathtt{op}} \\
+    V \arrow[ru, "\iota"] \arrow[u, "\iota"]
+    \end{tikzcd}
+    \end{figure}
+
+\end{definition}
+
+\begin{definition}[Clifford conjugate]
+    \label{conjugate}
+    \lean{CliffordAlgebra.reverse}
+    \leanok
+    \uses{involute,reverse}
+
+    \newvocab{Clifford conjugate} is an \vocab{algebra homomorphism}  ${*} : \Cl(Q) \amap \Cl(Q)$,
+    denoted $x^{*}$ (or even $x^\dagger$, $xᘁ$ in some literatures),
+    defined to be:
+
+    $$ x^{*} = \operatorname{reverse}(\operatorname{involute}(x)) = \tau(\alpha(x)) $$ for all $x \in \Cl(Q)$, satisfying
+    (as a \href{https://en.wikipedia.org/wiki/*-algebra#*-ring}{\newvocab{$*$-ring}}):
+
+    \begin{enumerate}
+
+    \item $(x + y)^{*} = (x)^{*} + (y)^{*}$
+    \item $(x y)^{*} = (y)^{*} (x)^{*}$
+    \item ${*} \circ {*} = \operatorname{id}$
+    \item $1^{*} = 1$
+    
+    \end{enumerate}
+
+    and (as a \href{https://en.wikipedia.org/wiki/*-algebra#*-algebra}{\newvocab{$*$-algebra}}):
+
+    $$ (r x)^{*} = r' x^{*} $$
+    
+    for all $r \in R$, $x, y \in \Cl(Q)$ where $'$ is the involution of the commutative $*$-ring $R$.
+
+    Note: In our current formalization in \Mathlib, the application of the involution on $r$ is ignored,
+    as there appears to be nothing in the literature that advocates doing this.
+
+    % Grade reversion, reversing the multiplication order of basis vectors.
+    % Also called *transpose* in some literature, thus denoted 
+
+    % It's called \newvocab{anti-involution} $\tau$ in \cite{jadczyk2019notes}.
+
+    \vocab{Clifford conjugate} is denoted $\bar{m}$ in \cite{lounestoCliffordAlgebrasSpinors2001} and most literatures, $m^\ddagger$ in \cite{chisolm2012geometric}.
+
+\end{definition}
+
+\begin{definition}[$Z_2$-graded derivations $i_f$, anti-derivation]
+    % \label{conjugate}
+    % \lean{CliffordAlgebra.reverse}
+    % \leanok
+    % \uses{involute,reverse}
+
+    Let $f$ be an element of the \vocab{dual module} $M^{*}$.
+
+    The \newvocab{anti-derivation} $i_{f} : T(M) \lmap T(M)$ is a linear map from $T(M)$ to $T(M)$, satisfying:
+
+    \begin{enumerate}
+
+    \item $i_{f}(1) = 0$
+    
+    \item $i_{f}(x \otimes u) = f(x) u-x \otimes i_{f}(u)$ for all $x \in M \subset T(M)$, $u \in T(M)$
+    
+    \end{enumerate}
+
+    The map $f \mapsto i_{f}$ from $M^{*}$ to \vocab{linear transformations} on $T(M)$ is linear. We have
+
+    \begin{enumerate}
+
+    \item $i_{f}\left( T^{p} M \right) \subset T^{p-1} M$
+    
+    \item $i_{f}^{2} = 0$
+    
+    \item $i_{f} i_{g} + i_{g} i_{f} = 0$, for all $f, g \in M^{*}$
+    
+    \end{enumerate}
+
+    For a quadratic form $Q$ on $M$,
+    % the ideal $J(Q)$ is stable under $i_{f}$, i.e. $i_{f}(J(Q)) \subset J(Q)$,
+    $\bar{i}_{f}$ can be defined on the quotient Clifford algebra:
+
+    $$
+    \iota \circ i_{f} = \bar{i}_{f} \circ \iota,
+    $$
+
+    satisfying:
+
+    \begin{enumerate}
+
+    \item $\bar{i}_{f}(1) = 0$ for $1 \in \Cl(Q)$
+
+    \item $\bar{i}_{f}\left( \iota(m) u \right) = f(m) u - \iota(m) \bar{i}_{f}(u)$ for all  $m \in M$, $u \in \Cl(Q)$
+    
+    \end{enumerate}
+
+    % TODO: 
+
+    % $f \in V^*$ already at the level of the tensor algebra $T(V)$.
+
+    % $i_f$ is defined recursively through $i_f(1) = 0$, $i_f(x \otimes u) = f(x)u - x \otimes i_f(u)$ for $x \in V, u \in T^p(V)$.
+
+    This is the approach used in \cite{bourbaki2007}, and re-introduced in \cite{jadczyk2019notes,jadczyk2023bundle}.
+
+    % The construction of natural linear mappings $\lambda_F : T(V) → T(V)$ that
+    % map every two-sided ideal $I(Q)$ to $I(Q + Q_F)$, where, for any bilinear form $F \in \operatorname{Bil}(V)$,
+    % $Q_F$ is the quadratic form $Q_F(x) = F(x, x)$.
+
+    % Following Bourbaki's convention, the descendants of these operators, acting at the level of Clifford algebras, with a bar.
+
+    $\bar{i_f}$ is denoted $\partial_v$ for $v \in \Cl(Q)_1$ in \cite{lundholm2009clifford}.
+
+\end{definition}

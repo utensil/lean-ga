@@ -1,11 +1,8 @@
-\subsection{Clifford algebras - definition}
-\label{sec:def}
-
 Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form $Q: M \to R$.
 
 \begin{definition}[Clifford algebra]
     \label{CliffordAlgebra}
-    \lean{CliffordAlgebra}
+    \lean{CliffordAlgebra,TensorAlgebra.toClifford}
     \leanok
     \uses{TensorAlgebra, QuadraticForm}
 
@@ -18,6 +15,10 @@ Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form 
     by the equivalence relation satisfying:
 
     $\forall m \in M, \iota(m)^2 \sim \rfun(Q(m))$.
+
+    The natural quotient map is denoted $\pi : T(M) \to \Cl (Q)$ in some literatures,
+    or $\pi_\Phi$/$\pi_Q$ to emphasize the bilinear form $\Phi$ or the quadratic form $Q$, respectively.
+
 \end{definition}
 
 \begin{remark}
@@ -63,6 +64,8 @@ Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form 
   We denote the canonical $R$-linear map to the Clifford algebra $\Cl(M)$ by $\iota : M \lmap{R} \Cl(M)$.
   % , called \newvocab{Clifford map} in some literatures.
 
+  It's denoted $i_\Phi$ or just $i$ in some literatures.
+
 \end{definition}
 
 \begin{definition}[Clifford lift]
@@ -80,13 +83,13 @@ Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form 
 
 \begin{theorem}[The universal property of Clifford algebras]
   \label{univ}
-  \lean{CliffordAlgebra.ι_comp_lift, lift_unique}
+  \lean{CliffordAlgebra.ι_comp_lift, CliffordAlgebra.lift_unique}
   \leanok
   \uses{iota, lift}
 
-  Given $f : M \lmap{R} A$, which \vocab{is Clifford}, $F = \operatorname{lift} f$, we have:
+  Given $f : M \lmap{R} A$, which \vocab{is Clifford}, $F = \operatorname{lift} f$ (denoted $\bar{f}$ in some literatures), we have:
 
-  1) $\iota \circ F = f$, i.e. the following diagram commutes:
+  1) $F \circ \iota = f$, i.e. the following diagram commutes:
 
   \begin{figure}[H]
     \centering
@@ -98,7 +101,7 @@ Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form 
 
   2) $\operatorname{lift}$ is unique, i.e. given $G : \Cl(Q) \amap A$, 
 
-  $\iota \circ G = f \iff G = \operatorname{lift} f$
+  $ G \circ \iota = f \iff G = \operatorname{lift} f$
 
 \end{theorem}
 
@@ -116,6 +119,6 @@ that is subject to change.
   \leanok
   \uses{CliffordAlgebra}
 
-  A \vocab{Exterior algebra} over $M$ is the Clifford algebra $\Cl(Q)$ where $Q = 0$.
+  A \vocab{Exterior algebra} over $M$ is the Clifford algebra $\Cl(Q)$ where $Q(m) = 0$ for all $m \in M$.
 
 \end{definition}
