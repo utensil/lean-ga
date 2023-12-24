@@ -18,7 +18,15 @@
 % \usepackage{color} 
 % \PassOptionsToPackage{hyphens}{url}
 % \usepackage[unicode]{hyperref}
-\usepackage[unicode,pagebackref=true]{hyperref}
+\usepackage[unicode,pagebackref=true,bookmarksopen=true, bookmarksdepth=5]{hyperref}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\hypersetup{
+    bookmarksnumbered=true,     
+    bookmarksopen=true,         
+    bookmarksopenlevel=1, 
+    pdfpagemode=UseOutlines
+}
 \usepackage{cleveref}
 
 % NOTE: Won't work in web version for roman numerals, but it works well for PDF version
