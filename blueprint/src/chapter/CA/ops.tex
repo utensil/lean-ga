@@ -111,10 +111,21 @@ We also use $m$ or $m_1, m_2, \dots$ to denote elements of $M$, i.e. vectors, an
 \end{definition}
 
 \begin{definition}[$Z_2$-graded derivations $i_f$, anti-derivation]
-    % \label{conjugate}
-    % \lean{CliffordAlgebra.reverse}
+    \label{antiDeriv}
+    % \lean{}
     % \leanok
-    % \uses{involute,reverse}
+    \uses{Dual,CliffordAlgebra}
+
+    We denote by $\operatorname{End}(M)$ the algebra of all \vocab{endomorphisms} (linear maps) of $M$.
+    
+    For $m \in M$, the linear operator
+    $e_{m} \in$ $\operatorname{End}(\mathrm{T}(M)), \mathrm{T}^{p}(M) \rightarrow \mathrm{T}^{p+1}(M)$ is of left multiplication by $m$ :
+
+    $$
+    e_{m}: x \mapsto e_{m}(x) = m \otimes x
+    $$
+
+    for all $x \in \mathrm{T}(M)$.
 
     Let $f$ be an element of the \vocab{dual module} $M^{*}$.
 
@@ -124,7 +135,7 @@ We also use $m$ or $m_1, m_2, \dots$ to denote elements of $M$, i.e. vectors, an
 
     \item $i_{f}(1) = 0$
     
-    \item $i_{f}(x \otimes u) = f(x) u-x \otimes i_{f}(u)$ for all $x \in M \subset T(M)$, $u \in T(M)$
+    \item $e_{m} \circ i_{f} + i_{f} \circ e_{m} = f(m) \cdot 1$ for all $m \in M$
     
     \end{enumerate}
 
@@ -132,6 +143,8 @@ We also use $m$ or $m_1, m_2, \dots$ to denote elements of $M$, i.e. vectors, an
 
     \begin{enumerate}
 
+    \item $i_{f}(m \otimes x) = f(m) x - m \otimes i_{f}(x)$ for all $m \in M \subset T(M)$, $x \in T(M)$
+    
     \item $i_{f}\left( T^{p} M \right) \subset T^{p-1} M$
     
     \item $i_{f}^{2} = 0$
@@ -139,6 +152,14 @@ We also use $m$ or $m_1, m_2, \dots$ to denote elements of $M$, i.e. vectors, an
     \item $i_{f} i_{g} + i_{g} i_{f} = 0$, for all $f, g \in M^{*}$
     
     \end{enumerate}
+
+    For $m_{1}, \ldots, m_{p} \in M$ we have
+
+    $$
+    i_{f}\left(m_{1} \otimes \cdots \otimes m_{p}\right)=\sum_{i=1}^{p}(-1)^{i-1} f\left(m_{i}\right) m_{1} \otimes \cdots \otimes \check{m}_{i} \otimes \cdots \otimes m_{p}
+    $$
+
+    where $\check{m}_{i}$ denotes \newvocab{deletion} (of $m_i$ from the multiplication).
 
     For a quadratic form $Q$ on $M$,
     % the ideal $J(Q)$ is stable under $i_{f}$, i.e. $i_{f}(J(Q)) \subset J(Q)$,
@@ -154,9 +175,35 @@ We also use $m$ or $m_1, m_2, \dots$ to denote elements of $M$, i.e. vectors, an
 
     \item $\bar{i}_{f}(1) = 0$ for $1 \in \Cl(Q)$
 
-    \item $\bar{i}_{f}\left( \iota(m) u \right) = f(m) u - \iota(m) \bar{i}_{f}(u)$ for all  $m \in M$, $u \in \Cl(Q)$
+    \item $\bar{i}_{f}\left( \iota(m) x \right) = f(m) x - \iota(m) \bar{i}_{f}(x)$ for all  $m \in M$, $x \in \Cl(Q)$
     
     \end{enumerate}
+
+    Let $F$ be a bilinear form on $M$. Then every $m \in M$ determines a linear form $f_{m}$ on $M$ defined as $f_{m}(m') = F(m, m')$.
+    
+    We will denote by $i_{m}^{F}$ the antiderivation $i_{f_{m}}$. We have:
+
+    \begin{enumerate}
+
+    \item $i_{m}^{F}(1) = 0$,
+
+    \item $ i_{m}^{F}(m' \otimes x) = F(m, m') x - m' \otimes i_{m}^{F}(x) $ for all $m' \in M, x \in T(M)$
+
+    \end{enumerate}
+
+    For $x_{1}, \ldots, x_{n}$ in $T(M)$, we have
+
+    $$
+    i_{m}^{F}\left(x_{1} \otimes \cdots \otimes x_{n}\right) = \sum_{j=1}^{n}(-1)^{j-1} F\left(m, x_{j}\right) x_{1} \otimes \cdots \otimes \check{x}_{j} \otimes \cdots \otimes x_{n}
+    $$
+
+    As it was in the case with $\bar{i}_{f}$, we will denote by $\bar{i}_{x}^{F}$ the antiderivation $\bar{i}_{f}$ for $f_m(m') = F(m, m')$ :
+
+    $$
+    \bar{i}_{m}^{F}=\bar{i}_{f}
+    $$
+
+    for $f_m(m') = F(m, m'), (m, m' \in M)$
 
     % TODO: 
 
@@ -173,5 +220,8 @@ We also use $m$ or $m_1, m_2, \dots$ to denote elements of $M$, i.e. vectors, an
     % Following Bourbaki's convention, the descendants of these operators, acting at the level of Clifford algebras, with a bar.
 
     $\bar{i_f}$ is denoted $\partial_v$ for $v \in \Cl(Q)_1$ in \cite{lundholm2009clifford}.
+
+    This is closely related to \vocab{contraction} (i.e. $\iota(m)\rfloor x = m \rfloor_{F} x \doteq \bar{i}_{m}^{F}(x)$ for $Q = 0$ )
+    and \href{https://en.wikipedia.org/wiki/Interior_product}{\vocab{interior product}}.
 
 \end{definition}
