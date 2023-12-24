@@ -52,6 +52,72 @@
 <div id="statements">
 
     
+    <div class="dep-modal-container" id="a0000000025_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="a0000000025" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">2.2.4</span><span class="definition_thmtitle">\(Z_2\)-graded derivations \(i_f\), anti-derivation</span></div>
+    <div class="thm_thmcontent"><p>Let \(f\) be an element of the <b class="bfseries">dual module</b> \(M^{*}\). </p>
+<p>The <b class="bfseries"><span style="color:#181870"> anti-derivation</span></b> \(i_{f} : T(M) \to _{l[T]}(M)\) is a linear map from \(T(M)\) to \(T(M)\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(i_{f}(1) = 0\) </p>
+</li>
+  <li><p>\(i_{f}(x \otimes u) = f(x) u-x \otimes i_{f}(u)\) for all \(x \in M \subset T(M)\), \(u \in T(M)\) </p>
+</li>
+</ol>
+<p>The map \(f \mapsto i_{f}\) from \(M^{*}\) to <b class="bfseries">linear transformations</b> on \(T(M)\) is linear. We have </p>
+<ol class="enumerate">
+  <li><p>\(i_{f}\left( T^{p} M \right) \subset T^{p-1} M\) </p>
+</li>
+  <li><p>\(i_{f}^{2} = 0\) </p>
+</li>
+  <li><p>\(i_{f} i_{g} + i_{g} i_{f} = 0\), for all \(f, g \in M^{*}\) </p>
+</li>
+</ol>
+<p>For a quadratic form \(Q\) on \(M\), \(\bar{i}_{f}\) can be defined on the quotient Clifford algebra: </p>
+<div class="displaymath" id="a0000000026">
+  \[  \iota \circ i_{f} = \bar{i}_{f} \circ \iota ,  \]
+</div>
+<p>satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(\bar{i}_{f}(1) = 0\) for \(1 \in \mathop{\mathcal{C}\ell }(Q)\) </p>
+</li>
+  <li><p>\(\bar{i}_{f}\left( \iota (m) u \right) = f(m) u - \iota (m) \bar{i}_{f}(u)\) for all \(m \in M\), \(u \in \mathop{\mathcal{C}\ell }(Q)\) </p>
+</li>
+</ol>
+<p>This is the approach used in <span class="cite">
+	[
+	<a href="sect0015.html#bourbaki2007" >Bourbaki(2007)</a>
+	]
+</span>, and re-introduced in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	, 
+	<a href="sect0015.html#jadczyk2023bundle" >Jadczyk(2023)</a>
+	]
+</span>. </p>
+<p>\(\bar{i_f}\) is denoted \(\partial _v\) for \(v \in \mathop{\mathcal{C}\ell }(Q)_1\) in <span class="cite">
+	[
+	<a href="sect0015.html#lundholm2009clifford" >Lundholm and Svensson(2009)</a>
+	]
+</span>. </p>
+</div>
+
+    <a class="latex_link" href="sec-ops.html#a0000000025">LaTeX</a>
+  </div>
+    
+      </div>
+    </div>
+
+
+    
     <div class="dep-modal-container" id="CliffordAlgebra_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
@@ -69,10 +135,73 @@
 <p>Let \(\mathit{1}: R \to _{+*}T(M)\) be the canonical map from \(R\) to \(T(M)\), as a ring homomorphism. </p>
 <p>A <b class="bfseries">Clifford algebra</b> over \(Q\), denoted \(\mathop{\mathcal{C}\ell }(Q)\), is the <b class="bfseries">ring quotient</b> of the <b class="bfseries">tensor algebra</b> \(T(M)\) by the equivalence relation satisfying: </p>
 <p>\(\forall m \in M, \iota (m)^2 \sim \mathit{1}(Q(m))\). </p>
+<p>The natural quotient map is denoted \(\pi : T(M) \to \mathop{\mathcal{C}\ell }(Q)\) in some literatures, or \(\pi _\Phi \)/\(\pi _Q\) to emphasize the bilinear form \(\Phi \) or the quadratic form \(Q\), respectively. </p>
 </div>
 
     <a class="latex_link" href="sec-def.html#CliffordAlgebra">LaTeX</a>
-  <a class="lean_link lean_decl" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra">Lean</a></div>
+  <div class="tooltip">
+      <span class="lean_link">Lean</span>
+      <ul class="tooltip_list">
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra" class="lean_decl">CliffordAlgebra</a></li>
+        
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/TensorAlgebra.toClifford" class="lean_decl">TensorAlgebra.toClifford</a></li>
+        
+      </ul>
+  </div></div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="conjugate_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="conjugate" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">2.2.3</span><span class="definition_thmtitle">Clifford conjugate</span></div>
+    <div class="thm_thmcontent">
+<p><b class="bfseries"><span style="color:#181870"> Clifford conjugate</span></b> is an <b class="bfseries">algebra homomorphism</b> \({*} : \mathop{\mathcal{C}\ell }(Q) \to _{a}\mathop{\mathcal{C}\ell }(Q)\), denoted \(x^{*}\) (or even \(x^\dagger \), \(xᘁ\) in some literatures), defined to be: </p>
+<div class="displaymath" id="a0000000023">
+  \[  x^{*} = \operatorname {reverse}(\operatorname {involute}(x)) = \tau (\alpha (x))  \]
+</div>
+<p> for all \(x \in \mathop{\mathcal{C}\ell }(Q)\), satisfying (as a <a href ="https://en.wikipedia.org/wiki/*-algebra#*-ring"><b class="bfseries"><span style="color:#181870"> \(*\)-ring</span></b></a>): </p>
+<ol class="enumerate">
+  <li><p>\((x + y)^{*} = (x)^{*} + (y)^{*}\) </p>
+</li>
+  <li><p>\((x y)^{*} = (y)^{*} (x)^{*}\) </p>
+</li>
+  <li><p>\({*} \circ {*} = \operatorname {id}\) </p>
+</li>
+  <li><p>\(1^{*} = 1\) </p>
+</li>
+</ol>
+<p>and (as a <a href ="https://en.wikipedia.org/wiki/*-algebra#*-algebra"><b class="bfseries"><span style="color:#181870"> \(*\)-algebra</span></b></a>): </p>
+<div class="displaymath" id="a0000000024">
+  \[  (r x)^{*} = r' x^{*}  \]
+</div>
+<p>for all \(r \in R\), \(x, y \in \mathop{\mathcal{C}\ell }(Q)\) where \('\) is the involution of the commutative \(*\)-ring \(R\). </p>
+<p>Note: In our current formalization in <span class="sffamily">Mathlib</span>&#160;, the application of the involution on \(r\) is ignored, as there appears to be nothing in the literature that advocates doing this. </p>
+<p><b class="bfseries">Clifford conjugate</b> is denoted \(\bar{m}\) in <span class="cite">
+	[
+	<a href="sect0015.html#lounestoCliffordAlgebrasSpinors2001" >Lounesto(2001)</a>
+	]
+</span> and most literatures, \(m^\ddagger \) in <span class="cite">
+	[
+	<a href="sect0015.html#chisolm2012geometric" >Chisolm(2012)</a>
+	]
+</span>. </p>
+</div>
+
+    <a class="latex_link" href="sec-ops.html#conjugate">LaTeX</a>
+  <a class="lean_link lean_decl" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.reverse">Lean</a></div>
     
       </div>
     </div>
@@ -92,11 +221,74 @@
       </span>
       <span class="definition_thmlabel">2.1.9</span><span class="definition_thmtitle">Exterior algebra</span></div>
     <div class="thm_thmcontent">
-<p>A <b class="bfseries">Exterior algebra</b> over \(M\) is the Clifford algebra \(\mathop{\mathcal{C}\ell }(Q)\) where \(Q = 0\). </p>
+<p>A <b class="bfseries">Exterior algebra</b> over \(M\) is the Clifford algebra \(\mathop{\mathcal{C}\ell }(Q)\) where \(Q(m) = 0\) for all \(m \in M\). </p>
 </div>
 
     <a class="latex_link" href="sec-def.html#ExteriorAlgebra">LaTeX</a>
   <a class="lean_link lean_decl" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/ExteriorAlgebra">Lean</a></div>
+    
+      </div>
+    </div>
+
+
+    
+    <div class="dep-modal-container" id="involute_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="involute" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">2.2.1</span><span class="definition_thmtitle">Grade involution</span></div>
+    <div class="thm_thmcontent">
+<p><b class="bfseries"><span style="color:#181870"> Grade involution</span></b>, intuitively, is negating each basis vector. </p>
+<p>Formally, it’s an <b class="bfseries">algebra homomorphism</b> \(\alpha : \mathop{\mathcal{C}\ell }(Q) \to _{a}\mathop{\mathcal{C}\ell }(Q)\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(\alpha \circ \alpha = \operatorname {id}\) </p>
+</li>
+  <li><p>\(\alpha (\iota (m)) = - \iota (m)\) </p>
+</li>
+</ol>
+<p>for all \(m \in M\). </p>
+<p>It’s called <b class="bfseries"><span style="color:#181870"> main involution</span></b> \(\alpha \) or <b class="bfseries"><span style="color:#181870"> main automorphism</span></b> in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	]
+</span>, the <b class="bfseries"><span style="color:#181870"> canonical automorphism</span></b> in <span class="cite">
+	[
+	<a href="sect0015.html#gallier2008clifford" >Gallier(2008)</a>
+	]
+</span>. </p>
+<p>It’s denoted \(\hat{m}\) in <span class="cite">
+	[
+	<a href="sect0015.html#lounestoCliffordAlgebrasSpinors2001" >Lounesto(2001)</a>
+	]
+</span>, \(\alpha (m)\) in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	]
+</span>, \(m^*\) in <span class="cite">
+	[
+	<a href="sect0015.html#chisolm2012geometric" >Chisolm(2012)</a>
+	]
+</span>. </p>
+<figure >
+  <div class="centered"><div class="tikzcd" id="a0000000021">
+    <img src="images/img-0002.svg" class="tikzcd-vector" alt="\begin{tikzcd} [column sep=huge, row sep=huge]
+    \Cl(Q) \arrow[r, &#34;\alpha&#34;] &amp; \Cl(Q) \\
+    V \arrow[ru, &#34;-\iota&#34;] \arrow[u, &#34;\iota&#34;]
+    \end{tikzcd}" />
+</div> </div>
+
+</figure>
+</div>
+
+    <a class="latex_link" href="sec-ops.html#involute">LaTeX</a>
+  <a class="lean_link lean_decl" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.involute">Lean</a></div>
     
       </div>
     </div>
@@ -117,6 +309,7 @@
       <span class="definition_thmlabel">2.1.5</span><span class="definition_thmtitle">Clifford map</span></div>
     <div class="thm_thmcontent">
 <p>We denote the canonical \(R\)-linear map to the Clifford algebra \(\mathop{\mathcal{C}\ell }(M)\) by \(\iota : M \to _{l[R]} \mathop{\mathcal{C}\ell }(M)\). </p>
+<p>It’s denoted \(i_\Phi \) or just \(i\) in some literatures. </p>
 </div>
 
     <a class="latex_link" href="sec-def.html#iota">LaTeX</a>
@@ -151,6 +344,70 @@
 
 
     
+    <div class="dep-modal-container" id="reverse_modal">
+      <div class="dep-modal-content">
+          <button class="dep-closebtn">
+<svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        
+  <div class="thm" id="reverse" style="display: none">
+    <div class="thm_thmheading">
+      <span class="definition_thmcaption">
+      Definition
+      </span>
+      <span class="definition_thmlabel">2.2.2</span><span class="definition_thmtitle">Grade reversion</span></div>
+    <div class="thm_thmcontent">
+<p><b class="bfseries"><span style="color:#181870"> Grade reversion</span></b>, intuitively, is reversing the multiplication order of basis vectors. </p>
+<p>Formally, it’s an <b class="bfseries">algebra homomorphism</b> \(\tau : \mathop{\mathcal{C}\ell }(Q) \to _{a}\mathop{\mathcal{C}\ell }(Q)^{\mathtt{op}}\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(\tau (m_1 m_2) = \tau (m_2) \tau (m_1)\) </p>
+</li>
+  <li><p>\(\tau \circ \tau = \operatorname {id}\) </p>
+</li>
+  <li><p>\(\tau (\iota (m)) = \iota (m)\) </p>
+</li>
+</ol>
+<p>It’s called <b class="bfseries"><span style="color:#181870"> anti-involution</span></b> \(\tau \) in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	]
+</span>, the <b class="bfseries"><span style="color:#181870"> canonical anti-automorphism</span></b> in <span class="cite">
+	[
+	<a href="sect0015.html#gallier2008clifford" >Gallier(2008)</a>
+	]
+</span>, also called <b class="bfseries"><span style="color:#181870"> transpose</span></b>/<b class="bfseries"><span style="color:#181870"> transposition</span></b> in some literature, following tensor algebra or matrix. </p>
+<p>It’s denoted \(\tilde{m}\) in <span class="cite">
+	[
+	<a href="sect0015.html#lounestoCliffordAlgebrasSpinors2001" >Lounesto(2001)</a>
+	]
+</span>, \(m^\tau \) in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	]
+</span> (with variants like \(m^t\) or \(m^\top \) in other literatures), \(m^\dagger \) in <span class="cite">
+	[
+	<a href="sect0015.html#chisolm2012geometric" >Chisolm(2012)</a>
+	]
+</span>. </p>
+<figure >
+  <div class="centered"><div class="tikzcd" id="a0000000022">
+    <img src="images/img-0003.svg" class="tikzcd-vector" alt="\begin{tikzcd} [column sep=huge, row sep=huge]
+    \Cl(Q) \arrow[r, &#34;\tau&#34;] &amp; \Cl(Q)^{\mathtt{op}} \\
+    V \arrow[ru, &#34;\iota&#34;] \arrow[u, &#34;\iota&#34;]
+    \end{tikzcd}" />
+</div> </div>
+
+</figure>
+</div>
+
+    <a class="latex_link" href="sec-ops.html#reverse">LaTeX</a>
+  <a class="lean_link lean_decl" href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.reverse">Lean</a></div>
+    
+      </div>
+    </div>
+
+
+    
     <div class="dep-modal-container" id="univ_modal">
       <div class="dep-modal-content">
           <button class="dep-closebtn">
@@ -164,10 +421,10 @@
       </span>
       <span class="theorem_thmlabel">2.1.7</span><span class="theorem_thmtitle">The universal property of Clifford algebras</span></div>
     <div class="thm_thmcontent">
-<p>Given \(f : M \to _{l[R]} A\), which <b class="bfseries">is Clifford</b>, \(F = \operatorname {lift} f\), we have: </p>
-<p>1) \(\iota \circ F = f\), i.e. the following diagram commutes: </p>
+<p>Given \(f : M \to _{l[R]} A\), which <b class="bfseries">is Clifford</b>, \(F = \operatorname {lift} f\) (denoted \(\bar{f}\) in some literatures), we have: </p>
+<p>1) \(F \circ \iota = f\), i.e. the following diagram commutes: </p>
 <figure >
-  <div class="centered"><div class="tikzcd" id="a0000000023">
+  <div class="centered"><div class="tikzcd" id="a0000000020">
     <img src="images/img-0001.svg" class="tikzcd-vector" alt="\begin{tikzcd} [column sep=huge, row sep=huge]
     \Cl(Q) \arrow[r, &#34;F = \operatorname{lift} f&#34;] &amp; A \\
     V \arrow[ru, &#34;f&#34;&#39;] \arrow[u, &#34;\iota&#34;]
@@ -176,7 +433,7 @@
 
 </figure>
 <p>2) \(\operatorname {lift}\) is unique, i.e. given \(G : \mathop{\mathcal{C}\ell }(Q) \to _{a}A\), </p>
-<p>\(\iota \circ G = f \iff G = \operatorname {lift} f\) </p>
+<p>\( G \circ \iota = f \iff G = \operatorname {lift} f\) </p>
 </div>
 
     <a class="latex_link" href="sec-def.html#univ">LaTeX</a>
@@ -186,7 +443,7 @@
         
            <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.ι_comp_lift" class="lean_decl">CliffordAlgebra.ι_comp_lift</a></li>
         
-           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/lift_unique" class="lean_decl">lift_unique</a></li>
+           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.lift_unique" class="lean_decl">CliffordAlgebra.lift_unique</a></li>
         
       </ul>
   </div></div>
@@ -212,7 +469,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	CliffordAlgebra	[color=green,		fillcolor="#b0eca3",		label=CliffordAlgebra,		shape=box,		style=filled];	iota	[color=green,		fillcolor="#b0eca3",		label=iota,		shape=box,		style=filled];	CliffordAlgebra -> iota	[style=dashed];	lift	[color=green,		fillcolor="#b0eca3",		label=lift,		shape=box,		style=filled];	CliffordAlgebra -> lift	[style=dashed];	ExteriorAlgebra	[color=green,		fillcolor="#b0eca3",		label=ExteriorAlgebra,		shape=box,		style=filled];	CliffordAlgebra -> ExteriorAlgebra	[style=dashed];	univ	[color=green,		label=univ,		shape=ellipse];	iota -> univ	[style=dashed];	lift -> univ	[style=dashed];}`)
+    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	CliffordAlgebra	[color=green,		fillcolor="#b0eca3",		label=CliffordAlgebra,		shape=box,		style=filled];	iota	[color=green,		fillcolor="#b0eca3",		label=iota,		shape=box,		style=filled];	CliffordAlgebra -> iota	[style=dashed];	ExteriorAlgebra	[color=green,		fillcolor="#b0eca3",		label=ExteriorAlgebra,		shape=box,		style=filled];	CliffordAlgebra -> ExteriorAlgebra	[style=dashed];	lift	[color=green,		fillcolor="#b0eca3",		label=lift,		shape=box,		style=filled];	CliffordAlgebra -> lift	[style=dashed];	involute	[color=green,		fillcolor="#b0eca3",		label=involute,		shape=box,		style=filled];	iota -> involute	[style=dashed];	reverse	[color=green,		fillcolor="#b0eca3",		label=reverse,		shape=box,		style=filled];	iota -> reverse	[style=dashed];	univ	[color=green,		label=univ,		shape=ellipse];	iota -> univ	[style=dashed];	conjugate	[color=green,		fillcolor="#b0eca3",		label=conjugate,		shape=box,		style=filled];	involute -> conjugate	[style=dashed];	lift -> univ	[style=dashed];	reverse -> conjugate	[style=dashed];	a0000000025	[color=blue,		fillcolor="#a3d6ff",		label=a0000000025,		shape=box,		style=filled];}`)
     .on("end", interactive);
 
 clickNode = function() {

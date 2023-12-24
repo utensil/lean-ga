@@ -12,10 +12,10 @@
 <meta name="generator" content="plasTeX" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Blueprint For Formalizing Geometric Algebra in Lean: Clifford algebras - definition</title>
-<link rel="next" href="sect0002.html" title="Involutions" />
-<link rel="prev" href="cha-foundations.html" title="Foundations" />
-<link rel="up" href="cha-foundations.html" title="Foundations" />
+<title>The Blueprint For Formalizing Geometric Algebra in Lean: Definition</title>
+<link rel="next" href="sec-ops.html" title="Operations" />
+<link rel="prev" href="cha-ca.html" title="Clifford Algebra" />
+<link rel="up" href="cha-ca.html" title="Clifford Algebra" />
 <link rel="stylesheet" href="styles/theme-white.css" />
 <link rel="stylesheet" href="styles/amsthm.css" />
 <link rel="stylesheet" href="styles/pygments.css" />
@@ -52,81 +52,80 @@
   </ul>
  </li>
 <li class=" active">
-  <a href="cha-foundations.html"><span class="toc_ref">2</span> <span class="toc_entry">Foundations</span></a>
+  <a href="cha-ca.html"><span class="toc_ref">2</span> <span class="toc_entry">Clifford Algebra</span></a>
   <span class="expand-toc">▼</span>
   <ul class="sub-toc-1 active">
      <li class=" active current">
-  <a href="sec-def.html"><span class="toc_ref">2.1</span> <span class="toc_entry">Clifford algebras - definition</span></a>
+  <a href="sec-def.html"><span class="toc_ref">2.1</span> <span class="toc_entry">Definition</span></a>
  </li>
 <li class="">
-  <a href="sect0003.html"><span class="toc_ref">2.2</span> <span class="toc_entry">Structure of Clifford algebras</span></a>
+  <a href="sec-ops.html"><span class="toc_ref">2.2</span> <span class="toc_entry">Operations</span></a>
  </li>
 <li class="">
-  <a href="sect0004.html"><span class="toc_ref">2.3</span> <span class="toc_entry">Classifying Clifford algebras</span></a>
+  <a href="sect0002.html"><span class="toc_ref">2.3</span> <span class="toc_entry">Structure</span></a>
  </li>
 <li class="">
-  <a href="sect0005.html"><span class="toc_ref">2.4</span> <span class="toc_entry">Representing Clifford algebras</span></a>
+  <a href="sect0003.html"><span class="toc_ref">2.4</span> <span class="toc_entry">Classification</span></a>
  </li>
 <li class="">
-  <a href="sect0006.html"><span class="toc_ref">2.5</span> <span class="toc_entry">Spin</span></a>
+  <a href="sect0004.html"><span class="toc_ref">2.5</span> <span class="toc_entry">Representation</span></a>
+ </li>
+<li class="">
+  <a href="sect0005.html"><span class="toc_ref">2.6</span> <span class="toc_entry">Spin</span></a>
  </li>
 
   </ul>
  </li>
 <li class="">
-  <a href="sect0007.html"><span class="toc_ref">3</span> <span class="toc_entry">Geometric Algebra</span></a>
+  <a href="cha-ga.html"><span class="toc_ref">3</span> <span class="toc_entry">Geometric Algebra</span></a>
   <span class="expand-toc">▶</span>
   <ul class="sub-toc-1">
      <li class="">
-  <a href="sect0008.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Axioms</span></a>
+  <a href="sect0006.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Axioms</span></a>
  </li>
 <li class="">
-  <a href="sect0009.html"><span class="toc_ref">3.2</span> <span class="toc_entry">Contents</span></a>
+  <a href="sect0007.html"><span class="toc_ref">3.2</span> <span class="toc_entry">Contents</span></a>
  </li>
 <li class="">
-  <a href="sect0010.html"><span class="toc_ref">3.3</span> <span class="toc_entry">Operations and properties</span></a>
+  <a href="sect0008.html"><span class="toc_ref">3.3</span> <span class="toc_entry">Operations and properties</span></a>
  </li>
 
   </ul>
  </li>
 <li class="">
-  <a href="sect0011.html"><span class="toc_ref">4</span> <span class="toc_entry">Concrete algebras - definition</span></a>
+  <a href="sect0009.html"><span class="toc_ref">4</span> <span class="toc_entry">Concrete algebras - definition</span></a>
   <span class="expand-toc">▶</span>
   <ul class="sub-toc-1">
      <li class="">
-  <a href="sect0012.html"><span class="toc_ref">4.1</span> <span class="toc_entry">CGA</span></a>
+  <a href="sect0010.html"><span class="toc_ref">4.1</span> <span class="toc_entry">CGA</span></a>
  </li>
 <li class="">
-  <a href="sect0013.html"><span class="toc_ref">4.2</span> <span class="toc_entry">PGA</span></a>
+  <a href="sect0011.html"><span class="toc_ref">4.2</span> <span class="toc_entry">PGA</span></a>
  </li>
 <li class="">
-  <a href="sect0014.html"><span class="toc_ref">4.3</span> <span class="toc_entry">STA</span></a>
+  <a href="sect0012.html"><span class="toc_ref">4.3</span> <span class="toc_entry">STA</span></a>
  </li>
 
   </ul>
  </li>
 <li class="">
-  <a href="sect0015.html"><span class="toc_ref">5</span> <span class="toc_entry">Applications</span></a>
+  <a href="sect0013.html"><span class="toc_ref">5</span> <span class="toc_entry">Applications</span></a>
   <span class="expand-toc">▶</span>
   <ul class="sub-toc-1">
      <li class="">
-  <a href="sect0016.html"><span class="toc_ref">5.1</span> <span class="toc_entry">Geometry</span></a>
+  <a href="sect0014.html"><span class="toc_ref">5.1</span> <span class="toc_entry">Geometry</span></a>
  </li>
 
   </ul>
  </li>
 <li class="">
-  <a href="sect0017.html"><span class="toc_ref">6</span> <span class="toc_entry">Experiments</span></a>
- </li>
-<li class="">
-  <a href="sect0018.html"><span class="toc_ref">7</span> <span class="toc_entry">Bibliography</span></a>
+  <a href="sect0015.html"><span class="toc_ref">6</span> <span class="toc_entry">Bibliography</span></a>
  </li>
 <li ><a href="dep_graph_section_1.html">Section 1 graph</a></li>
 <li ><a href="dep_graph_section_2.html">Section 2 graph</a></li>
 <li ><a href="dep_graph_section_3.html">Section 3 graph</a></li>
 <li ><a href="dep_graph_section_4.html">Section 4 graph</a></li>
 <li ><a href="dep_graph_section_5.html">Section 5 graph</a></li>
-<li ><a href="dep_graph_section_6.html">Section 6 graph</a></li>
 </ul>
 </nav>
 
@@ -135,7 +134,7 @@
 
 
 <div class="main-text">
-<h2 id="sec:def">2.1 Clifford algebras - definition</h2>
+<h2 id="sec:def">2.1 Definition</h2>
 
 <p>Let \(M\) be a module over a commutative ring \(R\), equipped with a quadratic form \(Q: M \to R\). </p>
 <p><div class="definition_thmwrapper" id="CliffordAlgebra">
@@ -174,6 +173,7 @@
         </header>
                 <ul class="uses">
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra" class="lean_decl">CliffordAlgebra</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/TensorAlgebra.toClifford" class="lean_decl">TensorAlgebra.toClifford</a></li>
         </ul>
 
       </div>
@@ -187,6 +187,7 @@
 <p>Let \(\mathit{1}: R \to _{+*}T(M)\) be the canonical map from \(R\) to \(T(M)\), as a ring homomorphism. </p>
 <p>A <b class="bfseries">Clifford algebra</b> over \(Q\), denoted \(\mathop{\mathcal{C}\ell }(Q)\), is the <b class="bfseries">ring quotient</b> of the <b class="bfseries">tensor algebra</b> \(T(M)\) by the equivalence relation satisfying: </p>
 <p>\(\forall m \in M, \iota (m)^2 \sim \mathit{1}(Q(m))\). </p>
+<p>The natural quotient map is denoted \(\pi : T(M) \to \mathop{\mathcal{C}\ell }(Q)\) in some literatures, or \(\pi _\Phi \)/\(\pi _Q\) to emphasize the bilinear form \(\Phi \) or the quadratic form \(Q\), respectively. </p>
 
   </div>
 </div> </p>
@@ -224,28 +225,28 @@
   
 <p>This definition and what follows in <span class="sffamily">Mathlib</span>&#160;is initially presented in <span class="cite">
 	[
-	<a href="sect0018.html#wieser2022formalizing" >Wieser and Song(2022)</a>
+	<a href="sect0015.html#wieser2022formalizing" >Wieser and Song(2022)</a>
 	]
 </span>, some further developments are based on <span class="cite">
 	[
-	<a href="sect0018.html#grinberg2016clifford" >Grinberg(2016)</a>
+	<a href="sect0015.html#grinberg2016clifford" >Grinberg(2016)</a>
 	]
 </span>, and in turn based on <span class="cite">
 	[
-	<a href="sect0018.html#bourbaki2007" >Bourbaki(2007)</a>
+	<a href="sect0015.html#bourbaki2007" >Bourbaki(2007)</a>
 	]
 </span> which is in French and never translated to English. </p>
 <p>The most informative English reference on <span class="cite">
 	[
-	<a href="sect0018.html#bourbaki2007" >Bourbaki(2007)</a>
+	<a href="sect0015.html#bourbaki2007" >Bourbaki(2007)</a>
 	]
 </span> is <span class="cite">
 	[
-	<a href="sect0018.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
 	]
 </span>, which has an updated exposition in <span class="cite">
 	[
-	<a href="sect0018.html#jadczyk2023bundle" >Jadczyk(2023)</a>
+	<a href="sect0015.html#jadczyk2023bundle" >Jadczyk(2023)</a>
 	]
 </span>. </p>
 
@@ -315,6 +316,7 @@
   <div class="definition_thmcontent">
   
 <p>We denote the canonical \(R\)-linear map to the Clifford algebra \(\mathop{\mathcal{C}\ell }(M)\) by \(\iota : M \to _{l[R]} \mathop{\mathcal{C}\ell }(M)\). </p>
+<p>It’s denoted \(i_\Phi \) or just \(i\) in some literatures. </p>
 
   </div>
 </div> </p>
@@ -403,7 +405,7 @@
         </header>
                 <ul class="uses">
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.ι_comp_lift" class="lean_decl">CliffordAlgebra.ι_comp_lift</a></li>
-          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/lift_unique" class="lean_decl">lift_unique</a></li>
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.lift_unique" class="lean_decl">CliffordAlgebra.lift_unique</a></li>
         </ul>
 
       </div>
@@ -413,10 +415,10 @@
   </div>
   <div class="theorem_thmcontent">
   
-<p>Given \(f : M \to _{l[R]} A\), which <b class="bfseries">is Clifford</b>, \(F = \operatorname {lift} f\), we have: </p>
-<p>1) \(\iota \circ F = f\), i.e. the following diagram commutes: </p>
+<p>Given \(f : M \to _{l[R]} A\), which <b class="bfseries">is Clifford</b>, \(F = \operatorname {lift} f\) (denoted \(\bar{f}\) in some literatures), we have: </p>
+<p>1) \(F \circ \iota = f\), i.e. the following diagram commutes: </p>
 <figure >
-  <div class="centered"><div class="tikzcd" id="a0000000023">
+  <div class="centered"><div class="tikzcd" id="a0000000020">
     <img src="images/img-0001.svg" class="tikzcd-vector" alt="\begin{tikzcd} [column sep=huge, row sep=huge]
     \Cl(Q) \arrow[r, &#34;F = \operatorname{lift} f&#34;] &amp; A \\
     V \arrow[ru, &#34;f&#34;&#39;] \arrow[u, &#34;\iota&#34;]
@@ -425,7 +427,7 @@
 
 </figure>
 <p>2) \(\operatorname {lift}\) is unique, i.e. given \(G : \mathop{\mathcal{C}\ell }(Q) \to _{a}A\), </p>
-<p>\(\iota \circ G = f \iff G = \operatorname {lift} f\) </p>
+<p>\( G \circ \iota = f \iff G = \operatorname {lift} f\) </p>
 
   </div>
 </div> </p>
@@ -490,7 +492,7 @@
   </div>
   <div class="definition_thmcontent">
   
-<p>A <b class="bfseries">Exterior algebra</b> over \(M\) is the Clifford algebra \(\mathop{\mathcal{C}\ell }(Q)\) where \(Q = 0\). </p>
+<p>A <b class="bfseries">Exterior algebra</b> over \(M\) is the Clifford algebra \(\mathop{\mathcal{C}\ell }(Q)\) where \(Q(m) = 0\) for all \(m \in M\). </p>
 
   </div>
 </div> </p>
@@ -505,11 +507,11 @@
 
   <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
 
-  <a href="cha-foundations.html" title="Foundations"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+  <a href="cha-ca.html" title="Clifford Algebra"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
 </a>
-  <a href="cha-foundations.html" title="Foundations"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+  <a href="cha-ca.html" title="Clifford Algebra"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
 </a>
-  <a href="sect0002.html" title="Involutions"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+  <a href="sec-ops.html" title="Operations"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
 </a>
 </nav>
 

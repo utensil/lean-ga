@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Blueprint For Formalizing Geometric Algebra in Lean: Operations</title>
+<link rel="next" href="sect0002.html" title="Structure" />
+<link rel="prev" href="sec-def.html" title="Definition" />
+<link rel="up" href="cha-ca.html" title="Clifford Algebra" />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+<link rel="stylesheet" href="styles/pygments.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">The Blueprint For Formalizing Geometric Algebra in Lean</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref"></span> <span class="toc_entry">Introduction</span></a>
+ </li>
+<li class="">
+  <a href="cha-preliminaries.html"><span class="toc_ref">1</span> <span class="toc_entry">Preliminaries</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sec-basics.html"><span class="toc_ref">1.1</span> <span class="toc_entry">Basics: from groups to modules</span></a>
+ </li>
+<li class="">
+  <a href="sec-algebras.html"><span class="toc_ref">1.2</span> <span class="toc_entry">Algebras</span></a>
+ </li>
+<li class="">
+  <a href="sec-forms.html"><span class="toc_ref">1.3</span> <span class="toc_entry">Forms</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class=" active">
+  <a href="cha-ca.html"><span class="toc_ref">2</span> <span class="toc_entry">Clifford Algebra</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sec-def.html"><span class="toc_ref">2.1</span> <span class="toc_entry">Definition</span></a>
+ </li>
+<li class=" active current">
+  <a href="sec-ops.html"><span class="toc_ref">2.2</span> <span class="toc_entry">Operations</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2.3</span> <span class="toc_entry">Structure</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html"><span class="toc_ref">2.4</span> <span class="toc_entry">Classification</span></a>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">2.5</span> <span class="toc_entry">Representation</span></a>
+ </li>
+<li class="">
+  <a href="sect0005.html"><span class="toc_ref">2.6</span> <span class="toc_entry">Spin</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="cha-ga.html"><span class="toc_ref">3</span> <span class="toc_entry">Geometric Algebra</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0006.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Axioms</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html"><span class="toc_ref">3.2</span> <span class="toc_entry">Contents</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html"><span class="toc_ref">3.3</span> <span class="toc_entry">Operations and properties</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0009.html"><span class="toc_ref">4</span> <span class="toc_entry">Concrete algebras - definition</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0010.html"><span class="toc_ref">4.1</span> <span class="toc_entry">CGA</span></a>
+ </li>
+<li class="">
+  <a href="sect0011.html"><span class="toc_ref">4.2</span> <span class="toc_entry">PGA</span></a>
+ </li>
+<li class="">
+  <a href="sect0012.html"><span class="toc_ref">4.3</span> <span class="toc_entry">STA</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0013.html"><span class="toc_ref">5</span> <span class="toc_entry">Applications</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0014.html"><span class="toc_ref">5.1</span> <span class="toc_entry">Geometry</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0015.html"><span class="toc_ref">6</span> <span class="toc_entry">Bibliography</span></a>
+ </li>
+<li ><a href="dep_graph_section_1.html">Section 1 graph</a></li>
+<li ><a href="dep_graph_section_2.html">Section 2 graph</a></li>
+<li ><a href="dep_graph_section_3.html">Section 3 graph</a></li>
+<li ><a href="dep_graph_section_4.html">Section 4 graph</a></li>
+<li ><a href="dep_graph_section_5.html">Section 5 graph</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h2 id="sec:ops">2.2 Operations</h2>
+
+<p>Same as the previous section, let \(M\) be a module over a commutative ring \(R\), equipped with a quadratic form \(Q: M \to R\). </p>
+<p>We also use \(m\) or \(m_1, m_2, \dots \) to denote elements of \(M\), i.e. vectors, and \(x, y, z\) to denote elements of \(\mathop{\mathcal{C}\ell }(Q)\). </p>
+<p><div class="definition_thmwrapper" id="involute">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">2.2.1</span>
+    <span class="definition_thmtitle">Grade involution</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-ops.html#involute">#</a>
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="sec-def.html#iota">Definition 2.1.5</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.involute" class="lean_decl">CliffordAlgebra.involute</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p><b class="bfseries"><span style="color:#181870"> Grade involution</span></b>, intuitively, is negating each basis vector. </p>
+<p>Formally, it’s an <b class="bfseries">algebra homomorphism</b> \(\alpha : \mathop{\mathcal{C}\ell }(Q) \to _{a}\mathop{\mathcal{C}\ell }(Q)\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(\alpha \circ \alpha = \operatorname {id}\) </p>
+</li>
+  <li><p>\(\alpha (\iota (m)) = - \iota (m)\) </p>
+</li>
+</ol>
+<p>for all \(m \in M\). </p>
+<p>It’s called <b class="bfseries"><span style="color:#181870"> main involution</span></b> \(\alpha \) or <b class="bfseries"><span style="color:#181870"> main automorphism</span></b> in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	]
+</span>, the <b class="bfseries"><span style="color:#181870"> canonical automorphism</span></b> in <span class="cite">
+	[
+	<a href="sect0015.html#gallier2008clifford" >Gallier(2008)</a>
+	]
+</span>. </p>
+<p>It’s denoted \(\hat{m}\) in <span class="cite">
+	[
+	<a href="sect0015.html#lounestoCliffordAlgebrasSpinors2001" >Lounesto(2001)</a>
+	]
+</span>, \(\alpha (m)\) in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	]
+</span>, \(m^*\) in <span class="cite">
+	[
+	<a href="sect0015.html#chisolm2012geometric" >Chisolm(2012)</a>
+	]
+</span>. </p>
+<figure >
+  <div class="centered"><div class="tikzcd" id="a0000000021">
+    <img src="images/img-0002.svg" class="tikzcd-vector" alt="\begin{tikzcd} [column sep=huge, row sep=huge]
+    \Cl(Q) \arrow[r, &#34;\alpha&#34;] &amp; \Cl(Q) \\
+    V \arrow[ru, &#34;-\iota&#34;] \arrow[u, &#34;\iota&#34;]
+    \end{tikzcd}" />
+</div> </div>
+
+</figure>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="reverse">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">2.2.2</span>
+    <span class="definition_thmtitle">Grade reversion</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-ops.html#reverse">#</a>
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="sec-def.html#iota">Definition 2.1.5</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.reverse" class="lean_decl">CliffordAlgebra.reverse</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p><b class="bfseries"><span style="color:#181870"> Grade reversion</span></b>, intuitively, is reversing the multiplication order of basis vectors. </p>
+<p>Formally, it’s an <b class="bfseries">algebra homomorphism</b> \(\tau : \mathop{\mathcal{C}\ell }(Q) \to _{a}\mathop{\mathcal{C}\ell }(Q)^{\mathtt{op}}\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(\tau (m_1 m_2) = \tau (m_2) \tau (m_1)\) </p>
+</li>
+  <li><p>\(\tau \circ \tau = \operatorname {id}\) </p>
+</li>
+  <li><p>\(\tau (\iota (m)) = \iota (m)\) </p>
+</li>
+</ol>
+<p>It’s called <b class="bfseries"><span style="color:#181870"> anti-involution</span></b> \(\tau \) in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	]
+</span>, the <b class="bfseries"><span style="color:#181870"> canonical anti-automorphism</span></b> in <span class="cite">
+	[
+	<a href="sect0015.html#gallier2008clifford" >Gallier(2008)</a>
+	]
+</span>, also called <b class="bfseries"><span style="color:#181870"> transpose</span></b>/<b class="bfseries"><span style="color:#181870"> transposition</span></b> in some literature, following tensor algebra or matrix. </p>
+<p>It’s denoted \(\tilde{m}\) in <span class="cite">
+	[
+	<a href="sect0015.html#lounestoCliffordAlgebrasSpinors2001" >Lounesto(2001)</a>
+	]
+</span>, \(m^\tau \) in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	]
+</span> (with variants like \(m^t\) or \(m^\top \) in other literatures), \(m^\dagger \) in <span class="cite">
+	[
+	<a href="sect0015.html#chisolm2012geometric" >Chisolm(2012)</a>
+	]
+</span>. </p>
+<figure >
+  <div class="centered"><div class="tikzcd" id="a0000000022">
+    <img src="images/img-0003.svg" class="tikzcd-vector" alt="\begin{tikzcd} [column sep=huge, row sep=huge]
+    \Cl(Q) \arrow[r, &#34;\tau&#34;] &amp; \Cl(Q)^{\mathtt{op}} \\
+    V \arrow[ru, &#34;\iota&#34;] \arrow[u, &#34;\iota&#34;]
+    \end{tikzcd}" />
+</div> </div>
+
+</figure>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="conjugate">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">2.2.3</span>
+    <span class="definition_thmtitle">Clifford conjugate</span>
+    ✓
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-ops.html#conjugate">#</a>
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="sec-ops.html#involute">Definition 2.2.1</a></li>
+          <li><a href="sec-ops.html#reverse">Definition 2.2.2</a></li>
+        </ul>
+
+      </div>
+    </div>
+    <button class="modal lean">L∃∀N</button>
+    <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+                <ul class="uses">
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.reverse" class="lean_decl">CliffordAlgebra.reverse</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p><b class="bfseries"><span style="color:#181870"> Clifford conjugate</span></b> is an <b class="bfseries">algebra homomorphism</b> \({*} : \mathop{\mathcal{C}\ell }(Q) \to _{a}\mathop{\mathcal{C}\ell }(Q)\), denoted \(x^{*}\) (or even \(x^\dagger \), \(xᘁ\) in some literatures), defined to be: </p>
+<div class="displaymath" id="a0000000023">
+  \[  x^{*} = \operatorname {reverse}(\operatorname {involute}(x)) = \tau (\alpha (x))  \]
+</div>
+<p> for all \(x \in \mathop{\mathcal{C}\ell }(Q)\), satisfying (as a <a href ="https://en.wikipedia.org/wiki/*-algebra#*-ring"><b class="bfseries"><span style="color:#181870"> \(*\)-ring</span></b></a>): </p>
+<ol class="enumerate">
+  <li><p>\((x + y)^{*} = (x)^{*} + (y)^{*}\) </p>
+</li>
+  <li><p>\((x y)^{*} = (y)^{*} (x)^{*}\) </p>
+</li>
+  <li><p>\({*} \circ {*} = \operatorname {id}\) </p>
+</li>
+  <li><p>\(1^{*} = 1\) </p>
+</li>
+</ol>
+<p>and (as a <a href ="https://en.wikipedia.org/wiki/*-algebra#*-algebra"><b class="bfseries"><span style="color:#181870"> \(*\)-algebra</span></b></a>): </p>
+<div class="displaymath" id="a0000000024">
+  \[  (r x)^{*} = r' x^{*}  \]
+</div>
+<p>for all \(r \in R\), \(x, y \in \mathop{\mathcal{C}\ell }(Q)\) where \('\) is the involution of the commutative \(*\)-ring \(R\). </p>
+<p>Note: In our current formalization in <span class="sffamily">Mathlib</span>&#160;, the application of the involution on \(r\) is ignored, as there appears to be nothing in the literature that advocates doing this. </p>
+<p><b class="bfseries">Clifford conjugate</b> is denoted \(\bar{m}\) in <span class="cite">
+	[
+	<a href="sect0015.html#lounestoCliffordAlgebrasSpinors2001" >Lounesto(2001)</a>
+	]
+</span> and most literatures, \(m^\ddagger \) in <span class="cite">
+	[
+	<a href="sect0015.html#chisolm2012geometric" >Chisolm(2012)</a>
+	]
+</span>. </p>
+
+  </div>
+</div> </p>
+<p><div class="definition_thmwrapper" id="a0000000025">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">2.2.4</span>
+    <span class="definition_thmtitle">\(Z_2\)-graded derivations \(i_f\), anti-derivation</span>
+    <div class="thm_icons">
+    <a class="icon proof" href="sec-ops.html#a0000000025">#</a>
+
+  </div>
+  </div>
+  <div class="definition_thmcontent">
+  <p>Let \(f\) be an element of the <b class="bfseries">dual module</b> \(M^{*}\). </p>
+<p>The <b class="bfseries"><span style="color:#181870"> anti-derivation</span></b> \(i_{f} : T(M) \to _{l[T]}(M)\) is a linear map from \(T(M)\) to \(T(M)\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(i_{f}(1) = 0\) </p>
+</li>
+  <li><p>\(i_{f}(x \otimes u) = f(x) u-x \otimes i_{f}(u)\) for all \(x \in M \subset T(M)\), \(u \in T(M)\) </p>
+</li>
+</ol>
+<p>The map \(f \mapsto i_{f}\) from \(M^{*}\) to <b class="bfseries">linear transformations</b> on \(T(M)\) is linear. We have </p>
+<ol class="enumerate">
+  <li><p>\(i_{f}\left( T^{p} M \right) \subset T^{p-1} M\) </p>
+</li>
+  <li><p>\(i_{f}^{2} = 0\) </p>
+</li>
+  <li><p>\(i_{f} i_{g} + i_{g} i_{f} = 0\), for all \(f, g \in M^{*}\) </p>
+</li>
+</ol>
+<p>For a quadratic form \(Q\) on \(M\), \(\bar{i}_{f}\) can be defined on the quotient Clifford algebra: </p>
+<div class="displaymath" id="a0000000026">
+  \[  \iota \circ i_{f} = \bar{i}_{f} \circ \iota ,  \]
+</div>
+<p>satisfying: </p>
+<ol class="enumerate">
+  <li><p>\(\bar{i}_{f}(1) = 0\) for \(1 \in \mathop{\mathcal{C}\ell }(Q)\) </p>
+</li>
+  <li><p>\(\bar{i}_{f}\left( \iota (m) u \right) = f(m) u - \iota (m) \bar{i}_{f}(u)\) for all \(m \in M\), \(u \in \mathop{\mathcal{C}\ell }(Q)\) </p>
+</li>
+</ol>
+<p>This is the approach used in <span class="cite">
+	[
+	<a href="sect0015.html#bourbaki2007" >Bourbaki(2007)</a>
+	]
+</span>, and re-introduced in <span class="cite">
+	[
+	<a href="sect0015.html#jadczyk2019notes" >Jadczyk(2019)</a>
+	, 
+	<a href="sect0015.html#jadczyk2023bundle" >Jadczyk(2023)</a>
+	]
+</span>. </p>
+<p>\(\bar{i_f}\) is denoted \(\partial _v\) for \(v \in \mathop{\mathcal{C}\ell }(Q)_1\) in <span class="cite">
+	[
+	<a href="sect0015.html#lundholm2009clifford" >Lundholm and Svensson(2009)</a>
+	]
+</span>. </p>
+
+  </div>
+</div> </p>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
+  <a href="sec-def.html" title="Definition"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="cha-ca.html" title="Clifford Algebra"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0002.html" title="Structure"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
