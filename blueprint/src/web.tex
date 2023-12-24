@@ -1,16 +1,16 @@
 % This file is the entry point for generating the website by Plastex.
+
 \documentclass{article}
 
-\input{preamble}
+\input{preamble/common}
+\input{preamble/web}
 
 \usepackage[showmore,dep_graph,dep_by=section,project=../../]{blueprint}
-% For testing \dochome work
-% \dochome{https://math.iisc.ac.in/~gadgil/proofs-and-programs-2023/doc/}
 
 % The rest of this file is identical to print.tex
 
-\input{macros}
-\input{meta}
+\input{preamble/macros}
+\input{preamble/meta}
 
 \begin{document}
 

@@ -1,0 +1,97 @@
+% Put any macro and import needed for the project here.
+% This will be used by both the web and print versions of the blueprint.
+% This file is not meant to be built. Build src/web.tex or src/print.text instead.
+
+% \usepackage{amsmath,amsfonts,amsthm,amssymb}
+% \usepackage{hyperref}
+% \usepackage{graphicx}
+% \DeclareGraphicsExtensions{.svg,.png,.jpg}
+% \usepackage[capitalize]{cleveref}
+% \usepackage{tikz-cd}
+% \usepackage{tikz}
+
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage{amsfonts, amsthm, amssymb, amsmath}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{shapes,arrows,decorations}
+% \usepackage{color} 
+% \PassOptionsToPackage{hyphens}{url}
+% \usepackage[unicode]{hyperref}
+\usepackage[unicode,pagebackref=true]{hyperref}
+\usepackage{cleveref}
+
+% NOTE: Won't work in web version for roman numerals, but it works well for PDF version
+\usepackage{enumerate}% http://ctan.org/pkg/enumerate
+
+\usepackage{listings}
+
+% FIXME: this fails to work: it breaks at where doi appears
+% \usepackage{natbib}
+
+% \usepackage{verbatim}
+
+% \usepackage[frozencache,cachedir=minted-cache]{minted}
+% \usepackage{minted}
+% \setminted{
+%   fontsize=\footnotesize,
+%   frame=single,
+%   breaklines
+% }
+% \setmintedinline{fontsize=\currentfontsize}
+% \definecolor{bg}{rgb}{0.95,0.95,0.95}
+% \newmintinline[leanc]{theorem.py:LeanLexer -x}{bgcolor=bg}
+% \newminted[leancode]{theorem.py:LeanLexer -x}{}
+% % https://tex.stackexchange.com/a/276750/41112
+% \newlength{\mintedfboxsep}
+% \setlength{\mintedfboxsep}{1.5pt}
+
+\date{\today}
+
+\setcounter{tocdepth}{1}
+
+% handle Lean code highlighting following https://lean-lang.org/lean4/doc/syntax_highlight_in_latex.html
+\definecolor{keywordcolor}{rgb}{0.7, 0.1, 0.1}   % red
+\definecolor{tacticcolor}{rgb}{0.0, 0.1, 0.6}    % blue
+\definecolor{commentcolor}{rgb}{0.4, 0.4, 0.4}   % grey
+\definecolor{symbolcolor}{rgb}{0.0, 0.1, 0.6}    % blue
+\definecolor{sortcolor}{rgb}{0.1, 0.5, 0.1}      % green
+\definecolor{attributecolor}{rgb}{0.7, 0.1, 0.1} % red
+
+\def\lstlanguagefiles{lstlean.tex}
+% set default language
+\lstset{language=lean}
+
+\numberwithin{equation}{subsection}
+
+% % Letters
+% \newcommand{\C}{\mathbb{C}}
+% \newcommand{\bbc}{\mathbb{C}}
+% \newcommand{\E}{\mathbb{E}}
+% \newcommand*{\bbe}{\mathbb{E}}
+% \newcommand{\F}{\mathbb{F}}
+% \newcommand{\bbf}{\mathbb{F}}
+% \newcommand{\bbH}{\mathbb{H}}
+% \newcommand{\bbP}{\mathbb{P}}
+% \newcommand{\bbI}{\mathbb{I}}
+% \newcommand{\bbn}{\mathbb{N}}
+% \newcommand{\bbq}{\mathbb{Q}}
+% \newcommand{\bbr}{\mathbb{R}}
+% \newcommand{\bbt}{\mathbb{T}}
+% \newcommand{\bbz}{\mathbb{Z}}
+% \newcommand{\N}{\mathbb{N}}
+
+% \newcommand{\lo}[1]{\mathcal{L}{#1}}
+
+% % Paired delimiters
+% \newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+% \newcommand{\Abs}[1]{\lvert #1 \rvert}
+% \newcommand{\brac}[1]{\left( #1\right)}
+% \newcommand{\norm}[1]{\lVert #1\rVert}
+% \newcommand{\inn}[1]{\left\langle #1 \right\rangle}
+
+% % Operators
+% \DeclareMathOperator{\dist}{dist}
+
+% \newcommand{\ind}[1]{1_{#1}}
+% \providecommand{\tup}[1]{{\vec{#1}}}

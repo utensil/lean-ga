@@ -1,0 +1,45 @@
+% Those macros are used for the web version of the blueprint.
+% This file is not meant to be built. Build src/web.tex or src/print.text instead.
+
+% \newtheorem{theorem}{Theorem}[chapter]
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{sublemma}[theorem]{Sub-lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{remark}[theorem]{Remark}
+% \newtheorem{example}[theorem]{Example}
+
+%%fakesection Applying theorem styles
+
+% \theoremstyle{plain}
+
+\newtheorem{theorem}{Theorem}
+\numberwithin{theorem}{subsection}
+
+\newtheorem*{theoremx}{Theorem} % theorem not in dep graph
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{lemmax}[theorem]{Lemma} % lemma not in dep graph
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{conjecture}[theorem]{Conjecture}
+% \newtheorem{defprop}[theorem]{Definition/Proposition}
+
+% \newtheorem{problem}[theorem]{Problem}
+% \newtheorem{assumption}[theorem]{Assumption}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+% \newtheorem{exercise}[theorem]{Exercise}
+% \newtheorem{warning}[theorem]{Warning}
+% \newtheorem{question}[theorem]{Question}
+% \newtheorem{observation}[theorem]{Observation}
+
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{examples}[theorem]{Examples}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{remarkx}{Remark} % unnumbered remark
+
+% theorem styles are implemented in style.css for plastex i.e. website

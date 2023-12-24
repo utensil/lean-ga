@@ -1,23 +1,24 @@
 % This file is the entry point for generating the PDF by LaTex.
 % The style is chosen based on https://www.sigplan.org/Resources/Author/
 %\documentclass[acmsmall,review,screen]{amsart}
-
 \documentclass[a4paper]{article}
 
-% Define `ifplastex` so we can have complicated macros for PDF
-% and simplified macros for the website.
-% See http://plastex.github.io/plastex/plastex/sect0006.html
-\newif\ifplastex
-\plastexfalse
+\input{preamble/common}
+\input{preamble/print}
 
-\input{preamble}
+% \begin{document}
+% \maketitle
+% \input{chapter/main}
+% \end{document}
+
+% \input{preamble}
 
 \usepackage{blueprint}
 
 % The rest of this file is identical to web.tex
 
-\input{macros}
-\input{meta}
+\input{preamble/macros}
+\input{preamble/meta}
 
 \begin{document}
 
