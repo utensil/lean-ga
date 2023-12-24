@@ -85,3 +85,7 @@ nav.toc li .expand-toc, nav.toc li.active .expand-toc.collapse {
     font-family: Fira Code, monospace;
     font-size: small;
 }
+
+div.content-wrapper {
+    max-width: 100ch;
+}
