@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="styles/amsthm.css" />
 <link rel="stylesheet" href="styles/pygments.css" />
 <link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
 <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -136,49 +137,68 @@
 <div class="main-text">
 <h2 id="sec:algebras">1.2 Algebras</h2>
 
-<p><div class="definition_thmwrapper" id="RingHom">
+<div class="definition_thmwrapper theorem-style-definition" id="RingHom">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.2.1</span>
     <span class="definition_thmtitle">Ring homomorphism</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-algebras.html#RingHom">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-basics.html#Ring">Definition 1.1.5</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingHom" class="lean_decl">RingHom</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingHomClass" class="lean_decl">RingHomClass</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/algebraMap" class="lean_decl">algebraMap</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -194,49 +214,92 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="Algebra">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:homomorphism">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.2.2</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-algebras.html#mk:homomorphism">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p><b class="bfseries"><span style="color:#181870"> Isomorphism</span></b> \(A \cong B\) is a bijective <b class="bfseries">homomorphism</b> \(\phi : A \to B\) (it follows that \(\phi ^{-1} : B \to A\) is also a <b class="bfseries">homomorphism</b>). </p>
+<p><b class="bfseries"><span style="color:#181870"> Endomorphism</span></b> is a <b class="bfseries">homomorphism</b> from an object to itself, denoted \(\operatorname {End}(A)\). </p>
+<p><b class="bfseries"><span style="color:#181870"> Automorphism</span></b> is an <b class="bfseries">endomorphism</b> which is also an <b class="bfseries">isomorphism</b>, denoted \(\operatorname {Aut}(A)\). </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="Algebra">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.2</span>
+    <span class="definition_thmlabel">1.2.3</span>
     <span class="definition_thmtitle">Algebra</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-algebras.html#Algebra">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-algebras.html#RingHom">Definition 1.2.1</a></li>
+          
           <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Algebra" class="lean_decl">Algebra</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -260,34 +323,46 @@
 <p>where we omitted that the ring homomorphism \(\mathit{1}\) is applied to \(r\) before each multiplication. </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:AlgebraNotation">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:AlgebraNotation">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.3</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-algebras.html#mk:AlgebraNotation">#</a>
+    <span class="remark_thmlabel">1.2.4</span>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-algebras.html#mk:AlgebraNotation">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
 <p>Following literatures, for \(r \in R\), usually we write \(\mathit{1}_A(r) : R \to _{+*} A\) as a product \(r \mathit{1}_A\) if not omitted, while they are written as a call to <code class="lstlinline"><span class="n">algebraMap</span> <span class="n">_</span> <span class="n">_</span> <span class="n">r</span></code> in <span class="sffamily">Mathlib</span>&#160;, which is defined to be <code class="lstlinline"><span class="n">Algebra.toRingHom</span> <span class="n">r</span></code>. </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:AlgebraLiterature">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:AlgebraLiterature">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.4</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-algebras.html#mk:AlgebraLiterature">#</a>
+    <span class="remark_thmlabel">1.2.5</span>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-algebras.html#mk:AlgebraLiterature">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -307,65 +382,88 @@
 <p>See <em>Implementation notes</em> in <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/Algebra">Algebra</a> for details. </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:AlgebraName">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:AlgebraName">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.5</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-algebras.html#mk:AlgebraName">#</a>
+    <span class="remark_thmlabel">1.2.6</span>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-algebras.html#mk:AlgebraName">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
 <p>What’s simply called algebra is actually associative algebra with identity, a.k.a. <b class="bfseries">associative unital algebra</b>. See <a href ="https://ncatlab.org/nlab/show/red%20herring%20principle">the red herring principle</a> for more about such phenomenon for naming, particularly the example of (possibly) <b class="bfseries">nonassociative algebra</b>. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="AlgHom">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="AlgHom">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.6</span>
+    <span class="definition_thmlabel">1.2.7</span>
     <span class="definition_thmtitle">Algebra homomorphism</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-algebras.html#AlgHom">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-algebras.html#RingHom">Definition 1.2.1</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/AlgHom" class="lean_decl">AlgHom</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -379,49 +477,67 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="RingQuot">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="RingQuot">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.7</span>
+    <span class="definition_thmlabel">1.2.8</span>
     <span class="definition_thmtitle">Quotient of non-commutative ring</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-algebras.html#RingQuot">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          
           <li><a href="sec-algebras.html#RingHom">Definition 1.2.1</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/RingQuot" class="lean_decl">RingQuot</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -437,17 +553,23 @@
 <p>i.e. the equivalence relation is compatible with the ring operations \(+\) and \(*\). </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:RingQuot">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:RingQuot">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.8</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-algebras.html#mk:RingQuot">#</a>
+    <span class="remark_thmlabel">1.2.9</span>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-algebras.html#mk:RingQuot">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -455,68 +577,88 @@
 <p>The universal properties of the quotient are proven, and should be used instead of the definition that is subject to change. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="FreeAlgebra">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="FreeAlgebra">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.9</span>
+    <span class="definition_thmlabel">1.2.10</span>
     <span class="definition_thmtitle">Free algebra</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-algebras.html#FreeAlgebra">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
-          <li><a href="sec-algebras.html#Algebra">Definition 1.2.2</a></li>
-          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.7</a></li>
+        
+        <ul class="uses">
+          
+          <li><a href="sec-algebras.html#Algebra">Definition 1.2.3</a></li>
+          
+          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.8</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra" class="lean_decl">FreeAlgebra</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra.Pre" class="lean_decl">FreeAlgebra.Pre</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/FreeAlgebra.Rel" class="lean_decl">FreeAlgebra.Rel</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
-<p>Let \(X\) be an arbitrary set. An <b class="bfseries"><span style="color:#181870"> free \(R\)-algebra</span></b> \(A\) on \(X\) (or “<b class="bfseries"><span style="color:#181870"> generated by</span></b> \(X\) ") is the <b class="bfseries">ring quotient</b> of the following inductively constructed set \(A_{pre}\) </p>
+<p>Let \(X\) be an arbitrary set. An <b class="bfseries"><span style="color:#181870"> free \(R\)-algebra</span></b> \(A\) on \(X\) (or “<b class="bfseries"><span style="color:#181870"> generated by</span></b> \(X\) ") is the <b class="bfseries">ring quotient</b> of the following inductively constructed set \(A_{\mathtt{pre}}\) </p>
 <ol class="enumerate">
-  <li><p>for all \(x\) in \(X\), there exists a map \(X \to A_{pre}\). </p>
+  <li><p>for all \(x\) in \(X\), there exists a map \(X \to A_{\mathtt{pre}}\). </p>
 </li>
-  <li><p>for all \(r\) in \(R\), there exists a map \(R \to A_{pre}\). </p>
+  <li><p>for all \(r\) in \(R\), there exists a map \(R \to A_{\mathtt{pre}}\). </p>
 </li>
-  <li><p>for all \(a, b\) in \(A_{pre}\), \(a + b\) is in \(A_{pre}\). </p>
+  <li><p>for all \(a, b\) in \(A_{\mathtt{pre}}\), \(a + b\) is in \(A_{\mathtt{pre}}\). </p>
 </li>
-  <li><p>for all \(a, b\) in \(A_{pre}\), \(a * b\) is in \(A_{pre}\). </p>
+  <li><p>for all \(a, b\) in \(A_{\mathtt{pre}}\), \(a * b\) is in \(A_{\mathtt{pre}}\). </p>
 </li>
 </ol>
 <p>by that equivalence relation that makes \(A\) an <b class="bfseries">\(R\)-algebra</b>, namely: </p>
 <ol class="enumerate">
-  <li><p>there exists a <b class="bfseries">ring homomorphism</b> from \(R\) to \(A_{pre}\), denoted \(R \to _{+*} A_{pre}\). </p>
+  <li><p>there exists a <b class="bfseries">ring homomorphism</b> from \(R\) to \(A_{\mathtt{pre}}\), denoted \(R \to _{+*} A_{\mathtt{pre}}\). </p>
 </li>
   <li><p>\(A\) is a <b class="bfseries">commutative group</b> under \(+\). </p>
 </li>
@@ -542,66 +684,90 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:FreeAlgebra">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:FreeAlgebra">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.10</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-algebras.html#mk:FreeAlgebra">#</a>
+    <span class="remark_thmlabel">1.2.11</span>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-algebras.html#mk:FreeAlgebra">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
 <p>What we defined here is the <b class="bfseries"><span style="color:#181870"> free (associative, unital) \(R\)-algebra</span></b> on \(X\), it can be denoted \(R\langle X \rangle \), expressing that it’s freely generated by \(R\) and \(X\), where \(X\) is the set of generators. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="LinearMap">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="LinearMap">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.11</span>
+    <span class="definition_thmlabel">1.2.12</span>
     <span class="definition_thmtitle">Linear map</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-algebras.html#LinearMap">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          
           <li><a href="sec-algebras.html#RingHom">Definition 1.2.1</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/LinearMap" class="lean_decl">LinearMap</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -614,50 +780,93 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="TensorAlgebra">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:linearMap">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.2.13</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-algebras.html#mk:linearMap">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>The set of all linear maps from \(M\) to \(M'\) is denoted \(\operatorname {Lin}(M, M')\), and \(\operatorname {Lin}(M)\) for mapping from \(M\) to itself. </p>
+<p>\(\operatorname {Lin}(M)\) is an <b class="bfseries">endomorphism</b>. </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="TensorAlgebra">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
-    <span class="definition_thmlabel">1.2.12</span>
+    <span class="definition_thmlabel">1.2.14</span>
     <span class="definition_thmtitle">Tensor algebra</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-algebras.html#TensorAlgebra">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
-          <li><a href="sec-algebras.html#FreeAlgebra">Definition 1.2.9</a></li>
-          <li><a href="sec-algebras.html#LinearMap">Definition 1.2.11</a></li>
-          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.7</a></li>
+        
+        <ul class="uses">
+          
+          <li><a href="sec-algebras.html#FreeAlgebra">Definition 1.2.10</a></li>
+          
+          <li><a href="sec-algebras.html#LinearMap">Definition 1.2.12</a></li>
+          
+          <li><a href="sec-algebras.html#RingQuot">Definition 1.2.8</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/TensorAlgebra" class="lean_decl">TensorAlgebra</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -672,17 +881,23 @@
 <p>i.e. making the inclusion of \(M\) into an <b class="bfseries">\(R\)-linear map</b>. </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:TensorAlgebra">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:TensorAlgebra">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
-    <span class="remark_thmlabel">1.2.13</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-algebras.html#mk:TensorAlgebra">#</a>
+    <span class="remark_thmlabel">1.2.15</span>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-algebras.html#mk:TensorAlgebra">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -696,7 +911,7 @@
 </ol>
 
   </div>
-</div> </p>
+</div>
 
 </div> <!--main-text -->
 </div> <!-- content-wrapper -->

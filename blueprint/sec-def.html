@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="styles/amsthm.css" />
 <link rel="stylesheet" href="styles/pygments.css" />
 <link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
 <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -137,70 +138,94 @@
 <h2 id="sec:def">2.1 Definition</h2>
 
 <p>Let \(M\) be a module over a commutative ring \(R\), equipped with a quadratic form \(Q: M \to R\). </p>
-<p><div class="definition_thmwrapper" id="CliffordAlgebra">
+<div class="definition_thmwrapper theorem-style-definition" id="CliffordAlgebra">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">2.1.1</span>
     <span class="definition_thmtitle">Clifford algebra</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-def.html#CliffordAlgebra">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
-          <li><a href="sec-algebras.html#TensorAlgebra">Definition 1.2.12</a></li>
+        
+        <ul class="uses">
+          
+          <li><a href="sec-algebras.html#TensorAlgebra">Definition 1.2.14</a></li>
+          
           <li><a href="sec-forms.html#QuadraticForm">Definition 1.3.2</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra" class="lean_decl">CliffordAlgebra</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/TensorAlgebra.toClifford" class="lean_decl">TensorAlgebra.toClifford</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
 <p>Let \(\iota : M \to _{l[R]} T(M)\) be the canonical \(R\)-linear map for the tensor algebra \(T(M)\). </p>
 <p>Let \(\mathit{1}: R \to _{+*}T(M)\) be the canonical map from \(R\) to \(T(M)\), as a ring homomorphism. </p>
-<p>A <b class="bfseries">Clifford algebra</b> over \(Q\), denoted \(\mathop{\mathcal{C}\ell }(Q)\), is the <b class="bfseries">ring quotient</b> of the <b class="bfseries">tensor algebra</b> \(T(M)\) by the equivalence relation satisfying: </p>
-<p>\(\forall m \in M, \iota (m)^2 \sim \mathit{1}(Q(m))\). </p>
+<p>A <b class="bfseries">Clifford algebra</b> over \(Q\), denoted \(\mathop{\mathcal{C}\ell }(Q)\), is the <b class="bfseries">ring quotient</b> of the <b class="bfseries">tensor algebra</b> \(T(M)\) by the equivalence relation satisfying \(\iota (m)^2 \sim \mathit{1}(Q(m))\) for all \(m \in M\). </p>
 <p>The natural quotient map is denoted \(\pi : T(M) \to \mathop{\mathcal{C}\ell }(Q)\) in some literatures, or \(\pi _\Phi \)/\(\pi _Q\) to emphasize the bilinear form \(\Phi \) or the quadratic form \(Q\), respectively. </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:two_sided_ideals">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:two_sided_ideals">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">2.1.2</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-def.html#mk:two_sided_ideals">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-def.html#mk:two_sided_ideals">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -209,17 +234,23 @@
 <p>Hence the definition above. </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:CliffordAlgebra">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:CliffordAlgebra">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">2.1.3</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-def.html#mk:CliffordAlgebra">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-def.html#mk:CliffordAlgebra">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -251,18 +282,24 @@
 </span>. </p>
 
   </div>
-</div> </p>
-<p><div class="example_thmwrapper" id="ex:clifford_algebra_v">
+</div>
+<div class="example_thmwrapper theorem-style-definition" id="ex:clifford_algebra_v">
   <div class="example_thmheading">
     <span class="example_thmcaption">
     Example
     </span>
     <span class="example_thmlabel">2.1.4</span>
     <span class="example_thmtitle">Clifford algebra over a vector space</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-def.html#ex:clifford_algebra_v">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-def.html#ex:clifford_algebra_v">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="example_thmcontent">
   
@@ -270,48 +307,65 @@
 <p>Since \(\mathbb R\) is a commutative ring and \(V\) is a module, <a href="sec-def.html#CliffordAlgebra">definition 2.1.1</a> of Clifford algebra applies. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="iota">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="iota">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">2.1.5</span>
     <span class="definition_thmtitle">Clifford map</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-def.html#iota">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-def.html#CliffordAlgebra">Definition 2.1.1</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.ι" class="lean_decl">CliffordAlgebra.ι</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -319,99 +373,136 @@
 <p>It’s denoted \(i_\Phi \) or just \(i\) in some literatures. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="lift">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="lift">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">2.1.6</span>
     <span class="definition_thmtitle">Clifford lift</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-def.html#lift">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-def.html#CliffordAlgebra">Definition 2.1.1</a></li>
-          <li><a href="sec-algebras.html#AlgHom">Definition 1.2.6</a></li>
+          
+          <li><a href="sec-algebras.html#AlgHom">Definition 1.2.7</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.lift" class="lean_decl">CliffordAlgebra.lift</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
-<p>Given a linear map \(f : M \to _{l[R]} A\) into an \(R\)-algebra \(A\), satisfying ∀\(m\) in \(M\), \(f(m)^2 = Q(m)\), called <b class="bfseries"><span style="color:#181870"> is Clifford</span></b>, the canonical <b class="bfseries"><span style="color:#181870"> lift</span></b> of \(f\) is defined to be a <b class="bfseries">algebra homomorphism</b> from \(\mathop{\mathcal{C}\ell }(Q)\) to \(A\), denoted \(\operatorname {lift} f : \mathop{\mathcal{C}\ell }(Q) \to _{a}A\). </p>
+<p>Given a linear map \(f : M \to _{l[R]} A\) into an \(R\)-algebra \(A\), satisfying \(f(m)^2 = Q(m)\) for all \(m \in M\), called <b class="bfseries"><span style="color:#181870"> is Clifford</span></b>, the canonical <b class="bfseries"><span style="color:#181870"> lift</span></b> of \(f\) is defined to be a <b class="bfseries">algebra homomorphism</b> from \(\mathop{\mathcal{C}\ell }(Q)\) to \(A\), denoted \(\operatorname {lift} f : \mathop{\mathcal{C}\ell }(Q) \to _{a}A\). </p>
 
   </div>
-</div> </p>
-<p><div class="theorem_thmwrapper" id="univ">
+</div>
+<div class="theorem_thmwrapper theorem-style-plain" id="univ">
   <div class="theorem_thmheading">
     <span class="theorem_thmcaption">
     Theorem
     </span>
     <span class="theorem_thmlabel">2.1.7</span>
-    <span class="theorem_thmtitle">The universal property of Clifford algebras</span>
+    <span class="theorem_thmtitle">Universal property</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-def.html#univ">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-def.html#iota">Definition 2.1.5</a></li>
+          
           <li><a href="sec-def.html#lift">Definition 2.1.6</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.ι_comp_lift" class="lean_decl">CliffordAlgebra.ι_comp_lift</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CliffordAlgebra.lift_unique" class="lean_decl">CliffordAlgebra.lift_unique</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="theorem_thmcontent">
   
@@ -426,76 +517,99 @@
 </div> </div>
 
 </figure>
-<p>2) \(\operatorname {lift}\) is unique, i.e. given \(G : \mathop{\mathcal{C}\ell }(Q) \to _{a}A\), </p>
+<p>2) \(\operatorname {lift}\) is unique, i.e. given \(G : \mathop{\mathcal{C}\ell }(Q) \to _{a}A\), we have: </p>
 <p>\( G \circ \iota = f \iff G = \operatorname {lift} f\) </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:univ">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:univ">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">2.1.8</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-def.html#mk:univ">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-def.html#mk:univ">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
-<p>The universal property of the Clifford algebras is proven, and should be used instead of the definition that is subject to change. </p>
+<p>The universal property of the Clifford algebras is now proven, and should be used instead of the definition that is subject to change. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="ExteriorAlgebra">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="ExteriorAlgebra">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">2.1.9</span>
     <span class="definition_thmtitle">Exterior algebra</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-def.html#ExteriorAlgebra">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-def.html#CliffordAlgebra">Definition 2.1.1</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/ExteriorAlgebra" class="lean_decl">ExteriorAlgebra</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
-<p>A <b class="bfseries">Exterior algebra</b> over \(M\) is the Clifford algebra \(\mathop{\mathcal{C}\ell }(Q)\) where \(Q(m) = 0\) for all \(m \in M\). </p>
+<p>An <b class="bfseries"><span style="color:#181870"> Exterior algebra</span></b> over \(M\) is the Clifford algebra \(\mathop{\mathcal{C}\ell }(Q)\) where \(Q(m) = 0\) for all \(m \in M\). </p>
 
   </div>
-</div> </p>
+</div>
 
 </div> <!--main-text -->
 </div> <!-- content-wrapper -->

@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="styles/amsthm.css" />
 <link rel="stylesheet" href="styles/pygments.css" />
 <link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
 <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -136,33 +137,46 @@
 <div class="main-text">
 <h2 id="sec:basics">1.1 Basics: from groups to modules</h2>
 
-<p><div class="definition_thmwrapper" id="Group">
+<div class="definition_thmwrapper theorem-style-definition" id="Group">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.1.1</span>
     <span class="definition_thmtitle">Group</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-basics.html#Group">#</a>
+    
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Group" class="lean_decl">Group</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/AddGroup" class="lean_decl">AddGroup</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -177,17 +191,23 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:Group">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:Group">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">1.1.2</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:Group">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-basics.html#mk:Group">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -195,17 +215,23 @@
 <p>A group G is abelian, or <b class="bfseries">commutative</b>, if \(g * h = h * g\) for all \(g, h \in G\). </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:Notation">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:Notation">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">1.1.3</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:Notation">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-basics.html#mk:Notation">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -227,34 +253,47 @@
 <p>We will use the corresponding notation in <span class="sffamily">Mathlib</span>&#160;for future operations without further explanation. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="Monoid">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="Monoid">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.1.4</span>
     <span class="definition_thmtitle">Monoid</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-basics.html#Monoid">#</a>
+    
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Monoid" class="lean_decl">Monoid</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/AddMonoid" class="lean_decl">AddMonoid</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -268,51 +307,71 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="Ring">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="Ring">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.1.5</span>
     <span class="definition_thmtitle">Ring</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-basics.html#Ring">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-basics.html#Group">Definition 1.1.1</a></li>
+          
           <li><a href="sec-basics.html#Monoid">Definition 1.1.4</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Ring" class="lean_decl">Ring</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CommRing" class="lean_decl">CommRing</a></li>
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/CommSemiring" class="lean_decl">CommSemiring</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -334,65 +393,88 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:CommRing">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:CommRing">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">1.1.6</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:CommRing">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-basics.html#mk:CommRing">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
 <p>In applications to Clifford algebras \(R\) will be always assumed to be <b class="bfseries">commutative</b>. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="DivisionRing">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="DivisionRing">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.1.7</span>
     <span class="definition_thmtitle">Division ring</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-basics.html#DivisionRing">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-basics.html#Ring">Definition 1.1.5</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/DivisionRing" class="lean_decl">DivisionRing</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -408,49 +490,67 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="Module">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="Module">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.1.8</span>
     <span class="definition_thmtitle">Module</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-basics.html#Module">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-basics.html#Group">Definition 1.1.1</a></li>
+          
           <li><a href="sec-basics.html#Ring">Definition 1.1.5</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Module" class="lean_decl">Module</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
@@ -473,17 +573,23 @@
 </ol>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:Module">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:Module">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">1.1.9</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:Module">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-basics.html#mk:Module">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -494,66 +600,90 @@
 <p>where \(\alpha \), \(\beta \), \(\gamma \) are different types. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="VectorSpace">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="VectorSpace">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.1.10</span>
     <span class="definition_thmtitle">Vector space</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-basics.html#VectorSpace">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          
           <li><a href="sec-basics.html#DivisionRing">Definition 1.1.7</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Module" class="lean_decl">Module</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
 <p>If \(R\) is a <b class="bfseries">division ring</b>, then a module \(M\) over \(R\) is called a <b class="bfseries"><span style="color:#181870"> vector space</span></b>. </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:VectorSpace">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:VectorSpace">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">1.1.11</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:VectorSpace">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-basics.html#mk:VectorSpace">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -568,17 +698,23 @@
 <p>for definitions/theorems about it, and most of them can be found under <span class="sffamily">Mathlib.LinearAlgebra</span> e.g. <a href ="https://leanprover-community.github.io/mathlib4_docs/find/#docs/LinearIndependent">LinearIndependent</a>. </p>
 
   </div>
-</div> </p>
-<p><div class="remark_thmwrapper" id="mk:Submodule">
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:Submodule">
   <div class="remark_thmheading">
     <span class="remark_thmcaption">
     Remark
     </span>
     <span class="remark_thmlabel">1.1.12</span>
-    <div class="thm_icons">
-    <a class="icon proof" href="sec-basics.html#mk:Submodule">#</a>
+    <div class="thm_header_extras">
 
-  </div>
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-basics.html#mk:Submodule">#</a>
+    
+    
+    
+        </div>
   </div>
   <div class="remark_thmcontent">
   
@@ -586,56 +722,74 @@
 <p>If \(M\) is a vector space then \(N\) is called a <b class="bfseries">subspace</b>. </p>
 
   </div>
-</div> </p>
-<p><div class="definition_thmwrapper" id="Dual">
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="Dual">
   <div class="definition_thmheading">
     <span class="definition_thmcaption">
     Definition
     </span>
     <span class="definition_thmlabel">1.1.13</span>
     <span class="definition_thmtitle">Dual module</span>
+    <div class="thm_header_extras">
+
+    
     ✓
-    <div class="thm_icons">
+        </div>
+    <div class="thm_header_hidden_extras">
+
     <a class="icon proof" href="sec-basics.html#Dual">#</a>
+    
+    
     <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
 </button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Uses</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
-          <li><a href="sec-algebras.html#LinearMap">Definition 1.2.11</a></li>
+          
+          <li><a href="sec-algebras.html#LinearMap">Definition 1.2.12</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
+
+    
+    
     <button class="modal lean">L∃∀N</button>
-    <div class="modal-container">
+        <div class="modal-container">
       <div class="modal-content">
         <header>
           <h1>Lean declarations</h1>
           <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
 </button>
         </header>
-                <ul class="uses">
+        
+        <ul class="uses">
+          
           <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/Module.Dual" class="lean_decl">Module.Dual</a></li>
+          
         </ul>
-
+    
       </div>
     </div>
 
-  </div>
+    
+        </div>
   </div>
   <div class="definition_thmcontent">
   
 <p>The <b class="bfseries"><span style="color:#181870"> dual module</span></b> \(M^* : M \to _{l[R]} R\) is the \(R\)-module of all linear maps from \(M\) to \(R\). </p>
 
   </div>
-</div>  </p>
+</div>
 
 </div> <!--main-text -->
 </div> <!-- content-wrapper -->

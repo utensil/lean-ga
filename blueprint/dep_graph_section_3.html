@@ -38,14 +38,23 @@
        <div class="bar"></div>
     </div></span> 
     <dl class="legend">
+      
       <dt>Boxes</dt><dd>definitions</dd>
+      
       <dt>Ellipses</dt><dd>theorems and lemmas</dd>
-      <dt>Red border</dt><dd>the <em>statement</em> of this result needs to be broken down into smaller formalizable pieces; prerequisites may or may not be ready</dd>
-      <dt>Red background</dt><dd>the proof is not ready to be worked on yet; waiting for either a clear citation or a good explanation of the proof; prerequisites may or may not be ready</dd>
+      
       <dt>Blue border</dt><dd>the <em>statement</em> of this result is ready to be formalized; all prerequisites are done</dd>
+      
+      <dt>Orange border</dt><dd>the <em>statement</em> of this result is not ready to be formalized; the blueprint needs more work</dd>
+      
       <dt>Blue background</dt><dd>the <em>proof</em> of this result is ready to be formalized; all prerequisites are done</dd>
+      
       <dt>Green border</dt><dd>the <em>statement</em> of this result is formalized</dd>
+      
       <dt>Green background</dt><dd>the <em>proof</em> of this result is formalized</dd>
+      
+      <dt>Dark green background</dt><dd>the <em>proof</em> of this result and all its ancestors are formalized</dd>
+      
     </dl>
   </div>
     <div id="graph"></div>
@@ -70,6 +79,13 @@
 </div>
 
     <a class="latex_link" href="sect0007.html#dim">LaTeX</a>
+    
+    
+  
+    
+    
+  
+    
   </div>
     
       </div>
@@ -94,6 +110,13 @@
 </div>
 
     <a class="latex_link" href="sect0007.html#Lipschitz">LaTeX</a>
+    
+    
+  
+    
+    
+  
+    
   </div>
     
       </div>
@@ -118,6 +141,13 @@
 </div>
 
     <a class="latex_link" href="sect0007.html#SpinGroup">LaTeX</a>
+    
+    
+  
+    
+    
+  
+    
   </div>
     
       </div>
@@ -141,7 +171,7 @@ graphContainer.graphviz({useWorker: true})
     .width(width)
     .height(height)
     .fit(true)
-    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Lipschitz	[color=red,		fillcolor="#FBCEB1",		label=Lipschitz,		shape=box,		style=filled];	SpinGroup	[color=red,		fillcolor="#FBCEB1",		label=SpinGroup,		shape=box,		style=filled];	Lipschitz -> SpinGroup	[style=dashed];	dim	[color=red,		label=dim,		shape=ellipse];}`)
+    .renderDot(`strict digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Lipschitz	[color=blue,		fillcolor=blue,		label=Lipschitz,		shape=box,		style=filled];	SpinGroup	[label=SpinGroup,		shape=box];	Lipschitz -> SpinGroup	[style=dashed];	dim	[color=blue,		label=dim,		shape=ellipse];}`)
     .on("end", interactive);
 
 clickNode = function() {
