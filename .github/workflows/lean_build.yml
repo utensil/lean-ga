@@ -107,11 +107,10 @@ jobs:
           apk add --update make py3-pip git pkgconfig graphviz graphviz-dev gcc musl-dev
           git config --global --add safe.directory $GITHUB_WORKSPACE
           git config --global --add safe.directory `pwd`
-          sudo rm /usr/lib/python3.*/EXTERNALLY-MANAGED
-          python3 -m pip install --upgrade pip requests wheel
-          python3 -m pip install pygraphviz --global-option=build_ext --global-option="-L/usr/lib/graphviz/" --global-option="-R/usr/lib/graphviz/"
-          pip install -r requirements.txt
-          python3 -m pip install invoke
+          python3 -m pip install --break-system-packages --upgrade pip requests wheel
+          python3 -m pip install --break-system-packages pygraphviz --global-option=build_ext --global-option="-L/usr/lib/graphviz/" --global-option="-R/usr/lib/graphviz/"
+          python3 -m pip install --break-system-packages -r requirements.txt
+          python3 -m pip install --break-system-packages invoke
           inv all
      
     - name: Deploy blueprint
