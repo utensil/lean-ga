@@ -7,6 +7,9 @@
 \newif\ifplastex
 \plastexfalse
 
+% https://tex.stackexchange.com/a/13268/75671
+% \renewcommand\familydefault{\sfdefault}
+
 \hypersetup{%
   colorlinks=true,
   linkcolor={red!50!black},
@@ -20,13 +23,21 @@
 % \citestyle{acmauthoryear}
 
 \usepackage[utf8]{inputenc}
+
+% To use mathpazo, we need to use the following lines
+% https://mirror-hk.koddos.net/CTAN/macros/latex/required/psnfss/psnfss2e.pdf
+% but a lot of missing unicode characters
 % \usepackage[T1]{fontenc}
-\usepackage{newunicodechar}
-\usepackage{lean_unicode}
+% \usepackage{textcomp}
+
 \usepackage{xspace}
 \usepackage{xpatch}
-\usepackage{unicode-math}
-\usepackage{fontspec}
+% clash with newpxmath
+% \usepackage{unicode-math}
+
+\usepackage{newunicodechar}
+\usepackage{lean_unicode}
+
 % https://tex.stackexchange.com/a/250368/75671
 \usepackage{float} %figure inside minipage
 \usepackage[autosize,debug]{dot2texi}
@@ -39,18 +50,18 @@
 % \usepackage{thmtools}
 % \usepackage{todonotes}
 
-% ad hoc fix for iota in Lean code
-\setmainfont{latinmodern-math.otf}
-%\setmathfont{Latin Modern Math}
-\setmathfont{latinmodern-math.otf}
-\setmathfont[range=\varnothing]{Asana-Math.otf}
-\setlength{\textwidth}{6.5in}
-\setlength{\oddsidemargin}{-0.1in}
-\setlength{\evensidemargin}{-0.1in}
-\setmathfont[range=\varnothing]{Asana-Math.otf}
-\setmathfont[range=\pitchfork]{Asana-Math.otf}
-\setmathfont[range=\intprod]{Asana-Math.otf}
-\setmathfont[range=\int]{latinmodern-math.otf}
+% % ad hoc fix for iota in Lean code
+% \setmainfont{latinmodern-math.otf}
+% %\setmathfont{Latin Modern Math}
+% \setmathfont{latinmodern-math.otf}
+% \setmathfont[range=\varnothing]{Asana-Math.otf}
+% \setlength{\textwidth}{6.5in}
+% \setlength{\oddsidemargin}{-0.1in}
+% \setlength{\evensidemargin}{-0.1in}
+% \setmathfont[range=\varnothing]{Asana-Math.otf}
+% \setmathfont[range=\pitchfork]{Asana-Math.otf}
+% \setmathfont[range=\intprod]{Asana-Math.otf}
+% \setmathfont[range=\int]{latinmodern-math.otf}
 
 \usepackage{backref}
 % Back refs
@@ -141,14 +152,22 @@
 	backgroundcolor=RedViolet!5!gray!5,
 }
 \declaretheoremstyle[
-	headfont=\bfseries,
+	headfont=\bfseries\sffamily,
 	bodyfont=\normalfont\small,
 	spaceabove=0pt,
 	spacebelow=0pt,
 	mdframed={style=mdblackbox}
 ]{thmblackbox}
 
+\declaretheoremstyle[
+	headfont=\bfseries\sffamily,
+	bodyfont=\normalfont, %\small, %\sffamily,
+	spaceabove=0pt,
+	spacebelow=0pt
+]{defbold}
+
 \theoremstyle{definition}
+% \declaretheorem[style=thmblackbox,name=Definition,numberwithin=subsection]{definition}
 \declaretheorem[style=thmbluebox,name=Theorem,numberwithin=subsection]{theorem}
 \declaretheorem[style=thmbluebox,name=Theorem,numberwithin=subsection]{theoremx} % theorem not in dep graph
 \declaretheorem[style=thmbluebox,name=Lemma,sibling=theorem]{lemma}
@@ -158,7 +177,8 @@
 
 \theoremstyle{definition}
 % \newtheorem{claim}[theorem]{Claim}
-\newtheorem{definition}[theorem]{Definition}
+% \newtheorem{definition}[theorem]{Definition}
+\declaretheorem[style=defbold,name=Definition,sibling=theorem]{definition}
 % \newtheorem{fact}[theorem]{Fact}
 % \newtheorem{abuse}[theorem]{Abuse of Notation}
 

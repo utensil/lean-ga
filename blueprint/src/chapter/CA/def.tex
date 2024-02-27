@@ -12,9 +12,7 @@ Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form 
 
     A \vocab{Clifford algebra} over $Q$, denoted $\Cl (Q)$, is
     the \vocab{ring quotient} of the \vocab{tensor algebra} $T(M)$
-    by the equivalence relation satisfying:
-
-    $\forall m \in M, \iota(m)^2 \sim \rfun(Q(m))$.
+    by the equivalence relation satisfying $\iota(m)^2 \sim \rfun(Q(m))$ for all $m \in M$.
 
     The natural quotient map is denoted $\pi : T(M) \to \Cl (Q)$ in some literatures,
     or $\pi_\Phi$/$\pi_Q$ to emphasize the bilinear form $\Phi$ or the quadratic form $Q$, respectively.
@@ -74,7 +72,8 @@ Let $M$ be a module over a commutative ring $R$, equipped with a quadratic form 
   \leanok
   \uses{CliffordAlgebra, AlgHom}
 
-  Given a linear map $f : M \lmap{R} A$ into an $R$-algebra $A$, satisfying \forall $m$ in $M$, $f(m)^2 = Q(m)$,
+  Given a linear map $f : M \lmap{R} A$ into an $R$-algebra $A$,
+  satisfying $f(m)^2 = Q(m)$ for all $m \in M$,
   called \newvocab{is Clifford},
   the canonical \newvocab{lift} of $f$ is defined to be a \vocab{algebra homomorphism} from $\Cl(Q)$ to $A$,
   denoted $\operatorname{lift} f : \Cl(Q) \amap A$.
@@ -119,6 +118,6 @@ that is subject to change.
   \leanok
   \uses{CliffordAlgebra}
 
-  A \vocab{Exterior algebra} over $M$ is the Clifford algebra $\Cl(Q)$ where $Q(m) = 0$ for all $m \in M$.
+  An \newvocab{Exterior algebra} over $M$ is the Clifford algebra $\Cl(Q)$ where $Q(m) = 0$ for all $m \in M$.
 
 \end{definition}
