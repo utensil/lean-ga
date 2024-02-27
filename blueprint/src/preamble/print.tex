@@ -30,6 +30,8 @@
 % \usepackage[T1]{fontenc}
 % \usepackage{textcomp}
 
+\usepackage{microtype}
+
 \usepackage{xspace}
 \usepackage{xpatch}
 % clash with newpxmath
@@ -123,6 +125,8 @@
 	bottomline=false,
 	linecolor=ForestGreen,
 	backgroundcolor=ForestGreen!5,
+	% innerleftmargin=20pt,
+	innerrightmargin=15pt
 }
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{ForestGreen!70!black},
@@ -164,7 +168,7 @@
 	bodyfont=\normalfont, %\small, %\sffamily,
 	spaceabove=0pt,
 	spacebelow=0pt
-]{defbold}
+]{def}
 
 \theoremstyle{definition}
 % \declaretheorem[style=thmblackbox,name=Definition,numberwithin=subsection]{definition}
@@ -178,7 +182,7 @@
 \theoremstyle{definition}
 % \newtheorem{claim}[theorem]{Claim}
 % \newtheorem{definition}[theorem]{Definition}
-\declaretheorem[style=defbold,name=Definition,sibling=theorem]{definition}
+\declaretheorem[style=def,name=Definition,sibling=theorem]{definition}
 % \newtheorem{fact}[theorem]{Fact}
 % \newtheorem{abuse}[theorem]{Abuse of Notation}
 
