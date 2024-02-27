@@ -17,3 +17,5 @@ blueprint/src/print-dot2tex-*.tex
 blueprint/src/print.brf
 dot2tex.log
 blueprint/src/dep_graph_src.tex
+blueprint/src/dep_graph_1.tex
+blueprint/src/dep_graph_2.tex
