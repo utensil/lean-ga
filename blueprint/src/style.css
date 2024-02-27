@@ -10,6 +10,7 @@
 */
 .example_thmwrapper {
     border: 1px solid #8C2700;
+    margin: 1em 0 1em 0;
     padding: 1em 1em 1em 1em;
     background-color: #fef9f8;
 }
@@ -20,6 +21,7 @@
 
 .remark_thmwrapper {
     border-left: 5px solid #458933;
+    margin: 1em 0 1em 0;
     padding: 1em 1em 1em 1em;
     background-color: #f5f9f4;
 }
