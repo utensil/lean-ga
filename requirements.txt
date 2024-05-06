@@ -5,9 +5,9 @@ invoke==2.2.0
 # export C_INCLUDE_PATH="$(brew --prefix graphviz)/include/"
 # export LIBRARY_PATH="$(brew --prefix graphviz)/lib/"
 # pip install --use-pep517 --config-setting="--global-option=build_ext" pygraphviz
-plasTeX @ git+https://github.com/plastex/plastex.git
-leanblueprint @ git+https://github.com/PatrickMassot/leanblueprint.git
+plasTeX @ git+https://github.com/plastex/plastex.git #@4b66cd7442f9df8fe5eecb4deb4b7f9eb7ae8657
+leanblueprint @ git+https://github.com/PatrickMassot/leanblueprint.git #@05ae69af3f8439c306d3fe2ddc65f0a7760e0310
 watchfiles==0.16.1
 dot2tex @ git+https://github.com/xyz2tex/dot2tex
-# pygments>=2.18.0
-pygments @ git+https://github.com/utensil/pygments.git@lean4_mathescape
+pygments>=2.18.0
+# pygments @ git+https://github.com/utensil/pygments.git@lean4_mathescape

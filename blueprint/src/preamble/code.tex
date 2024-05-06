@@ -1,51 +1,51 @@
+\newif\ifuselistings
+\uselistingstrue
+% minted still doesn't work with plastex
+% \uselistingsfalse
+
+\ifuselistings
 % clash with newpxmath
 % \usepackage{unicode-math}
 % \usepackage{newunicodechar}
 % \usepackage{lean_unicode}
-% \usepackage{listings}
 
-% % handle Lean code highlighting following https://lean-lang.org/lean4/doc/syntax_highlight_in_latex.html
-% \definecolor{keywordcolor}{rgb}{0.7, 0.1, 0.1}   % red
-% \definecolor{tacticcolor}{rgb}{0.0, 0.1, 0.6}    % blue
-% \definecolor{commentcolor}{rgb}{0.4, 0.4, 0.4}   % grey
-% \definecolor{symbolcolor}{rgb}{0.0, 0.1, 0.6}    % blue
-% \definecolor{sortcolor}{rgb}{0.1, 0.5, 0.1}      % green
-% \definecolor{attributecolor}{rgb}{0.7, 0.1, 0.1} % red
+\usepackage{listings}
 
-% \def\lstlanguagefiles{lstlean.tex}
-% % set default language
-% \lstset{language=lean}
+% handle Lean code highlighting following https://lean-lang.org/lean4/doc/syntax_highlight_in_latex.html
+\definecolor{keywordcolor}{rgb}{0.7, 0.1, 0.1}   % red
+\definecolor{tacticcolor}{rgb}{0.0, 0.1, 0.6}    % blue
+\definecolor{commentcolor}{rgb}{0.4, 0.4, 0.4}   % grey
+\definecolor{symbolcolor}{rgb}{0.0, 0.1, 0.6}    % blue
+\definecolor{sortcolor}{rgb}{0.1, 0.5, 0.1}      % green
+\definecolor{attributecolor}{rgb}{0.7, 0.1, 0.1} % red
+
+\def\lstlanguagefiles{lstlean.tex}
+% set default language
+\lstset{language=lean}
+
+\else % minted
 
 % https://github.com/tonsky/FiraCode/wiki/Installing
 % https://wiki.alpinelinux.org/wiki/Fonts
 \setmonofont{DejaVuSansMono.ttf}
-% \usepackage[cachedir=minted-cache]{minted}
+
+% \usepackage[frozencache,cachedir=minted-cache]{minted}
 % https://github.com/gpoore/minted/issues/159#issuecomment-297131828
 \usepackage[outputdir=../print,cachedir=_minted-cache]{minted}
 
 \setminted{
   fontsize=\footnotesize,
-%   frame=single,
-%   breaklines
+  frame=single,
+  breaklines
 }
 
 % https://pygments.org/styles/
 % \usemintedstyle{tango}  % a nice, colorful theme % or manni, monokai, one-dark % default is fine too
 
+\fi
 
-% \usepackage{verbatim}
-
-% \usepackage[frozencache,cachedir=minted-cache]{minted}
-% \usepackage{minted}
-% \setminted{
-%   fontsize=\footnotesize,
-%   frame=single,
-%   breaklines
-% }
-% \setmintedinline{fontsize=\currentfontsize}
-% \definecolor{bg}{rgb}{0.95,0.95,0.95}
-% \newmintinline[leanc]{theorem.py:LeanLexer -x}{bgcolor=bg}
-% \newminted[leancode]{theorem.py:LeanLexer -x}{}
-% % https://tex.stackexchange.com/a/276750/41112
-% \newlength{\mintedfboxsep}
-% \setlength{\mintedfboxsep}{1.5pt}
+% No, this doesn't work for plastex, it sees begin/end then fails, despite of the if/else/fi structure
+% define new environment that proxies to lstlisting or minted
+% \newenvironment{leancode}
+%   {\ifuselistings\begin{lstlisting}[mathescape=true]\else\begin{minted}[autogobble,texcomments]{lean4}\fi}
+%   {\ifuselistings\end{lstlisting}\else\end{minted}\fi}
