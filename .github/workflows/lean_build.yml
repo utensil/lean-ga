@@ -105,6 +105,7 @@ jobs:
         run: |
           apk update
           apk add --update make py3-pip git pkgconfig graphviz graphviz-dev gcc musl-dev
+          apk add font-dejavu
           git config --global --add safe.directory $GITHUB_WORKSPACE
           git config --global --add safe.directory `pwd`
           python3 -m pip install --break-system-packages --upgrade pip requests wheel
