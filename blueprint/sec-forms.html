@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  MathJax = { 
+    tex: {
+		    inlineMath: [['$','$'], ['\\(','\\)']]
+	} }
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Blueprint For Formalizing Geometric Algebra in Lean: Forms</title>
+<link rel="next" href="cha-ca.html" title="Clifford Algebra" />
+<link rel="prev" href="sec-algebras.html" title="Algebras" />
+<link rel="up" href="cha-preliminaries.html" title="Preliminaries" />
+<link rel="stylesheet" href="styles/theme-white.css" />
+<link rel="stylesheet" href="styles/amsthm.css" />
+<link rel="stylesheet" href="styles/pygments.css" />
+<link rel="stylesheet" href="styles/showmore.css" />
+<link rel="stylesheet" href="styles/blueprint.css" />
+<link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+<header>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+<h1 id="doc_title"><a href="index.html">The Blueprint For Formalizing Geometric Algebra in Lean</a></h1>
+</header>
+
+<div class="wrapper">
+<nav class="toc">
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref"></span> <span class="toc_entry">Introduction</span></a>
+ </li>
+<li class=" active">
+  <a href="cha-preliminaries.html"><span class="toc_ref">1</span> <span class="toc_entry">Preliminaries</span></a>
+  <span class="expand-toc">▼</span>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sec-basics.html"><span class="toc_ref">1.1</span> <span class="toc_entry">Basics: from groups to modules</span></a>
+ </li>
+<li class="">
+  <a href="sec-algebras.html"><span class="toc_ref">1.2</span> <span class="toc_entry">Algebras</span></a>
+ </li>
+<li class=" active current">
+  <a href="sec-forms.html"><span class="toc_ref">1.3</span> <span class="toc_entry">Forms</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="cha-ca.html"><span class="toc_ref">2</span> <span class="toc_entry">Clifford Algebra</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sec-def.html"><span class="toc_ref">2.1</span> <span class="toc_entry">Definition</span></a>
+ </li>
+<li class="">
+  <a href="sec-ops.html"><span class="toc_ref">2.2</span> <span class="toc_entry">Operations</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2.3</span> <span class="toc_entry">Structure</span></a>
+ </li>
+<li class="">
+  <a href="sect0003.html"><span class="toc_ref">2.4</span> <span class="toc_entry">Classification</span></a>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">2.5</span> <span class="toc_entry">Representation</span></a>
+ </li>
+<li class="">
+  <a href="sect0005.html"><span class="toc_ref">2.6</span> <span class="toc_entry">Spin</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="cha-ga.html"><span class="toc_ref">3</span> <span class="toc_entry">Geometric Algebra</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0006.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Axioms</span></a>
+ </li>
+<li class="">
+  <a href="sect0007.html"><span class="toc_ref">3.2</span> <span class="toc_entry">Contents</span></a>
+ </li>
+<li class="">
+  <a href="sect0008.html"><span class="toc_ref">3.3</span> <span class="toc_entry">Operations and properties</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0009.html"><span class="toc_ref">4</span> <span class="toc_entry">Concrete algebras - definition</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0010.html"><span class="toc_ref">4.1</span> <span class="toc_entry">CGA</span></a>
+ </li>
+<li class="">
+  <a href="sect0011.html"><span class="toc_ref">4.2</span> <span class="toc_entry">PGA</span></a>
+ </li>
+<li class="">
+  <a href="sect0012.html"><span class="toc_ref">4.3</span> <span class="toc_entry">STA</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0013.html"><span class="toc_ref">5</span> <span class="toc_entry">Applications</span></a>
+  <span class="expand-toc">▶</span>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0014.html"><span class="toc_ref">5.1</span> <span class="toc_entry">Geometry</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0015.html"><span class="toc_ref">6</span> <span class="toc_entry">Bibliography</span></a>
+ </li>
+<li ><a href="dep_graph_section_1.html">Section 1 graph</a></li>
+<li ><a href="dep_graph_section_2.html">Section 2 graph</a></li>
+<li ><a href="dep_graph_section_3.html">Section 3 graph</a></li>
+<li ><a href="dep_graph_section_4.html">Section 4 graph</a></li>
+<li ><a href="dep_graph_section_5.html">Section 5 graph</a></li>
+</ul>
+</nav>
+
+<div class="content">
+<div class="content-wrapper">
+
+
+<div class="main-text">
+<h2 id="sec:forms">1.3 Forms</h2>
+
+<div class="definition_thmwrapper theorem-style-definition" id="BilinForm">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.3.1</span>
+    <span class="definition_thmtitle">Bilinear form</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-forms.html#BilinForm">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sec-basics.html#Module">Definition 1.1.8</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/BilinForm" class="lean_decl">BilinForm</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>Let \(R\) be a ring, \(M\) an \(R\)-module. An <b class="bfseries"><span style="color:#181870"> bilinear form</span></b> \(B\) over \(M\) is a map \(B : M \to M \to R\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\( B(x + y, z) = B(x, z) +B(y, z) \) </p>
+</li>
+  <li><p>\( B(x, y + z) = B(x, y) +B(x, z) \) </p>
+</li>
+  <li><p>\( B(a \bullet x, y) = a * B(x, y)\) </p>
+</li>
+  <li><p>\( B(x, a \bullet y) = a * B(x, y)\) </p>
+</li>
+</ol>
+<p>for all \(a \in R, x, y, z \in M\). </p>
+
+  </div>
+</div>
+<div class="definition_thmwrapper theorem-style-definition" id="QuadraticForm">
+  <div class="definition_thmheading">
+    <span class="definition_thmcaption">
+    Definition
+    </span>
+    <span class="definition_thmlabel">1.3.2</span>
+    <span class="definition_thmtitle">Quadratic form</span>
+    <div class="thm_header_extras">
+
+    
+    ✓
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-forms.html#QuadraticForm">#</a>
+    
+    
+    <button class="modal"><svg  class="icon icon-mindmap "><use xlink:href="symbol-defs.svg#icon-mindmap"></use></svg>
+</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Uses</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="sec-forms.html#BilinForm">Definition 1.3.1</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+    
+    <button class="modal lean">L∃∀N</button>
+        <div class="modal-container">
+      <div class="modal-content">
+        <header>
+          <h1>Lean declarations</h1>
+          <button class="closebtn"><svg  class="icon icon-cross "><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+</button>
+        </header>
+        
+        <ul class="uses">
+          
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/QuadraticForm" class="lean_decl">QuadraticForm</a></li>
+          
+          <li><a href="https://leanprover-community.github.io/mathlib4_docs/find/#doc/QuadraticForm.polar" class="lean_decl">QuadraticForm.polar</a></li>
+          
+        </ul>
+    
+      </div>
+    </div>
+
+    
+        </div>
+  </div>
+  <div class="definition_thmcontent">
+  
+<p>Let \(R\) be a commutative ring, \(M\) a \(R\)-module. An <b class="bfseries"><span style="color:#181870"> quadratic form</span></b> \(Q\) over \(M\) is a map \(Q : M \to R\), satisfying: </p>
+<ol class="enumerate">
+  <li><p>\( Q(a \bullet x) = a * a * Q(x)\) for all \(a \in R, x \in M\). </p>
+</li>
+  <li><p>there exists a companion <b class="bfseries">bilinear form</b> \(B : M \to M \to R\), such that \(Q(x + y) = Q(x) + Q(y) + B(x, y)\) </p>
+</li>
+</ol>
+<p>In some literatures, the bilinear form is denoted \(\Phi \), and called the <b class="bfseries"><span style="color:#181870"> polar form</span></b> associated with the quadratic form \(Q\), or simply the polar form of \(Q\). </p>
+
+  </div>
+</div>
+<div class="remark_thmwrapper theorem-style-definition" id="mk:QuadraticForm">
+  <div class="remark_thmheading">
+    <span class="remark_thmcaption">
+    Remark
+    </span>
+    <span class="remark_thmlabel">1.3.3</span>
+    <div class="thm_header_extras">
+
+        </div>
+    <div class="thm_header_hidden_extras">
+
+    <a class="icon proof" href="sec-forms.html#mk:QuadraticForm">#</a>
+    
+    
+    
+        </div>
+  </div>
+  <div class="remark_thmcontent">
+  
+<p>This notion generalizes to commutative semirings using the approach in <span class="cite">
+	[
+	<a href="sect0015.html#izhakian2016" >Izhakian et&#160;al<span class="mbox" style="width: ">.</span>(2016)</a>
+	]
+</span>. </p>
+
+  </div>
+</div>
+
+</div> <!--main-text -->
+</div> <!-- content-wrapper -->
+</div> <!-- content -->
+</div> <!-- wrapper -->
+
+<nav class="prev_up_next">
+  <svg  id="showmore-minus" class="icon icon-eye-minus showmore"><use xlink:href="symbol-defs.svg#icon-eye-minus"></use></svg>
+
+  <svg  id="showmore-plus" class="icon icon-eye-plus showmore"><use xlink:href="symbol-defs.svg#icon-eye-plus"></use></svg>
+
+  <a href="sec-algebras.html" title="Algebras"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="cha-preliminaries.html" title="Preliminaries"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="cha-ca.html" title="Clifford Algebra"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+<script type="text/javascript" src="js/js.cookie.min.js"></script>
+<script type="text/javascript" src="js/showmore.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
