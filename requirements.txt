@@ -1,7 +1,13 @@
 # https://github.com/pyinvoke/invoke/issues/891
 invoke==2.2.0
 # mathlibtools==1.1.1
+# https://github.com/pygraphviz/pygraphviz/issues/155#issuecomment-2009517671
+# export C_INCLUDE_PATH="$(brew --prefix graphviz)/include/"
+# export LIBRARY_PATH="$(brew --prefix graphviz)/lib/"
+# pip install --use-pep517 --config-setting="--global-option=build_ext" pygraphviz
 plasTeX @ git+https://github.com/plastex/plastex.git
 leanblueprint @ git+https://github.com/PatrickMassot/leanblueprint.git
 watchfiles==0.16.1
 dot2tex @ git+https://github.com/xyz2tex/dot2tex
+# pygments>=2.18.0
+pygments @ git+https://github.com/utensil/pygments.git@lean4_mathescape

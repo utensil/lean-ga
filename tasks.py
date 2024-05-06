@@ -38,10 +38,13 @@ def bp(ctx):
 
     cwd = os.getcwd()
     os.chdir(BP_DIR)
-    run('mkdir -p print && cd src && xelatex --shell-escape -output-directory=../print print.tex')
+    result = run('mkdir -p print && cd src && xelatex -halt-on-error -interaction=nonstopmode --shell-escape -output-directory=../print print.tex')
+    if result.exited != 0:
+        warnings.warn('xelatex failed to build the blueprint PDF file: %d' % result.exited)
+        return
     run('cd print && bibtex print.aux', env={'BIBINPUTS': '../src'})
-    run('cd src && xelatex --shell-escape -output-directory=../print print.tex')
-    run('cd src && xelatex --shell-escape -output-directory=../print print.tex')
+    run('cd src && xelatex -halt-on-error -interaction=nonstopmode --shell-escape -output-directory=../print print.tex')
+    run('cd src && xelatex -halt-on-error -interaction=nonstopmode --shell-escape -output-directory=../print print.tex')
     run('cp print/print.bbl src/web.bbl')
     os.chdir(cwd)
 
@@ -62,7 +65,7 @@ def web(ctx):
         print(e)
 
 @task
-def serve(ctx, port=8080):
+def serve(ctx, port=8089):
     """
     Serve the blueprint website assuming the blueprint website is already built
     """
@@ -120,6 +123,8 @@ def dev(ctx):
                 '.*\.synctex.*$',
                 '.*\.w18$',
                 '.*\.xdv$',
+                '.*\.pyg$',
+                '_minted-print/*'
             )
         ))
 
