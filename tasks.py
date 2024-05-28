@@ -111,20 +111,20 @@ def dev(ctx):
     run_process(BP_DIR/'src', target='inv serve', callback=callback,
         watch_filter=DefaultFilter(
             ignore_entity_patterns=(
-                '.*\.aux$',
-                '.*\.log$',
-                '.*\.fls$',
-                '.*\.fdb_latexmk$',
-                '.*\.bbl$',
-                '.*\.paux$',
-                '.*\.pdf$',
-                '.*\.out$',
-                '.*\.blg$',
-                '.*\.synctex.*$',
-                '.*\.w18$',
-                '.*\.xdv$',
-                '.*\.pyg$',
-                '_minted-print/*'
+                r'.*\.aux$',
+                r'.*\.log$',
+                r'.*\.fls$',
+                r'.*\.fdb_latexmk$',
+                r'.*\.bbl$',
+                r'.*\.paux$',
+                r'.*\.pdf$',
+                r'.*\.out$',
+                r'.*\.blg$',
+                r'.*\.synctex.*$',
+                r'.*\.w18$',
+                r'.*\.xdv$',
+                r'.*\.pyg$',
+                r'_minted-print/.*'
             )
         ))
 
