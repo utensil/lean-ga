@@ -1,35 +1,26 @@
 \section{Dependency graph}
 
+% rotate=90,
 \begin{figure}[H]
-    % \begin{minipage}[b]{0.6\textwidth}
     \centering
     {
-    \begin{dot2tex}[dot,file=dep_graph_1]
+    \begin{dot2tex}[dot,graphstyle={scale=0.8,transform shape}]
+        digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	Group	[color=green,		fillcolor="#B0ECA3",		label=Group,		shape=box,		style=filled];	Ring	[color=green,		fillcolor="#B0ECA3",		label=Ring,		shape=box,		style=filled];	Group -> Ring	[style=dashed];	Module	[color=green,		fillcolor="#B0ECA3",		label=Module,		shape=box,		style=filled];	Ring -> Module	[style=dashed];	DivisionRing	[color=green,		fillcolor="#B0ECA3",		label=DivisionRing,		shape=box,		style=filled];	Ring -> DivisionRing	[style=dashed];	RingHom	[color=green,		fillcolor="#B0ECA3",		label=RingHom,		shape=box,		style=filled];	Ring -> RingHom	[style=dashed];	RingQuot	[color=green,		fillcolor="#B0ECA3",		label=RingQuot,		shape=box,		style=filled];	Module -> RingQuot	[style=dashed];	LinearMap	[color=green,		fillcolor="#B0ECA3",		label=LinearMap,		shape=box,		style=filled];	Module -> LinearMap	[style=dashed];	VectorSpace	[color=green,		fillcolor="#B0ECA3",		label=VectorSpace,		shape=box,		style=filled];	Module -> VectorSpace	[style=dashed];	Algebra	[color=green,		fillcolor="#B0ECA3",		label=Algebra,		shape=box,		style=filled];	Module -> Algebra	[style=dashed];	BilinForm	[color=green,		fillcolor="#B0ECA3",		label=BilinForm,		shape=box,		style=filled];	Module -> BilinForm	[style=dashed];	FreeAlgebra	[color=green,		fillcolor="#B0ECA3",		label=FreeAlgebra,		shape=box,		style=filled];	RingQuot -> FreeAlgebra	[style=dashed];	Dual	[color=green,		fillcolor="#B0ECA3",		label=Dual,		shape=box,		style=filled];	LinearMap -> Dual	[style=dashed];	TensorAlgebra	[color=green,		fillcolor="#B0ECA3",		label=TensorAlgebra,		shape=box,		style=filled];	LinearMap -> TensorAlgebra	[style=dashed];	Algebra -> FreeAlgebra	[style=dashed];	QuadraticForm	[color=green,		fillcolor="#B0ECA3",		label=QuadraticForm,		shape=box,		style=filled];	BilinForm -> QuadraticForm	[style=dashed];	DivisionRing -> VectorSpace	[style=dashed];	RingHom -> RingQuot	[style=dashed];	RingHom -> LinearMap	[style=dashed];	RingHom -> Algebra	[style=dashed];	AlgHom	[color=green,		fillcolor="#B0ECA3",		label=AlgHom,		shape=box,		style=filled];	RingHom -> AlgHom	[style=dashed];	FreeAlgebra -> TensorAlgebra	[style=dashed];	Monoid	[color=green,		fillcolor="#B0ECA3",		label=Monoid,		shape=box,		style=filled];	Monoid -> Ring	[style=dashed];}
     \end{dot2tex}
     }
     \caption{Preliminaries}
     \label{fig:dep_graph_1}
-    % \medskip
-    % \end{minipage}%
-    % \begin{minipage}[b]{0.4\textwidth}
-    % \centering
-    % \end{minipage}
 \end{figure}
 
 \begin{figure}[H]
-    % \begin{minipage}[b]{0.6\textwidth}
     \centering
     {
-    \begin{dot2tex}[dot,file=dep_graph_2]
+    \begin{dot2tex}[dot]
+        digraph "" {	graph [bgcolor=transparent];	node [label="\N",		penwidth=1.8	];	edge [arrowhead=vee];	CliffordAlgebra	[color=green,		fillcolor="#b0eca3",		label=CliffordAlgebra,		shape=box,		style=filled];	lift	[color=green,		fillcolor="#b0eca3",		label=lift,		shape=box,		style=filled];	CliffordAlgebra -> lift	[style=dashed];	ExteriorAlgebra	[color=green,		fillcolor="#b0eca3",		label=ExteriorAlgebra,		shape=box,		style=filled];	CliffordAlgebra -> ExteriorAlgebra	[style=dashed];	iota	[color=green,		fillcolor="#b0eca3",		label=iota,		shape=box,		style=filled];	CliffordAlgebra -> iota	[style=dashed];	antiDeriv	[color=blue,		fillcolor="#a3d6ff",		label=antiDeriv,		shape=box,		style=filled];	CliffordAlgebra -> antiDeriv	[style=dashed];	involute	[color=green,		fillcolor="#b0eca3",		label=involute,		shape=box,		style=filled];	conjugate	[color=green,		fillcolor="#b0eca3",		label=conjugate,		shape=box,		style=filled];	involute -> conjugate	[style=dashed];	univ	[color=green,		label=univ,		shape=ellipse];	lift -> univ	[style=dashed];	iota -> involute	[style=dashed];	reverse	[color=green,		fillcolor="#b0eca3",		label=reverse,		shape=box,		style=filled];	iota -> reverse	[style=dashed];	iota -> univ	[style=dashed];	reverse -> conjugate	[style=dashed];}a
     \end{dot2tex}
     }
     \caption{Clifford Algebra}
     \label{fig:dep_graph_2}
-    % \medskip
-    % \end{minipage}%
-    % \begin{minipage}[b]{0.4\textwidth}
-    % \centering
-    % \end{minipage}
 \end{figure}
 
 Legends:
